@@ -1,3 +1,20 @@
-= 主页
+= 个人记录
 
-这里是主页
+个人工具
+
+* Angular脚手架(wng --min test-output-folder-name):
+** Windows: https://gitee.com/consolelog/wang-ng-init/releases/download/v1.4.0/wng.exe
+** Linux: https://gitee.com/consolelog/wang-ng-init/releases/download/v1.4.0/wng-linux-x86_64
+** macOS: https://gitee.com/consolelog/wang-ng-init/releases/download/v1.4.0/wng
+* TypeScript脚手架(wts my-typescript-folder-name)
+** https://gitee.com/consolelog/wang-typescript-starter/releases/download/v1.0.0/wts.zip
+* Tauri脚手架(wtauri demo-tauri002)
+** macOS: https://gitee.com/consolelog/wtauri/releases/download/v1.3.0/wtauri_macos_x86-64
+** Windows: https://gitee.com/consolelog/wtauri/releases/download/v1.3.0/wtauri.exe
+** Linux: https://gitee.com/consolelog/wtauri/releases/download/v1.3.0/wtauri_linux_gnu_x86-64
+* Antora脚手架(wantora docs-my-antora)
+** macOS: https://gitee.com/consolelog/wantora/releases/download/v1.1.0/wantora
+** Windows: https://gitee.com/consolelog/wantora/releases/download/v1.1.0/wantora.exe
+* CHANGELOG变更日志生成工具(wlog)
+** macOS: https://gitee.com/consolelog/wang-changelog/releases/download/v1.2.0/wlog
+** Linux: https://gitee.com/consolelog/wang-changelog/releases/download/v1.2.0/wlog.exe
