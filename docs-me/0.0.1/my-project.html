@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: 我的文档</title>
+    <title>项目记录 :: 我的文档</title>
     <meta name="generator" content="Antora 3.1.10">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -52,42 +52,27 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="docs-spring-boot-admin" data-version="0.0.1">
+<div class="nav-container" data-component="docs-me" data-version="0.0.1">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
     <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
-    <h3 class="title"><a href="index.html">SpringBootAdmin文档</a></h3>
+    <h3 class="title"><a href="index.html">个人记录</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="index.html">什么是 Spring Boot Admin（SBA）?</a>
+    <a class="nav-link" href="doc.html">我的文档</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="getting-started.html">入门</a>
+    <a class="nav-link" href="regexp.html">正则表达式</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="client.html">客户端应用程序</a>
+    <a class="nav-link" href="my-tools.html">个人工具</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="server.html">SBA服务端</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="security.html">安全</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="customizing.html">自定义</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="monitoring-1.5.x.html">监听1.5.x版本的Spring Boot</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="changes-2.x.html">2.x版本的变化</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="faqs.html">常见问题</a>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="my-project.html">项目记录</a>
   </li>
 </ul>
   </li>
@@ -96,7 +81,7 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">SpringBootAdmin文档</span>
+    <span class="title">个人记录</span>
     <span class="version">0.0.1</span>
   </div>
   <ul class="components">
@@ -132,11 +117,11 @@
         </li>
       </ul>
     </li>
-    <li class="component is-current">
-      <div class="title"><a href="index.html">SpringBootAdmin文档</a></div>
+    <li class="component">
+      <div class="title"><a href="../../docs-spring-boot-admin/0.0.1/index.html">SpringBootAdmin文档</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">0.0.1</a>
+        <li class="version is-latest">
+          <a href="../../docs-spring-boot-admin/0.0.1/index.html">0.0.1</a>
         </li>
       </ul>
     </li>
@@ -164,11 +149,11 @@
         </li>
       </ul>
     </li>
-    <li class="component">
-      <div class="title"><a href="../../docs-me/0.0.1/index.html">个人记录</a></div>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">个人记录</a></div>
       <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../docs-me/0.0.1/index.html">0.0.1</a>
+        <li class="version is-current is-latest">
+          <a href="index.html">0.0.1</a>
         </li>
       </ul>
     </li>
@@ -196,109 +181,30 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../docs-me/0.0.1/index.html" class="home-link"></a>
+  <a href="index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">个人记录</a></li>
+    <li><a href="my-project.html">项目记录</a></li>
+  </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-spring-boot-admin/edit/2.6.6/modules/ROOT/pages/server-clustering.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-me/edit/master/modules/ROOT/pages/my-project.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="目录" data-levels="3">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<div class="sect1">
-<h2 id="clustering-support"><a class="anchor" href="#clustering-support"></a>1. 集群</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Spring Boot Admin服务端支持通过Hazelcast的方式建立集群。当提供 <code>HazelcastConfig</code> 或 <code>HazelcastInstance</code> Bean的时候会自动开启。 你也可以持久化Hazelcast的配置，这样在服务重启之后仍然能保持之前的状态。 同时推荐参考 <a href="http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#boot-features-hazelcast/">Spring Boot对Hazelcast的支持</a>。</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
+<h1 class="page">项目记录</h1>
+<div class="ulist">
+<ul>
 <li>
-<p>将Hazelcast添加到依赖中:</p>
-<div class="listingblock">
-<div class="title">pom.xml</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
-    &lt;groupId&gt;com.hazelcast&lt;/groupId&gt;
-    &lt;artifactId&gt;hazelcast&lt;/artifactId&gt;
-&lt;/dependency&gt;</code></pre>
-</div>
-</div>
+<p><a href="https://github.com/qq253498229/antora-document-template/blob/master/.github/workflows/deploy_gh_pages.yml">antora+GitHubActions脚手架</a>，自动部署到gh-pages</p>
 </li>
 <li>
-<p>初始化HazelcastConfig:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
-public Config hazelcastConfig() {
-	// This map is used to store the events.
-	// It should be configured to reliably hold all the data,
-	// Spring Boot Admin will compact the events, if there are too many
-	MapConfig eventStoreMap = new MapConfig(DEFAULT_NAME_EVENT_STORE_MAP).setInMemoryFormat(InMemoryFormat.OBJECT)
-			.setBackupCount(1)
-			.setMergePolicyConfig(new MergePolicyConfig(PutIfAbsentMergePolicy.class.getName(), 100));
-
-	// This map is used to deduplicate the notifications.
-	// If data in this map gets lost it should not be a big issue as it will atmost
-	// lead to
-	// the same notification to be sent by multiple instances
-	MapConfig sentNotificationsMap = new MapConfig(DEFAULT_NAME_SENT_NOTIFICATIONS_MAP)
-			.setInMemoryFormat(InMemoryFormat.OBJECT).setBackupCount(1)
-			.setEvictionConfig(new EvictionConfig().setEvictionPolicy(EvictionPolicy.LRU)
-					.setMaxSizePolicy(MaxSizePolicy.PER_NODE))
-			.setMergePolicyConfig(new MergePolicyConfig(PutIfAbsentMergePolicy.class.getName(), 100));
-
-	Config config = new Config();
-	config.addMapConfig(eventStoreMap);
-	config.addMapConfig(sentNotificationsMap);
-	config.setProperty("hazelcast.jmx", "true");
-
-	// WARNING: This setups a local cluster, you change it to fit your needs.
-	config.getNetworkConfig().getJoin().getMulticastConfig().setEnabled(false);
-	TcpIpConfig tcpIpConfig = config.getNetworkConfig().getJoin().getTcpIpConfig();
-	tcpIpConfig.setEnabled(true);
-	tcpIpConfig.setMembers(singletonList("127.0.0.1"));
-	return config;
-}</code></pre>
-</div>
-</div>
+<p><a href="https://github.com/qq253498229/github-actions-template/blob/master/.github/workflows/main.yml">GitHub Actions示例</a>，打包并上传dist，之后创建Release</p>
 </li>
-</ol>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">表格 1. Hazelcast配置可选项</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">属性名</th>
-<th class="tableblock halign-left valign-top">说明</th>
-<th class="tableblock halign-left valign-top">默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring.boot.admin.hazelcast.enabled</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">开启对Hazelcast的支持</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring.boot.admin.hazelcast.event-store</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">对Hazelcast-map事件的存储名称</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"spring-boot-admin-event-store"</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring.boot.admin.hazelcast.sent-notifications</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">用于清除Hazelcast-map对应名称的重复通知</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"spring-boot-admin-sent-notifications"</code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
+</ul>
 </div>
 </article>
   </div>
