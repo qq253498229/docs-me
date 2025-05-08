@@ -24,3 +24,12 @@ jobs:
         with:
           folder: docs
           branch: gh-pages
+      - name: 压缩文档
+        run: zip -r docs.zip docs
+      - name: 发布草稿
+        uses: softprops/action-gh-release@v2
+        with:
+          files: docs.zip
+          draft: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
