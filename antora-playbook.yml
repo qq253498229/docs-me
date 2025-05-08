@@ -1,5 +1,5 @@
 site:
-  title: docs-me
+  title: 我的文档
   start_page: docs-me::index.adoc
 content:
   sources:
