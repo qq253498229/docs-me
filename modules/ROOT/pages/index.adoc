@@ -9,6 +9,7 @@
 * 技术相关
 ** https://doc.codeforfun.cn/docs-greenworks-js/0.0.1/index.html[GreenWorks-JS]
 ** https://doc.codeforfun.cn/docs-peerjs/0.0.1/index.html[PeerJS]
+** https://doc.codeforfun.cn/docs-neutralino-api/0.0.1/index.html[NeutralinoJS]
 ** https://doc.codeforfun.cn/docs-actuator/3.3.3/index.html[SpringBootActuator]
 ** https://doc.codeforfun.cn/docs-spring-boot-admin/0.0.1/index.html[SpringBootAdmin文档]
 ** https://doc.codeforfun.cn/docs-steamworks-rs/0.11.0/index.html[Steamworks for Rust]

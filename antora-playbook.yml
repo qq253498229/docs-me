@@ -27,6 +27,8 @@ content:
       branches: ["master"]
     - url: https://github.com/qq253498229/docs-peerjs.git
       branches: ["master"]
+    - url: https://github.com/qq253498229/docs-neutralino-api.git
+      branches: ["master"]
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
