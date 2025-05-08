@@ -1,0 +1,2280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>线程转储 (threaddump) :: docs-me</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-me</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-actuator" data-version="3.3.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Spring Boot Actuator</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="auditevents.html">审计事件 (auditevents)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="beans.html">Beans (beans)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="caches.html">缓存 (caches)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="conditions.html">条件评估报告 (conditions)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configprops.html">配置属性 (configprops)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="env.html">环境 (env)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="flyway.html">Flyway (flyway)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="health.html">健康检查 (health)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="heapdump.html">Heap Dump (heapdump)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="httpexchanges.html">HTTP 交换 (httpexchanges)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="info.html">Info (info)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="integrationgraph.html">Spring Integration Graph (integrationgraph)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="liquibase.html">Liquibase (liquibase)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logfile.html">日志文件 (logfile)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="loggers.html">日志记录器 (loggers)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mappings.html">映射 (mappings)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="metrics.html">指标 (metrics)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="prometheus.html">Prometheus (prometheus)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="quartz.html">Quartz (quartz)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="sbom.html">软件物料清单 (sbom)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scheduledtasks.html">计划任务 (scheduledtasks)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="sessions.html">会话 (sessions)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shutdown.html">关机 (shutdown)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="startup.html">应用程序启动 (startup)</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="threaddump.html">线程转储 (threaddump)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Boot Actuator</span>
+    <span class="version">3.3.3</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../docs-greenworks-js/0.0.1/index.html">Greenworks-JS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-greenworks-js/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-pd2/0.0.1/index.html">PD2记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-pd2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-peerjs/0.0.1/index.html">PEER JS</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-peerjs/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Spring Boot Actuator</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">3.3.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-spring-boot-admin/0.0.1/index.html">SpringBootAdmin文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-spring-boot-admin/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steamworks-rs/0.11.0/index.html">Steamworks for Rust</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steamworks-rs/0.11.0/index.html">0.11.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-tauri/v1/index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-tauri/v1/index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-testing-angular/中文/start.html">Testing Angular</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-testing-angular/中文/start.html">中文</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-me/0.0.1/index.html">个人记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-me/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-taiwu/0.0.1/index.html">太吾绘卷</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-taiwu/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-palworld/0.0.1/index.html">幻兽帕鲁笔记</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-palworld/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../docs-me/0.0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Spring Boot Actuator</a></li>
+    <li><a href="threaddump.html">线程转储 (threaddump)</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-actuator/edit/master/modules/ROOT/pages/threaddump.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">线程转储 (threaddump)</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>threaddump</code> 端点提供应用程序 JVM 的线程转储。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_获取_json_格式的线程转储"><a class="anchor" href="#_获取_json_格式的线程转储"></a>获取 JSON 格式的线程转储</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要以 JSON 格式获取线程转储，可以按照以下基于 curl 的示例，使用适当的 <code>Accept</code> 头发送 <code>GET</code> 请求到 <code>/actuator/threaddump</code>：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">curl 'http://localhost:8080/actuator/threaddump' -i -X GET \
+-H 'Accept: application/json'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>响应结果类似于以下内容：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 38917
+
+{
+  "threads" : [ {
+    "threadName" : "Test worker",
+    "threadId" : 1,
+    "blockedTime" : -1,
+    "blockedCount" : 37,
+    "waitedTime" : -1,
+    "waitedCount" : 39,
+    "lockOwnerId" : -1,
+    "daemon" : false,
+    "inNative" : false,
+    "suspended" : false,
+    "threadState" : "RUNNABLE",
+    "priority" : 5,
+    "stackTrace" : [ {
+      "moduleName" : "java.management",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "dumpThreads0",
+      "fileName" : "ThreadImpl.java",
+      "lineNumber" : -2,
+      "nativeMethod" : true,
+      "className" : "sun.management.ThreadImpl"
+    }, {
+      "moduleName" : "java.management",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "dumpAllThreads",
+      "fileName" : "ThreadImpl.java",
+      "lineNumber" : 528,
+      "nativeMethod" : false,
+      "className" : "sun.management.ThreadImpl"
+    }, {
+      "moduleName" : "java.management",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "dumpAllThreads",
+      "fileName" : "ThreadImpl.java",
+      "lineNumber" : 516,
+      "nativeMethod" : false,
+      "className" : "sun.management.ThreadImpl"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "getFormattedThreadDump",
+      "fileName" : "ThreadDumpEndpoint.java",
+      "lineNumber" : 52,
+      "nativeMethod" : false,
+      "className" : "org.springframework.boot.actuate.management.ThreadDumpEndpoint"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "threadDump",
+      "fileName" : "ThreadDumpEndpoint.java",
+      "lineNumber" : 43,
+      "nativeMethod" : false,
+      "className" : "org.springframework.boot.actuate.management.ThreadDumpEndpoint"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "invoke0",
+      "fileName" : "NativeMethodAccessorImpl.java",
+      "lineNumber" : -2,
+      "nativeMethod" : true,
+      "className" : "jdk.internal.reflect.NativeMethodAccessorImpl"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "invoke",
+      "fileName" : "NativeMethodAccessorImpl.java",
+      "lineNumber" : 77,
+      "nativeMethod" : false,
+      "className" : "jdk.internal.reflect.NativeMethodAccessorImpl"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "invoke",
+      "fileName" : "DelegatingMethodAccessorImpl.java",
+      "lineNumber" : 43,
+      "nativeMethod" : false,
+      "className" : "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "invoke",
+      "fileName" : "Method.java",
+      "lineNumber" : 569,
+      "nativeMethod" : false,
+      "className" : "java.lang.reflect.Method"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "invokeMethod",
+      "fileName" : "ReflectionUtils.java",
+      "lineNumber" : 281,
+      "nativeMethod" : false,
+      "className" : "org.springframework.util.ReflectionUtils"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "invoke",
+      "fileName" : "ReflectiveOperationInvoker.java",
+      "lineNumber" : 74,
+      "nativeMethod" : false,
+      "className" : "org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "invoke",
+      "fileName" : "AbstractDiscoveredOperation.java",
+      "lineNumber" : 60,
+      "nativeMethod" : false,
+      "className" : "org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "handle",
+      "fileName" : "AbstractWebMvcEndpointHandlerMapping.java",
+      "lineNumber" : 327,
+      "nativeMethod" : false,
+      "className" : "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$ServletWebOperationAdapter"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "handle",
+      "fileName" : "AbstractWebMvcEndpointHandlerMapping.java",
+      "lineNumber" : 434,
+      "nativeMethod" : false,
+      "className" : "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler"
+    }, {
+      "methodName" : "invoke",
+      "lineNumber" : -1,
+      "nativeMethod" : false,
+      "className" : "jdk.internal.reflect.GeneratedMethodAccessor64"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "invoke",
+      "fileName" : "DelegatingMethodAccessorImpl.java",
+      "lineNumber" : 43,
+      "nativeMethod" : false,
+      "className" : "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "invoke",
+      "fileName" : "Method.java",
+      "lineNumber" : 569,
+      "nativeMethod" : false,
+      "className" : "java.lang.reflect.Method"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "doInvoke",
+      "fileName" : "InvocableHandlerMethod.java",
+      "lineNumber" : 255,
+      "nativeMethod" : false,
+      "className" : "org.springframework.web.method.support.InvocableHandlerMethod"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "invokeForRequest",
+      "fileName" : "InvocableHandlerMethod.java",
+      "lineNumber" : 188,
+      "nativeMethod" : false,
+      "className" : "org.springframework.web.method.support.InvocableHandlerMethod"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "invokeAndHandle",
+      "fileName" : "ServletInvocableHandlerMethod.java",
+      "lineNumber" : 118,
+      "nativeMethod" : false,
+      "className" : "org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "invokeHandlerMethod",
+      "fileName" : "RequestMappingHandlerAdapter.java",
+      "lineNumber" : 926,
+      "nativeMethod" : false,
+      "className" : "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "handleInternal",
+      "fileName" : "RequestMappingHandlerAdapter.java",
+      "lineNumber" : 831,
+      "nativeMethod" : false,
+      "className" : "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "handle",
+      "fileName" : "AbstractHandlerMethodAdapter.java",
+      "lineNumber" : 87,
+      "nativeMethod" : false,
+      "className" : "org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "doDispatch",
+      "fileName" : "DispatcherServlet.java",
+      "lineNumber" : 1089,
+      "nativeMethod" : false,
+      "className" : "org.springframework.web.servlet.DispatcherServlet"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "doService",
+      "fileName" : "DispatcherServlet.java",
+      "lineNumber" : 979,
+      "nativeMethod" : false,
+      "className" : "org.springframework.web.servlet.DispatcherServlet"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "processRequest",
+      "fileName" : "FrameworkServlet.java",
+      "lineNumber" : 1014,
+      "nativeMethod" : false,
+      "className" : "org.springframework.web.servlet.FrameworkServlet"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "doGet",
+      "fileName" : "FrameworkServlet.java",
+      "lineNumber" : 903,
+      "nativeMethod" : false,
+      "className" : "org.springframework.web.servlet.FrameworkServlet"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "service",
+      "fileName" : "HttpServlet.java",
+      "lineNumber" : 527,
+      "nativeMethod" : false,
+      "className" : "jakarta.servlet.http.HttpServlet"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "service",
+      "fileName" : "FrameworkServlet.java",
+      "lineNumber" : 885,
+      "nativeMethod" : false,
+      "className" : "org.springframework.web.servlet.FrameworkServlet"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "service",
+      "fileName" : "TestDispatcherServlet.java",
+      "lineNumber" : 72,
+      "nativeMethod" : false,
+      "className" : "org.springframework.test.web.servlet.TestDispatcherServlet"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "service",
+      "fileName" : "HttpServlet.java",
+      "lineNumber" : 614,
+      "nativeMethod" : false,
+      "className" : "jakarta.servlet.http.HttpServlet"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "doFilter",
+      "fileName" : "MockFilterChain.java",
+      "lineNumber" : 165,
+      "nativeMethod" : false,
+      "className" : "org.springframework.mock.web.MockFilterChain$ServletFilterProxy"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "doFilter",
+      "fileName" : "MockFilterChain.java",
+      "lineNumber" : 132,
+      "nativeMethod" : false,
+      "className" : "org.springframework.mock.web.MockFilterChain"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "perform",
+      "fileName" : "MockMvc.java",
+      "lineNumber" : 201,
+      "nativeMethod" : false,
+      "className" : "org.springframework.test.web.servlet.MockMvc"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "jsonThreadDump",
+      "fileName" : "ThreadDumpEndpointDocumentationTests.java",
+      "lineNumber" : 66,
+      "nativeMethod" : false,
+      "className" : "org.springframework.boot.actuate.autoconfigure.endpoint.web.documentation.ThreadDumpEndpointDocumentationTests"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "invoke0",
+      "fileName" : "NativeMethodAccessorImpl.java",
+      "lineNumber" : -2,
+      "nativeMethod" : true,
+      "className" : "jdk.internal.reflect.NativeMethodAccessorImpl"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "invoke",
+      "fileName" : "NativeMethodAccessorImpl.java",
+      "lineNumber" : 77,
+      "nativeMethod" : false,
+      "className" : "jdk.internal.reflect.NativeMethodAccessorImpl"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "invoke",
+      "fileName" : "DelegatingMethodAccessorImpl.java",
+      "lineNumber" : 43,
+      "nativeMethod" : false,
+      "className" : "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "invoke",
+      "fileName" : "Method.java",
+      "lineNumber" : 569,
+      "nativeMethod" : false,
+      "className" : "java.lang.reflect.Method"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "invokeMethod",
+      "fileName" : "ReflectionUtils.java",
+      "lineNumber" : 728,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.commons.util.ReflectionUtils"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "proceed",
+      "fileName" : "MethodInvocation.java",
+      "lineNumber" : 60,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.execution.MethodInvocation"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "proceed",
+      "fileName" : "InvocationInterceptorChain.java",
+      "lineNumber" : 131,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "intercept",
+      "fileName" : "TimeoutExtension.java",
+      "lineNumber" : 156,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.extension.TimeoutExtension"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "interceptTestableMethod",
+      "fileName" : "TimeoutExtension.java",
+      "lineNumber" : 147,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.extension.TimeoutExtension"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "interceptTestMethod",
+      "fileName" : "TimeoutExtension.java",
+      "lineNumber" : 86,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.extension.TimeoutExtension"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "apply",
+      "lineNumber" : -1,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor$$Lambda$204/0x00007f94ec136068"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "lambda$ofVoidMethod$0",
+      "fileName" : "InterceptingExecutableInvoker.java",
+      "lineNumber" : 103,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "apply",
+      "lineNumber" : -1,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall$$Lambda$205/0x00007f94ec136488"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "lambda$invoke$0",
+      "fileName" : "InterceptingExecutableInvoker.java",
+      "lineNumber" : 93,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.execution.InterceptingExecutableInvoker"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "apply",
+      "lineNumber" : -1,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$$Lambda$489/0x00007f94ec1e6200"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "proceed",
+      "fileName" : "InvocationInterceptorChain.java",
+      "lineNumber" : 106,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "proceed",
+      "fileName" : "InvocationInterceptorChain.java",
+      "lineNumber" : 64,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.execution.InvocationInterceptorChain"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "chainAndInvoke",
+      "fileName" : "InvocationInterceptorChain.java",
+      "lineNumber" : 45,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.execution.InvocationInterceptorChain"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "invoke",
+      "fileName" : "InvocationInterceptorChain.java",
+      "lineNumber" : 37,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.execution.InvocationInterceptorChain"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "invoke",
+      "fileName" : "InterceptingExecutableInvoker.java",
+      "lineNumber" : 92,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.execution.InterceptingExecutableInvoker"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "invoke",
+      "fileName" : "InterceptingExecutableInvoker.java",
+      "lineNumber" : 86,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.execution.InterceptingExecutableInvoker"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "lambda$invokeTestMethod$7",
+      "fileName" : "TestMethodTestDescriptor.java",
+      "lineNumber" : 218,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "lineNumber" : -1,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor$$Lambda$1033/0x00007f94ec60ca78"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "ThrowableCollector.java",
+      "lineNumber" : 73,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.ThrowableCollector"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "invokeTestMethod",
+      "fileName" : "TestMethodTestDescriptor.java",
+      "lineNumber" : 214,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "TestMethodTestDescriptor.java",
+      "lineNumber" : 139,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "TestMethodTestDescriptor.java",
+      "lineNumber" : 69,
+      "nativeMethod" : false,
+      "className" : "org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "lambda$executeRecursively$6",
+      "fileName" : "NodeTestTask.java",
+      "lineNumber" : 151,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "lineNumber" : -1,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$306/0x00007f94ec156428"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "ThrowableCollector.java",
+      "lineNumber" : 73,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.ThrowableCollector"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "lambda$executeRecursively$8",
+      "fileName" : "NodeTestTask.java",
+      "lineNumber" : 141,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "invoke",
+      "lineNumber" : -1,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$305/0x00007f94ec156200"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "around",
+      "fileName" : "Node.java",
+      "lineNumber" : 137,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.Node"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "lambda$executeRecursively$9",
+      "fileName" : "NodeTestTask.java",
+      "lineNumber" : 139,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "lineNumber" : -1,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$304/0x00007f94ec153c98"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "ThrowableCollector.java",
+      "lineNumber" : 73,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.ThrowableCollector"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "executeRecursively",
+      "fileName" : "NodeTestTask.java",
+      "lineNumber" : 138,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "NodeTestTask.java",
+      "lineNumber" : 95,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "accept",
+      "lineNumber" : -1,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService$$Lambda$310/0x00007f94ec156f40"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "forEach",
+      "fileName" : "ArrayList.java",
+      "lineNumber" : 1511,
+      "nativeMethod" : false,
+      "className" : "java.util.ArrayList"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "invokeAll",
+      "fileName" : "SameThreadHierarchicalTestExecutorService.java",
+      "lineNumber" : 41,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "lambda$executeRecursively$6",
+      "fileName" : "NodeTestTask.java",
+      "lineNumber" : 155,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "lineNumber" : -1,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$306/0x00007f94ec156428"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "ThrowableCollector.java",
+      "lineNumber" : 73,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.ThrowableCollector"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "lambda$executeRecursively$8",
+      "fileName" : "NodeTestTask.java",
+      "lineNumber" : 141,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "invoke",
+      "lineNumber" : -1,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$305/0x00007f94ec156200"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "around",
+      "fileName" : "Node.java",
+      "lineNumber" : 137,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.Node"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "lambda$executeRecursively$9",
+      "fileName" : "NodeTestTask.java",
+      "lineNumber" : 139,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "lineNumber" : -1,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$304/0x00007f94ec153c98"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "ThrowableCollector.java",
+      "lineNumber" : 73,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.ThrowableCollector"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "executeRecursively",
+      "fileName" : "NodeTestTask.java",
+      "lineNumber" : 138,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "NodeTestTask.java",
+      "lineNumber" : 95,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "accept",
+      "lineNumber" : -1,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService$$Lambda$310/0x00007f94ec156f40"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "forEach",
+      "fileName" : "ArrayList.java",
+      "lineNumber" : 1511,
+      "nativeMethod" : false,
+      "className" : "java.util.ArrayList"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "invokeAll",
+      "fileName" : "SameThreadHierarchicalTestExecutorService.java",
+      "lineNumber" : 41,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "lambda$executeRecursively$6",
+      "fileName" : "NodeTestTask.java",
+      "lineNumber" : 155,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "lineNumber" : -1,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$306/0x00007f94ec156428"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "ThrowableCollector.java",
+      "lineNumber" : 73,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.ThrowableCollector"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "lambda$executeRecursively$8",
+      "fileName" : "NodeTestTask.java",
+      "lineNumber" : 141,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "invoke",
+      "lineNumber" : -1,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$305/0x00007f94ec156200"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "around",
+      "fileName" : "Node.java",
+      "lineNumber" : 137,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.Node"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "lambda$executeRecursively$9",
+      "fileName" : "NodeTestTask.java",
+      "lineNumber" : 139,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "lineNumber" : -1,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$304/0x00007f94ec153c98"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "ThrowableCollector.java",
+      "lineNumber" : 73,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.ThrowableCollector"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "executeRecursively",
+      "fileName" : "NodeTestTask.java",
+      "lineNumber" : 138,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "NodeTestTask.java",
+      "lineNumber" : 95,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.NodeTestTask"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "submit",
+      "fileName" : "SameThreadHierarchicalTestExecutorService.java",
+      "lineNumber" : 35,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "HierarchicalTestExecutor.java",
+      "lineNumber" : 57,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "HierarchicalTestEngine.java",
+      "lineNumber" : 54,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "EngineExecutionOrchestrator.java",
+      "lineNumber" : 198,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.launcher.core.EngineExecutionOrchestrator"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "EngineExecutionOrchestrator.java",
+      "lineNumber" : 169,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.launcher.core.EngineExecutionOrchestrator"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "EngineExecutionOrchestrator.java",
+      "lineNumber" : 93,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.launcher.core.EngineExecutionOrchestrator"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "lambda$execute$0",
+      "fileName" : "EngineExecutionOrchestrator.java",
+      "lineNumber" : 58,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.launcher.core.EngineExecutionOrchestrator"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "accept",
+      "lineNumber" : -1,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.launcher.core.EngineExecutionOrchestrator$$Lambda$259/0x00007f94ec141180"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "withInterceptedStreams",
+      "fileName" : "EngineExecutionOrchestrator.java",
+      "lineNumber" : 141,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.launcher.core.EngineExecutionOrchestrator"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "EngineExecutionOrchestrator.java",
+      "lineNumber" : 57,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.launcher.core.EngineExecutionOrchestrator"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "DefaultLauncher.java",
+      "lineNumber" : 103,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.launcher.core.DefaultLauncher"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "DefaultLauncher.java",
+      "lineNumber" : 85,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.launcher.core.DefaultLauncher"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "DelegatingLauncher.java",
+      "lineNumber" : 47,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.launcher.core.DelegatingLauncher"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "execute",
+      "fileName" : "SessionPerRequestLauncher.java",
+      "lineNumber" : 63,
+      "nativeMethod" : false,
+      "className" : "org.junit.platform.launcher.core.SessionPerRequestLauncher"
+    }, {
+      "methodName" : "processAllTestClasses",
+      "fileName" : "JUnitPlatformTestClassProcessor.java",
+      "lineNumber" : 99,
+      "nativeMethod" : false,
+      "className" : "org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor"
+    }, {
+      "methodName" : "access$000",
+      "fileName" : "JUnitPlatformTestClassProcessor.java",
+      "lineNumber" : 79,
+      "nativeMethod" : false,
+      "className" : "org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor"
+    }, {
+      "methodName" : "stop",
+      "fileName" : "JUnitPlatformTestClassProcessor.java",
+      "lineNumber" : 75,
+      "nativeMethod" : false,
+      "className" : "org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor"
+    }, {
+      "methodName" : "stop",
+      "fileName" : "SuiteTestClassProcessor.java",
+      "lineNumber" : 62,
+      "nativeMethod" : false,
+      "className" : "org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "invoke0",
+      "fileName" : "NativeMethodAccessorImpl.java",
+      "lineNumber" : -2,
+      "nativeMethod" : true,
+      "className" : "jdk.internal.reflect.NativeMethodAccessorImpl"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "invoke",
+      "fileName" : "NativeMethodAccessorImpl.java",
+      "lineNumber" : 77,
+      "nativeMethod" : false,
+      "className" : "jdk.internal.reflect.NativeMethodAccessorImpl"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "invoke",
+      "fileName" : "DelegatingMethodAccessorImpl.java",
+      "lineNumber" : 43,
+      "nativeMethod" : false,
+      "className" : "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "invoke",
+      "fileName" : "Method.java",
+      "lineNumber" : 569,
+      "nativeMethod" : false,
+      "className" : "java.lang.reflect.Method"
+    }, {
+      "methodName" : "dispatch",
+      "fileName" : "ReflectionDispatch.java",
+      "lineNumber" : 36,
+      "nativeMethod" : false,
+      "className" : "org.gradle.internal.dispatch.ReflectionDispatch"
+    }, {
+      "methodName" : "dispatch",
+      "fileName" : "ReflectionDispatch.java",
+      "lineNumber" : 24,
+      "nativeMethod" : false,
+      "className" : "org.gradle.internal.dispatch.ReflectionDispatch"
+    }, {
+      "methodName" : "dispatch",
+      "fileName" : "ContextClassLoaderDispatch.java",
+      "lineNumber" : 33,
+      "nativeMethod" : false,
+      "className" : "org.gradle.internal.dispatch.ContextClassLoaderDispatch"
+    }, {
+      "methodName" : "invoke",
+      "fileName" : "ProxyDispatchAdapter.java",
+      "lineNumber" : 94,
+      "nativeMethod" : false,
+      "className" : "org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler"
+    }, {
+      "moduleName" : "jdk.proxy1",
+      "methodName" : "stop",
+      "lineNumber" : -1,
+      "nativeMethod" : false,
+      "className" : "jdk.proxy1.$Proxy2"
+    }, {
+      "methodName" : "run",
+      "fileName" : "TestWorker.java",
+      "lineNumber" : 193,
+      "nativeMethod" : false,
+      "className" : "org.gradle.api.internal.tasks.testing.worker.TestWorker$3"
+    }, {
+      "methodName" : "executeAndMaintainThreadName",
+      "fileName" : "TestWorker.java",
+      "lineNumber" : 129,
+      "nativeMethod" : false,
+      "className" : "org.gradle.api.internal.tasks.testing.worker.TestWorker"
+    }, {
+      "methodName" : "execute",
+      "fileName" : "TestWorker.java",
+      "lineNumber" : 100,
+      "nativeMethod" : false,
+      "className" : "org.gradle.api.internal.tasks.testing.worker.TestWorker"
+    }, {
+      "methodName" : "execute",
+      "fileName" : "TestWorker.java",
+      "lineNumber" : 60,
+      "nativeMethod" : false,
+      "className" : "org.gradle.api.internal.tasks.testing.worker.TestWorker"
+    }, {
+      "methodName" : "execute",
+      "fileName" : "ActionExecutionWorker.java",
+      "lineNumber" : 56,
+      "nativeMethod" : false,
+      "className" : "org.gradle.process.internal.worker.child.ActionExecutionWorker"
+    }, {
+      "methodName" : "call",
+      "fileName" : "SystemApplicationClassLoaderWorker.java",
+      "lineNumber" : 113,
+      "nativeMethod" : false,
+      "className" : "org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker"
+    }, {
+      "methodName" : "call",
+      "fileName" : "SystemApplicationClassLoaderWorker.java",
+      "lineNumber" : 65,
+      "nativeMethod" : false,
+      "className" : "org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "run",
+      "fileName" : "GradleWorkerMain.java",
+      "lineNumber" : 69,
+      "nativeMethod" : false,
+      "className" : "worker.org.gradle.process.internal.worker.GradleWorkerMain"
+    }, {
+      "classLoaderName" : "app",
+      "methodName" : "main",
+      "fileName" : "GradleWorkerMain.java",
+      "lineNumber" : 74,
+      "nativeMethod" : false,
+      "className" : "worker.org.gradle.process.internal.worker.GradleWorkerMain"
+    } ],
+    "lockedMonitors" : [ ],
+    "lockedSynchronizers" : [ ]
+  }, {
+    "threadName" : "Reference Handler",
+    "threadId" : 2,
+    "blockedTime" : -1,
+    "blockedCount" : 0,
+    "waitedTime" : -1,
+    "waitedCount" : 0,
+    "lockOwnerId" : -1,
+    "daemon" : true,
+    "inNative" : false,
+    "suspended" : false,
+    "threadState" : "RUNNABLE",
+    "priority" : 10,
+    "stackTrace" : [ {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "waitForReferencePendingList",
+      "fileName" : "Reference.java",
+      "lineNumber" : -2,
+      "nativeMethod" : true,
+      "className" : "java.lang.ref.Reference"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "processPendingReferences",
+      "fileName" : "Reference.java",
+      "lineNumber" : 253,
+      "nativeMethod" : false,
+      "className" : "java.lang.ref.Reference"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "run",
+      "fileName" : "Reference.java",
+      "lineNumber" : 215,
+      "nativeMethod" : false,
+      "className" : "java.lang.ref.Reference$ReferenceHandler"
+    } ],
+    "lockedMonitors" : [ ],
+    "lockedSynchronizers" : [ ]
+  }, {
+    "threadName" : "Finalizer",
+    "threadId" : 3,
+    "blockedTime" : -1,
+    "blockedCount" : 1,
+    "waitedTime" : -1,
+    "waitedCount" : 2,
+    "lockName" : "java.lang.ref.ReferenceQueue$Lock@4d46444b",
+    "lockOwnerId" : -1,
+    "daemon" : true,
+    "inNative" : false,
+    "suspended" : false,
+    "threadState" : "WAITING",
+    "priority" : 8,
+    "stackTrace" : [ {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "wait",
+      "lineNumber" : -2,
+      "nativeMethod" : true,
+      "className" : "java.lang.Object"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "remove",
+      "fileName" : "ReferenceQueue.java",
+      "lineNumber" : 155,
+      "nativeMethod" : false,
+      "className" : "java.lang.ref.ReferenceQueue"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "remove",
+      "fileName" : "ReferenceQueue.java",
+      "lineNumber" : 176,
+      "nativeMethod" : false,
+      "className" : "java.lang.ref.ReferenceQueue"
+    }, {
+      "moduleName" : "java.base",
+      "moduleVersion" : "17.0.12",
+      "methodName" : "run",
+      "fileName" : "Finalizer.java",
+      "lineNumber" : 172,
+      "nativeMethod" : false,
+      "className" : "java.lang.ref.Finalizer$FinalizerThread"
+    } ],
+    "lockedMonitors" : [ ],
+    "lockedSynchronizers" : [ ],
+    "lockInfo" : {
+      "className" : "java.lang.ref.ReferenceQueue$Lock",
+      "identityHashCode" : 1296450635
+    }
+  } ]
+}</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_响应结构"><a class="anchor" href="#_响应结构"></a>响应结构</h3>
+<div class="paragraph">
+<p>响应包含 JVM 线程的详细信息。下表描述了响应的结构：</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">路径</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JVM 的线程信息。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].blockedCount</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">线程被阻塞的总次数。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].blockedTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">线程被阻塞的时间（毫秒）。如果线程争用监视被禁用，则为 -1。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].daemon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">线程是否为守护线程（仅在 Java 9 或更高版本可用）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].inNative</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">线程是否正在执行本机代码。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].lockName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">线程阻塞的对象描述（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].lockInfo</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">线程正在等待的阻塞对象。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].lockInfo.className</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">锁定对象的完全限定类名。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].lockInfo.identityHashCode</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">锁定对象的标识哈希码。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].lockedMonitors</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">线程锁定的监视器（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].lockedMonitors.[].className</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">锁定对象的类名。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].lockedMonitors.[].identityHashCode</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">锁定对象的标识哈希码。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].lockedMonitors.[].lockedStackDepth</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">监视器被锁定的堆栈深度。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].lockedMonitors.[].lockedStackFrame</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">锁定监视器的堆栈帧。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].lockedSynchronizers</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">线程锁定的同步器。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].lockedSynchronizers.[].className</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">锁定同步器的类名。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].lockedSynchronizers.[].identityHashCode</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">锁定同步器的标识哈希码。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].lockOwnerId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">阻塞线程的对象所属的线程 ID。如果线程未被阻塞，则为 <code>-1</code>。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].lockOwnerName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">阻塞线程对象所属的线程名称（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].priority</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">线程的优先级（仅在 Java 9 或更高版本可用）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].stackTrace</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">线程的堆栈跟踪。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].stackTrace.[].classLoaderName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">包含此条目所标识的执行点的类的类加载器名称（如果有，仅在 Java 9 或更高版本可用）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].stackTrace.[].className</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">包含此条目所标识的执行点的类的名称。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].stackTrace.[].fileName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">包含此条目所标识的执行点的源文件名称（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].stackTrace.[].lineNumber</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">此条目所标识的执行点的行号。如果未知则为负值。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].stackTrace.[].methodName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">方法名称。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].stackTrace.[].moduleName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">包含此条目所标识的执行点的模块名称（如果有，仅在 Java 9 或更高版本可用）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].stackTrace.[].moduleVersion</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">包含此条目所标识的执行点的模块版本（如果有，仅在 Java 9 或更高版本可用）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].stackTrace.[].nativeMethod</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">执行点是否为本机方法。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].suspended</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">线程是否被挂起。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].threadId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">线程 ID。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].threadName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">线程名称。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].threadState</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">线程状态 (<code>NEW</code>, <code>RUNNABLE</code>, <code>BLOCKED</code>, <code>WAITING</code>, <code>TIMED_WAITING</code>, <code>TERMINATED</code>)。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].waitedCount</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">线程等待通知的总次数。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threads.[].waitedTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">线程等待的时间（毫秒）。如果线程争用监视被禁用，则为 -1。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_获取文本格式的线程转储"><a class="anchor" href="#_获取文本格式的线程转储"></a>获取文本格式的线程转储</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要以文本格式获取线程转储，可以按照以下基于 curl 的示例，发送一个接受 <code>text/plain</code> 的 <code>GET</code> 请求到 <code>/actuator/threaddump</code>：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">curl 'http://localhost:8080/actuator/threaddump' -i -X GET \
+-H 'Accept: text/plain'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>响应结果类似于以下内容：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 200 OK
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 52837
+
+2024-08-22 16:50:35
+Full thread dump OpenJDK 64-Bit Server VM (17.0.12+10-LTS mixed mode, sharing):
+
+"Test worker" - Thread t@1
+   java.lang.Thread.State: RUNNABLE
+	at java.management@17.0.12/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@17.0.12/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:528)
+	at java.management@17.0.12/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:516)
+	at app//org.springframework.boot.actuate.management.ThreadDumpEndpoint.getFormattedThreadDump(ThreadDumpEndpoint.java:52)
+	at app//org.springframework.boot.actuate.management.ThreadDumpEndpoint.textThreadDump(ThreadDumpEndpoint.java:48)
+	at java.base@17.0.12/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.12/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.12/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.12/java.lang.reflect.Method.invoke(Method.java:569)
+	at app//org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+	at app//org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at app//org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at app//org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$ServletWebOperationAdapter.handle(AbstractWebMvcEndpointHandlerMapping.java:327)
+	at app//org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(AbstractWebMvcEndpointHandlerMapping.java:434)
+	at jdk.internal.reflect.GeneratedMethodAccessor64.invoke(Unknown Source)
+	at java.base@17.0.12/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.12/java.lang.reflect.Method.invoke(Method.java:569)
+	at app//org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at app//org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at app//org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at app//org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at app//org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at app//org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at app//org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at app//org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at app//org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at app//org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at app//jakarta.servlet.http.HttpServlet.service(HttpServlet.java:527)
+	at app//org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at app//org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72)
+	at app//jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at app//org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165)
+	at app//org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
+	at app//org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201)
+	at app//org.springframework.boot.actuate.autoconfigure.endpoint.web.documentation.ThreadDumpEndpointDocumentationTests.textThreadDump(ThreadDumpEndpointDocumentationTests.java:182)
+	at java.base@17.0.12/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.12/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.12/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.12/java.lang.reflect.Method.invoke(Method.java:569)
+	at app//org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at app//org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor$$Lambda$204/0x00007f94ec136068.apply(Unknown Source)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall$$Lambda$205/0x00007f94ec136488.apply(Unknown Source)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$$Lambda$489/0x00007f94ec1e6200.apply(Unknown Source)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor$$Lambda$1033/0x00007f94ec60ca78.execute(Unknown Source)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$306/0x00007f94ec156428.execute(Unknown Source)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$305/0x00007f94ec156200.invoke(Unknown Source)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$304/0x00007f94ec153c98.execute(Unknown Source)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService$$Lambda$310/0x00007f94ec156f40.accept(Unknown Source)
+	at java.base@17.0.12/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$306/0x00007f94ec156428.execute(Unknown Source)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$305/0x00007f94ec156200.invoke(Unknown Source)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$304/0x00007f94ec153c98.execute(Unknown Source)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService$$Lambda$310/0x00007f94ec156f40.accept(Unknown Source)
+	at java.base@17.0.12/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$306/0x00007f94ec156428.execute(Unknown Source)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$305/0x00007f94ec156200.invoke(Unknown Source)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$304/0x00007f94ec153c98.execute(Unknown Source)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator$$Lambda$259/0x00007f94ec141180.accept(Unknown Source)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at app//org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at app//org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base@17.0.12/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.12/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.12/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.12/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+
+   Locked ownable synchronizers:
+	- None
+
+"Reference Handler" - Thread t@2
+   java.lang.Thread.State: RUNNABLE
+	at java.base@17.0.12/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+	at java.base@17.0.12/java.lang.ref.Reference.processPendingReferences(Reference.java:253)
+	at java.base@17.0.12/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:215)
+
+   Locked ownable synchronizers:
+	- None
+
+"Finalizer" - Thread t@3
+   java.lang.Thread.State: WAITING
+	at java.base@17.0.12/java.lang.Object.wait(Native Method)
+	- waiting on &lt;4d46444b&gt; (a java.lang.ref.ReferenceQueue$Lock)
+	at java.base@17.0.12/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@17.0.12/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+	at java.base@17.0.12/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:172)
+
+   Locked ownable synchronizers:
+	- None
+
+"Signal Dispatcher" - Thread t@4
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Common-Cleaner" - Thread t@11
+   java.lang.Thread.State: TIMED_WAITING
+	at java.base@17.0.12/java.lang.Object.wait(Native Method)
+	- waiting on &lt;42fccd6a&gt; (a java.lang.ref.ReferenceQueue$Lock)
+	at java.base@17.0.12/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@17.0.12/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+	at java.base@17.0.12/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:162)
+
+   Locked ownable synchronizers:
+	- None
+
+"Notification Thread" - Thread t@12
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"/127.0.0.1:41172 to /127.0.0.1:43613 workers" - Thread t@14
+   java.lang.Thread.State: WAITING
+	at java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for &lt;33aa9e40&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.base@17.0.12/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1625)
+	at org.gradle.internal.remote.internal.hub.queue.EndPointQueue.take(EndPointQueue.java:49)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:403)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- Locked &lt;2525ff7e&gt; (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"/127.0.0.1:41172 to /127.0.0.1:43613 workers Thread 2" - Thread t@15
+   java.lang.Thread.State: WAITING
+	at java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for &lt;551ae26a&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.base@17.0.12/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1625)
+	at org.gradle.internal.remote.internal.hub.queue.EndPointQueue.take(EndPointQueue.java:49)
+	at org.gradle.internal.remote.internal.hub.MessageHub$ConnectionDispatch.run(MessageHub.java:322)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- Locked &lt;223aa2f7&gt; (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"/127.0.0.1:41172 to /127.0.0.1:43613 workers Thread 3" - Thread t@16
+   java.lang.Thread.State: RUNNABLE
+	at java.base@17.0.12/sun.nio.ch.EPoll.wait(Native Method)
+	at java.base@17.0.12/sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:118)
+	at java.base@17.0.12/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+	- locked &lt;2a81809e&gt; (a sun.nio.ch.Util$2)
+	- locked &lt;698d5831&gt; (a sun.nio.ch.EPollSelectorImpl)
+	at java.base@17.0.12/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+	at org.gradle.internal.remote.internal.inet.SocketConnection$SocketInputStream.read(SocketConnection.java:185)
+	at com.esotericsoftware.kryo.io.Input.fill(Input.java:146)
+	at com.esotericsoftware.kryo.io.Input.require(Input.java:178)
+	at com.esotericsoftware.kryo.io.Input.readByte(Input.java:295)
+	at org.gradle.internal.serialize.kryo.KryoBackedDecoder.readByte(KryoBackedDecoder.java:88)
+	at org.gradle.internal.remote.internal.hub.InterHubMessageSerializer$MessageReader.read(InterHubMessageSerializer.java:64)
+	at org.gradle.internal.remote.internal.hub.InterHubMessageSerializer$MessageReader.read(InterHubMessageSerializer.java:52)
+	at org.gradle.internal.remote.internal.inet.SocketConnection.receive(SocketConnection.java:81)
+	at org.gradle.internal.remote.internal.hub.MessageHub$ConnectionReceive.run(MessageHub.java:270)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- Locked &lt;57af006c&gt; (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"process reaper" - Thread t@20
+   java.lang.Thread.State: TIMED_WAITING
+	at java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for &lt;6b86fed8&gt; (a java.util.concurrent.SynchronousQueue$TransferStack)
+	at java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+	at java.base@17.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+	at java.base@17.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"Attach Listener" - Thread t@21
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"HikariPool-1 housekeeper" - Thread t@29
+   java.lang.Thread.State: TIMED_WAITING
+	at java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for &lt;4d251646&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1674)
+	at java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+	at java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"boundedElastic-evictor-1" - Thread t@40
+   java.lang.Thread.State: TIMED_WAITING
+	at java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for &lt;57f4839c&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1674)
+	at java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+	at java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"reactor-http-epoll-1" - Thread t@41
+   java.lang.Thread.State: RUNNABLE
+	at app//io.netty.channel.epoll.Native.epollWait(Native Method)
+	at app//io.netty.channel.epoll.Native.epollWait(Native.java:220)
+	at app//io.netty.channel.epoll.Native.epollWait(Native.java:213)
+	at app//io.netty.channel.epoll.EpollEventLoop.epollWaitNoTimerChange(EpollEventLoop.java:308)
+	at app//io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:365)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994)
+	at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"server" - Thread t@42
+   java.lang.Thread.State: WAITING
+	at java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for &lt;543b0583&gt; (a java.util.concurrent.CountDownLatch$Sync)
+	at java.base@17.0.12/java.util.concurrent.locks.LockSupport.park(LockSupport.java:211)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:715)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1047)
+	at java.base@17.0.12/java.util.concurrent.CountDownLatch.await(CountDownLatch.java:230)
+	at app//reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:91)
+	at app//reactor.core.publisher.Mono.block(Mono.java:1779)
+	at app//org.springframework.boot.web.embedded.netty.NettyWebServer$1.run(NettyWebServer.java:229)
+
+   Locked ownable synchronizers:
+	- None
+
+"reactor-http-epoll-2" - Thread t@43
+   java.lang.Thread.State: RUNNABLE
+	at app//io.netty.channel.epoll.Native.epollWait(Native Method)
+	at app//io.netty.channel.epoll.Native.epollWait(Native.java:220)
+	at app//io.netty.channel.epoll.Native.epollWait(Native.java:213)
+	at app//io.netty.channel.epoll.EpollEventLoop.epollWaitNoTimerChange(EpollEventLoop.java:308)
+	at app//io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:365)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994)
+	at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"reactor-http-epoll-3" - Thread t@44
+   java.lang.Thread.State: RUNNABLE
+	at app//io.netty.channel.epoll.Native.epollWait(Native Method)
+	at app//io.netty.channel.epoll.Native.epollWait(Native.java:220)
+	at app//io.netty.channel.epoll.Native.epollWait(Native.java:213)
+	at app//io.netty.channel.epoll.EpollEventLoop.epollWaitNoTimerChange(EpollEventLoop.java:308)
+	at app//io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:365)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994)
+	at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"reactor-http-epoll-4" - Thread t@45
+   java.lang.Thread.State: RUNNABLE
+	at app//io.netty.channel.epoll.Native.epollWait(Native Method)
+	at app//io.netty.channel.epoll.Native.epollWait(Native.java:220)
+	at app//io.netty.channel.epoll.Native.epollWait(Native.java:213)
+	at app//io.netty.channel.epoll.EpollEventLoop.epollWaitNoTimerChange(EpollEventLoop.java:308)
+	at app//io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:365)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994)
+	at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"boundedElastic-1" - Thread t@46
+   java.lang.Thread.State: WAITING
+	at java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for &lt;89741e2&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.base@17.0.12/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1625)
+	at java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1170)
+	at java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"Catalina-utility-1" - Thread t@48
+   java.lang.Thread.State: TIMED_WAITING
+	at java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for &lt;6de5e190&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1674)
+	at java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+	at java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"container-0" - Thread t@49
+   java.lang.Thread.State: TIMED_WAITING
+	at java.base@17.0.12/java.lang.Thread.sleep(Native Method)
+	at app//org.apache.catalina.core.StandardServer.await(StandardServer.java:524)
+	at app//org.springframework.boot.web.embedded.tomcat.TomcatWebServer$1.run(TomcatWebServer.java:219)
+
+   Locked ownable synchronizers:
+	- None
+
+"Catalina-utility-2" - Thread t@50
+   java.lang.Thread.State: WAITING
+	at java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for &lt;6de5e190&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.base@17.0.12/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1625)
+	at java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1177)
+	at java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-auto-1-exec-1" - Thread t@51
+   java.lang.Thread.State: WAITING
+	at java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for &lt;1e7e67d3&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.base@17.0.12/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1625)
+	at java.base@17.0.12/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at app//org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:117)
+	at app//org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:33)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1114)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1175)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-auto-1-exec-2" - Thread t@52
+   java.lang.Thread.State: WAITING
+	at java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for &lt;1e7e67d3&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.base@17.0.12/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1625)
+	at java.base@17.0.12/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at app//org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:117)
+	at app//org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:33)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1114)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1175)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-auto-1-exec-3" - Thread t@53
+   java.lang.Thread.State: WAITING
+	at java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for &lt;1e7e67d3&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.base@17.0.12/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1625)
+	at java.base@17.0.12/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at app//org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:117)
+	at app//org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:33)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1114)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1175)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-auto-1-exec-4" - Thread t@54
+   java.lang.Thread.State: WAITING
+	at java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for &lt;1e7e67d3&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.base@17.0.12/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1625)
+	at java.base@17.0.12/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at app//org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:117)
+	at app//org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:33)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1114)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1175)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-auto-1-exec-5" - Thread t@55
+   java.lang.Thread.State: WAITING
+	at java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for &lt;1e7e67d3&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.base@17.0.12/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1625)
+	at java.base@17.0.12/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at app//org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:117)
+	at app//org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:33)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1114)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1175)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-auto-1-exec-6" - Thread t@56
+   java.lang.Thread.State: WAITING
+	at java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for &lt;1e7e67d3&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.base@17.0.12/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1625)
+	at java.base@17.0.12/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at app//org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:117)
+	at app//org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:33)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1114)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1175)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-auto-1-exec-7" - Thread t@57
+   java.lang.Thread.State: WAITING
+	at java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for &lt;1e7e67d3&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.base@17.0.12/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1625)
+	at java.base@17.0.12/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at app//org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:117)
+	at app//org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:33)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1114)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1175)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-auto-1-exec-8" - Thread t@58
+   java.lang.Thread.State: WAITING
+	at java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for &lt;1e7e67d3&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.base@17.0.12/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1625)
+	at java.base@17.0.12/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at app//org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:117)
+	at app//org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:33)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1114)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1175)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-auto-1-exec-9" - Thread t@59
+   java.lang.Thread.State: WAITING
+	at java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for &lt;1e7e67d3&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.base@17.0.12/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1625)
+	at java.base@17.0.12/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at app//org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:117)
+	at app//org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:33)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1114)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1175)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-auto-1-exec-10" - Thread t@60
+   java.lang.Thread.State: WAITING
+	at java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for &lt;1e7e67d3&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.base@17.0.12/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+	at java.base@17.0.12/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+	at java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1625)
+	at java.base@17.0.12/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at app//org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:117)
+	at app//org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:33)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1114)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1175)
+	at app//org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-auto-1-Poller" - Thread t@61
+   java.lang.Thread.State: RUNNABLE
+	at java.base@17.0.12/sun.nio.ch.EPoll.wait(Native Method)
+	at java.base@17.0.12/sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:118)
+	at java.base@17.0.12/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+	- locked &lt;12e56e82&gt; (a sun.nio.ch.Util$2)
+	- locked &lt;204fb56d&gt; (a sun.nio.ch.EPollSelectorImpl)
+	at java.base@17.0.12/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:141)
+	at app//org.apache.tomcat.util.net.NioEndpoint$Poller.run(NioEndpoint.java:755)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-nio-auto-1-Acceptor" - Thread t@62
+   java.lang.Thread.State: RUNNABLE
+	at java.base@17.0.12/sun.nio.ch.Net.accept(Native Method)
+	at java.base@17.0.12/sun.nio.ch.ServerSocketChannelImpl.implAccept(ServerSocketChannelImpl.java:425)
+	at java.base@17.0.12/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:391)
+	at app//org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:518)
+	at app//org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71)
+	at app//org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:128)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- Locked &lt;62e42995&gt; (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+
+"pool-4-thread-1" - Thread t@69
+   java.lang.Thread.State: RUNNABLE
+	at java.base@17.0.12/java.time.Instant.ofEpochSecond(Instant.java:331)
+	at java.base@17.0.12/java.time.Clock.currentInstant(Clock.java:527)
+	at java.base@17.0.12/java.time.Instant.now(Instant.java:275)
+	at app//org.springframework.boot.actuate.autoconfigure.endpoint.web.documentation.ScheduledTasksEndpointDocumentationTests$TestConfiguration$CustomTrigger.nextExecution(ScheduledTasksEndpointDocumentationTests.java:120)
+	at app//org.springframework.scheduling.concurrent.ReschedulingRunnable.schedule(ReschedulingRunnable.java:78)
+	- locked &lt;f498ae5&gt; (a java.lang.Object)
+	at app//org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:102)
+	- locked &lt;f498ae5&gt; (a java.lang.Object)
+	at java.base@17.0.12/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base@17.0.12/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+
+   Locked ownable synchronizers:
+	- Locked &lt;7f06ef67&gt; (a java.util.concurrent.ThreadPoolExecutor$Worker)</pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

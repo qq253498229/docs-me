@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>我的文档 :: docs-me</title>
+    <title>2.x版本的变化 :: docs-me</title>
     <meta name="generator" content="Antora 3.1.10">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -47,21 +47,42 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="docs-me" data-version="0.0.1">
+<div class="nav-container" data-component="docs-spring-boot-admin" data-version="0.0.1">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
     <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
-    <h3 class="title"><a href="index.html">个人记录</a></h3>
+    <h3 class="title"><a href="index.html">SpringBootAdmin文档</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="doc.html">我的文档</a>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">什么是 Spring Boot Admin（SBA）?</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="regexp.html">正则表达式</a>
+    <a class="nav-link" href="getting-started.html">入门</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="client.html">客户端应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="server.html">SBA服务端</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="security.html">安全</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="customizing.html">自定义</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="monitoring-1.5.x.html">监听1.5.x版本的Spring Boot</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="changes-2.x.html">2.x版本的变化</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faqs.html">常见问题</a>
   </li>
 </ul>
   </li>
@@ -70,7 +91,7 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">个人记录</span>
+    <span class="title">SpringBootAdmin文档</span>
     <span class="version">0.0.1</span>
   </div>
   <ul class="components">
@@ -106,11 +127,11 @@
         </li>
       </ul>
     </li>
-    <li class="component">
-      <div class="title"><a href="../../docs-spring-boot-admin/0.0.1/index.html">SpringBootAdmin文档</a></div>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">SpringBootAdmin文档</a></div>
       <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../docs-spring-boot-admin/0.0.1/index.html">0.0.1</a>
+        <li class="version is-current is-latest">
+          <a href="index.html">0.0.1</a>
         </li>
       </ul>
     </li>
@@ -138,11 +159,11 @@
         </li>
       </ul>
     </li>
-    <li class="component is-current">
-      <div class="title"><a href="index.html">个人记录</a></div>
+    <li class="component">
+      <div class="title"><a href="../../docs-me/0.0.1/index.html">个人记录</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">0.0.1</a>
+        <li class="version is-latest">
+          <a href="../../docs-me/0.0.1/index.html">0.0.1</a>
         </li>
       </ul>
     </li>
@@ -170,64 +191,129 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="index.html" class="home-link"></a>
+  <a href="../../docs-me/0.0.1/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="index.html">个人记录</a></li>
-    <li><a href="doc.html">我的文档</a></li>
+    <li><a href="index.html">SpringBootAdmin文档</a></li>
+    <li><a href="changes-2.x.html">2.x版本的变化</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-me/edit/master/modules/ROOT/pages/doc.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-spring-boot-admin/edit/2.6.6/modules/ROOT/pages/changes-2.x.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="目录" data-levels="3">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">我的文档</h1>
-<div class="sect1">
-<h2 id="_技术类"><a class="anchor" href="#_技术类"></a>技术类</h2>
+<h1 class="page">2.x版本的变化</h1>
+<div id="preamble">
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>NeutralinoJS: <a href="https://gitee.com/consolelog/docs-neutralino-api" class="bare">https://gitee.com/consolelog/docs-neutralino-api</a></p>
-</li>
-<li>
-<p>Spring Actuator: <a href="https://gitee.com/consolelog/docs-actuator" class="bare">https://gitee.com/consolelog/docs-actuator</a></p>
-</li>
-<li>
-<p>rust-libp2p(ing): <a href="https://gitee.com/consolelog/docs-rust-libp2p" class="bare">https://gitee.com/consolelog/docs-rust-libp2p</a></p>
-</li>
-<li>
-<p>Tauri: <a href="https://gitee.com/consolelog/docs-tauri" class="bare">https://gitee.com/consolelog/docs-tauri</a></p>
-</li>
-<li>
-<p>Steamworks for Rust: <a href="https://gitee.com/consolelog/docs-steamworks-rs" class="bare">https://gitee.com/consolelog/docs-steamworks-rs</a></p>
-</li>
-<li>
-<p>Spring Boot Admin: <a href="https://gitee.com/consolelog/docs-spring-boot-admin" class="bare">https://gitee.com/consolelog/docs-spring-boot-admin</a></p>
-</li>
-<li>
-<p>Greenworks-JS: <a href="https://gitee.com/consolelog/docs-greenworks-js" class="bare">https://gitee.com/consolelog/docs-greenworks-js</a></p>
-</li>
-<li>
-<p>ElasticSearch Java API: <a href="https://gitee.com/consolelog/docs-es-java" class="bare">https://gitee.com/consolelog/docs-es-java</a></p>
+<p>Added stable automatic-module-name to all jars</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_游戏类"><a class="anchor" href="#_游戏类"></a>游戏类</h2>
+<h2 id="_页面"><a class="anchor" href="#_页面"></a>1. 页面</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>Project Diablo2: <a href="https://gitee.com/consolelog/docs-pd2" class="bare">https://gitee.com/consolelog/docs-pd2</a></p>
+<p>使用vue.js重写了ui页面</p>
 </li>
 <li>
-<p>幻兽帕鲁: <a href="https://gitee.com/consolelog/docs-palworld" class="bare">https://gitee.com/consolelog/docs-palworld</a></p>
+<p>将登录页面模块集成到主模块中</p>
+</li>
+<li>
+<p>删除了活动模块，因为没什么人使用它</p>
+</li>
+<li>
+<p>移除了Hystrix-Dashboard的集成（可能会改变）</p>
+</li>
+<li>
+<p>添加了session接口</p>
+</li>
+<li>
+<p>添加了元数据（屏蔽之后）的显示</p>
+</li>
+<li>
+<p>添加了重置日志级别的选项</p>
+</li>
+<li>
+<p>添加了 wallboard 试图</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_后端"><a class="anchor" href="#_后端"></a>2. 后端</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>将所有的类都移动到了 <code>spring.boot.admin.server</code> 包下</p>
+</li>
+<li>
+<p>与Spring cloud相关的拓展移动到了 <code>spring-boot-admin-server-cloud</code></p>
+</li>
+<li>
+<p>使用event sourcing 原则对后端重新进行了设计</p>
+</li>
+<li>
+<p>添加了应用的概念（有1到n个实例组成）</p>
+</li>
+<li>
+<p>将检测接口移动到后端，通过 <code>/actuator</code> 地址发送OPTIONS请求进行索引或者是查看</p>
+</li>
+<li>
+<p>使用WebClient自定义代理代替Zuul</p>
+</li>
+<li>
+<p>移除spring-cloud-starter依赖</p>
+</li>
+<li>
+<p>添加了 <code>CompositeHttpHeadersProvider</code> 来适配同时有多个 <code>HttpHeadersProviders</code> 的情况</p>
+</li>
+<li>
+<p>添加了 <code>InstanceExchangeFilterFunctions</code> ，它允许对向被监控的实例所发出的请求进行拦截/修改</p>
+</li>
+<li>
+<p>添加了CloudFoundry开箱即用的支持</p>
+</li>
+<li>
+<p>添加了使用 <code>LegacyEndpointConverters</code> 对 Spring Boot 1.5.x 版本actuator接口的支持</p>
+</li>
+<li>
+<p>更新 <code>OpsGenieNotifier</code> 的api到v2版本</p>
+</li>
+<li>
+<p>使用Thymeleaf模板重写了 <code>MailNotifier</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_客户端"><a class="anchor" href="#_客户端"></a>3. 客户端</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>将所有的配置移动到 <code>spring.boot.admin.client.<strong></code> 以及 <code>spring.boot.admin.client.instance.</strong></code> 下</p>
+</li>
+<li>
+<p>将所有源码移动到 <code>spring.boot.admin.client</code> 包下</p>
+</li>
+<li>
+<p>添加了对webflux应用的支持</p>
+</li>
+<li>
+<p>添加了CloudFoundry开箱即用的支持</p>
 </li>
 </ul>
 </div>

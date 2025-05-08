@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>我的文档 :: docs-me</title>
+    <title>Actuator REST API :: docs-me</title>
     <meta name="generator" content="Antora 3.1.10">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -47,21 +47,90 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="docs-me" data-version="0.0.1">
+<div class="nav-container" data-component="docs-actuator" data-version="3.3.3">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
     <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
-    <h3 class="title"><a href="index.html">个人记录</a></h3>
+    <h3 class="title"><a href="index.html">Spring Boot Actuator</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="doc.html">我的文档</a>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="auditevents.html">审计事件 (auditevents)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="regexp.html">正则表达式</a>
+    <a class="nav-link" href="beans.html">Beans (beans)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="caches.html">缓存 (caches)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="conditions.html">条件评估报告 (conditions)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configprops.html">配置属性 (configprops)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="env.html">环境 (env)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="flyway.html">Flyway (flyway)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="health.html">健康检查 (health)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="heapdump.html">Heap Dump (heapdump)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="httpexchanges.html">HTTP 交换 (httpexchanges)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="info.html">Info (info)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="integrationgraph.html">Spring Integration Graph (integrationgraph)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="liquibase.html">Liquibase (liquibase)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logfile.html">日志文件 (logfile)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="loggers.html">日志记录器 (loggers)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mappings.html">映射 (mappings)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="metrics.html">指标 (metrics)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="prometheus.html">Prometheus (prometheus)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="quartz.html">Quartz (quartz)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="sbom.html">软件物料清单 (sbom)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scheduledtasks.html">计划任务 (scheduledtasks)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="sessions.html">会话 (sessions)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shutdown.html">关机 (shutdown)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="startup.html">应用程序启动 (startup)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="threaddump.html">线程转储 (threaddump)</a>
   </li>
 </ul>
   </li>
@@ -70,8 +139,8 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">个人记录</span>
-    <span class="version">0.0.1</span>
+    <span class="title">Spring Boot Actuator</span>
+    <span class="version">3.3.3</span>
   </div>
   <ul class="components">
     <li class="component">
@@ -98,11 +167,11 @@
         </li>
       </ul>
     </li>
-    <li class="component">
-      <div class="title"><a href="../../docs-actuator/3.3.3/index.html">Spring Boot Actuator</a></div>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Spring Boot Actuator</a></div>
       <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../docs-actuator/3.3.3/index.html">3.3.3</a>
+        <li class="version is-current is-latest">
+          <a href="index.html">3.3.3</a>
         </li>
       </ul>
     </li>
@@ -138,11 +207,11 @@
         </li>
       </ul>
     </li>
-    <li class="component is-current">
-      <div class="title"><a href="index.html">个人记录</a></div>
+    <li class="component">
+      <div class="title"><a href="../../docs-me/0.0.1/index.html">个人记录</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">0.0.1</a>
+        <li class="version is-latest">
+          <a href="../../docs-me/0.0.1/index.html">0.0.1</a>
         </li>
       </ul>
     </li>
@@ -170,66 +239,74 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="index.html" class="home-link"></a>
+  <a href="../../docs-me/0.0.1/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="index.html">个人记录</a></li>
-    <li><a href="doc.html">我的文档</a></li>
+    <li><a href="index.html">Spring Boot Actuator</a></li>
+    <li><a href="index.html">Actuator REST API</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-me/edit/master/modules/ROOT/pages/doc.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-actuator/edit/master/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="目录" data-levels="3">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">我的文档</h1>
-<div class="sect1">
-<h2 id="_技术类"><a class="anchor" href="#_技术类"></a>技术类</h2>
+<h1 class="page">Actuator REST API</h1>
+<div id="preamble">
 <div class="sectionbody">
+<div class="paragraph">
+<p>这份 API 文档描述了 Spring Boot Actuators 的 Web 端点。</p>
+</div>
+<div class="paragraph">
+<p>在您继续之前，您应该阅读以下主题：</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>NeutralinoJS: <a href="https://gitee.com/consolelog/docs-neutralino-api" class="bare">https://gitee.com/consolelog/docs-neutralino-api</a></p>
+<p><a href="#urls">URLs</a></p>
 </li>
 <li>
-<p>Spring Actuator: <a href="https://gitee.com/consolelog/docs-actuator" class="bare">https://gitee.com/consolelog/docs-actuator</a></p>
-</li>
-<li>
-<p>rust-libp2p(ing): <a href="https://gitee.com/consolelog/docs-rust-libp2p" class="bare">https://gitee.com/consolelog/docs-rust-libp2p</a></p>
-</li>
-<li>
-<p>Tauri: <a href="https://gitee.com/consolelog/docs-tauri" class="bare">https://gitee.com/consolelog/docs-tauri</a></p>
-</li>
-<li>
-<p>Steamworks for Rust: <a href="https://gitee.com/consolelog/docs-steamworks-rs" class="bare">https://gitee.com/consolelog/docs-steamworks-rs</a></p>
-</li>
-<li>
-<p>Spring Boot Admin: <a href="https://gitee.com/consolelog/docs-spring-boot-admin" class="bare">https://gitee.com/consolelog/docs-spring-boot-admin</a></p>
-</li>
-<li>
-<p>Greenworks-JS: <a href="https://gitee.com/consolelog/docs-greenworks-js" class="bare">https://gitee.com/consolelog/docs-greenworks-js</a></p>
-</li>
-<li>
-<p>ElasticSearch Java API: <a href="https://gitee.com/consolelog/docs-es-java" class="bare">https://gitee.com/consolelog/docs-es-java</a></p>
+<p><a href="#timestamps">Timestamps</a></p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+为了获得下面记录的正确 JSON 响应，Jackson 必须可用。
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_游戏类"><a class="anchor" href="#_游戏类"></a>游戏类</h2>
+<h2 id="urls"><a class="anchor" href="#urls"></a>URLs</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Project Diablo2: <a href="https://gitee.com/consolelog/docs-pd2" class="bare">https://gitee.com/consolelog/docs-pd2</a></p>
-</li>
-<li>
-<p>幻兽帕鲁: <a href="https://gitee.com/consolelog/docs-palworld" class="bare">https://gitee.com/consolelog/docs-palworld</a></p>
-</li>
-</ul>
+<div class="paragraph">
+<p>默认情况下，所有 Web 端点都位于 <code>/actuator</code> 路径下，URL 形式为 <code>/actuator/{id}</code>。 可以通过使用 <code>management.endpoints.web.base-path</code> 属性来配置 <code>/actuator</code> 基本路径，如下例所示：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">management.endpoints.web.base-path=/manage</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>上述 <code>application.properties</code> 示例将端点 URL 的形式从 <code>/actuator/{id}</code> 更改为 <code>/manage/{id}</code>。 例如，<code>info</code> 端点的 URL 将变为 <code>/manage/info</code>。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="timestamps"><a class="anchor" href="#timestamps"></a>Timestamps</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>所有端点消费的时间戳，无论是作为查询参数还是请求体中，都必须按照 <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank" rel="noopener">ISO 8601</a> 规范格式化为带偏移量的日期和时间。</p>
 </div>
 </div>
 </div>

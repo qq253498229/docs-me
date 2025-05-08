@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>计划任务 (scheduledtasks) :: docs-me</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-me</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-actuator" data-version="3.3.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Spring Boot Actuator</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="auditevents.html">审计事件 (auditevents)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="beans.html">Beans (beans)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="caches.html">缓存 (caches)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="conditions.html">条件评估报告 (conditions)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configprops.html">配置属性 (configprops)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="env.html">环境 (env)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="flyway.html">Flyway (flyway)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="health.html">健康检查 (health)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="heapdump.html">Heap Dump (heapdump)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="httpexchanges.html">HTTP 交换 (httpexchanges)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="info.html">Info (info)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="integrationgraph.html">Spring Integration Graph (integrationgraph)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="liquibase.html">Liquibase (liquibase)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logfile.html">日志文件 (logfile)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="loggers.html">日志记录器 (loggers)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mappings.html">映射 (mappings)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="metrics.html">指标 (metrics)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="prometheus.html">Prometheus (prometheus)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="quartz.html">Quartz (quartz)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="sbom.html">软件物料清单 (sbom)</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="scheduledtasks.html">计划任务 (scheduledtasks)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="sessions.html">会话 (sessions)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shutdown.html">关机 (shutdown)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="startup.html">应用程序启动 (startup)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="threaddump.html">线程转储 (threaddump)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Boot Actuator</span>
+    <span class="version">3.3.3</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../docs-greenworks-js/0.0.1/index.html">Greenworks-JS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-greenworks-js/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-pd2/0.0.1/index.html">PD2记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-pd2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-peerjs/0.0.1/index.html">PEER JS</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-peerjs/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Spring Boot Actuator</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">3.3.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-spring-boot-admin/0.0.1/index.html">SpringBootAdmin文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-spring-boot-admin/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steamworks-rs/0.11.0/index.html">Steamworks for Rust</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steamworks-rs/0.11.0/index.html">0.11.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-tauri/v1/index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-tauri/v1/index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-testing-angular/中文/start.html">Testing Angular</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-testing-angular/中文/start.html">中文</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-me/0.0.1/index.html">个人记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-me/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-taiwu/0.0.1/index.html">太吾绘卷</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-taiwu/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-palworld/0.0.1/index.html">幻兽帕鲁笔记</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-palworld/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../docs-me/0.0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Spring Boot Actuator</a></li>
+    <li><a href="scheduledtasks.html">计划任务 (scheduledtasks)</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-actuator/edit/master/modules/ROOT/pages/scheduledtasks.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">计划任务 (scheduledtasks)</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>scheduledtasks</code> 端点提供了关于应用程序计划任务的信息。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_获取定时任务"><a class="anchor" href="#_获取定时任务"></a>获取定时任务</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要获取定时任务，可以发送一个 <code>GET</code> 请求到 <code>/actuator/scheduledtasks</code>，如下所示的 curl 示例：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">curl 'http://localhost:8080/actuator/scheduledtasks' -i -X GET</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>得到的响应类似如下：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.spring-boot.actuator.v3+json
+Content-Length: 629
+
+{
+  "cron" : [ {
+    "runnable" : {
+      "target" : "com.example.Processor.processOrders"
+    },
+    "expression" : "0 0 0/3 1/1 * ?"
+  } ],
+  "fixedDelay" : [ {
+    "runnable" : {
+      "target" : "com.example.Processor.purge"
+    },
+    "initialDelay" : 5000,
+    "interval" : 5000
+  } ],
+  "fixedRate" : [ {
+    "runnable" : {
+      "target" : "com.example.Processor.retrieveIssues"
+    },
+    "initialDelay" : 10000,
+    "interval" : 3000
+  } ],
+  "custom" : [ {
+    "runnable" : {
+      "target" : "com.example.Processor$CustomTriggeredRunnable"
+    },
+    "trigger" : "com.example.Processor$CustomTrigger@111d4b1c"
+  } ]
+}</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_响应结构"><a class="anchor" href="#_响应结构"></a>响应结构</h3>
+<div class="paragraph">
+<p>响应中包含应用程序定时任务的详细信息。下表描述了响应的结构：</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">路径</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cron</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cron 任务（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cron.[].runnable.target</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">将执行的目标。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cron.[].expression</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cron 表达式。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fixedDelay</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">固定延迟任务（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fixedDelay.[].runnable.target</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">将执行的目标。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fixedDelay.[].initialDelay</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">首次执行前的延迟时间（毫秒）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fixedDelay.[].interval</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">从上一次执行结束到下一次开始之间的间隔时间（毫秒）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fixedRate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">固定频率任务（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fixedRate.[].runnable.target</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">将执行的目标。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fixedRate.[].interval</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">每次执行开始之间的间隔时间（毫秒）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fixedRate.[].initialDelay</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">首次执行前的延迟时间（毫秒）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>custom</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">自定义触发器的任务（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>custom.[].runnable.target</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">将执行的目标。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>custom.[].trigger</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">任务的触发器。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

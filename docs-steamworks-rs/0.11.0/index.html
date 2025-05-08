@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>我的文档 :: docs-me</title>
+    <title>Steamworks for Rust :: docs-me</title>
     <meta name="generator" content="Antora 3.1.10">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -47,21 +47,60 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="docs-me" data-version="0.0.1">
+<div class="nav-container" data-component="docs-steamworks-rs" data-version="0.11.0">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
     <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
-    <h3 class="title"><a href="index.html">个人记录</a></h3>
+    <h3 class="title"><a href="index.html">Steamworks for Rust</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="doc.html">我的文档</a>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="client.html">Client (客户端)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="regexp.html">正则表达式</a>
+    <a class="nav-link" href="app.html">Apps (应用)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="utils.html">Utils (工具)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="matchmaking.html">MatchMaking (匹配大厅)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="networking.html">Networking (网络)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="friends.html">Friends (好友)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="input.html">Input (输入)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="user.html">User (用户)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="user-stats.html">UserStats (用户状态)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="remote-play.html">RemotePlay (远程畅玩)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="remote-storage.html">RemoteStorage (远程存储)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ugc.html">UGC (创意工坊)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="networking-message.html">NetworkingMessages (网络消息)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="networking-sockets.html">NetworkingSockets (网络连接)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="networking-utils.html">NetworkingUtils (网络工具)</a>
   </li>
 </ul>
   </li>
@@ -70,8 +109,8 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">个人记录</span>
-    <span class="version">0.0.1</span>
+    <span class="title">Steamworks for Rust</span>
+    <span class="version">0.11.0</span>
   </div>
   <ul class="components">
     <li class="component">
@@ -114,11 +153,11 @@
         </li>
       </ul>
     </li>
-    <li class="component">
-      <div class="title"><a href="../../docs-steamworks-rs/0.11.0/index.html">Steamworks for Rust</a></div>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Steamworks for Rust</a></div>
       <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../docs-steamworks-rs/0.11.0/index.html">0.11.0</a>
+        <li class="version is-current is-latest">
+          <a href="index.html">0.11.0</a>
         </li>
       </ul>
     </li>
@@ -138,11 +177,11 @@
         </li>
       </ul>
     </li>
-    <li class="component is-current">
-      <div class="title"><a href="index.html">个人记录</a></div>
+    <li class="component">
+      <div class="title"><a href="../../docs-me/0.0.1/index.html">个人记录</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">0.0.1</a>
+        <li class="version is-latest">
+          <a href="../../docs-me/0.0.1/index.html">0.0.1</a>
         </li>
       </ul>
     </li>
@@ -170,68 +209,25 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="index.html" class="home-link"></a>
+  <a href="../../docs-me/0.0.1/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="index.html">个人记录</a></li>
-    <li><a href="doc.html">我的文档</a></li>
+    <li><a href="index.html">Steamworks for Rust</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-me/edit/master/modules/ROOT/pages/doc.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-steamworks-rs/edit/master/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="目录" data-levels="3">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">我的文档</h1>
-<div class="sect1">
-<h2 id="_技术类"><a class="anchor" href="#_技术类"></a>技术类</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>NeutralinoJS: <a href="https://gitee.com/consolelog/docs-neutralino-api" class="bare">https://gitee.com/consolelog/docs-neutralino-api</a></p>
-</li>
-<li>
-<p>Spring Actuator: <a href="https://gitee.com/consolelog/docs-actuator" class="bare">https://gitee.com/consolelog/docs-actuator</a></p>
-</li>
-<li>
-<p>rust-libp2p(ing): <a href="https://gitee.com/consolelog/docs-rust-libp2p" class="bare">https://gitee.com/consolelog/docs-rust-libp2p</a></p>
-</li>
-<li>
-<p>Tauri: <a href="https://gitee.com/consolelog/docs-tauri" class="bare">https://gitee.com/consolelog/docs-tauri</a></p>
-</li>
-<li>
-<p>Steamworks for Rust: <a href="https://gitee.com/consolelog/docs-steamworks-rs" class="bare">https://gitee.com/consolelog/docs-steamworks-rs</a></p>
-</li>
-<li>
-<p>Spring Boot Admin: <a href="https://gitee.com/consolelog/docs-spring-boot-admin" class="bare">https://gitee.com/consolelog/docs-spring-boot-admin</a></p>
-</li>
-<li>
-<p>Greenworks-JS: <a href="https://gitee.com/consolelog/docs-greenworks-js" class="bare">https://gitee.com/consolelog/docs-greenworks-js</a></p>
-</li>
-<li>
-<p>ElasticSearch Java API: <a href="https://gitee.com/consolelog/docs-es-java" class="bare">https://gitee.com/consolelog/docs-es-java</a></p>
-</li>
-</ul>
+<h1 class="page">Steamworks for Rust</h1>
+<div class="paragraph">
+<p>此 <a href="https://crates.io/crates/steamworks">crate</a> 提供 <a href="https://partner.steamgames.com/doc/sdk">Steamworks SDK</a> 的 Rust 调用API。</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_游戏类"><a class="anchor" href="#_游戏类"></a>游戏类</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Project Diablo2: <a href="https://gitee.com/consolelog/docs-pd2" class="bare">https://gitee.com/consolelog/docs-pd2</a></p>
-</li>
-<li>
-<p>幻兽帕鲁: <a href="https://gitee.com/consolelog/docs-palworld" class="bare">https://gitee.com/consolelog/docs-palworld</a></p>
-</li>
-</ul>
-</div>
-</div>
+<div class="paragraph">
+<p>源码地址: <a href="https://github.com/Noxime/steamworks-rs" class="bare">https://github.com/Noxime/steamworks-rs</a></p>
 </div>
 </article>
   </div>
