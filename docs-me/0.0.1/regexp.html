@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>正则表达式 :: docs-me</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-me</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-me" data-version="0.0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">个人记录</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="doc.html">我的文档</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="regexp.html">正则表达式</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">个人记录</span>
+    <span class="version">0.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">个人记录</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">个人记录</a></li>
+    <li><a href="regexp.html">正则表达式</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-me/edit/master/modules/ROOT/pages/regexp.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">正则表达式</h1>
+<div class="sect1">
+<h2 id="_转义字符"><a class="anchor" href="#_转义字符"></a>转义字符</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">字符</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">解释</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>\n</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">换行符</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>\t</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">制表符</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>\\</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">代表\本身</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>\^</code>,<code>\$</code>,<code>\.</code>,<code>\,</code>,<code>\{</code>,<code>\}</code>,<code>\?</code>,<code>\+</code>,<code>\*</code>,<code>|</code>,<code>\[</code>,<code>\]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">匹配这些字符本身</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_标准字符集合"><a class="anchor" href="#_标准字符集合"></a>标准字符集合</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">字符</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">解释</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>\d</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">任意一个数字,0～9中的任意一个</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>\w</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">任意一个字母或数字或下划线，也就是A～Z,a～z,0～9,_中任意一个</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>\s</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">包括空格、制表符、换行符等空白字符的其中任意一个</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>.</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">小数点可以匹配任意一个字符，但是不包括<code>\n</code>，如果要匹配包括<code>\n</code>在内的所有字符，一般用<code>[\s\S]</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>除了“<code>.</code>”之外都区分大小写，大写就是相反的意思</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_自定义字符集合"><a class="anchor" href="#_自定义字符集合"></a>自定义字符集合</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">字符</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">解释</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[ab5@]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">匹配a或b或5或@</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[^abc]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">匹配abc之外的任意一个字符</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[a-z]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">匹配a～z之间的任意一个字母</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[^a-d0-3]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">匹配a～d和0～3之外的任意一个字符</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>除了^-\之外的特殊符号，如果被包含在中括号中，则失去特殊意义</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_量词"><a class="anchor" href="#_量词"></a>量词</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">字符</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">解释</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{n}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">表示匹配到n次</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{m,n}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">表示匹配m到n次，最少m，最大n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{n,}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">表示至少匹配到n次</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">表示匹配到0次或1次，等价于{0,1}</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">表示至少匹配到1次，等价于{1,}</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">表示不匹配或匹配任意次，等价于{0,}</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>默认量词匹配模式为贪婪模式，也就是能多匹配就多匹配，如果在量词后加上"?"则会更改为非贪婪模式，意思是满足最低匹配规则就停止继续匹配。</p>
+</div>
+<div class="paragraph">
+<p>例如:"123456"如果是匹配"\d{2,6}"的话则会匹配到:"123456"，如果是匹配"\d{2,6}?"的话则会分别匹配到"12","34","56"</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_位置匹配"><a class="anchor" href="#_位置匹配"></a>位置匹配</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">字符</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">解释</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>^</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">匹配字符串开始的位置</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">匹配字符串结束的位置</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>\b</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">匹配一个单词的边界，在匹配中不光hello是一个单词，hello123也会被当作一个单词</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>(?=exp)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">该位置后面会匹配到exp</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>(?&lt;=exp)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">该位置前面会匹配到exp</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>(?!exp)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">该位置后面不会匹配到exp</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>(?&lt;!exp)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">该位置前面不会匹配到exp</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>位置匹配不会匹配到带有宽度的字符，而仅仅是匹配位置，可以理解成位置的逻辑判断</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_匹配模式"><a class="anchor" href="#_匹配模式"></a>匹配模式</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">字符</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">解释</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IgnoreCase</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">忽略大小写模式</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SingleLine</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">单行模式，是否将整个字符视为一行，只有一个开头和结尾，同时"."可以匹配到"\n"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MultiLine</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">多行模式，每行字符都有独自的开头和结尾，此时如果要匹配绝对开头或结尾则需要使用"\A"和"\Z"代替"^"和"$"</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>不同软件或语言中匹配模式的英文单词不一定是"IgnoreCase"、"SingleLine"、"MultiLine"，请根据实际情况作出判断(例如有时候忽略大小写的单词为CaseInsensitive，多行模式的英文单词为LineBreak)，大多数情况下默认的匹配模式为:区分大小写、多行模式</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_分组和引用"><a class="anchor" href="#_分组和引用"></a>分组和引用</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">字符</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">解释</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">|</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"与或非"中"或"的关系，表示满足左边或右边都会被匹配到</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">括号中的表达式作为一个整体，同时可以被引用</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(?:exp)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">括号中的表达式作为一个整体，但是不可以被引用</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>例如:</p>
+</div>
+<div class="paragraph">
+<p>"goto gogo"这串字符</p>
+</div>
+<div class="paragraph">
+<p>如果匹配 "[a-z]{2}" 的话,则会匹配到"go","to","go","go"；</p>
+</div>
+<div class="paragraph">
+<p>如果是匹配 "([a-z]{2})\1" 的话,则会匹配到:"gogo"；</p>
+</div>
+<div class="paragraph">
+<p>如果是匹配 "(?:[a-z]{2})\1" 的话,则什么都匹配不到。</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>引用可能会造成性能降低，所以尽可能的使用(?:exp)这种形式</p>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
