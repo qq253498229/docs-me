@@ -1,0 +1,26 @@
+on:
+  push:
+    branches:
+      - master
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy_gh_pages:
+    runs-on: ubuntu-latest
+    name: 部署到GitHub Pages
+    steps:
+      - name: 拉取代码
+        id: checkout
+        uses: actions/checkout@v4
+      - name: 编译文档
+        run: |
+          npm ci
+          npm run build
+      - name: 部署到gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs
+          branch: gh-pages
