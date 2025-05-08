@@ -3,3 +3,6 @@
 * https://github.com/qq253498229/antora-document-template/blob/master/.github/workflows/deploy_gh_pages.yml[antora+GitHubActions脚手架]，自动部署到gh-pages
 * https://github.com/qq253498229/github-actions-template/blob/master/.github/workflows/main.yml[GitHub Actions示例]，打包并上传dist，之后创建Release
 * https://github.com/qq253498229/wujie-demo1[无界+Angular19]前端微应用demo
+* https://github.com/qq253498229/wang-webstorm-ngxs-plugin[WebStorm NGXS插件]，自动跳转到action实现
+* https://github.com/qq253498229/neu-ng[Neutralinojs+angular]示例
+* https://github.com/qq253498229/demo-neu1[Neutralinojs+angular]示例
