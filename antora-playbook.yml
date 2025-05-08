@@ -5,6 +5,28 @@ content:
   sources:
     - url: .
       branches: [HEAD]
+    - url: https://gitee.com/consolelog/docs-testing-angular.git
+      branches: ["master", "english"]
+    - url: https://gitee.com/consolelog/docs-steamworks-rs.git
+      branches: ["master"]
+    - url: https://gitee.com/consolelog/docs-greenworks-js.git
+      branches: ["master"]
+    - url: https://gitee.com/consolelog/docs-es-java.git
+      branches: ["v7.16", "v6.8", "v6.2"]
+    - url: https://gitee.com/consolelog/docs-spring-boot-admin.git
+      branches: ["2.6.6"]
+    - url: https://gitee.com/consolelog/docs-tauri.git
+      branches: ["master"]
+    - url: https://gitee.com/consolelog/docs-actuator.git
+      branches: ["master"]
+    - url: https://gitee.com/consolelog/docs-pd2.git
+      branches: ["master"]
+    - url: https://gitee.com/consolelog/docs-palworld.git
+      branches: ["master"]
+    - url: https://gitee.com/consolelog/docs-taiwu.git
+      branches: ["master"]
+    - url: https://gitee.com/consolelog/docs-peerjs.git
+      branches: ["master"]
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
