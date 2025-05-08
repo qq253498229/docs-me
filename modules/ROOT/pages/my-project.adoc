@@ -1,0 +1,4 @@
+= 项目记录
+
+* https://github.com/qq253498229/antora-document-template/blob/master/.github/workflows/deploy_gh_pages.yml[antora+GitHubActions脚手架]，自动部署到gh-pages
+* https://github.com/qq253498229/github-actions-template/blob/master/.github/workflows/main.yml[GitHub Actions示例]，打包并上传dist，之后创建Release

@@ -1,25 +1,17 @@
 = 个人记录
 
-个人工具
+== 文档整理
 
-* Angular脚手架(wng --min test-output-folder-name):
-** Windows: https://gitee.com/consolelog/wang-ng-init/releases/download/v1.4.0/wng.exe
-** Linux: https://gitee.com/consolelog/wang-ng-init/releases/download/v1.4.0/wng-linux-x86_64
-** macOS: https://gitee.com/consolelog/wang-ng-init/releases/download/v1.4.0/wng
-* TypeScript脚手架(wts my-typescript-folder-name)
-** https://gitee.com/consolelog/wang-typescript-starter/releases/download/v1.0.0/wts.zip
-* Tauri脚手架(wtauri demo-tauri002)
-** macOS: https://gitee.com/consolelog/wtauri/releases/download/v1.3.0/wtauri_macos_x86-64
-** Windows: https://gitee.com/consolelog/wtauri/releases/download/v1.3.0/wtauri.exe
-** Linux: https://gitee.com/consolelog/wtauri/releases/download/v1.3.0/wtauri_linux_gnu_x86-64
-* Antora脚手架(wantora docs-my-antora)
-** macOS: https://gitee.com/consolelog/wantora/releases/download/v1.1.0/wantora
-** Windows: https://gitee.com/consolelog/wantora/releases/download/v1.1.0/wantora.exe
-* CHANGELOG变更日志生成工具(wlog)
-** macOS: https://gitee.com/consolelog/wang-changelog/releases/download/v1.2.0/wlog
-** Linux: https://gitee.com/consolelog/wang-changelog/releases/download/v1.2.0/wlog.exe
+* 游戏相关
+** https://doc.codeforfun.cn/docs-pd2/0.0.1/index.html[PD2萌新站]
+** https://doc.codeforfun.cn/docs-taiwu/0.0.1/index.html[太吾绘卷]
+** https://doc.codeforfun.cn/docs-palworld/0.0.1/index.html[幻兽帕鲁]
+* 技术相关
+** https://doc.codeforfun.cn/docs-greenworks-js/0.0.1/index.html[GreenWorks-JS]
+** https://doc.codeforfun.cn/docs-peerjs/0.0.1/index.html[PeerJS]
+** https://doc.codeforfun.cn/docs-actuator/3.3.3/index.html[SpringBootActuator]
+** https://doc.codeforfun.cn/docs-spring-boot-admin/0.0.1/index.html[SpringBootAdmin文档]
+** https://doc.codeforfun.cn/docs-steamworks-rs/0.11.0/index.html[Steamworks for Rust]
+** https://doc.codeforfun.cn/docs-tauri/v1/index.html[Tauri API 文档]
+** https://doc.codeforfun.cn/docs-testing-angular/%E4%B8%AD%E6%96%87/start.html[Testing Angular]
 
-项目记录
-
-* https://github.com/qq253498229/antora-document-template/blob/master/.github/workflows/deploy_gh_pages.yml[antora脚手架]，自动部署到gh-pages
-* https://github.com/qq253498229/github-actions-template/blob/master/.github/workflows/main.yml[GitHub Actions示例]，打包并上传dist，之后创建Release
