@@ -5,27 +5,27 @@ content:
   sources:
     - url: .
       branches: [HEAD]
-    - url: https://gitee.com/consolelog/docs-testing-angular.git
+    - url: https://github.com/qq253498229/docs-testing-angular.git
       branches: ["master", "english"]
-    - url: https://gitee.com/consolelog/docs-steamworks-rs.git
+    - url: https://github.com/qq253498229/docs-steamworks-rs.git
       branches: ["master"]
-    - url: https://gitee.com/consolelog/docs-greenworks-js.git
+    - url: https://github.com/qq253498229/docs-greenworks-js.git
       branches: ["master"]
-    - url: https://gitee.com/consolelog/docs-es-java.git
+    - url: https://github.com/qq253498229/docs-es-java.git
       branches: ["v7.16", "v6.8", "v6.2"]
-    - url: https://gitee.com/consolelog/docs-spring-boot-admin.git
+    - url: https://github.com/qq253498229/docs-spring-boot-admin.git
       branches: ["2.6.6"]
-    - url: https://gitee.com/consolelog/docs-tauri.git
+    - url: https://github.com/qq253498229/docs-tauri.git
       branches: ["master"]
-    - url: https://gitee.com/consolelog/docs-actuator.git
+    - url: https://github.com/qq253498229/docs-actuator.git
       branches: ["master"]
-    - url: https://gitee.com/consolelog/docs-pd2.git
+    - url: https://github.com/qq253498229/docs-pd2.git
       branches: ["master"]
-    - url: https://gitee.com/consolelog/docs-palworld.git
+    - url: https://github.com/qq253498229/docs-palworld.git
       branches: ["master"]
-    - url: https://gitee.com/consolelog/docs-taiwu.git
+    - url: https://github.com/qq253498229/docs-taiwu.git
       branches: ["master"]
-    - url: https://gitee.com/consolelog/docs-peerjs.git
+    - url: https://github.com/qq253498229/docs-peerjs.git
       branches: ["master"]
 ui:
   bundle:
