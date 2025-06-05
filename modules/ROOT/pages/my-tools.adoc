@@ -16,3 +16,5 @@
 * CHANGELOG变更日志生成工具(wlog)
 ** macOS: https://gitee.com/consolelog/wang-changelog/releases/download/v1.2.0/wlog
 ** Linux: https://gitee.com/consolelog/wang-changelog/releases/download/v1.2.0/wlog.exe
+* 文件搜索工具(一搜)
+** https://github.com/qq253498229/wang-file-searcher/releases

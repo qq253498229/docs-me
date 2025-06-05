@@ -6,3 +6,4 @@
 * https://github.com/qq253498229/wang-webstorm-ngxs-plugin[WebStorm NGXS插件]，自动跳转到action实现
 * https://github.com/qq253498229/neu-ng[Neutralinojs+angular]示例
 * https://github.com/qq253498229/demo-neu1[Neutralinojs+angular]示例
+* https://github.com/qq253498229/demo-ng-translate[Angular19国际化]示例
