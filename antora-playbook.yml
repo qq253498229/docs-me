@@ -36,3 +36,4 @@ ui:
   supplemental_files: ui-bundle
 output:
   dir: ./docs
+
