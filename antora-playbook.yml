@@ -5,6 +5,50 @@ content:
   sources:
     - url: .
       branches: [HEAD]
+    - url: https://github.com/qq253498229/docs-pd2.git
+      branches: [master]
+    - url: https://github.com/qq253498229/docs-palworld.git
+      branches: [master]
+    - url: https://github.com/qq253498229/docs-xiuxian.git
+      branches: [master]
+    - url: https://github.com/qq253498229/docs-milk.git
+      branches: [master]
+    - url: https://github.com/qq253498229/docs-hunter.git
+      branches: [master]
+    - url: https://github.com/qq253498229/docs-taiwu.git
+      branches: [master]
+    - url: https://github.com/qq253498229/docs-neutralino-api.git
+      branches: [master]
+    - url: https://github.com/qq253498229/docs-actuator.git
+      branches: [master]
+    - url: https://github.com/qq253498229/docs-rust-libp2p.git
+      branches: [master]
+    - url: https://github.com/qq253498229/docs-tauri.git
+      branches: [master]
+    - url: https://github.com/qq253498229/docs-steamworks-rs.git
+      branches: [master]
+    - url: https://github.com/qq253498229/docs-spring-boot-admin.git
+      branches: [master]
+    - url: https://github.com/qq253498229/docs-greenworks-js.git
+      branches: [master]
+    - url: https://github.com/qq253498229/docs-es-java.git
+      branches: [v7.16,v6.8,v6.2]
+    - url: https://github.com/qq253498229/docs-peerjs.git
+      branches: [master]
+    - url: https://github.com/qq253498229/docs-testing-angular.git
+      branches: [master]
+    - url: https://github.com/qq253498229/docs-building-event-driven-microservices.git
+      branches: [master]
+    - url: https://github.com/qq253498229/docs-antora-oauth2.1.git
+      branches: [master]
+    - url: https://github.com/qq253498229/docs-steam-electron.git
+      branches: [master]
+    - url: https://github.com/qq253498229/docs-logitech.git
+      branches: [master]
+    - url: https://github.com/qq253498229/docs-config.git
+      branches: [master]
+    - url: https://github.com/qq253498229/docs-oauth2.git
+      branches: [master]
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
