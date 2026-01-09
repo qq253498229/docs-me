@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Quartz (quartz) :: docs-me</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-me</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-actuator" data-version="3.3.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Spring Boot Actuator</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="auditevents.html">审计事件 (auditevents)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="beans.html">Beans (beans)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="caches.html">缓存 (caches)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="conditions.html">条件评估报告 (conditions)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configprops.html">配置属性 (configprops)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="env.html">环境 (env)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="flyway.html">Flyway (flyway)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="health.html">健康检查 (health)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="heapdump.html">Heap Dump (heapdump)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="httpexchanges.html">HTTP 交换 (httpexchanges)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="info.html">Info (info)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="integrationgraph.html">Spring Integration Graph (integrationgraph)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="liquibase.html">Liquibase (liquibase)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logfile.html">日志文件 (logfile)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="loggers.html">日志记录器 (loggers)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mappings.html">映射 (mappings)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="metrics.html">指标 (metrics)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="prometheus.html">Prometheus (prometheus)</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="quartz.html">Quartz (quartz)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="sbom.html">软件物料清单 (sbom)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scheduledtasks.html">计划任务 (scheduledtasks)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="sessions.html">会话 (sessions)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shutdown.html">关机 (shutdown)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="startup.html">应用程序启动 (startup)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="threaddump.html">线程转储 (threaddump)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Boot Actuator</span>
+    <span class="version">3.3.3</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../docs-config/0.0.1/index.html">docs-config</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-config/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steam-electron/0.0.1/index.html">docs-steam-electron</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steam-electron/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-xiuxian/0.0.1/index.html">docs-xiuxian</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-xiuxian/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-es-java/7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-es-java/7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-greenworks-js/0.0.1/index.html">Greenworks-JS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-greenworks-js/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-rust-libp2p/0.0.1/index.html">libp2p入门</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-rust-libp2p/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-neutralino-api/0.0.1/index.html">NeutralinoJS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-neutralino-api/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-antora-oauth2.1/0.0.1/index.html">OAuth 2.1 授权框架</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-antora-oauth2.1/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-pd2/0.0.1/index.html">PD2记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-pd2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-peerjs/0.0.1/index.html">PEER JS</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-peerjs/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Spring Boot Actuator</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">3.3.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-oauth2/0.0.1/index.html">Spring Boot OAuth2</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-oauth2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steamworks-rs/0.11.0/index.html">Steamworks for Rust</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steamworks-rs/0.11.0/index.html">0.11.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-tauri/v1/index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-tauri/v1/index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-testing-angular/中文/start.html">Testing Angular</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-testing-angular/中文/start.html">中文</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-me/0.0.1/index.html">个人记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-me/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-taiwu/0.0.1/index.html">太吾绘卷</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-taiwu/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-palworld/0.0.1/index.html">幻兽帕鲁笔记</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-palworld/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-building-event-driven-microservices/0.0.1/index.html">微服务与事件驱动架构</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-building-event-driven-microservices/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-hunter/0.0.1/index.html">猎人-荒野的呼唤</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-hunter/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-logitech/v8.45/index.html">罗技鼠标宏文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-logitech/v8.45/index.html">v8.45</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-milk/0.0.1/index.html">银河奶牛</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-milk/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../docs-me/0.0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Spring Boot Actuator</a></li>
+    <li><a href="quartz.html">Quartz (quartz)</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-actuator/edit/master/modules/ROOT/pages/quartz.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Quartz (quartz)</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>quartz</code> 端点提供有关由 Quartz 调度器管理的任务和触发器的信息。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_获取已注册的组"><a class="anchor" href="#_获取已注册的组"></a>获取已注册的组</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>任务和触发器被管理在组中。要获取已注册的任务和触发器组的列表，可以按照以下基于 curl 的示例发送 <code>GET</code> 请求到 <code>/actuator/quartz</code>：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">curl 'http://localhost:8080/actuator/quartz' -i -X GET</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>结果响应类似于以下内容：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.spring-boot.actuator.v3+json
+Content-Length: 120
+
+{
+  "jobs" : {
+    "groups" : [ "samples", "tests" ]
+  },
+  "triggers" : {
+    "groups" : [ "samples", "DEFAULT" ]
+  }
+}</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_响应结构"><a class="anchor" href="#_响应结构"></a>响应结构</h3>
+<div class="paragraph">
+<p>响应包含已注册任务和触发器的组名。下表描述了响应的结构：</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">路径</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jobs.groups</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">一个任务组名的数组。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.groups</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">一个触发器组名的数组。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_获取已注册任务名称"><a class="anchor" href="#_获取已注册任务名称"></a>获取已注册任务名称</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要获取已注册任务名称的列表，可以按照以下基于 curl 的示例发送 <code>GET</code> 请求到 <code>/actuator/quartz/jobs</code>：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">curl 'http://localhost:8080/actuator/quartz/jobs' -i -X GET</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>结果响应类似于以下内容：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.spring-boot.actuator.v3+json
+Content-Length: 137
+
+{
+  "groups" : {
+    "samples" : {
+      "jobs" : [ "jobOne", "jobTwo" ]
+    },
+    "tests" : {
+      "jobs" : [ "jobThree" ]
+    }
+  }
+}</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_响应结构_2"><a class="anchor" href="#_响应结构_2"></a>响应结构</h3>
+<div class="paragraph">
+<p>响应包含每个组的已注册任务名称。下表描述了响应的结构：</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">路径</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>groups</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">以名称为键的任务组。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>groups.*.jobs</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">任务名称的数组。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_获取已注册触发器名称"><a class="anchor" href="#_获取已注册触发器名称"></a>获取已注册触发器名称</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要获取已注册触发器名称的列表，可以按照以下基于 curl 的示例发送 <code>GET</code> 请求到 <code>/actuator/quartz/triggers</code>：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">curl 'http://localhost:8080/actuator/quartz/triggers' -i -X GET</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>结果响应类似于以下内容：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.spring-boot.actuator.v3+json
+Content-Length: 229
+
+{
+  "groups" : {
+    "samples" : {
+      "paused" : false,
+      "triggers" : [ "3am-weekdays", "every-day", "once-a-week" ]
+    },
+    "DEFAULT" : {
+      "paused" : false,
+      "triggers" : [ "every-hour-tue-thu" ]
+    }
+  }
+}</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_响应结构_3"><a class="anchor" href="#_响应结构_3"></a>响应结构</h3>
+<div class="paragraph">
+<p>响应包含每个组的已注册触发器名称。下表描述了响应的结构：</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">路径</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>groups</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">以名称为键的触发器组。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>groups.*.paused</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">该触发器组是否已暂停。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>groups.*.triggers</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器名称的数组。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_获取任务组概览"><a class="anchor" href="#_获取任务组概览"></a>获取任务组概览</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要获取特定组中任务的概览，可以按照以下基于 curl 的示例发送 <code>GET</code> 请求到 <code>/actuator/quartz/jobs/{groupName}</code>：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">curl 'http://localhost:8080/actuator/quartz/jobs/samples' -i -X GET</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>上述示例获取了 <code>samples</code> 组中任务的摘要。结果响应类似于以下内容：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.spring-boot.actuator.v3+json
+Content-Length: 201
+
+{
+  "group" : "samples",
+  "jobs" : {
+    "jobOne" : {
+      "className" : "org.springframework.scheduling.quartz.DelegatingJob"
+    },
+    "jobTwo" : {
+      "className" : "org.quartz.Job"
+    }
+  }
+}</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_响应结构_4"><a class="anchor" href="#_响应结构_4"></a>响应结构</h3>
+<div class="paragraph">
+<p>响应包含特定组中任务的概览。下表描述了响应的结构：</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">路径</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>group</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">组的名称。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jobs</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">以名称为键的任务详细信息。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jobs.*.className</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">任务实现的完全限定名称。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_获取触发器组概览"><a class="anchor" href="#_获取触发器组概览"></a>获取触发器组概览</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要获取特定组中触发器的概览，可以按照以下基于 curl 的示例发送 <code>GET</code> 请求到 <code>/actuator/quartz/triggers/{groupName}</code>：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">curl 'http://localhost:8080/actuator/quartz/triggers/tests' -i -X GET</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>上述示例获取了 <code>tests</code> 组中触发器的摘要。结果响应类似于以下内容：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.spring-boot.actuator.v3+json
+Content-Length: 1268
+
+{
+  "group" : "tests",
+  "paused" : false,
+  "triggers" : {
+    "cron" : {
+      "3am-week" : {
+        "previousFireTime" : "2020-12-04T03:00:00.000+00:00",
+        "nextFireTime" : "2020-12-07T03:00:00.000+00:00",
+        "priority" : 3,
+        "expression" : "0 0 3 ? * 1,2,3,4,5",
+        "timeZone" : "Europe/Paris"
+      }
+    },
+    "simple" : {
+      "every-day" : {
+        "nextFireTime" : "2020-12-04T12:00:00.000+00:00",
+        "priority" : 7,
+        "interval" : 86400000
+      }
+    },
+    "dailyTimeInterval" : {
+      "tue-thu" : {
+        "priority" : 5,
+        "interval" : 3600000,
+        "daysOfWeek" : [ 3, 5 ],
+        "startTimeOfDay" : "09:00:00",
+        "endTimeOfDay" : "18:00:00"
+      }
+    },
+    "calendarInterval" : {
+      "once-a-week" : {
+        "previousFireTime" : "2020-12-02T14:00:00.000+00:00",
+        "nextFireTime" : "2020-12-08T14:00:00.000+00:00",
+        "priority" : 5,
+        "interval" : 604800000,
+        "timeZone" : "Etc/UTC"
+      }
+    },
+    "custom" : {
+      "once-a-year-custom" : {
+        "previousFireTime" : "2020-07-14T16:00:00.000+00:00",
+        "nextFireTime" : "2021-07-14T16:00:00.000+00:00",
+        "priority" : 10,
+        "trigger" : "com.example.CustomTrigger@fdsfsd"
+      }
+    }
+  }
+}</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_响应结构_5"><a class="anchor" href="#_响应结构_5"></a>响应结构</h3>
+<div class="paragraph">
+<p>响应包含特定组中触发器的概览。提供了触发器实现的具体细节。下表描述了响应的结构：</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">路径</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>group</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">组的名称。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paused</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">该组是否已暂停。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.cron</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">以名称为键的 Cron 触发器（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.simple</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">以名称为键的简单触发器（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.dailyTimeInterval</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">以名称为键的每日时间间隔触发器（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.calendarInterval</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">以名称为键的日历间隔触发器（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.custom</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">以名称为键的其他触发器（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.cron.*.previousFireTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器上次触发的时间（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.cron.*.nextFireTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器计划下一次触发的时间（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.cron.*.priority</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">如果两个触发器具有相同的计划触发时间，则使用的优先级。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.cron.*.expression</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用的 Cron 表达式。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.cron.*.timeZone</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">解析表达式的时区（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.simple.*.previousFireTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器上次触发的时间（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.simple.*.nextFireTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器计划下一次触发的时间（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.simple.*.priority</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">如果两个触发器具有相同的计划触发时间，则使用的优先级。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.simple.*.interval</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">两次执行之间的间隔（以毫秒为单位）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.dailyTimeInterval.*.previousFireTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器上次触发的时间（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.dailyTimeInterval.*.nextFireTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器计划下一次触发的时间（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.dailyTimeInterval.*.priority</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">如果两个触发器具有相同的计划触发时间，则使用的优先级。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.dailyTimeInterval.*.interval</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">加到触发时间以计算下一个触发器重复时间的间隔（以毫秒为单位）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.dailyTimeInterval.*.daysOfWeek</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">在每周的哪些天触发的数组。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.dailyTimeInterval.*.startTimeOfDay</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">以给定间隔开始触发的时间（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.dailyTimeInterval.*.endTimeOfDay</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">以给定间隔完成触发的时间（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.calendarInterval.*.previousFireTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器上次触发的时间（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.calendarInterval.*.nextFireTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器计划下一次触发的时间（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.calendarInterval.*.priority</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">如果两个触发器具有相同的计划触发时间，则使用的优先级。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.calendarInterval.*.interval</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">加到触发时间以计算下一个触发器重复时间的间隔（以毫秒为单位）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.calendarInterval.*.timeZone</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">进行时间计算的时区（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.custom.*.previousFireTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器上次触发的时间（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.custom.*.nextFireTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器计划下一次触发的时间（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.custom.*.priority</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">如果两个触发器具有相同的计划触发时间，则使用的优先级。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.custom.*.trigger</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">自定义触发器实例的 toString 表示。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_获取任务详情"><a class="anchor" href="#_获取任务详情"></a>获取任务详情</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要获取特定任务的详细信息，可以按照以下基于 curl 的示例发送 <code>GET</code> 请求到 <code>/actuator/quartz/jobs/{groupName}/{jobName}</code>：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">curl 'http://localhost:8080/actuator/quartz/jobs/samples/jobOne' -i -X GET</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>上述示例获取了 <code>samples</code> 组和 <code>jobOne</code> 名称标识的任务的详细信息。结果响应类似于以下内容：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.spring-boot.actuator.v3+json
+Content-Length: 609
+
+{
+  "group" : "samples",
+  "name" : "jobOne",
+  "description" : "A sample job",
+  "className" : "org.springframework.scheduling.quartz.DelegatingJob",
+  "durable" : false,
+  "requestRecovery" : false,
+  "data" : {
+    "password" : "secret",
+    "user" : "admin"
+  },
+  "triggers" : [ {
+    "group" : "samples",
+    "name" : "every-day",
+    "previousFireTime" : "2020-12-04T03:00:00.000+00:00",
+    "nextFireTime" : "2020-12-04T12:00:00.000+00:00",
+    "priority" : 7
+  }, {
+    "group" : "samples",
+    "name" : "3am-weekdays",
+    "nextFireTime" : "2020-12-07T03:00:00.000+00:00",
+    "priority" : 3
+  } ]
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>如果数据映射中的某个键被标识为敏感信息，其值将会被清理。</p>
+</div>
+<div class="sect2">
+<h3 id="_响应结构_6"><a class="anchor" href="#_响应结构_6"></a>响应结构</h3>
+<div class="paragraph">
+<p>响应包含任务的完整详细信息，包括与之相关的触发器摘要（如果有）。触发器按下次触发时间和优先级排序。下表描述了响应的结构：</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">路径</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>group</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">组的名称。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">任务的名称。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>description</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">任务的描述（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>className</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">任务实现的完全限定名称。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>durable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">任务在孤立后是否应继续存储。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requestRecovery</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">在遇到“恢复”或“故障转移”情况时，任务是否应重新执行。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.*</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">任务数据映射（key/value对，如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">与任务相关的触发器数组（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.[].group</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器组的名称。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.[].name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器的名称。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.[].previousFireTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器上次触发的时间（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.[].nextFireTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器计划下一次触发的时间（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers.[].priority</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">如果两个触发器具有相同的计划触发时间，则使用的优先级。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_获取触发器详情"><a class="anchor" href="#_获取触发器详情"></a>获取触发器详情</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要获取特定触发器的详细信息，可以按照以下基于 curl 的示例发送 <code>GET</code> 请求到 <code>/actuator/quartz/triggers/{groupName}/{triggerName}</code>：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">curl 'http://localhost:8080/actuator/quartz/triggers/samples/example' -i -X GET</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>上述示例获取了由 <code>samples</code> 组和 <code>example</code> 名称标识的触发器的详细信息。</p>
+</div>
+<div class="sect2">
+<h3 id="common-response-structure"><a class="anchor" href="#common-response-structure"></a>通用响应结构</h3>
+<div class="paragraph">
+<p>响应具有通用结构以及一个特定于触发器类型的额外对象。支持以下五种类型：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>cron</code> 表示 <code>CronTrigger</code></p>
+</li>
+<li>
+<p><code>simple</code> 表示 <code>SimpleTrigger</code></p>
+</li>
+<li>
+<p><code>dailyTimeInterval</code> 表示 <code>DailyTimeIntervalTrigger</code></p>
+</li>
+<li>
+<p><code>calendarInterval</code> 表示 <code>CalendarIntervalTrigger</code></p>
+</li>
+<li>
+<p><code>custom</code> 表示其他触发器实现</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>下表描述了响应中通用元素的结构：</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">路径</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>group</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">组的名称。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器的名称。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>description</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器的描述（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>state</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器的状态 (<code>NONE</code>, <code>NORMAL</code>, <code>PAUSED</code>, <code>COMPLETE</code>, <code>ERROR</code>, <code>BLOCKED</code>)。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>type</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器的类型 (<code>calendarInterval</code>, <code>cron</code>, <code>custom</code>, <code>dailyTimeInterval</code>, <code>simple</code>)。该类型决定包含类型特定详细信息的对象的键。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>calendarName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">与此触发器关联的日历名称（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>startTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器应生效的时间（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>endTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器应停止重复的时间（无论是否有剩余的重复次数）（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>previousFireTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器上次触发的时间（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nextFireTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器计划下一次触发的时间（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>priority</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">如果两个触发器具有相同的计划触发时间，则使用的优先级。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>finalFireTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器最后一次触发的时间（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">任务数据映射（以名称为键，如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>calendarInterval</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">日历时间间隔触发器的详细信息（如果有，且类型为 calendarInterval）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>custom</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">自定义触发器的详细信息（如果有，且类型为 custom）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cron</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cron 触发器的详细信息（如果有，且类型为 cron）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dailyTimeInterval</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">每日时间间隔触发器的详细信息（如果有，且类型为 dailyTimeInterval）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>simple</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">简单触发器的详细信息（如果有，且类型为 simple）。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_cron_触发器响应结构"><a class="anchor" href="#_cron_触发器响应结构"></a>Cron 触发器响应结构</h3>
+<div class="paragraph">
+<p>Cron 触发器定义了用于确定触发时间的 cron 表达式。此类触发器的响应示例如下：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.spring-boot.actuator.v3+json
+Content-Length: 490
+
+{
+  "group" : "samples",
+  "name" : "example",
+  "description" : "Example trigger",
+  "state" : "NORMAL",
+  "type" : "cron",
+  "calendarName" : "bankHolidays",
+  "startTime" : "2020-11-30T17:00:00.000+00:00",
+  "endTime" : "2020-12-30T03:00:00.000+00:00",
+  "previousFireTime" : "2020-12-04T03:00:00.000+00:00",
+  "nextFireTime" : "2020-12-07T03:00:00.000+00:00",
+  "priority" : 3,
+  "data" : { },
+  "cron" : {
+    "expression" : "0 0 3 ? * 1,2,3,4,5",
+    "timeZone" : "Europe/Paris"
+  }
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>大部分响应对所有触发器类型都是通用的。<a href="#common-response-structure">前面已描述了</a> 通用元素的结构。下表描述了与 cron 触发器相关的响应部分的结构：</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">路径</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cron</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cron 触发器的特定详细信息。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cron.expression</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用的 Cron 表达式。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cron.timeZone</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">用于解析表达式的时区（如果有）。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_简单触发器响应结构"><a class="anchor" href="#_简单触发器响应结构"></a>简单触发器响应结构</h3>
+<div class="paragraph">
+<p>简单触发器用于在指定时间触发任务，并可选择在指定的时间间隔重复触发。此类触发器的响应示例如下：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.spring-boot.actuator.v3+json
+Content-Length: 549
+
+{
+  "group" : "samples",
+  "name" : "example",
+  "description" : "Example trigger",
+  "state" : "NORMAL",
+  "type" : "simple",
+  "calendarName" : "bankHolidays",
+  "startTime" : "2020-11-30T17:00:00.000+00:00",
+  "endTime" : "2020-12-30T03:00:00.000+00:00",
+  "previousFireTime" : "2020-12-04T03:00:00.000+00:00",
+  "nextFireTime" : "2020-12-07T03:00:00.000+00:00",
+  "priority" : 7,
+  "finalFireTime" : "2020-12-29T17:00:00.000+00:00",
+  "data" : { },
+  "simple" : {
+    "interval" : 86400000,
+    "repeatCount" : -1,
+    "timesTriggered" : 0
+  }
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>大部分响应对所有触发器类型都是通用的。<a href="#common-response-structure">前面已描述了</a> 通用元素的结构。下表描述了与简单触发器相关的响应部分的结构：</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">路径</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>simple</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">简单触发器的特定详细信息。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>simple.interval</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">两次执行之间的间隔（以毫秒为单位）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>simple.repeatCount</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器应重复的次数，或 -1 表示无限重复。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>simple.timesTriggered</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器已触发的次数。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_每日时间间隔触发器响应结构"><a class="anchor" href="#_每日时间间隔触发器响应结构"></a>每日时间间隔触发器响应结构</h3>
+<div class="paragraph">
+<p>每日时间间隔触发器用于基于每日重复时间间隔触发任务。此类触发器的响应示例如下：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.spring-boot.actuator.v3+json
+Content-Length: 667
+
+{
+  "group" : "samples",
+  "name" : "example",
+  "description" : "Example trigger",
+  "state" : "PAUSED",
+  "type" : "dailyTimeInterval",
+  "calendarName" : "bankHolidays",
+  "startTime" : "2020-11-30T17:00:00.000+00:00",
+  "endTime" : "2020-12-30T03:00:00.000+00:00",
+  "previousFireTime" : "2020-12-04T03:00:00.000+00:00",
+  "nextFireTime" : "2020-12-07T03:00:00.000+00:00",
+  "priority" : 5,
+  "finalFireTime" : "2020-12-30T18:00:00.000+00:00",
+  "data" : { },
+  "dailyTimeInterval" : {
+    "interval" : 3600000,
+    "daysOfWeek" : [ 3, 5 ],
+    "startTimeOfDay" : "09:00:00",
+    "endTimeOfDay" : "18:00:00",
+    "repeatCount" : -1,
+    "timesTriggered" : 0
+  }
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>大部分响应对所有触发器类型都是通用的。<a href="#common-response-structure">前面已描述了</a> 通用元素的结构。下表描述了与每日时间间隔触发器相关的响应部分的结构：</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">路径</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dailyTimeInterval</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">每日时间间隔触发器的特定详细信息。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dailyTimeInterval.interval</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">加到触发时间以计算下一个触发器重复时间的间隔（以毫秒为单位）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dailyTimeInterval.daysOfWeek</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">一周中触发的天数数组。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dailyTimeInterval.startTimeOfDay</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">在给定间隔开始触发的时间（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dailyTimeInterval.endTimeOfDay</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">在给定间隔完成触发的时间（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dailyTimeInterval.repeatCount</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器应重复的次数，或 -1 表示无限重复。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dailyTimeInterval.timesTriggered</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器已触发的次数。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_日历间隔触发器响应结构"><a class="anchor" href="#_日历间隔触发器响应结构"></a>日历间隔触发器响应结构</h3>
+<div class="paragraph">
+<p>日历间隔触发器用于基于重复的日历时间间隔触发任务。此类触发器的响应示例如下：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.spring-boot.actuator.v3+json
+Content-Length: 669
+
+{
+  "group" : "samples",
+  "name" : "example",
+  "description" : "Example trigger",
+  "state" : "NORMAL",
+  "type" : "calendarInterval",
+  "calendarName" : "bankHolidays",
+  "startTime" : "2020-11-30T17:00:00.000+00:00",
+  "endTime" : "2020-12-30T03:00:00.000+00:00",
+  "previousFireTime" : "2020-12-04T03:00:00.000+00:00",
+  "nextFireTime" : "2020-12-07T03:00:00.000+00:00",
+  "priority" : 5,
+  "finalFireTime" : "2020-12-28T17:00:00.000+00:00",
+  "data" : { },
+  "calendarInterval" : {
+    "interval" : 604800000,
+    "timeZone" : "Etc/UTC",
+    "timesTriggered" : 0,
+    "preserveHourOfDayAcrossDaylightSavings" : false,
+    "skipDayIfHourDoesNotExist" : false
+  }
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>大部分响应对所有触发器类型都是通用的。<a href="#common-response-structure">前面已描述了</a> 通用元素的结构。下表描述了与日历间隔触发器相关的响应部分的结构：</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">路径</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>calendarInterval</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">日历间隔触发器的特定详细信息。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>calendarInterval.interval</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">加到触发时间以计算下一个触发器重复时间的间隔（以毫秒为单位）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>calendarInterval.timeZone</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">执行时间计算的时区（如果有）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>calendarInterval.timesTriggered</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发器已触发的次数。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>calendarInterval.preserveHourOfDayAcrossDaylightSavings</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">无论夏令时转换如何，是否在同一时间触发。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>calendarInterval.skipDayIfHourDoesNotExist</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">如果某天中某个小时不存在，是否跳过。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_自定义触发器响应结构"><a class="anchor" href="#_自定义触发器响应结构"></a>自定义触发器响应结构</h3>
+<div class="paragraph">
+<p>自定义触发器是其他实现的触发器。此类触发器的响应示例如下：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.spring-boot.actuator.v3+json
+Content-Length: 457
+
+{
+  "group" : "samples",
+  "name" : "example",
+  "description" : "Example trigger.",
+  "state" : "NORMAL",
+  "type" : "custom",
+  "calendarName" : "bankHolidays",
+  "startTime" : "2020-11-30T17:00:00.000+00:00",
+  "endTime" : "2020-12-30T03:00:00.000+00:00",
+  "previousFireTime" : "2020-12-04T03:00:00.000+00:00",
+  "nextFireTime" : "2020-12-07T03:00:00.000+00:00",
+  "priority" : 10,
+  "custom" : {
+    "trigger" : "com.example.CustomTrigger@fdsfsd"
+  }
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>大部分响应对所有触发器类型都是通用的。<a href="#common-response-structure">前面已描述了</a> 通用元素的结构。下表描述了与自定义触发器相关的响应部分的结构：</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">路径</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>custom</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">自定义触发器的特定详细信息。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>custom.trigger</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">自定义触发器实例的 toString 表示。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

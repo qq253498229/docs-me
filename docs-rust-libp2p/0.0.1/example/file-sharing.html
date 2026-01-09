@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>基本文件共享应用程序 :: docs-me</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">docs-me</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-rust-libp2p" data-version="0.0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">libp2p入门</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">教程</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/hole-punching.html">打洞教程</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/ping.html">Ping教程</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">示例</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="chat.html">聊天</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="distributed-key-value-store.html">分布式键值存储</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="file-sharing.html">基本文件共享应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ipfs-kad.html">IPFS Kademlia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ipfs-private.html">IPFS 私有实现</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ping.html">Ping</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="rendezvous.html">Rendezvous</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="autonat.html">AutoNAT</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="relay-server.html">中继服务器</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">libp2p入门</span>
+    <span class="version">0.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../docs-config/0.0.1/index.html">docs-config</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-config/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-steam-electron/0.0.1/index.html">docs-steam-electron</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-steam-electron/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-xiuxian/0.0.1/index.html">docs-xiuxian</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-xiuxian/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-es-java/7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-es-java/7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../docs-es-java/6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../docs-es-java/6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-greenworks-js/0.0.1/index.html">Greenworks-JS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-greenworks-js/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">libp2p入门</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-neutralino-api/0.0.1/index.html">NeutralinoJS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-neutralino-api/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-antora-oauth2.1/0.0.1/index.html">OAuth 2.1 授权框架</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-antora-oauth2.1/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-pd2/0.0.1/index.html">PD2记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-pd2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-peerjs/0.0.1/index.html">PEER JS</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-peerjs/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-actuator/3.3.3/index.html">Spring Boot Actuator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-actuator/3.3.3/index.html">3.3.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-oauth2/0.0.1/index.html">Spring Boot OAuth2</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-oauth2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-steamworks-rs/0.11.0/index.html">Steamworks for Rust</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-steamworks-rs/0.11.0/index.html">0.11.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-tauri/v1/index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-tauri/v1/index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-testing-angular/中文/start.html">Testing Angular</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-testing-angular/中文/start.html">中文</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-me/0.0.1/index.html">个人记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-me/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-taiwu/0.0.1/index.html">太吾绘卷</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-taiwu/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-palworld/0.0.1/index.html">幻兽帕鲁笔记</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-palworld/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-building-event-driven-microservices/0.0.1/index.html">微服务与事件驱动架构</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-building-event-driven-microservices/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-hunter/0.0.1/index.html">猎人-荒野的呼唤</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-hunter/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-logitech/v8.45/index.html">罗技鼠标宏文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-logitech/v8.45/index.html">v8.45</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-milk/0.0.1/index.html">银河奶牛</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-milk/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../docs-me/0.0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">libp2p入门</a></li>
+    <li>示例</li>
+    <li><a href="file-sharing.html">基本文件共享应用程序</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-rust-libp2p/edit/master/modules/ROOT/pages/example/file-sharing.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">基本文件共享应用程序</h1>
+<div class="sect1">
+<h2 id="_描述"><a class="anchor" href="#_描述"></a>描述</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>文件共享示例展示了一个使用libp2p构建的基本文件共享应用程序。这个示例展示了如何在提供简单文件共享功能的同时，将rust-libp2p集成到更大的应用程序中。</p>
+</div>
+<div class="paragraph">
+<p>在这个应用程序中，网络中的对等方可以充当文件提供者或文件检索者。提供者使用 <code>libp2p-kad</code> 在分布式哈希表（DHT）上公告他们可用的文件。检索者可以从网络中的任何节点通过文件名定位和检索文件。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_工作原理"><a class="anchor" href="#_工作原理"></a>工作原理</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>让我们了解文件共享流程：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>文件提供者</strong>：节点A和B作为文件提供者。每个节点提供特定文件：节点A提供文件FA，节点B提供文件FB。为了使他们的文件可用，他们使用 <code>libp2p-kad</code> 在DHT上将自己公告为提供者。这使得网络中的其他节点能够发现和检索他们的文件。</p>
+</li>
+<li>
+<p><strong>文件检索者</strong>：节点C作为文件检索者。它想要检索文件FA或FB。使用 <code>libp2p-kad</code>，它可以在DHT上定位这些文件的提供者，而不需要直接连接到它们。节点C连接到相应的提供者节点，并使用 <code>libp2p-request-response</code> 请求文件内容。</p>
+</li>
+<li>
+<p><strong>DHT和网络连接性</strong>：DHT（分布式哈希表）在文件共享过程中扮演着关键角色。它允许节点存储和发现有关文件提供者的信息。网络中的节点通过DHT相互连接，实现了高效的文件发现和检索。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_架构属性"><a class="anchor" href="#_架构属性"></a>架构属性</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>文件共享应用程序具有以下架构属性：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>清洁和可克隆的接口</strong>：应用程序提供了一个清洁且可克隆的async/await接口，允许用户无缝地与网络层交互。<code>客户端</code> 模块封装了网络通信所需的功能。</p>
+</li>
+<li>
+<p><strong>高效的网络处理</strong>：应用程序使用单个任务驱动网络层。这种设计选择确保了高效的网络通信，无需锁或复杂的同步机制。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_用法"><a class="anchor" href="#_用法"></a>用法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要设置一个简单的文件共享场景，其中一个提供者和一个检索者，请按照以下步骤操作：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1.<strong>启动文件提供者</strong>：在一个终端中，运行以下命令以启动文件提供者节点：</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">cargo run -- --listen-address /ip4/127.0.0.1/tcp/40837 \
+    --secret-key-seed 1 \
+    provide \
+    --path &lt;path-to-your-file&gt; \
+    --name &lt;name-for-others-to-find-your-file&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>此命令启动一个节点，该节点监听指定的地址，并提供位于指定路径的文件。文件通过提供的名称标识，允许其他节点发现和检索它。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>2.<strong>启动文件检索者</strong>：在另一个终端中，运行以下命令以启动文件检索者节点：</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">cargo run -- --peer /ip4/127.0.0.1/tcp/40837/p2p/12D3KooWPjceQrSwdWXPyLLeABRXmuqt69Rg3sBYbU1Nft9HyQ6X \
+    get \
+    --name &lt;name-for-others-to-find-your-file&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>此命令启动一个节点，该节点连接到指定的对等方（提供者）并请求具有给定名称的文件。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+检索者节点不需要直接连接到提供者。只要两个节点都连接到同一DHT网络中的任何节点，文件就可以成功检索。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>这个文件共享示例展示了使用libp2p构建文件共享应用程序的基本概念。通过理解这个示例的流程和架构属性，你可以利用libp2p的力量将点对点网络功能集成到你自己的应用程序中。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_结论"><a class="anchor" href="#_结论"></a>结论</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>文件共享示例提供了一个使用libp2p的基本文件共享应用程序的实际实现。通过利用libp2p的能力，如DHT和网络连接协议，它展示了对等方如何以去中心化的方式共享文件。</p>
+</div>
+<div class="paragraph">
+<p>通过探索和理解这个示例中提出的文件共享流程和架构属性，开发者可以获得使用libp2p构建自己的文件共享应用程序的洞察。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_代码"><a class="anchor" href="#_代码"></a>代码</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_cargo_toml"><a class="anchor" href="#_cargo_toml"></a>Cargo.toml</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">[package]
+name = "file-sharing-example"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license = "MIT"
+
+[package.metadata.release]
+release = false
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+tokio = { workspace = true, features = ["full"] }
+clap = { version = "4.5.6", features = ["derive"] }
+futures = { workspace = true }
+libp2p = { path = "../../libp2p", features = [ "tokio", "cbor", "dns", "kad", "noise", "macros", "request-response", "tcp", "websocket", "yamux"] }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true, features = ["env-filter"] }
+
+[lints]
+workspace = true</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_main_rs"><a class="anchor" href="#_main_rs"></a>main.rs</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-rust hljs" data-lang="rust">#![doc = include_str!("../README.md")]
+
+mod network;
+
+use clap::Parser;
+use tokio::task::spawn;
+
+use futures::prelude::*;
+use futures::StreamExt;
+use libp2p::{core::Multiaddr, multiaddr::Protocol};
+use std::error::Error;
+use std::io::Write;
+use std::path::PathBuf;
+use tracing_subscriber::EnvFilter;
+
+#[tokio::main]
+async fn main() -&gt; Result&lt;(), Box&lt;dyn Error&gt;&gt; {
+    let _ = tracing_subscriber::fmt()
+        .with_env_filter(EnvFilter::from_default_env())
+        .try_init();
+
+    let opt = Opt::parse();
+
+    let (mut network_client, mut network_events, network_event_loop) =
+        network::new(opt.secret_key_seed).await?;
+
+    // Spawn the network task for it to run in the background.
+    spawn(network_event_loop.run());
+
+    // In case a listen address was provided use it, otherwise listen on any
+    // address.
+    match opt.listen_address {
+        Some(addr) =&gt; network_client
+            .start_listening(addr)
+            .await
+            .expect("Listening not to fail."),
+        None =&gt; network_client
+            .start_listening("/ip4/0.0.0.0/tcp/0".parse()?)
+            .await
+            .expect("Listening not to fail."),
+    };
+
+    // In case the user provided an address of a peer on the CLI, dial it.
+    if let Some(addr) = opt.peer {
+        let Some(Protocol::P2p(peer_id)) = addr.iter().last() else {
+            return Err("Expect peer multiaddr to contain peer ID.".into());
+        };
+        network_client
+            .dial(peer_id, addr)
+            .await
+            .expect("Dial to succeed");
+    }
+
+    match opt.argument {
+        // Providing a file.
+        CliArgument::Provide { path, name } =&gt; {
+            // Advertise oneself as a provider of the file on the DHT.
+            network_client.start_providing(name.clone()).await;
+
+            loop {
+                match network_events.next().await {
+                    // Reply with the content of the file on incoming requests.
+                    Some(network::Event::InboundRequest { request, channel }) =&gt; {
+                        if request == name {
+                            network_client
+                                .respond_file(std::fs::read(&amp;path)?, channel)
+                                .await;
+                        }
+                    }
+                    e =&gt; todo!("{:?}", e),
+                }
+            }
+        }
+        // Locating and getting a file.
+        CliArgument::Get { name } =&gt; {
+            // Locate all nodes providing the file.
+            let providers = network_client.get_providers(name.clone()).await;
+            if providers.is_empty() {
+                return Err(format!("Could not find provider for file {name}.").into());
+            }
+
+            // Request the content of the file from each node.
+            let requests = providers.into_iter().map(|p| {
+                let mut network_client = network_client.clone();
+                let name = name.clone();
+                async move { network_client.request_file(p, name).await }.boxed()
+            });
+
+            // Await the requests, ignore the remaining once a single one succeeds.
+            let file_content = futures::future::select_ok(requests)
+                .await
+                .map_err(|_| "None of the providers returned file.")?
+                .0;
+
+            std::io::stdout().write_all(&amp;file_content)?;
+        }
+    }
+
+    Ok(())
+}
+
+#[derive(Parser, Debug)]
+#[clap(name = "libp2p file sharing example")]
+struct Opt {
+    /// Fixed value to generate deterministic peer ID.
+    #[clap(long)]
+    secret_key_seed: Option&lt;u8&gt;,
+
+    #[clap(long)]
+    peer: Option&lt;Multiaddr&gt;,
+
+    #[clap(long)]
+    listen_address: Option&lt;Multiaddr&gt;,
+
+    #[clap(subcommand)]
+    argument: CliArgument,
+}
+
+#[derive(Debug, Parser)]
+enum CliArgument {
+    Provide {
+        #[clap(long)]
+        path: PathBuf,
+        #[clap(long)]
+        name: String,
+    },
+    Get {
+        #[clap(long)]
+        name: String,
+    },
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_network_rs"><a class="anchor" href="#_network_rs"></a>network.rs</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-rust hljs" data-lang="rust">use futures::channel::{mpsc, oneshot};
+use futures::prelude::*;
+use futures::StreamExt;
+
+use libp2p::{
+    core::Multiaddr,
+    identity, kad,
+    multiaddr::Protocol,
+    noise,
+    request_response::{self, OutboundRequestId, ProtocolSupport, ResponseChannel},
+    swarm::{NetworkBehaviour, Swarm, SwarmEvent},
+    tcp, yamux, PeerId,
+};
+
+use libp2p::StreamProtocol;
+use serde::{Deserialize, Serialize};
+use std::collections::{hash_map, HashMap, HashSet};
+use std::error::Error;
+use std::time::Duration;
+
+/// Creates the network components, namely:
+///
+/// - The network client to interact with the network layer from anywhere
+///   within your application.
+///
+/// - The network event stream, e.g. for incoming requests.
+///
+/// - The network task driving the network itself.
+pub(crate) async fn new(
+    secret_key_seed: Option&lt;u8&gt;,
+) -&gt; Result&lt;(Client, impl Stream&lt;Item = Event&gt;, EventLoop), Box&lt;dyn Error&gt;&gt; {
+    // Create a public/private key pair, either random or based on a seed.
+    let id_keys = match secret_key_seed {
+        Some(seed) =&gt; {
+            let mut bytes = [0u8; 32];
+            bytes[0] = seed;
+            identity::Keypair::ed25519_from_bytes(bytes).unwrap()
+        }
+        None =&gt; identity::Keypair::generate_ed25519(),
+    };
+    let peer_id = id_keys.public().to_peer_id();
+
+    let mut swarm = libp2p::SwarmBuilder::with_existing_identity(id_keys)
+        .with_tokio()
+        .with_tcp(
+            tcp::Config::default(),
+            noise::Config::new,
+            yamux::Config::default,
+        )?
+        .with_behaviour(|key| Behaviour {
+            kademlia: kad::Behaviour::new(
+                peer_id,
+                kad::store::MemoryStore::new(key.public().to_peer_id()),
+            ),
+            request_response: request_response::cbor::Behaviour::new(
+                [(
+                    StreamProtocol::new("/file-exchange/1"),
+                    ProtocolSupport::Full,
+                )],
+                request_response::Config::default(),
+            ),
+        })?
+        .with_swarm_config(|c| c.with_idle_connection_timeout(Duration::from_secs(60)))
+        .build();
+
+    swarm
+        .behaviour_mut()
+        .kademlia
+        .set_mode(Some(kad::Mode::Server));
+
+    let (command_sender, command_receiver) = mpsc::channel(0);
+    let (event_sender, event_receiver) = mpsc::channel(0);
+
+    Ok((
+        Client {
+            sender: command_sender,
+        },
+        event_receiver,
+        EventLoop::new(swarm, command_receiver, event_sender),
+    ))
+}
+
+#[derive(Clone)]
+pub(crate) struct Client {
+    sender: mpsc::Sender&lt;Command&gt;,
+}
+
+impl Client {
+    /// Listen for incoming connections on the given address.
+    pub(crate) async fn start_listening(
+        &amp;mut self,
+        addr: Multiaddr,
+    ) -&gt; Result&lt;(), Box&lt;dyn Error + Send&gt;&gt; {
+        let (sender, receiver) = oneshot::channel();
+        self.sender
+            .send(Command::StartListening { addr, sender })
+            .await
+            .expect("Command receiver not to be dropped.");
+        receiver.await.expect("Sender not to be dropped.")
+    }
+
+    /// Dial the given peer at the given address.
+    pub(crate) async fn dial(
+        &amp;mut self,
+        peer_id: PeerId,
+        peer_addr: Multiaddr,
+    ) -&gt; Result&lt;(), Box&lt;dyn Error + Send&gt;&gt; {
+        let (sender, receiver) = oneshot::channel();
+        self.sender
+            .send(Command::Dial {
+                peer_id,
+                peer_addr,
+                sender,
+            })
+            .await
+            .expect("Command receiver not to be dropped.");
+        receiver.await.expect("Sender not to be dropped.")
+    }
+
+    /// Advertise the local node as the provider of the given file on the DHT.
+    pub(crate) async fn start_providing(&amp;mut self, file_name: String) {
+        let (sender, receiver) = oneshot::channel();
+        self.sender
+            .send(Command::StartProviding { file_name, sender })
+            .await
+            .expect("Command receiver not to be dropped.");
+        receiver.await.expect("Sender not to be dropped.");
+    }
+
+    /// Find the providers for the given file on the DHT.
+    pub(crate) async fn get_providers(&amp;mut self, file_name: String) -&gt; HashSet&lt;PeerId&gt; {
+        let (sender, receiver) = oneshot::channel();
+        self.sender
+            .send(Command::GetProviders { file_name, sender })
+            .await
+            .expect("Command receiver not to be dropped.");
+        receiver.await.expect("Sender not to be dropped.")
+    }
+
+    /// Request the content of the given file from the given peer.
+    pub(crate) async fn request_file(
+        &amp;mut self,
+        peer: PeerId,
+        file_name: String,
+    ) -&gt; Result&lt;Vec&lt;u8&gt;, Box&lt;dyn Error + Send&gt;&gt; {
+        let (sender, receiver) = oneshot::channel();
+        self.sender
+            .send(Command::RequestFile {
+                file_name,
+                peer,
+                sender,
+            })
+            .await
+            .expect("Command receiver not to be dropped.");
+        receiver.await.expect("Sender not be dropped.")
+    }
+
+    /// Respond with the provided file content to the given request.
+    pub(crate) async fn respond_file(
+        &amp;mut self,
+        file: Vec&lt;u8&gt;,
+        channel: ResponseChannel&lt;FileResponse&gt;,
+    ) {
+        self.sender
+            .send(Command::RespondFile { file, channel })
+            .await
+            .expect("Command receiver not to be dropped.");
+    }
+}
+
+pub(crate) struct EventLoop {
+    swarm: Swarm&lt;Behaviour&gt;,
+    command_receiver: mpsc::Receiver&lt;Command&gt;,
+    event_sender: mpsc::Sender&lt;Event&gt;,
+    pending_dial: HashMap&lt;PeerId, oneshot::Sender&lt;Result&lt;(), Box&lt;dyn Error + Send&gt;&gt;&gt;&gt;,
+    pending_start_providing: HashMap&lt;kad::QueryId, oneshot::Sender&lt;()&gt;&gt;,
+    pending_get_providers: HashMap&lt;kad::QueryId, oneshot::Sender&lt;HashSet&lt;PeerId&gt;&gt;&gt;,
+    pending_request_file:
+        HashMap&lt;OutboundRequestId, oneshot::Sender&lt;Result&lt;Vec&lt;u8&gt;, Box&lt;dyn Error + Send&gt;&gt;&gt;&gt;,
+}
+
+impl EventLoop {
+    fn new(
+        swarm: Swarm&lt;Behaviour&gt;,
+        command_receiver: mpsc::Receiver&lt;Command&gt;,
+        event_sender: mpsc::Sender&lt;Event&gt;,
+    ) -&gt; Self {
+        Self {
+            swarm,
+            command_receiver,
+            event_sender,
+            pending_dial: Default::default(),
+            pending_start_providing: Default::default(),
+            pending_get_providers: Default::default(),
+            pending_request_file: Default::default(),
+        }
+    }
+
+    pub(crate) async fn run(mut self) {
+        loop {
+            tokio::select! {
+                event = self.swarm.select_next_some() =&gt; self.handle_event(event).await,
+                command = self.command_receiver.next() =&gt; match command {
+                    Some(c) =&gt; self.handle_command(c).await,
+                    // Command channel closed, thus shutting down the network event loop.
+                    None=&gt;  return,
+                },
+            }
+        }
+    }
+
+    async fn handle_event(&amp;mut self, event: SwarmEvent&lt;BehaviourEvent&gt;) {
+        match event {
+            SwarmEvent::Behaviour(BehaviourEvent::Kademlia(
+                kad::Event::OutboundQueryProgressed {
+                    id,
+                    result: kad::QueryResult::StartProviding(_),
+                    ..
+                },
+            )) =&gt; {
+                let sender: oneshot::Sender&lt;()&gt; = self
+                    .pending_start_providing
+                    .remove(&amp;id)
+                    .expect("Completed query to be previously pending.");
+                let _ = sender.send(());
+            }
+            SwarmEvent::Behaviour(BehaviourEvent::Kademlia(
+                kad::Event::OutboundQueryProgressed {
+                    id,
+                    result:
+                        kad::QueryResult::GetProviders(Ok(kad::GetProvidersOk::FoundProviders {
+                            providers,
+                            ..
+                        })),
+                    ..
+                },
+            )) =&gt; {
+                if let Some(sender) = self.pending_get_providers.remove(&amp;id) {
+                    sender.send(providers).expect("Receiver not to be dropped");
+
+                    // Finish the query. We are only interested in the first result.
+                    self.swarm
+                        .behaviour_mut()
+                        .kademlia
+                        .query_mut(&amp;id)
+                        .unwrap()
+                        .finish();
+                }
+            }
+            SwarmEvent::Behaviour(BehaviourEvent::Kademlia(
+                kad::Event::OutboundQueryProgressed {
+                    result:
+                        kad::QueryResult::GetProviders(Ok(
+                            kad::GetProvidersOk::FinishedWithNoAdditionalRecord { .. },
+                        )),
+                    ..
+                },
+            )) =&gt; {}
+            SwarmEvent::Behaviour(BehaviourEvent::Kademlia(_)) =&gt; {}
+            SwarmEvent::Behaviour(BehaviourEvent::RequestResponse(
+                request_response::Event::Message { message, .. },
+            )) =&gt; match message {
+                request_response::Message::Request {
+                    request, channel, ..
+                } =&gt; {
+                    self.event_sender
+                        .send(Event::InboundRequest {
+                            request: request.0,
+                            channel,
+                        })
+                        .await
+                        .expect("Event receiver not to be dropped.");
+                }
+                request_response::Message::Response {
+                    request_id,
+                    response,
+                } =&gt; {
+                    let _ = self
+                        .pending_request_file
+                        .remove(&amp;request_id)
+                        .expect("Request to still be pending.")
+                        .send(Ok(response.0));
+                }
+            },
+            SwarmEvent::Behaviour(BehaviourEvent::RequestResponse(
+                request_response::Event::OutboundFailure {
+                    request_id, error, ..
+                },
+            )) =&gt; {
+                let _ = self
+                    .pending_request_file
+                    .remove(&amp;request_id)
+                    .expect("Request to still be pending.")
+                    .send(Err(Box::new(error)));
+            }
+            SwarmEvent::Behaviour(BehaviourEvent::RequestResponse(
+                request_response::Event::ResponseSent { .. },
+            )) =&gt; {}
+            SwarmEvent::NewListenAddr { address, .. } =&gt; {
+                let local_peer_id = *self.swarm.local_peer_id();
+                eprintln!(
+                    "Local node is listening on {:?}",
+                    address.with(Protocol::P2p(local_peer_id))
+                );
+            }
+            SwarmEvent::IncomingConnection { .. } =&gt; {}
+            SwarmEvent::ConnectionEstablished {
+                peer_id, endpoint, ..
+            } =&gt; {
+                if endpoint.is_dialer() {
+                    if let Some(sender) = self.pending_dial.remove(&amp;peer_id) {
+                        let _ = sender.send(Ok(()));
+                    }
+                }
+            }
+            SwarmEvent::ConnectionClosed { .. } =&gt; {}
+            SwarmEvent::OutgoingConnectionError { peer_id, error, .. } =&gt; {
+                if let Some(peer_id) = peer_id {
+                    if let Some(sender) = self.pending_dial.remove(&amp;peer_id) {
+                        let _ = sender.send(Err(Box::new(error)));
+                    }
+                }
+            }
+            SwarmEvent::IncomingConnectionError { .. } =&gt; {}
+            SwarmEvent::Dialing {
+                peer_id: Some(peer_id),
+                ..
+            } =&gt; eprintln!("Dialing {peer_id}"),
+            e =&gt; panic!("{e:?}"),
+        }
+    }
+
+    async fn handle_command(&amp;mut self, command: Command) {
+        match command {
+            Command::StartListening { addr, sender } =&gt; {
+                let _ = match self.swarm.listen_on(addr) {
+                    Ok(_) =&gt; sender.send(Ok(())),
+                    Err(e) =&gt; sender.send(Err(Box::new(e))),
+                };
+            }
+            Command::Dial {
+                peer_id,
+                peer_addr,
+                sender,
+            } =&gt; {
+                if let hash_map::Entry::Vacant(e) = self.pending_dial.entry(peer_id) {
+                    self.swarm
+                        .behaviour_mut()
+                        .kademlia
+                        .add_address(&amp;peer_id, peer_addr.clone());
+                    match self.swarm.dial(peer_addr.with(Protocol::P2p(peer_id))) {
+                        Ok(()) =&gt; {
+                            e.insert(sender);
+                        }
+                        Err(e) =&gt; {
+                            let _ = sender.send(Err(Box::new(e)));
+                        }
+                    }
+                } else {
+                    todo!("Already dialing peer.");
+                }
+            }
+            Command::StartProviding { file_name, sender } =&gt; {
+                let query_id = self
+                    .swarm
+                    .behaviour_mut()
+                    .kademlia
+                    .start_providing(file_name.into_bytes().into())
+                    .expect("No store error.");
+                self.pending_start_providing.insert(query_id, sender);
+            }
+            Command::GetProviders { file_name, sender } =&gt; {
+                let query_id = self
+                    .swarm
+                    .behaviour_mut()
+                    .kademlia
+                    .get_providers(file_name.into_bytes().into());
+                self.pending_get_providers.insert(query_id, sender);
+            }
+            Command::RequestFile {
+                file_name,
+                peer,
+                sender,
+            } =&gt; {
+                let request_id = self
+                    .swarm
+                    .behaviour_mut()
+                    .request_response
+                    .send_request(&amp;peer, FileRequest(file_name));
+                self.pending_request_file.insert(request_id, sender);
+            }
+            Command::RespondFile { file, channel } =&gt; {
+                self.swarm
+                    .behaviour_mut()
+                    .request_response
+                    .send_response(channel, FileResponse(file))
+                    .expect("Connection to peer to be still open.");
+            }
+        }
+    }
+}
+
+#[derive(NetworkBehaviour)]
+struct Behaviour {
+    request_response: request_response::cbor::Behaviour&lt;FileRequest, FileResponse&gt;,
+    kademlia: kad::Behaviour&lt;kad::store::MemoryStore&gt;,
+}
+
+#[derive(Debug)]
+enum Command {
+    StartListening {
+        addr: Multiaddr,
+        sender: oneshot::Sender&lt;Result&lt;(), Box&lt;dyn Error + Send&gt;&gt;&gt;,
+    },
+    Dial {
+        peer_id: PeerId,
+        peer_addr: Multiaddr,
+        sender: oneshot::Sender&lt;Result&lt;(), Box&lt;dyn Error + Send&gt;&gt;&gt;,
+    },
+    StartProviding {
+        file_name: String,
+        sender: oneshot::Sender&lt;()&gt;,
+    },
+    GetProviders {
+        file_name: String,
+        sender: oneshot::Sender&lt;HashSet&lt;PeerId&gt;&gt;,
+    },
+    RequestFile {
+        file_name: String,
+        peer: PeerId,
+        sender: oneshot::Sender&lt;Result&lt;Vec&lt;u8&gt;, Box&lt;dyn Error + Send&gt;&gt;&gt;,
+    },
+    RespondFile {
+        file: Vec&lt;u8&gt;,
+        channel: ResponseChannel&lt;FileResponse&gt;,
+    },
+}
+
+#[derive(Debug)]
+pub(crate) enum Event {
+    InboundRequest {
+        request: String,
+        channel: ResponseChannel&lt;FileResponse&gt;,
+    },
+}
+
+// Simple file exchange protocol
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+struct FileRequest(String);
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub(crate) struct FileResponse(Vec&lt;u8&gt;);</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Rendezvous :: docs-me</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">docs-me</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-rust-libp2p" data-version="0.0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">libp2p入门</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">教程</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/hole-punching.html">打洞教程</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/ping.html">Ping教程</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">示例</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="chat.html">聊天</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="distributed-key-value-store.html">分布式键值存储</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="file-sharing.html">基本文件共享应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ipfs-kad.html">IPFS Kademlia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ipfs-private.html">IPFS 私有实现</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ping.html">Ping</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="rendezvous.html">Rendezvous</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="autonat.html">AutoNAT</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="relay-server.html">中继服务器</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">libp2p入门</span>
+    <span class="version">0.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../docs-config/0.0.1/index.html">docs-config</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-config/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-steam-electron/0.0.1/index.html">docs-steam-electron</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-steam-electron/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-xiuxian/0.0.1/index.html">docs-xiuxian</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-xiuxian/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-es-java/7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-es-java/7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../docs-es-java/6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../docs-es-java/6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-greenworks-js/0.0.1/index.html">Greenworks-JS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-greenworks-js/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">libp2p入门</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-neutralino-api/0.0.1/index.html">NeutralinoJS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-neutralino-api/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-antora-oauth2.1/0.0.1/index.html">OAuth 2.1 授权框架</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-antora-oauth2.1/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-pd2/0.0.1/index.html">PD2记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-pd2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-peerjs/0.0.1/index.html">PEER JS</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-peerjs/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-actuator/3.3.3/index.html">Spring Boot Actuator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-actuator/3.3.3/index.html">3.3.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-oauth2/0.0.1/index.html">Spring Boot OAuth2</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-oauth2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-steamworks-rs/0.11.0/index.html">Steamworks for Rust</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-steamworks-rs/0.11.0/index.html">0.11.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-tauri/v1/index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-tauri/v1/index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-testing-angular/中文/start.html">Testing Angular</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-testing-angular/中文/start.html">中文</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-me/0.0.1/index.html">个人记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-me/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-taiwu/0.0.1/index.html">太吾绘卷</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-taiwu/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-palworld/0.0.1/index.html">幻兽帕鲁笔记</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-palworld/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-building-event-driven-microservices/0.0.1/index.html">微服务与事件驱动架构</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-building-event-driven-microservices/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-hunter/0.0.1/index.html">猎人-荒野的呼唤</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-hunter/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-logitech/v8.45/index.html">罗技鼠标宏文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-logitech/v8.45/index.html">v8.45</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-milk/0.0.1/index.html">银河奶牛</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-milk/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../docs-me/0.0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">libp2p入门</a></li>
+    <li>示例</li>
+    <li><a href="rendezvous.html">Rendezvous</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-rust-libp2p/edit/master/modules/ROOT/pages/example/rendezvous.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Rendezvous</h1>
+<div class="sect1">
+<h2 id="_描述"><a class="anchor" href="#_描述"></a>描述</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>这个会合协议示例展示了如何实现一个会合服务器以及如何使用不同的二进制文件与之交互。会合服务器促进了对等方的注册和发现，使得对等方能够以去中心化的方式找到彼此并进行通信。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_使用说明"><a class="anchor" href="#_使用说明"></a>使用说明</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要运行这个示例，请按照以下步骤操作：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1.启动会合服务器，运行以下命令：</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">RUST_LOG=info cargo run --bin rendezvous-example</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>这个命令启动了会合服务器，它将监听传入的连接并处理对等方的注册和发现。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>2.通过执行以下命令注册一个对等方：</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">RUST_LOG=info cargo run --bin rzv-register</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>这个命令将一个对等方注册到会合服务器，允许其他对等方发现它。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>3.尝试通过运行以下命令发现之前步骤中注册的对等方：</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">RUST_LOG=info cargo run --bin rzv-discover</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>这个命令尝试使用会合服务器发现注册的对等方。如果成功，它将打印出被发现对等方的详细信息。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>4.此外，你可以尝试使用识别协议发现对等方，执行以下命令：</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">RUST_LOG=info cargo run --bin rzv-identify</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>这个命令演示了使用识别协议进行对等方发现。如果成功，它将打印出对等方的身份信息。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>5.尝试不同的注册、发现以及协议组合，以探索会合协议和libp2p库的能力。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_结论"><a class="anchor" href="#_结论"></a>结论</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>会合协议示例提供了一个实际的演示，展示了如何使用libp2p实现对等方的注册和发现。通过运行会合服务器并利用提供的二进制文件，用户可以在去中心化网络中注册对等方并发现它们。</p>
+</div>
+<div class="paragraph">
+<p>请随意探索代码，并根据你的特定用例定制会合服务器和二进制文件的行为。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_代码"><a class="anchor" href="#_代码"></a>代码</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_cargo_toml"><a class="anchor" href="#_cargo_toml"></a>Cargo.toml</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">[package]
+name = "rendezvous-example"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license = "MIT"
+
+[package.metadata.release]
+release = false
+
+[dependencies]
+futures = { workspace = true }
+libp2p = { path = "../../libp2p", features = ["identify", "macros", "noise", "ping", "rendezvous", "tcp", "tokio", "yamux"] }
+tokio = { workspace = true, features = ["rt-multi-thread", "macros", "time"] }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true, features = ["env-filter"] }
+
+[lints]
+workspace = true</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_main_rs"><a class="anchor" href="#_main_rs"></a>main.rs</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-rust hljs" data-lang="rust">#![doc = include_str!("../README.md")]
+
+use futures::StreamExt;
+use libp2p::{
+    identify, noise, ping, rendezvous,
+    swarm::{NetworkBehaviour, SwarmEvent},
+    tcp, yamux,
+};
+use std::error::Error;
+use std::time::Duration;
+use tracing_subscriber::EnvFilter;
+
+#[tokio::main]
+async fn main() -&gt; Result&lt;(), Box&lt;dyn Error&gt;&gt; {
+    let _ = tracing_subscriber::fmt()
+        .with_env_filter(EnvFilter::from_default_env())
+        .try_init();
+
+    // Results in PeerID 12D3KooWDpJ7As7BWAwRMfu1VU2WCqNjvq387JEYKDBj4kx6nXTN which is
+    // used as the rendezvous point by the other peer examples.
+    let keypair = libp2p::identity::Keypair::ed25519_from_bytes([0; 32]).unwrap();
+
+    let mut swarm = libp2p::SwarmBuilder::with_existing_identity(keypair)
+        .with_tokio()
+        .with_tcp(
+            tcp::Config::default(),
+            noise::Config::new,
+            yamux::Config::default,
+        )?
+        .with_behaviour(|key| MyBehaviour {
+            identify: identify::Behaviour::new(identify::Config::new(
+                "rendezvous-example/1.0.0".to_string(),
+                key.public(),
+            )),
+            rendezvous: rendezvous::server::Behaviour::new(rendezvous::server::Config::default()),
+            ping: ping::Behaviour::new(ping::Config::new().with_interval(Duration::from_secs(1))),
+        })?
+        .with_swarm_config(|cfg| cfg.with_idle_connection_timeout(Duration::from_secs(5)))
+        .build();
+
+    let _ = swarm.listen_on("/ip4/0.0.0.0/tcp/62649".parse().unwrap());
+
+    while let Some(event) = swarm.next().await {
+        match event {
+            SwarmEvent::ConnectionEstablished { peer_id, .. } =&gt; {
+                tracing::info!("Connected to {}", peer_id);
+            }
+            SwarmEvent::ConnectionClosed { peer_id, .. } =&gt; {
+                tracing::info!("Disconnected from {}", peer_id);
+            }
+            SwarmEvent::Behaviour(MyBehaviourEvent::Rendezvous(
+                rendezvous::server::Event::PeerRegistered { peer, registration },
+            )) =&gt; {
+                tracing::info!(
+                    "Peer {} registered for namespace '{}'",
+                    peer,
+                    registration.namespace
+                );
+            }
+            SwarmEvent::Behaviour(MyBehaviourEvent::Rendezvous(
+                rendezvous::server::Event::DiscoverServed {
+                    enquirer,
+                    registrations,
+                },
+            )) =&gt; {
+                tracing::info!(
+                    "Served peer {} with {} registrations",
+                    enquirer,
+                    registrations.len()
+                );
+            }
+            other =&gt; {
+                tracing::debug!("Unhandled {:?}", other);
+            }
+        }
+    }
+
+    Ok(())
+}
+
+#[derive(NetworkBehaviour)]
+struct MyBehaviour {
+    identify: identify::Behaviour,
+    rendezvous: rendezvous::server::Behaviour,
+    ping: ping::Behaviour,
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_binrzv_discovery_rs"><a class="anchor" href="#_binrzv_discovery_rs"></a>bin/rzv-discovery.rs</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-rust hljs" data-lang="rust">use futures::StreamExt;
+use libp2p::{
+    multiaddr::Protocol,
+    noise, ping, rendezvous,
+    swarm::{NetworkBehaviour, SwarmEvent},
+    tcp, yamux, Multiaddr,
+};
+use std::error::Error;
+use std::time::Duration;
+use tracing_subscriber::EnvFilter;
+
+const NAMESPACE: &amp;str = "rendezvous";
+
+#[tokio::main]
+async fn main() -&gt; Result&lt;(), Box&lt;dyn Error&gt;&gt; {
+    let _ = tracing_subscriber::fmt()
+        .with_env_filter(EnvFilter::from_default_env())
+        .try_init();
+
+    let rendezvous_point_address = "/ip4/127.0.0.1/tcp/62649".parse::&lt;Multiaddr&gt;().unwrap();
+    let rendezvous_point = "12D3KooWDpJ7As7BWAwRMfu1VU2WCqNjvq387JEYKDBj4kx6nXTN"
+        .parse()
+        .unwrap();
+
+    let mut swarm = libp2p::SwarmBuilder::with_new_identity()
+        .with_tokio()
+        .with_tcp(
+            tcp::Config::default(),
+            noise::Config::new,
+            yamux::Config::default,
+        )?
+        .with_behaviour(|key| MyBehaviour {
+            rendezvous: rendezvous::client::Behaviour::new(key.clone()),
+            ping: ping::Behaviour::new(ping::Config::new().with_interval(Duration::from_secs(1))),
+        })?
+        .with_swarm_config(|cfg| cfg.with_idle_connection_timeout(Duration::from_secs(5)))
+        .build();
+
+    swarm.dial(rendezvous_point_address.clone()).unwrap();
+
+    let mut discover_tick = tokio::time::interval(Duration::from_secs(30));
+    let mut cookie = None;
+
+    loop {
+        tokio::select! {
+                event = swarm.select_next_some() =&gt; match event {
+                    SwarmEvent::ConnectionEstablished { peer_id, .. } if peer_id == rendezvous_point =&gt; {
+                        tracing::info!(
+                            "Connected to rendezvous point, discovering nodes in '{}' namespace ...",
+                            NAMESPACE
+                        );
+
+                        swarm.behaviour_mut().rendezvous.discover(
+                            Some(rendezvous::Namespace::new(NAMESPACE.to_string()).unwrap()),
+                            None,
+                            None,
+                            rendezvous_point,
+                        );
+                    }
+                    SwarmEvent::Behaviour(MyBehaviourEvent::Rendezvous(rendezvous::client::Event::Discovered {
+                        registrations,
+                        cookie: new_cookie,
+                        ..
+                    })) =&gt; {
+                        cookie.replace(new_cookie);
+
+                        for registration in registrations {
+                            for address in registration.record.addresses() {
+                                let peer = registration.record.peer_id();
+                                tracing::info!(%peer, %address, "Discovered peer");
+
+                                let p2p_suffix = Protocol::P2p(peer);
+                                let address_with_p2p =
+                                    if !address.ends_with(&amp;Multiaddr::empty().with(p2p_suffix.clone())) {
+                                        address.clone().with(p2p_suffix)
+                                    } else {
+                                        address.clone()
+                                    };
+
+                                swarm.dial(address_with_p2p).unwrap();
+                            }
+                        }
+                    }
+                    SwarmEvent::Behaviour(MyBehaviourEvent::Ping(ping::Event {
+                        peer,
+                        result: Ok(rtt),
+                        ..
+                    })) if peer != rendezvous_point =&gt; {
+                        tracing::info!(%peer, "Ping is {}ms", rtt.as_millis())
+                    }
+                    other =&gt; {
+                        tracing::debug!("Unhandled {:?}", other);
+                    }
+            },
+            _ = discover_tick.tick(), if cookie.is_some() =&gt;
+                swarm.behaviour_mut().rendezvous.discover(
+                    Some(rendezvous::Namespace::new(NAMESPACE.to_string()).unwrap()),
+                    cookie.clone(),
+                    None,
+                    rendezvous_point
+                    )
+        }
+    }
+}
+
+#[derive(NetworkBehaviour)]
+struct MyBehaviour {
+    rendezvous: rendezvous::client::Behaviour,
+    ping: ping::Behaviour,
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_binrzv_identify_rs"><a class="anchor" href="#_binrzv_identify_rs"></a>bin/rzv-identify.rs</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-rust hljs" data-lang="rust">use futures::StreamExt;
+use libp2p::{
+    identify, noise, ping, rendezvous,
+    swarm::{NetworkBehaviour, SwarmEvent},
+    tcp, yamux, Multiaddr,
+};
+use std::time::Duration;
+use tracing_subscriber::EnvFilter;
+
+#[tokio::main]
+async fn main() {
+    let _ = tracing_subscriber::fmt()
+        .with_env_filter(EnvFilter::from_default_env())
+        .try_init();
+
+    let rendezvous_point_address = "/ip4/127.0.0.1/tcp/62649".parse::&lt;Multiaddr&gt;().unwrap();
+    let rendezvous_point = "12D3KooWDpJ7As7BWAwRMfu1VU2WCqNjvq387JEYKDBj4kx6nXTN"
+        .parse()
+        .unwrap();
+
+    let mut swarm = libp2p::SwarmBuilder::with_new_identity()
+        .with_tokio()
+        .with_tcp(
+            tcp::Config::default(),
+            noise::Config::new,
+            yamux::Config::default,
+        )
+        .unwrap()
+        .with_behaviour(|key| MyBehaviour {
+            identify: identify::Behaviour::new(identify::Config::new(
+                "rendezvous-example/1.0.0".to_string(),
+                key.public(),
+            )),
+            rendezvous: rendezvous::client::Behaviour::new(key.clone()),
+            ping: ping::Behaviour::new(ping::Config::new().with_interval(Duration::from_secs(1))),
+        })
+        .unwrap()
+        .with_swarm_config(|cfg| cfg.with_idle_connection_timeout(Duration::from_secs(5)))
+        .build();
+
+    let _ = swarm.listen_on("/ip4/0.0.0.0/tcp/0".parse().unwrap());
+
+    swarm.dial(rendezvous_point_address.clone()).unwrap();
+
+    while let Some(event) = swarm.next().await {
+        match event {
+            SwarmEvent::NewListenAddr { address, .. } =&gt; {
+                tracing::info!("Listening on {}", address);
+            }
+            SwarmEvent::ConnectionClosed {
+                peer_id,
+                cause: Some(error),
+                ..
+            } if peer_id == rendezvous_point =&gt; {
+                tracing::error!("Lost connection to rendezvous point {}", error);
+            }
+            // once `/identify` did its job, we know our external address and can register
+            SwarmEvent::Behaviour(MyBehaviourEvent::Identify(identify::Event::Received {
+                info,
+                ..
+            })) =&gt; {
+                // Register our external address. Needs to be done explicitly
+                // for this case, as it's a local address.
+                swarm.add_external_address(info.observed_addr);
+                if let Err(error) = swarm.behaviour_mut().rendezvous.register(
+                    rendezvous::Namespace::from_static("rendezvous"),
+                    rendezvous_point,
+                    None,
+                ) {
+                    tracing::error!("Failed to register: {error}");
+                    return;
+                }
+            }
+            SwarmEvent::Behaviour(MyBehaviourEvent::Rendezvous(
+                rendezvous::client::Event::Registered {
+                    namespace,
+                    ttl,
+                    rendezvous_node,
+                },
+            )) =&gt; {
+                tracing::info!(
+                    "Registered for namespace '{}' at rendezvous point {} for the next {} seconds",
+                    namespace,
+                    rendezvous_node,
+                    ttl
+                );
+            }
+            SwarmEvent::Behaviour(MyBehaviourEvent::Rendezvous(
+                rendezvous::client::Event::RegisterFailed {
+                    rendezvous_node,
+                    namespace,
+                    error,
+                },
+            )) =&gt; {
+                tracing::error!(
+                    "Failed to register: rendezvous_node={}, namespace={}, error_code={:?}",
+                    rendezvous_node,
+                    namespace,
+                    error
+                );
+                return;
+            }
+            SwarmEvent::Behaviour(MyBehaviourEvent::Ping(ping::Event {
+                peer,
+                result: Ok(rtt),
+                ..
+            })) if peer != rendezvous_point =&gt; {
+                tracing::info!("Ping to {} is {}ms", peer, rtt.as_millis())
+            }
+            other =&gt; {
+                tracing::debug!("Unhandled {:?}", other);
+            }
+        }
+    }
+}
+
+#[derive(NetworkBehaviour)]
+struct MyBehaviour {
+    identify: identify::Behaviour,
+    rendezvous: rendezvous::client::Behaviour,
+    ping: ping::Behaviour,
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_binrzv_register_rs"><a class="anchor" href="#_binrzv_register_rs"></a>bin/rzv-register.rs</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-rust hljs" data-lang="rust">use futures::StreamExt;
+use libp2p::{
+    noise, ping, rendezvous,
+    swarm::{NetworkBehaviour, SwarmEvent},
+    tcp, yamux, Multiaddr,
+};
+use std::time::Duration;
+use tracing_subscriber::EnvFilter;
+
+#[tokio::main]
+async fn main() {
+    let _ = tracing_subscriber::fmt()
+        .with_env_filter(EnvFilter::from_default_env())
+        .try_init();
+
+    let rendezvous_point_address = "/ip4/127.0.0.1/tcp/62649".parse::&lt;Multiaddr&gt;().unwrap();
+    let rendezvous_point = "12D3KooWDpJ7As7BWAwRMfu1VU2WCqNjvq387JEYKDBj4kx6nXTN"
+        .parse()
+        .unwrap();
+
+    let mut swarm = libp2p::SwarmBuilder::with_new_identity()
+        .with_tokio()
+        .with_tcp(
+            tcp::Config::default(),
+            noise::Config::new,
+            yamux::Config::default,
+        )
+        .unwrap()
+        .with_behaviour(|key| MyBehaviour {
+            rendezvous: rendezvous::client::Behaviour::new(key.clone()),
+            ping: ping::Behaviour::new(ping::Config::new().with_interval(Duration::from_secs(1))),
+        })
+        .unwrap()
+        .with_swarm_config(|cfg| cfg.with_idle_connection_timeout(Duration::from_secs(5)))
+        .build();
+
+    // In production the external address should be the publicly facing IP address of the rendezvous point.
+    // This address is recorded in the registration entry by the rendezvous point.
+    let external_address = "/ip4/127.0.0.1/tcp/0".parse::&lt;Multiaddr&gt;().unwrap();
+    swarm.add_external_address(external_address);
+
+    swarm.dial(rendezvous_point_address.clone()).unwrap();
+
+    while let Some(event) = swarm.next().await {
+        match event {
+            SwarmEvent::NewListenAddr { address, .. } =&gt; {
+                tracing::info!("Listening on {}", address);
+            }
+            SwarmEvent::ConnectionClosed {
+                peer_id,
+                cause: Some(error),
+                ..
+            } if peer_id == rendezvous_point =&gt; {
+                tracing::error!("Lost connection to rendezvous point {}", error);
+            }
+            SwarmEvent::ConnectionEstablished { peer_id, .. } if peer_id == rendezvous_point =&gt; {
+                if let Err(error) = swarm.behaviour_mut().rendezvous.register(
+                    rendezvous::Namespace::from_static("rendezvous"),
+                    rendezvous_point,
+                    None,
+                ) {
+                    tracing::error!("Failed to register: {error}");
+                    return;
+                }
+                tracing::info!("Connection established with rendezvous point {}", peer_id);
+            }
+            // once `/identify` did its job, we know our external address and can register
+            SwarmEvent::Behaviour(MyBehaviourEvent::Rendezvous(
+                rendezvous::client::Event::Registered {
+                    namespace,
+                    ttl,
+                    rendezvous_node,
+                },
+            )) =&gt; {
+                tracing::info!(
+                    "Registered for namespace '{}' at rendezvous point {} for the next {} seconds",
+                    namespace,
+                    rendezvous_node,
+                    ttl
+                );
+            }
+            SwarmEvent::Behaviour(MyBehaviourEvent::Rendezvous(
+                rendezvous::client::Event::RegisterFailed {
+                    rendezvous_node,
+                    namespace,
+                    error,
+                },
+            )) =&gt; {
+                tracing::error!(
+                    "Failed to register: rendezvous_node={}, namespace={}, error_code={:?}",
+                    rendezvous_node,
+                    namespace,
+                    error
+                );
+                return;
+            }
+            SwarmEvent::Behaviour(MyBehaviourEvent::Ping(ping::Event {
+                peer,
+                result: Ok(rtt),
+                ..
+            })) if peer != rendezvous_point =&gt; {
+                tracing::info!("Ping to {} is {}ms", peer, rtt.as_millis())
+            }
+            other =&gt; {
+                tracing::debug!("Unhandled {:?}", other);
+            }
+        }
+    }
+}
+
+#[derive(NetworkBehaviour)]
+struct MyBehaviour {
+    rendezvous: rendezvous::client::Behaviour,
+    ping: ping::Behaviour,
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

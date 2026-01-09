@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>7.安全考虑 :: docs-me</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-me</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-antora-oauth2.1" data-version="0.0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">OAuth 2.1 授权框架</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="1-introduction.html">1.介绍</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="2-client-registration.html">2.客户端注册</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="3-protocol-endpoints.html">3.协议端点</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="4-grant-types.html">4.授权类型</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="5-resource-requests.html">5.资源请求</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="6-extensibility.html">6.可扩展性</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="7-security-considerations.html">7.安全考虑</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="8-native-applications.html">8.原生应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="9-section-9.html">9.基于浏览器的应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="10-differences-from-oauth-20.html">10.与OAuth 2.0的不同之处</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="11-iana-considerations.html">11.IANA考虑因素</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="12-references.html">12.参考文献</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-a.html">附录A</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-b.html">附录B</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-c.html">附录C</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-d.html">附录D</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-e.html">附录E</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-f.html">附录F</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="authors-addresses.html">作者邮箱</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OAuth 2.1 授权框架</span>
+    <span class="version">0.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../docs-config/0.0.1/index.html">docs-config</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-config/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steam-electron/0.0.1/index.html">docs-steam-electron</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steam-electron/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-xiuxian/0.0.1/index.html">docs-xiuxian</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-xiuxian/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-es-java/7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-es-java/7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-greenworks-js/0.0.1/index.html">Greenworks-JS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-greenworks-js/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-rust-libp2p/0.0.1/index.html">libp2p入门</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-rust-libp2p/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-neutralino-api/0.0.1/index.html">NeutralinoJS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-neutralino-api/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">OAuth 2.1 授权框架</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-pd2/0.0.1/index.html">PD2记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-pd2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-peerjs/0.0.1/index.html">PEER JS</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-peerjs/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-actuator/3.3.3/index.html">Spring Boot Actuator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-actuator/3.3.3/index.html">3.3.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-oauth2/0.0.1/index.html">Spring Boot OAuth2</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-oauth2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steamworks-rs/0.11.0/index.html">Steamworks for Rust</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steamworks-rs/0.11.0/index.html">0.11.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-tauri/v1/index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-tauri/v1/index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-testing-angular/中文/start.html">Testing Angular</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-testing-angular/中文/start.html">中文</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-me/0.0.1/index.html">个人记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-me/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-taiwu/0.0.1/index.html">太吾绘卷</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-taiwu/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-palworld/0.0.1/index.html">幻兽帕鲁笔记</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-palworld/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-building-event-driven-microservices/0.0.1/index.html">微服务与事件驱动架构</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-building-event-driven-microservices/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-hunter/0.0.1/index.html">猎人-荒野的呼唤</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-hunter/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-logitech/v8.45/index.html">罗技鼠标宏文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-logitech/v8.45/index.html">v8.45</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-milk/0.0.1/index.html">银河奶牛</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-milk/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../docs-me/0.0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">OAuth 2.1 授权框架</a></li>
+    <li><a href="7-security-considerations.html">7.安全考虑</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-antora-oauth2.1/edit/master/modules/ROOT/pages/7-security-considerations.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">7.安全考虑</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>作为一个灵活且可扩展的框架，OAuth的安全考虑取决于许多因素。以下部分针对 <a href="2-client-registration.html#client-types" class="xref page">第2.1节</a>中描述的三种客户端配置文件（Web应用程序、基于浏览器的应用程序和本机应用程序）为实施者提供了安全指南。</p>
+</div>
+<div class="paragraph">
+<p>[<a href="12-references.html#RFC6819" class="xref page">RFC6819</a>]和[<a href="12-references.html#I-D.ietf-oauth-security-topics" class="xref page">I-D.ietf-oauth-security-topics</a>]提供了全面的OAuth安全模型和分析，以及协议设计的背景。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="access-token-security-consi"><a class="anchor" href="#access-token-security-consi"></a>7.1.访问令牌安全考虑</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="security-threats"><a class="anchor" href="#security-threats"></a>7.1.1安全威胁</h3>
+<div class="paragraph">
+<p>以下列表列出了针对使用某种形式令牌的协议的一些常见威胁。此威胁列表基于NIST Special Publication 800-63 [<a href="12-references.html#NIST800-63" class="xref page">NIST800-63</a>]。</p>
+</div>
+<div class="sect3">
+<h4 id="access-token-manufacture-mo"><a class="anchor" href="#access-token-manufacture-mo"></a>7.1.1.1.访问令牌伪造/修改</h4>
+<div class="paragraph">
+<p>攻击者可能会生成一个伪造的访问令牌或修改现有令牌的令牌内容（如身份验证或属性声明），导致资源服务器向客户端授予不适当的访问权限。例如，攻击者可能会修改令牌以延长有效期；恶意客户端可能会修改断言以获得他们本应无法查看的信息的访问权限。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="access-token-disclosure"><a class="anchor" href="#access-token-disclosure"></a>7.1.1.2.访问令牌泄露</h4>
+<div class="paragraph">
+<p>访问令牌可能包含身份验证和属性声明，其中包括敏感信息。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="access-token-redirect"><a class="anchor" href="#access-token-redirect"></a>7.1.1.3.访问令牌重定向</h4>
+<div class="paragraph">
+<p>攻击者使用为一个资源服务器生成的访问令牌来访问另一个错误地认为该令牌是为其生成的不同资源服务器。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="access-token-replay"><a class="anchor" href="#access-token-replay"></a>7.1.1.4.访问令牌重放</h4>
+<div class="paragraph">
+<p>攻击者尝试使用之前已经与该资源服务器使用过的访问令牌。</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="threat-mitigation"><a class="anchor" href="#threat-mitigation"></a>7.1.2.威胁缓解</h3>
+<div class="paragraph">
+<p>通过使用数字签名保护访问令牌的内容，可以缓解大量威胁。</p>
+</div>
+<div class="paragraph">
+<p>或者，持有者令牌可以包含对授权信息的引用，而不是直接编码信息。使用引用可能需要资源服务器和授权服务器之间进行额外的交互以解决对授权信息的引用。本规范未定义此类交互的机制，但Token Introspection [<a href="12-references.html#RFC7662" class="xref page">RFC7662</a>]中定义了一种此类机制。</p>
+</div>
+<div class="paragraph">
+<p>本文档未指定访问令牌的编码或内容；因此，关于保证访问令牌完整性保护的详细建议不在本规范的范围内。访问令牌的编码和签名机制的一个示例在JSON Web Token Profile for Access Tokens [<a href="12-references.html#RFC9068" class="xref page">RFC9068</a>]中进行了描述。</p>
+</div>
+<div class="paragraph">
+<p>为了处理访问令牌重定向，授权服务器必须在令牌中包含预期接收者（受众）的身份，通常是单个资源服务器（或资源服务器列表）。还建议将令牌的使用限制在特定范围内。</p>
+</div>
+<div class="paragraph">
+<p>如果cookie在没有TLS保护的情况下传输，则其中包含的任何信息都存在泄露的风险。因此，绝对不能在可以明文发送的cookie中存储持有者令牌，因为其中的任何信息都存在泄露的风险。有关cookie的安全考虑，请参阅“HTTP State Management Mechanism” [<a href="12-references.html#RFC6265" class="xref page">RFC6265</a>]。</p>
+</div>
+<div class="paragraph">
+<p>在某些部署中（包括使用负载均衡器的部署），到资源服务器的TLS连接在实际提供资源的服务器之前终止。这可能会导致在TLS连接终止的前端服务器和提供资源的后端服务器之间，令牌未受保护。在此类部署中，必须采取足够措施以确保前端服务器和后端服务器之间访问令牌的机密性；对令牌进行加密是此类可能措施中的一种。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="summary-of-recommendations"><a class="anchor" href="#summary-of-recommendations"></a>7.1.3.建议总结</h3>
+<div class="sect3">
+<h4 id="safeguard-bearer-tokens"><a class="anchor" href="#safeguard-bearer-tokens"></a>7.1.3.1.保护承载令牌</h4>
+<div class="paragraph">
+<p>客户端实现必须确保承载令牌不会泄露给非预期方，因为非预期方能够使用这些令牌访问受保护资源。这是使用承载令牌时的首要安全考虑，也是后续所有更具体建议的基础。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="validate-tls-certificate-ch"><a class="anchor" href="#validate-tls-certificate-ch"></a>7.1.3.2.验证TLS证书链</h4>
+<div class="paragraph">
+<p>客户端在向受保护资源发出请求时，必须验证TLS证书链。如果不这样做，可能会导致DNS劫持攻击，从而窃取令牌并获得非预期访问权限。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="always-use-tls-https"><a class="anchor" href="#always-use-tls-https"></a>7.1.3.3.始终使用TLS（https）</h4>
+<div class="paragraph">
+<p>客户端在使用承载令牌发出请求时，必须始终使用TLS（https）或等效的传输安全协议。如果不这样做，会使令牌面临多种攻击，从而可能让攻击者获得非预期访问权限。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="dont-store-bearer-tokens-in"><a class="anchor" href="#dont-store-bearer-tokens-in"></a>7.1.3.4.不要在HTTP cookie中存储承载令牌</h4>
+<div class="paragraph">
+<p>实现中不得在可以以明文发送的cookie（这是cookie的默认传输模式）中存储承载令牌。确实需要在cookie中存储承载令牌的实现必须采取预防措施，防范跨站请求伪造攻击。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="issue-short-lived-bearer-to"><a class="anchor" href="#issue-short-lived-bearer-to"></a>7.1.3.5.颁发短期承载令牌</h4>
+<div class="paragraph">
+<p>授权服务器应当颁发短期承载令牌，特别是在向在Web浏览器或其他可能发生信息泄露的环境中运行的客户端颁发令牌时。使用短期承载令牌可以减轻令牌泄露所带来的影响。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="issue-scoped-bearer-tokens"><a class="anchor" href="#issue-scoped-bearer-tokens"></a>7.1.3.6.颁发限定范围的承载令牌</h4>
+<div class="paragraph">
+<p>授权服务器应当颁发包含受众限制的承载令牌，将其使用范围限定为预期的依赖方或依赖方集合。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="dont-pass-bearer-tokens-in-"><a class="anchor" href="#dont-pass-bearer-tokens-in-"></a>7.1.3.7.不要在页面URL中传递承载令牌</h4>
+<div class="paragraph">
+<p>绝对不要在页面URL中传递承载令牌（例如，作为查询字符串参数）。相反，承载令牌应当在采取了保密措施的HTTP消息头或消息体中传递。浏览器、Web服务器和其他软件可能无法充分保护浏览器历史记录、Web服务器日志和其他数据结构中的URL。如果在页面URL中传递承载令牌，攻击者可能会从历史数据、日志或其他未受保护的位置窃取它们。</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="access-token-privilege-rest"><a class="anchor" href="#access-token-privilege-rest"></a>7.1.4.访问令牌权限限制</h3>
+<div class="paragraph">
+<p>与访问令牌相关联的权限应仅限于特定应用程序或用例所需的最小权限。这可以防止客户端超出资源所有者授权的权限。同时，还可以防止用户超出各自安全策略授权的权限。权限限制还有助于减轻访问令牌泄露的影响。</p>
+</div>
+<div class="paragraph">
+<p>特别是，访问令牌应仅限于特定的资源服务器（受众限制），最好仅限于单个资源服务器。为实现这一点，授权服务器将访问令牌与特定的资源服务器相关联，并且每个资源服务器都有义务验证每个请求中随附的访问令牌是否打算用于该特定的资源服务器。如果不是，资源服务器必须拒绝处理相应的请求。客户端和授权服务器可以利用本文件和[RFC8707]中分别指定的scope或resource参数来确定它们想要访问的资源服务器。</p>
+</div>
+<div class="paragraph">
+<p>此外，访问令牌应仅限于资源服务器或资源上的某些资源和操作。为实现这一点，授权服务器将访问令牌与相应的资源和操作相关联，并且每个资源服务器都有义务验证每个请求中随附的访问令牌是否打算用于特定资源上的特定操作。如果不是，资源服务器必须拒绝处理相应的请求。客户端和授权服务器可以利用[RFC9396]中指定的scope和authorization_details参数来确定这些资源和/或操作。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="client-authentication-3"><a class="anchor" href="#client-authentication-3"></a>7.2.客户端认证</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>根据客户端注册和凭证生命周期管理的整体流程，这可能会影响授权服务器对特定客户端的信任度。</p>
+</div>
+<div class="paragraph">
+<p>例如，对动态注册的客户端进行认证并不能证明客户端的身份，它只能确保向授权服务器发出的重复请求来自同一客户端实例。此类客户端在允许请求的范围方面可能受到限制，或者可能有其他限制，如更短的令牌生命周期。</p>
+</div>
+<div class="paragraph">
+<p>相比之下，如果存在一个已注册的应用程序，其开发者的身份已经过验证，签订了合同，并且只在一个安全后端服务中使用颁发的客户端密钥，那么授权服务器可能会允许此客户端请求更敏感的范围或颁发持续时间更长的令牌。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="client-impersonation"><a class="anchor" href="#client-impersonation"></a>7.3.客户端冒充</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>如果机密客户端的凭据被盗，恶意客户端可以冒充该客户端并获得对受保护资源的访问权限。</p>
+</div>
+<div class="paragraph">
+<p>授权服务器应该强制执行明确的资源所有者认证，并向资源所有者提供有关客户端和请求的授权范围及生命周期的信息。资源所有者需要根据当前客户端的上下文审查这些信息，并授权或拒绝请求。</p>
+</div>
+<div class="paragraph">
+<p>授权服务器在未经客户端认证或依赖其他措施确保重复请求来自原始客户端而非冒充者的情况下，不应自动（无需资源所有者主动交互）处理重复的授权请求。</p>
+</div>
+<div class="sect2">
+<h3 id="impersonation-of-native-app"><a class="anchor" href="#impersonation-of-native-app"></a>7.3.1.原生应用的冒充</h3>
+<div class="paragraph">
+<p>如上所述，除非可以确保客户端的身份，否则授权服务器不应自动处理授权请求，而无需用户同意或交互。这包括用户之前已经为给定客户端ID批准了授权请求的情况——除非可以证明客户端的身份，否则应按照之前没有批准过任何请求来处理该请求。</p>
+</div>
+<div class="paragraph">
+<p>授权服务器可以接受诸如声称的https方案重定向等措施作为身份证明。一些操作系统可能会提供可接受的替代平台特定身份功能，视情况而定。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="access-token-privilege-restr"><a class="anchor" href="#access-token-privilege-restr"></a>7.3.2.访问令牌权限限制</h3>
+<div class="paragraph">
+<p>客户端应该请求具有最小必要范围的访问令牌。授权服务器在选择如何满足请求的范围时，应该考虑客户端的身份，并且可能会颁发范围小于请求的访问令牌。</p>
+</div>
+<div class="paragraph">
+<p>与访问令牌相关联的权限应该限制为特定应用程序或用例所需的最小权限。这可以防止客户端超出资源所有者授权的权限。还可以防止用户超出各自安全策略授权的权限。权限限制还有助于减少访问令牌泄露的影响。</p>
+</div>
+<div class="paragraph">
+<p>特别是，访问令牌应该限制为某些资源服务器（受众限制），最好限制为单个资源服务器。为了实施这一点，授权服务器将访问令牌与某些资源服务器相关联，并且每个资源服务器都有义务验证每个请求中发送的访问令牌是否旨在用于该特定资源服务器。如果不是，资源服务器必须拒绝处理相应的请求。客户端和授权服务器可以利用[<a href="12-references.html#RFC8707" class="xref page">RFC8707</a>]中分别指定的scope或resource参数来确定它们要访问的资源服务器。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="client-impersonating-resour"><a class="anchor" href="#client-impersonating-resour"></a>7.4.客户端冒充资源所有者</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>资源服务器可能会根据为其颁发访问令牌的资源所有者的身份，或根据客户端凭据授权中的客户端身份来做出访问控制决策。如果两种选项都可能，则取决于实现的细节，客户端的身份可能会被误认为资源所有者的身份。 例如，如果客户端能够在授权服务器注册期间选择自己的client_id，则恶意客户端可能会将其设置为标识最终用户的值（例如，如果使用OpenID Connect，则为sub值）。如果资源服务器无法正确区分颁发给客户端的访问令牌和颁发给最终用户的访问令牌，则客户端可能能够访问最终用户的资源。</p>
+</div>
+<div class="paragraph">
+<p>如果授权服务器具有客户端ID和用户标识符的通用命名空间，导致资源服务器无法区分由资源所有者授权的访问令牌和由客户端自身授权的访问令牌，那么授权服务器不应允许客户端影响其client_id或任何其他声明（如果这会造成与真实资源所有者的混淆）。如果无法避免这种情况，授权服务器必须为资源服务器提供其他手段来区分这两种类型的访问令牌。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="authorization-code-security"><a class="anchor" href="#authorization-code-security"></a>7.5.授权码安全考虑</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="authorization-code-injectio"><a class="anchor" href="#authorization-code-injectio"></a>7.5.1.授权码注入</h3>
+<div class="paragraph">
+<p>授权码注入是一种攻击，攻击者使客户端在其重定向URI中接收到来自攻击者的授权码，而不是来自合法授权服务器的授权码。如果没有相应的保护措施，客户端就没有机制来知道攻击已经发生。授权码注入可能导致攻击者获得受害者的帐户访问权限，同时也可能导致受害者意外获得攻击者帐户的访问权限。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="countermeasures"><a class="anchor" href="#countermeasures"></a>7.5.2.应对措施</h3>
+<div class="paragraph">
+<p>为防止授权码被注入到客户端中，客户端必须使用code_challenge和code_verifier，授权服务器必须强制执行其使用，除非同时满足以下两个条件：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>客户端是机密客户端。</p>
+</li>
+<li>
+<p>在特定的部署和特定的请求中，授权服务器有合理保证认为客户端正确实现了OpenID Connect nonce机制。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>在这种情况下，仍建议使用并强制执行code_challenge和code_verifier。</p>
+</div>
+<div class="paragraph">
+<p>code_challenge或OpenID Connect nonce值必须是特定于事务的，并且与启动事务的客户端和用户代理安全绑定。如果事务导致错误，必须为code_challenge或nonce选择新的值。</p>
+</div>
+<div class="paragraph">
+<p>依赖客户端来验证OpenID Connect nonce参数意味着授权服务器无法确认客户端是否实际上已经保护自己免受授权码注入攻击。如果攻击者能够将授权码注入到客户端中，客户端仍然会交换注入的授权码并获得令牌，只有在验证nonce后发现不匹配时才会拒绝ID令牌。相比之下，授权服务器强制执行code_challenge和code_verifier参数提供了更高的安全性结果，因为授权服务器能够预先识别授权码注入攻击，并首先避免发放任何令牌。</p>
+</div>
+<div class="paragraph">
+<p>历史备注：尽管PKCE[<a href="12-references.html#RFC7636" class="xref page">RFC7636</a>]（其中创建了code_challenge和code_verifier参数）最初被设计为保护本机应用程序免受授权码渗出攻击的机制，但包括Web应用程序和其他机密客户端在内的所有类型的OAuth客户端都容易受到授权码注入攻击，而code_challenge和code_verifier机制可以解决这些问题。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="reuse-of-authorization-code"><a class="anchor" href="#reuse-of-authorization-code"></a>7.5.3.授权码重用</h3>
+<div class="paragraph">
+<p>如果授权码能够被多次使用，则可能发生多种类型的攻击。</p>
+</div>
+<div class="paragraph">
+<p>如 <a href="4-grant-types.html#token-endpoint-extension" class="xref page">第4.1.3节</a>所述，当授权服务器收到包含已用于发放访问令牌的授权码的第二个有效请求时，必须拒绝令牌请求并撤销已发放的任何令牌。如果攻击者能够渗出授权码并在合法客户端之前使用它，攻击者将获得访问令牌，而合法客户端则不会。撤销已发放的令牌意味着攻击者的令牌也将被撤销，从而阻止攻击进一步进行。</p>
+</div>
+<div class="paragraph">
+<p>然而，授权服务器只有在包含授权码的请求也有效（包括任何其他参数，如code_verifier和客户端身份验证）的情况下，才应撤销已发放的令牌。授权服务器在收到包含无效参数的重复授权码时，不应撤销已发放的令牌。如果这样做，将为能够获得授权码但无法在合法客户端之前通过发送无效授权码请求获得客户端身份验证或code_verifier的攻击者创造拒绝服务的机会，从而在合法客户端发出有效请求时撤销其令牌。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="http-307-redirect"><a class="anchor" href="#http-307-redirect"></a>7.5.4.HTTP 307 重定向</h3>
+<div class="paragraph">
+<p>一个可能包含用户凭证的重定向请求的授权服务器，不得使用307状态码（[<a href="12-references.html#RFC9110" class="xref page">RFC9110</a>] 第15.4.8节）进行重定向。如果对此类请求使用HTTP重定向（而非例如JavaScript），授权服务器（AS）应使用303状态码（“参见其他”）。</p>
+</div>
+<div class="paragraph">
+<p>在授权端点，一个典型的协议流程是授权服务器提示用户在表单中输入其凭证，然后使用POST方法将该表单提交回授权服务器。授权服务器检查凭证，如果成功，则将用户代理重定向到客户端的重定向URI。</p>
+</div>
+<div class="paragraph">
+<p>如果重定向使用307状态码，用户代理将通过POST请求向客户端发送用户凭证。</p>
+</div>
+<div class="paragraph">
+<p>这将敏感凭证暴露给客户端。如果客户端是恶意的，它可以使用这些凭证在授权服务器上冒充用户。</p>
+</div>
+<div class="paragraph">
+<p>这种行为可能对开发人员来说出乎意料，但在 [<a href="12-references.html#RFC9110" class="xref page">RFC9110</a>] 第15.4.8节中有定义。此状态码不要求用户代理将POST请求重写为GET请求，从而丢弃POST请求内容中的表单数据。</p>
+</div>
+<div class="paragraph">
+<p>在HTTP [<a href="12-references.html#RFC9110" class="xref page">RFC9110</a>] 中，只有303状态码可以明确地将HTTP POST请求重写为HTTP GET请求。对于所有其他状态码（包括常用的302），用户代理可以选择不将POST重写为GET请求，因此会将用户凭证暴露给客户端。（然而，在实践中，大多数用户代理仅对307重定向显示这种行为。）</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ensuring-endpoint-authentic"><a class="anchor" href="#ensuring-endpoint-authentic"></a>7.6.确保端点真实性</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>通过使用诸如[<a href="12-references.html#RFC8446" class="xref page">RFC8446</a>]之类的通道安全机制与授权端点和令牌端点进行通信，可缓解与中间人攻击相关的风险。有关详细信息，请参阅 <a href="1-introduction.html#communication-security" class="xref page">第1.5节</a>。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="credentials-guessing-attack"><a class="anchor" href="#credentials-guessing-attack"></a>7.7.凭据猜测攻击</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>授权服务器必须防止攻击者猜测访问令牌、授权码、刷新令牌、资源所有者密码和客户端凭据。</p>
+</div>
+<div class="paragraph">
+<p>攻击者猜测生成的令牌（以及其他不打算由最终用户处理的凭据）的概率必须小于或等于2<sup>(-128)，并且应该小于或等于2</sup>(-160)。</p>
+</div>
+<div class="paragraph">
+<p>授权服务器必须使用其他手段来保护打算供最终用户使用的凭据。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="phishing-attacks"><a class="anchor" href="#phishing-attacks"></a>7.8.钓鱼攻击</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>广泛部署此协议和类似协议可能会导致最终用户对被重定向到要求他们输入密码的网站的做法习以为常。如果最终用户在输入凭据之前没有小心验证这些网站的真实性，攻击者就可能利用这种做法来窃取资源所有者的密码。</p>
+</div>
+<div class="paragraph">
+<p>服务提供商应该尝试向最终用户宣传钓鱼攻击带来的风险，并应该提供机制，使最终用户能够轻松确认其网站的真实性。客户端开发人员应考虑他们与用户代理（例如外部、嵌入式）交互时的安全影响，以及最终用户验证授权服务器真实性的能力。</p>
+</div>
+<div class="paragraph">
+<p>有关缓解钓鱼攻击风险的更多详细信息，请参阅 <a href="1-introduction.html#communication-security" class="xref page">第1.5节</a>。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cross-site-request-forgery"><a class="anchor" href="#cross-site-request-forgery"></a>7.9.跨站请求伪造</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>攻击者可能会尝试在受害者的设备上向合法客户端的重定向URI注入请求，例如，导致客户端访问攻击者控制的资源。这是跨站请求伪造（CSRF）攻击的一种变体。</p>
+</div>
+<div class="paragraph">
+<p>传统的对策是，客户端在状态参数中传递一个随机值（也称为CSRF令牌），该参数将请求与重定向URI链接到用户代理会话，如所述。这一对策在[<a href="12-references.html#RFC6819" class="xref page">RFC6819</a>]第5.3.5节中有详细描述。code_verifier参数或OpenID Connect nonce值也提供了相同的保护。</p>
+</div>
+<div class="paragraph">
+<p>当使用code_verifier代替state或nonce进行CSRF保护时，重要的是要注意：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>客户端必须确保认证服务器（AS）支持客户端打算使用的code_challenge_method。如果授权服务器不支持请求的方法，则必须使用state或nonce进行CSRF保护。</p>
+</li>
+<li>
+<p>如果state用于携带应用程序状态，并且其内容完整性令人担忧，客户端必须保护state免受篡改和交换。这可以通过将state的内容绑定到浏览器会话和/或对state值进行签名/加密来实现[<a href="12-references.html#I-D.bradley-oauth-jwt-encoded-state" class="xref page">I-D.bradley-oauth-jwt-encoded-state</a>]。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>因此，AS必须提供一种方法，通过根据[<a href="12-references.html#RFC8414" class="xref page">RFC8414</a>]的AS元数据或提供特定于部署的方法来确保或确定支持，从而检测其支持的code challenge方法。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="clickjacking"><a class="anchor" href="#clickjacking"></a>7.10.点击劫持攻击</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>如[<a href="12-references.html#RFC6819" class="xref page">RFC6819</a>]第4.4.1.9节所述，授权请求容易受到点击劫持攻击，也称为用户界面重放攻击。在这种攻击中，攻击者将授权端点用户界面嵌入到无害的上下文中。用户以为在与该上下文进行交互（例如，点击按钮），却无意中与授权端点用户界面进行了交互。相反的情况也可能发生：用户以为在与授权端点进行交互，却可能无意中在覆盖在原始用户界面之上的攻击者提供的输入字段中输入了密码。点击劫持攻击可以被设计得让用户几乎察觉不到攻击，例如，使用几乎不可见的iframe覆盖在其他元素之上。</p>
+</div>
+<div class="paragraph">
+<p>攻击者可以利用这一途径获取用户的身份验证凭据，更改授予客户端的访问范围，并可能访问用户的资源。</p>
+</div>
+<div class="paragraph">
+<p>授权服务器必须防止点击劫持攻击。[<a href="12-references.html#RFC6819" class="xref page">RFC6819</a>]中描述了多种应对措施，包括使用X-Frame-Options HTTP响应头字段和防框架破坏的JavaScript。除此之外，授权服务器还应使用内容安全策略（CSP）2级[<a href="12-references.html#CSP-2" class="xref page">CSP-2</a>]或更高级别。</p>
+</div>
+<div class="paragraph">
+<p>为了有效，必须在授权端点以及（如果适用）用于对用户进行身份验证和授权客户端的其他端点（例如，设备授权端点、登录页面、错误页面等）上使用CSP。这可以防止在用户代理中由未经授权的源进行框架。客户端可以允许由其重定向端点所使用的源之外的其他源进行框架。因此，授权服务器应允许管理员为特定客户端配置允许的源和/或允许客户端动态注册这些源。</p>
+</div>
+<div class="paragraph">
+<p>使用CSP允许授权服务器在单个响应头字段中指定多个源，并使用灵活的模式对这些源进行约束（有关详细信息，请参阅[<a href="12-references.html#CSP-2" class="xref page">CSP-2</a>]）。该标准的2级提供了一种强大的机制，通过使用限制框架来源（使用frame-ancestors）的政策以及与限制允许在HTML页面上执行的脚本来源（通过使用script-src）的政策相结合，来防范点击劫持攻击。以下列表显示了此类政策的一个非规范性示例：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 200 OK
+Content-Security-Policy: frame-ancestors https://ext.example.org:8000
+Content-Security-Policy: script-src 'self'
+X-Frame-Options: ALLOW-FROM https://ext.example.org:8000
+...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>由于一些用户代理不支持[<a href="12-references.html#CSP-2" class="xref page">CSP-2</a>]，因此应该将此技术与其他技术（包括[<a href="12-references.html#RFC6819" class="xref page">RFC6819</a>]中描述的技术）结合使用，除非授权服务器明确不支持此类旧版用户代理。即使在这种情况下，仍然应该采取其他附加对策。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="code-injection-and-input-va"><a class="anchor" href="#code-injection-and-input-va"></a>7.11.代码注入和输入验证</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>当应用程序使用未经消毒的输入或其他外部变量，并导致应用程序逻辑被修改时，就会发生代码注入攻击。这可能会使攻击者获得对应用程序设备或其数据的访问权限、造成拒绝服务或引入各种恶意副作用。</p>
+</div>
+<div class="paragraph">
+<p>授权服务器和客户端必须对接收到的任何值进行消毒（在可能的情况下进行验证），特别是state和redirect_uri参数的值。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="open-redirection"><a class="anchor" href="#open-redirection"></a>7.12.开放重定向</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>开放重定向器是一个端点，它将用户的浏览器转发到从查询参数中获得的任意URI。这样的端点有时会被实现，例如，在用户被重定向到外部网站之前显示一条消息，或者将用户重定向回他们在被中断（例如，登录提示）之前打算访问的URL。</p>
+</div>
+<div class="paragraph">
+<p>当授权服务器（AS）或客户端存在开放重定向器时，可能会发生以下攻击。</p>
+</div>
+<div class="sect2">
+<h3 id="client-as-open-redirector"><a class="anchor" href="#client-as-open-redirector"></a>7.12.1.客户端作为开放重定向器</h3>
+<div class="paragraph">
+<p>客户端绝不能暴露开放重定向器。攻击者可能会利用开放重定向器生成指向客户端的URL，并利用它们来泄露授权代码，如 [<a href="12-references.html#I-D.ietf-oauth-security-topics" class="xref page">I-D.ietf-oauth-security-topics</a>] 第4.1.1节所述。另一种滥用情况是生成看似指向客户端的URL。这可能会欺骗用户信任该URL并在其浏览器中访问。这可能会被用于网络钓鱼。</p>
+</div>
+<div class="paragraph">
+<p>为了防止开放重定向，客户端只有在目标URL在白名单中或可以验证请求的原始来源和完整性时，才应进行重定向。OWASP描述了针对开放重定向的对策[<a href="12-references.html#owasp_redir" class="xref page">owasp_redir</a>]。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="authorization-server-as-ope"><a class="anchor" href="#authorization-server-as-ope"></a>7.12.2.授权服务器作为开放重定向器</h3>
+<div class="paragraph">
+<p>与客户端一样，攻击者可能会尝试利用用户对授权服务器（尤其是其URL）的信任来执行网络钓鱼攻击。OAuth授权服务器经常会将用户重定向到其他网站（即客户端），但必须以安全的方式进行。</p>
+</div>
+<div class="paragraph">
+<p><a href="4-grant-types.html#error-response-2" class="xref page">第4.1.2.1节</a>已经通过规定授权服务器（AS）在client_id和redirect_uri组合无效的情况下不得自动重定向用户代理来防止开放重定向。</p>
+</div>
+<div class="paragraph">
+<p>然而，攻击者还可以利用正确注册的重定向URI来执行网络钓鱼攻击。例如，攻击者可以通过动态客户端注册[<a href="12-references.html#RFC7591" class="xref page">RFC7591</a>]注册一个客户端，并执行以下攻击之一：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>故意发送一个错误的授权请求，例如，通过使用无效的scope值，从而指示AS将用户代理重定向到其钓鱼网站。</p>
+</li>
+<li>
+<p>故意发送一个有效的授权请求，其中client_id和redirect_uri由攻击者控制。在用户进行身份验证后，AS会提示用户为该请求提供同意。如果用户注意到请求有问题并拒绝该请求，AS仍然会将用户代理重定向到钓鱼网站。在这种情况下，无论用户采取什么操作，用户代理都会被重定向到钓鱼网站。</p>
+</li>
+<li>
+<p>故意发送一个有效的静默身份验证请求（prompt=none），其中client_id和redirect_uri由攻击者控制。在这种情况下，AS会自动将用户代理重定向到钓鱼网站。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>授权服务器（AS）必须采取预防措施来防范这些威胁。AS必须先对用户进行身份验证，并且在重定向用户之前（静默身份验证用例除外），在需要时提示用户输入凭据。基于风险评估，AS需要决定是否信任重定向URI。它可以考虑内部或通过某些外部服务进行的URI分析来评估URI背后的内容和可信度以及重定向URI的来源和其他客户端数据。</p>
+</div>
+<div class="paragraph">
+<p>AS只有在信任重定向URI的情况下才应自动重定向用户代理。如果URI不受信任，AS可以通知用户并依赖用户做出正确决定。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="authorization-server-mix-up"><a class="anchor" href="#authorization-server-mix-up"></a>7.13.授权服务器混淆缓解</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>混淆是指OAuth客户端与两个或多个授权服务器交互，并且至少有一个授权服务器受攻击者控制的场景下的攻击。例如，如果攻击者使用动态注册在自己的授权服务器上注册客户端，或者授权服务器被攻破，就可能出现这种情况。</p>
+</div>
+<div class="paragraph">
+<p>当OAuth客户端只能与一个授权服务器交互时，不需要进行混淆防御。然而，在OAuth客户端与两个或多个授权服务器交互的场景中，客户端必须防止混淆攻击。以下讨论两种不同的方法。</p>
+</div>
+<div class="paragraph">
+<p>对于这两种防御方法，客户端必须存储每个授权请求的发送方（即授权服务器），将此信息与用户代理绑定，并检查授权响应是否来自正确的发送方。如果适用，客户端还必须确保后续的访问令牌请求发送给同一发送方。发送方通过相关元数据为要在流程中使用的授权端点和令牌端点的组合提供抽象标识符。如果无法使用发行者标识符，例如，如果不使用OAuth元数据[<a href="12-references.html#RFC8414" class="xref page">RFC8414</a>]或OpenID Connect发现[<a href="12-references.html#OpenID.Discovery" class="xref page">OpenID.Discovery</a>]，则可以使用此元组的另一个唯一标识符或元组本身。为了简洁起见，以下将此类特定于部署的标识符归为发行者（或发行者标识符）。</p>
+</div>
+<div class="paragraph">
+<p>注意：仅存储授权服务器URL不足以识别混淆攻击。攻击者可能会将未受攻击的AS的授权端点URL声明为“其”AS URL，但将其控制下的令牌端点声明为自己的。</p>
+</div>
+<div class="paragraph">
+<p>有关几种类型混淆攻击的详细描述，请参阅[<a href="12-references.html#I-D.ietf-oauth-security-topics" class="xref page">I-D.ietf-oauth-security-topics</a>]的第4.4节。</p>
+</div>
+<div class="sect2">
+<h3 id="mix-up-defense-via-issuer-i"><a class="anchor" href="#mix-up-defense-via-issuer-i"></a>7.13.1.通过发行者标识进行混淆防御</h3>
+<div class="paragraph">
+<p>此防御要求授权服务器在授权响应中向客户端发送其发行者标识符。在收到授权响应时，客户端必须将收到的发行者标识符与存储的发行者标识符进行比较。如果不匹配，客户端必须终止交互。</p>
+</div>
+<div class="paragraph">
+<p>发行者标识符可以通过不同的方式传输给客户端：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>例如，可以通过可选的响应参数iss（见 <a href="4-grant-types.html#authorization-response" class="xref page">第4.1.2节</a>）传输发行者信息。</p>
+</li>
+<li>
+<p>当使用OpenID Connect并且在授权响应中返回ID Token时，客户端可以评估ID Token中的iss声明。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>在这两种情况下，都必须根据[<a href="12-references.html#RFC9207" class="xref page">RFC9207</a>]评估iss值。</p>
+</div>
+<div class="paragraph">
+<p>虽然此防御可能需要使用额外的参数来传输发行者信息，但它是针对混淆的一种强大且相对简单的防御方法。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mix-up-defense-via-distinct"><a class="anchor" href="#mix-up-defense-via-distinct"></a>7.13.2.通过不同的重定向URI进行混淆防御</h3>
+<div class="paragraph">
+<p>对于此防御，客户端必须为与其交互的每个发行者使用不同的重定向URI。</p>
+</div>
+<div class="paragraph">
+<p>客户端必须通过比较发行者的不同重定向URI与接收授权响应时的URI，来检查授权响应是否来自正确的发行者。如果不匹配，客户端必须终止流程。</p>
+</div>
+<div class="paragraph">
+<p>虽然此防御基于现有的OAuth功能，但在客户端只为许多不同的发行者注册一次（如在某些开放银行方案中）的场景中无法使用，并且由于与客户端注册的紧密集成，它更难以自动部署。</p>
+</div>
+<div class="paragraph">
+<p>此外，攻击者可能会通过使用客户端分配给攻击者AS的重定向URI在“诚实”的AS上注册新客户端来规避此防御提供的保护。然后，攻击者可以如上所述运行攻击，用其新创建的客户端的客户端ID替换客户端ID。</p>
+</div>
+<div class="paragraph">
+<p>因此，只有在没有其他选择的情况下才应使用此防御。</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

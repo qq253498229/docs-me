@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>基本文件共享应用程序示例 :: docs-me</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">docs-me</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-rust-libp2p" data-version="0.0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">libp2p入门</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">教程</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/hole-punching.html">打洞教程</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/ping.html">Ping教程</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">示例</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="chat.html">聊天</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="distributed-key-value-store.html">分布式键值存储</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="file-sharing.html">基本文件共享应用程序</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="ipfs-kad.html">IPFS Kademlia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ipfs-private.html">IPFS 私有实现</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ping.html">Ping</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="rendezvous.html">Rendezvous</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="autonat.html">AutoNAT</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="relay-server.html">中继服务器</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">libp2p入门</span>
+    <span class="version">0.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../docs-config/0.0.1/index.html">docs-config</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-config/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-steam-electron/0.0.1/index.html">docs-steam-electron</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-steam-electron/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-xiuxian/0.0.1/index.html">docs-xiuxian</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-xiuxian/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-es-java/7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-es-java/7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../docs-es-java/6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../docs-es-java/6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-greenworks-js/0.0.1/index.html">Greenworks-JS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-greenworks-js/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">libp2p入门</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-neutralino-api/0.0.1/index.html">NeutralinoJS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-neutralino-api/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-antora-oauth2.1/0.0.1/index.html">OAuth 2.1 授权框架</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-antora-oauth2.1/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-pd2/0.0.1/index.html">PD2记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-pd2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-peerjs/0.0.1/index.html">PEER JS</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-peerjs/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-actuator/3.3.3/index.html">Spring Boot Actuator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-actuator/3.3.3/index.html">3.3.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-oauth2/0.0.1/index.html">Spring Boot OAuth2</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-oauth2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-steamworks-rs/0.11.0/index.html">Steamworks for Rust</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-steamworks-rs/0.11.0/index.html">0.11.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-tauri/v1/index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-tauri/v1/index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-testing-angular/中文/start.html">Testing Angular</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-testing-angular/中文/start.html">中文</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-me/0.0.1/index.html">个人记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-me/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-taiwu/0.0.1/index.html">太吾绘卷</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-taiwu/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-palworld/0.0.1/index.html">幻兽帕鲁笔记</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-palworld/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-building-event-driven-microservices/0.0.1/index.html">微服务与事件驱动架构</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-building-event-driven-microservices/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-hunter/0.0.1/index.html">猎人-荒野的呼唤</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-hunter/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-logitech/v8.45/index.html">罗技鼠标宏文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-logitech/v8.45/index.html">v8.45</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-milk/0.0.1/index.html">银河奶牛</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-milk/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../docs-me/0.0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">libp2p入门</a></li>
+    <li>示例</li>
+    <li><a href="ipfs-kad.html">IPFS Kademlia</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-rust-libp2p/edit/master/modules/ROOT/pages/example/ipfs-kad.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">基本文件共享应用程序示例</h1>
+<div class="sect1">
+<h2 id="_描述"><a class="anchor" href="#_描述"></a>描述</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>这个示例展示了如何使用 libp2p 在 IPFS 网络上与 Kademlia 协议进行交互。代码演示了如何：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>执行 Kademlia 查询以找到特定 peer ID 最接近的节点</p>
+</li>
+<li>
+<p>将 PK 记录插入到 Kademlia DHT 中</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>通过运行这个示例，用户可以更好地理解 Kademlia 协议如何在 IPFS 网络上运行和执行操作。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_使用说明"><a class="anchor" href="#_使用说明"></a>使用说明</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>示例代码展示了如何使用 Rust P2P 库在 IPFS 网络上执行 Kademlia 查询。</p>
+</div>
+<div class="sect2">
+<h3 id="_获取最接近的节点"><a class="anchor" href="#_获取最接近的节点"></a>获取最接近的节点</h3>
+<div class="paragraph">
+<p>通过指定一个 peer ID 作为参数，代码将搜索给定 peer ID 最接近的节点。</p>
+</div>
+<div class="sect3">
+<h4 id="_参数"><a class="anchor" href="#_参数"></a>参数</h4>
+<div class="paragraph">
+<p>运行示例代码：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">cargo run -- get-peers [PEER_ID]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>将 <code>[PEER_ID]</code> 替换为你想要搜索的 base58 编码的 peer ID。如果没有提供 peer ID，将生成一个随机的 peer ID。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_示例输出"><a class="anchor" href="#_示例输出"></a>示例输出</h4>
+<div class="paragraph">
+<p>运行示例代码后，你将在控制台看到输出。输出将显示 Kademlia 查询的结果，包括指定 peer ID 最接近的节点。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_成功查询输出"><a class="anchor" href="#_成功查询输出"></a>成功查询输出</h4>
+<div class="paragraph">
+<p>如果 Kademlia 查询成功找到最接近的节点，输出将是：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">Searching for the closest peers to [PEER_ID]
+Query finished with closest peers: [peer1, peer2, peer3]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_失败查询输出"><a class="anchor" href="#_失败查询输出"></a>失败查询输出</h4>
+<div class="paragraph">
+<p>如果 Kademlia 查询超时或没有可达节点，输出将指示失败：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">Searching for the closest peers to [PEER_ID]
+Query finished with no closest peers.</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_将_pk_记录插入到_dht_中"><a class="anchor" href="#_将_pk_记录插入到_dht_中"></a>将 PK 记录插入到 DHT 中</h3>
+<div class="paragraph">
+<p>通过指定 <code>put-pk-record</code> 作为子命令，代码将生成的公钥作为 PK 记录插入到 DHT 中。</p>
+</div>
+<div class="sect3">
+<h4 id="_参数_2"><a class="anchor" href="#_参数_2"></a>参数</h4>
+<div class="paragraph">
+<p>运行示例代码：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">cargo run -- put-pk-record</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_示例输出_2"><a class="anchor" href="#_示例输出_2"></a>示例输出</h4>
+<div class="paragraph">
+<p>运行示例代码后，你将在控制台看到输出。输出将显示 Kademlia 操作的结果。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_成功操作输出"><a class="anchor" href="#_成功操作输出"></a>成功操作输出</h4>
+<div class="paragraph">
+<p>如果 Kademlia 查询成功找到最接近的节点，输出将是：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">Putting PK record into the DHT
+Successfully inserted the PK record</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_失败查询输出_2"><a class="anchor" href="#_失败查询输出_2"></a>失败查询输出</h4>
+<div class="paragraph">
+<p>如果 Kademlia 操作超时或没有可达节点，输出将指示失败：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">Putting PK record into the DHT
+Failed to insert the PK record</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_结论"><a class="anchor" href="#_结论"></a>结论</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>总之，这个示例提供了一个实用的演示，展示了如何使用 Rust P2P 库在 IPFS 网络上与 Kademlia 协议进行交互。通过检查代码并运行示例，用户可以深入了解 Kademlia 的内部工作原理以及它如何执行各种基本操作，如获取最接近的节点或将记录插入到 DHT 中。这些知识在开发点对点应用程序或理解去中心化网络时非常有价值。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_代码"><a class="anchor" href="#_代码"></a>代码</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_cargo_toml"><a class="anchor" href="#_cargo_toml"></a>Cargo.toml</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">[package]
+name = "ipfs-kad-example"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license = "MIT"
+
+[package.metadata.release]
+release = false
+
+[dependencies]
+tokio = { workspace = true, features = ["rt-multi-thread", "macros"] }
+async-trait = "0.1"
+clap = { version = "4.5.6", features = ["derive"] }
+env_logger = "0.10"
+futures = { workspace = true }
+anyhow = "1.0.86"
+libp2p = { path = "../../libp2p", features = [ "tokio", "dns", "kad", "noise", "tcp", "yamux", "rsa"] }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true, features = ["env-filter"] }
+
+[lints]
+workspace = true</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_main_rs"><a class="anchor" href="#_main_rs"></a>main.rs</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-rust hljs" data-lang="rust">#![doc = include_str!("../README.md")]
+
+use std::num::NonZeroUsize;
+use std::ops::Add;
+use std::time::{Duration, Instant};
+
+use anyhow::{bail, Result};
+use clap::Parser;
+use futures::StreamExt;
+use libp2p::swarm::{StreamProtocol, SwarmEvent};
+use libp2p::{bytes::BufMut, identity, kad, noise, tcp, yamux, PeerId};
+use tracing_subscriber::EnvFilter;
+
+const BOOTNODES: [&amp;str; 4] = [
+    "QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN",
+    "QmQCU2EcMqAqQPR2i9bChDtGNJchTbq5TbXJJ16u19uLTa",
+    "QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb",
+    "QmcZf59bWwK5XFi76CZX8cbJ4BhTzzA3gU1ZjYZcYW3dwt",
+];
+
+const IPFS_PROTO_NAME: StreamProtocol = StreamProtocol::new("/ipfs/kad/1.0.0");
+
+#[tokio::main]
+async fn main() -&gt; Result&lt;()&gt; {
+    let _ = tracing_subscriber::fmt()
+        .with_env_filter(EnvFilter::from_default_env())
+        .try_init();
+
+    // Create a random key for ourselves.
+    let local_key = identity::Keypair::generate_ed25519();
+
+    let mut swarm = libp2p::SwarmBuilder::with_existing_identity(local_key.clone())
+        .with_tokio()
+        .with_tcp(
+            tcp::Config::default(),
+            noise::Config::new,
+            yamux::Config::default,
+        )?
+        .with_dns()?
+        .with_behaviour(|key| {
+            // Create a Kademlia behaviour.
+            let mut cfg = kad::Config::new(IPFS_PROTO_NAME);
+            cfg.set_query_timeout(Duration::from_secs(5 * 60));
+            let store = kad::store::MemoryStore::new(key.public().to_peer_id());
+            kad::Behaviour::with_config(key.public().to_peer_id(), store, cfg)
+        })?
+        .with_swarm_config(|c| c.with_idle_connection_timeout(Duration::from_secs(5)))
+        .build();
+
+    // Add the bootnodes to the local routing table. `libp2p-dns` built
+    // into the `transport` resolves the `dnsaddr` when Kademlia tries
+    // to dial these nodes.
+    for peer in &amp;BOOTNODES {
+        swarm
+            .behaviour_mut()
+            .add_address(&amp;peer.parse()?, "/dnsaddr/bootstrap.libp2p.io".parse()?);
+    }
+
+    let cli_opt = Opt::parse();
+
+    match cli_opt.argument {
+        CliArgument::GetPeers { peer_id } =&gt; {
+            let peer_id = peer_id.unwrap_or(PeerId::random());
+            println!("Searching for the closest peers to {peer_id}");
+            swarm.behaviour_mut().get_closest_peers(peer_id);
+        }
+        CliArgument::PutPkRecord {} =&gt; {
+            println!("Putting PK record into the DHT");
+
+            let mut pk_record_key = vec![];
+            pk_record_key.put_slice("/pk/".as_bytes());
+            pk_record_key.put_slice(swarm.local_peer_id().to_bytes().as_slice());
+
+            let mut pk_record =
+                kad::Record::new(pk_record_key, local_key.public().encode_protobuf());
+            pk_record.publisher = Some(*swarm.local_peer_id());
+            pk_record.expires = Some(Instant::now().add(Duration::from_secs(60)));
+
+            swarm
+                .behaviour_mut()
+                .put_record(pk_record, kad::Quorum::N(NonZeroUsize::new(3).unwrap()))?;
+        }
+    }
+
+    loop {
+        let event = swarm.select_next_some().await;
+
+        match event {
+            SwarmEvent::Behaviour(kad::Event::OutboundQueryProgressed {
+                result: kad::QueryResult::GetClosestPeers(Ok(ok)),
+                ..
+            }) =&gt; {
+                // The example is considered failed as there
+                // should always be at least 1 reachable peer.
+                if ok.peers.is_empty() {
+                    bail!("Query finished with no closest peers.")
+                }
+
+                println!("Query finished with closest peers: {:#?}", ok.peers);
+
+                return Ok(());
+            }
+            SwarmEvent::Behaviour(kad::Event::OutboundQueryProgressed {
+                result:
+                    kad::QueryResult::GetClosestPeers(Err(kad::GetClosestPeersError::Timeout {
+                        ..
+                    })),
+                ..
+            }) =&gt; {
+                bail!("Query for closest peers timed out")
+            }
+            SwarmEvent::Behaviour(kad::Event::OutboundQueryProgressed {
+                result: kad::QueryResult::PutRecord(Ok(_)),
+                ..
+            }) =&gt; {
+                println!("Successfully inserted the PK record");
+
+                return Ok(());
+            }
+            SwarmEvent::Behaviour(kad::Event::OutboundQueryProgressed {
+                result: kad::QueryResult::PutRecord(Err(err)),
+                ..
+            }) =&gt; {
+                bail!(anyhow::Error::new(err).context("Failed to insert the PK record"));
+            }
+            _ =&gt; {}
+        }
+    }
+}
+
+#[derive(Parser, Debug)]
+#[clap(name = "libp2p Kademlia DHT example")]
+struct Opt {
+    #[clap(subcommand)]
+    argument: CliArgument,
+}
+
+#[derive(Debug, Parser)]
+enum CliArgument {
+    GetPeers {
+        #[clap(long)]
+        peer_id: Option&lt;PeerId&gt;,
+    },
+    PutPkRecord {},
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

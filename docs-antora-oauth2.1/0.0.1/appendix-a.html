@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>附录A. 增强型巴科斯范式（ABNF）语法 :: docs-me</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-me</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-antora-oauth2.1" data-version="0.0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">OAuth 2.1 授权框架</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="1-introduction.html">1.介绍</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="2-client-registration.html">2.客户端注册</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="3-protocol-endpoints.html">3.协议端点</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="4-grant-types.html">4.授权类型</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="5-resource-requests.html">5.资源请求</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="6-extensibility.html">6.可扩展性</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="7-security-considerations.html">7.安全考虑</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="8-native-applications.html">8.原生应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="9-section-9.html">9.基于浏览器的应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="10-differences-from-oauth-20.html">10.与OAuth 2.0的不同之处</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="11-iana-considerations.html">11.IANA考虑因素</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="12-references.html">12.参考文献</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="appendix-a.html">附录A</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-b.html">附录B</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-c.html">附录C</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-d.html">附录D</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-e.html">附录E</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-f.html">附录F</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="authors-addresses.html">作者邮箱</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OAuth 2.1 授权框架</span>
+    <span class="version">0.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../docs-config/0.0.1/index.html">docs-config</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-config/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steam-electron/0.0.1/index.html">docs-steam-electron</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steam-electron/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-xiuxian/0.0.1/index.html">docs-xiuxian</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-xiuxian/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-es-java/7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-es-java/7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-greenworks-js/0.0.1/index.html">Greenworks-JS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-greenworks-js/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-rust-libp2p/0.0.1/index.html">libp2p入门</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-rust-libp2p/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-neutralino-api/0.0.1/index.html">NeutralinoJS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-neutralino-api/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">OAuth 2.1 授权框架</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-pd2/0.0.1/index.html">PD2记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-pd2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-peerjs/0.0.1/index.html">PEER JS</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-peerjs/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-actuator/3.3.3/index.html">Spring Boot Actuator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-actuator/3.3.3/index.html">3.3.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-oauth2/0.0.1/index.html">Spring Boot OAuth2</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-oauth2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steamworks-rs/0.11.0/index.html">Steamworks for Rust</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steamworks-rs/0.11.0/index.html">0.11.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-tauri/v1/index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-tauri/v1/index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-testing-angular/中文/start.html">Testing Angular</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-testing-angular/中文/start.html">中文</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-me/0.0.1/index.html">个人记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-me/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-taiwu/0.0.1/index.html">太吾绘卷</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-taiwu/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-palworld/0.0.1/index.html">幻兽帕鲁笔记</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-palworld/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-building-event-driven-microservices/0.0.1/index.html">微服务与事件驱动架构</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-building-event-driven-microservices/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-hunter/0.0.1/index.html">猎人-荒野的呼唤</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-hunter/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-logitech/v8.45/index.html">罗技鼠标宏文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-logitech/v8.45/index.html">v8.45</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-milk/0.0.1/index.html">银河奶牛</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-milk/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../docs-me/0.0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">OAuth 2.1 授权框架</a></li>
+    <li><a href="appendix-a.html">附录A</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-antora-oauth2.1/edit/master/modules/ROOT/pages/appendix-a.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">附录A. 增强型巴科斯范式（ABNF）语法</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>本节使用[<a href="12-references.html#RFC5234" class="xref page">RFC5234</a>]中的符号为本规范中定义的元素提供增强型巴科斯范式（ABNF）语法描述。以下ABNF根据Unicode代码点[<a href="12-references.html#W3C.REC-xml-20081126" class="xref page">W3C.REC-xml-20081126</a>]进行定义；这些字符通常采用UTF-8编码。元素按首次定义的顺序呈现。</p>
+</div>
+<div class="paragraph">
+<p>以下部分定义中使用了来自[<a href="12-references.html#RFC3986" class="xref page">RFC3986</a>]的“URI引用”定义。</p>
+</div>
+<div class="paragraph">
+<p>以下部分定义中使用了以下常用定义：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>VSCHAR     = %x20-7E
+NQCHAR     = %x21 / %x23-5B / %x5D-7E
+NQSCHAR    = %x20-21 / %x23-5B / %x5D-7E</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="client_id-syntax"><a class="anchor" href="#client_id-syntax"></a>A.1. "client_id" 语法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>client_id 元素定义在 <a href="2-client-registration.html#client-secret" class="xref page">章节 2.4.1</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>client-id     = *VSCHAR</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="client_secret-syntax"><a class="anchor" href="#client_secret-syntax"></a>A.2. "client_secret" 语法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>client_secret 元素定义在 <a href="2-client-registration.html#client-secret" class="xref page">章节 2.4.1</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>client-secret = *VSCHAR</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="response_type-syntax"><a class="anchor" href="#response_type-syntax"></a>A.3. "response_type" 语法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>response_type 元素定义在 <a href="4-grant-types.html#authorization-request" class="xref page">章节 4.1.1</a> 和 <a href="6-extensibility.html#defining-new-authorization-e" class="xref page">章节 6.4</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>response-type = response-name *( SP response-name )
+response-name = 1*response-char
+response-char = "_" / DIGIT / ALPHA</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="scope-syntax"><a class="anchor" href="#scope-syntax"></a>A.4. "scope" 语法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>scope 元素定义在 <a href="1-introduction.html#access-token-scope" class="xref page">章节 1.4.1</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre> scope       = scope-token *( SP scope-token )
+ scope-token = 1*NQCHAR</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="state-syntax"><a class="anchor" href="#state-syntax"></a>A.5. "state" 语法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>state 元素定义在 <a href="4-grant-types.html#authorization-request" class="xref page">章节 4.1.1</a>, <a href="4-grant-types.html#authorization-response" class="xref page">章节 4.1.2</a>, 和 <a href="4-grant-types.html#error-response-2" class="xref page">章节 4.1.2.1</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre> state      = 1*VSCHAR</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="redirect_uri-syntax"><a class="anchor" href="#redirect_uri-syntax"></a>A.6. "redirect_uri" 语法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>redirect_uri 元素定义在 <a href="4-grant-types.html#authorization-request" class="xref page">章节 4.1.1</a>, 和 <a href="4-grant-types.html#token-endpoint-extension" class="xref page">章节 4.1.3</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre> redirect-uri      = URI-reference</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="error-syntax"><a class="anchor" href="#error-syntax"></a>A.7. "error" 语法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>error 元素定义在 <a href="4-grant-types.html#error-response-2" class="xref page">章节 4.1.2.1</a>, <a href="3-protocol-endpoints.html#error-response" class="xref page">章节 3.2.4</a>, <a href="7-security-considerations.html#client-authentication-3" class="xref page">7.2</a>, 和 <a href="8-native-applications.html#security-considerations-in-" class="xref page">8.5</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre> error             = 1*NQSCHAR</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="error_description-syntax"><a class="anchor" href="#error_description-syntax"></a>A.8. "error_description" 语法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>error_description 元素定义在 <a href="4-grant-types.html#error-response-2" class="xref page">章节 4.1.2.1</a>, <a href="3-protocol-endpoints.html#error-response" class="xref page">章节 3.2.4</a>, 和 <a href="5-resource-requests.html#error-response-3" class="xref page">章节 5.3</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre> error-description = 1*NQSCHAR</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="error_uri-syntax"><a class="anchor" href="#error_uri-syntax"></a>A.9. "error_uri" 语法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>error_uri 元素定义在 <a href="4-grant-types.html#error-response-2" class="xref page">章节 4.1.2.1</a>, <a href="3-protocol-endpoints.html#error-response" class="xref page">章节 3.2.4</a>, 和 <a href="7-security-considerations.html#client-authentication-3" class="xref page">7.2</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre> error-uri         = URI-reference</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="grant_type-syntax"><a class="anchor" href="#grant_type-syntax"></a>A.10. "grant_type" 语法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The grant_type 元素定义在 <a href="3-protocol-endpoints.html#token-request" class="xref page">章节 3.2.2</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre> grant-type = grant-name / URI-reference
+ grant-name = 1*name-char
+ name-char  = "-" / "." / "_" / DIGIT / ALPHA</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="code-syntax"><a class="anchor" href="#code-syntax"></a>A.11. "code" 语法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>code 元素定义在 <a href="4-grant-types.html#token-endpoint-extension" class="xref page">章节 4.1.3</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre> code       = 1*VSCHAR</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="access_token-syntax"><a class="anchor" href="#access_token-syntax"></a>A.12. "access_token" 语法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>access_token 元素定义在 <a href="3-protocol-endpoints.html#token-response" class="xref page">章节 3.2.3</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre> access-token = 1*VSCHAR</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="token_type-syntax"><a class="anchor" href="#token_type-syntax"></a>A.13. "token_type" 语法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>token_type 元素定义在 <a href="3-protocol-endpoints.html#token-response" class="xref page">章节 3.2.3</a>, 和 <a href="6-extensibility.html#vendor-specific-access-toke" class="xref page">章节 6.1</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre> token-type = type-name / URI-reference
+ type-name  = 1*name-char
+ name-char  = "-" / "." / "_" / DIGIT / ALPHA</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="expires_in-syntax"><a class="anchor" href="#expires_in-syntax"></a>A.14. "expires_in" 语法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>expires_in 元素定义在 <a href="3-protocol-endpoints.html#token-response" class="xref page">章节 3.2.3</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre> expires-in = 1*DIGIT</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="refresh_token-syntax"><a class="anchor" href="#refresh_token-syntax"></a>A.15. "refresh_token" 语法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>refresh_token 元素定义在 <a href="3-protocol-endpoints.html#token-response" class="xref page">章节 3.2.3</a> 和 <a href="4-grant-types.html#refresh-token-grant" class="xref page">章节 4.3</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre> refresh-token = 1*VSCHAR</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="endpoint-parameter-syntax"><a class="anchor" href="#endpoint-parameter-syntax"></a>A.16. 端点参数语法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>新端点参数的语法定义在 <a href="6-extensibility.html#defining-new-endpoint-param" class="xref page">章节 6.2</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre> param-name = 1*name-char
+ name-char  = "-" / "." / "_" / DIGIT / ALPHA</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="code_verifier-syntax"><a class="anchor" href="#code_verifier-syntax"></a>A.17. "code_verifier" 语法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>code_verifier的ABNF如下。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>code-verifier = 43*128unreserved
+unreserved = ALPHA / DIGIT / "-" / "." / "_" / "~"
+ALPHA = %x41-5A / %x61-7A
+DIGIT = %x30-39</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="code_challenge-syntax"><a class="anchor" href="#code_challenge-syntax"></a>A.18. "code_challenge" 语法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>code_challenge的ABNF如下。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>code-challenge = 43*128unreserved
+unreserved = ALPHA / DIGIT / "-" / "." / "_" / "~"
+ALPHA = %x41-5A / %x61-7A
+DIGIT = %x30-39</pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

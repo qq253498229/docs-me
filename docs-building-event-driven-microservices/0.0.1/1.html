@@ -1,0 +1,2019 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>第 1 章 为什么用事件驱动型微服务 :: docs-me</title>
+    <link rel="prev" href="more_information.html">
+    <link rel="next" href="2.html">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-me</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-building-event-driven-microservices" data-version="0.0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">微服务与事件驱动架构</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="copyright.html">版权声明</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="o_reilly_media_inc_introduction.html">O&#8217;Reilly Media, Inc. 介绍</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="industry_evaluation.html">业界评论</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="introduction.html">前言</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="typesetting_convention.html">排版约定</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="o_reilly_online_learning_platform.html">O&#8217;Reilly在线学习平台（O&#8217;Reilly Online Learning）</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="contact_us.html">联系我们</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="acknowledgments.html">致谢</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="more_information.html">更多信息</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="1.html">第 1 章 为什么用事件驱动型微服务</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#_1_1_什么是事件驱动型微服务">1.1 什么是事件驱动型微服务</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_1_2_领域驱动设计和界限上下文">1.2 领域驱动设计和界限上下文</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_1_2_1_运用领域模型和界限上下文">1.2.1 运用领域模型和界限上下文</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_1_2_2_保持界限上下文与业务需求一致">1.2.2 保持界限上下文与业务需求一致</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_1_3_沟通结构">1.3 沟通结构</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_1_3_1_业务沟通结构">1.3.1 业务沟通结构</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_1_3_2_实现沟通结构">1.3.2 实现沟通结构</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_1_3_3_数据沟通结构">1.3.3 数据沟通结构</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_1_3_4_康威定律和沟通结构">1.3.4 康威定律和沟通结构</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_1_4_传统计算中的沟通结构">1.4 传统计算中的沟通结构</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_1_4_1_选项1创建一个新服务">1.4.1 选项1：创建一个新服务</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_1_4_2_选项2将它加入现有服务中">1.4.2 选项2：将它加入现有服务中</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_1_4_3_两种选项的利弊">1.4.3 两种选项的利弊</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_1_4_4_团队场景续">1.4.4 团队场景（续）</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_1_4_5_冲突的压力">1.4.5 冲突的压力</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_1_5_事件驱动的沟通结构">1.5 事件驱动的沟通结构</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_1_5_1_事件是通信的基础">1.5.1 事件是通信的基础</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_1_5_2_事件流提供了单一事实来源">1.5.2 事件流提供了单一事实来源</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_1_5_3_消费者执行自己的建模和查询">1.5.3 消费者执行自己的建模和查询</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_1_5_4_整个组织的数据沟通得到改善">1.5.4 整个组织的数据沟通得到改善</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_1_5_5_高可访问的数据利于业务变更">1.5.5 高可访问的数据利于业务变更</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_1_6_异步的事件驱动型微服务">1.6 异步的事件驱动型微服务</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_使用事件驱动型微服务的示例团队">使用事件驱动型微服务的示例团队</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_1_7_同步式微服务">1.7 同步式微服务</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_1_7_1_同步式微服务的缺点">1.7.1 同步式微服务的缺点</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_1_7_2_同步式微服务的优点">1.7.2 同步式微服务的优点</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#_1_8_小结">1.8 小结</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="2.html">第 2 章 事件驱动型微服务基础</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="2.html#_2_1_构建拓扑">2.1 构建拓扑</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2.html#_2_1_1_微服务拓扑">2.1.1 微服务拓扑</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2.html#_2_1_2_业务拓扑">2.1.2 业务拓扑</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2.html#_2_2_事件内容">2.2 事件内容</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="2.html#_2_3_事件的结构">2.3 事件的结构</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2.html#_2_3_1_无键事件">2.3.1 无键事件</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2.html#_2_3_2_实体事件">2.3.2 实体事件</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2.html#_2_3_3_键控事件">2.3.3 键控事件</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2.html#_2_4_物化来自实体事件的状态">2.4 物化来自实体事件的状态</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2.html#_2_5_事件数据的定义和schema">2.5 事件数据的定义和schema</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2.html#_2_6_微服务单一写原则">2.6 微服务单一写原则</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="2.html#_2_7_用事件代理赋能微服务">2.7 用事件代理赋能微服务</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2.html#_2_7_1_事件存储和服务">2.7.1 事件存储和服务</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2.html#_2_7_2_需要考虑的其他因素">2.7.2 需要考虑的其他因素</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="2.html#_2_8_事件代理与消息代理">2.8 事件代理与消息代理</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2.html#_2_8_1_从不可变日志中消费">2.8.1 从不可变日志中消费</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2.html#_2_8_2_提供单一事实来源">2.8.2 提供单一事实来源</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="2.html#_2_9_大规模管理微服务">2.9 大规模管理微服务</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2.html#_2_9_1_将微服务放到容器内">2.9.1 将微服务放到容器内</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2.html#_2_9_2_将微服务放到虚拟机内">2.9.2 将微服务放到虚拟机内</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2.html#_2_9_3_管理容器和虚拟机">2.9.3 管理容器和虚拟机</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2.html#_2_10_缴纳微服务税">2.10 缴纳微服务税</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2.html#_2_11_小结">2.11 小结</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="3.html">第 3 章 通信和数据契约</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="3.html#_3_1_事件驱动数据契约">3.1 事件驱动数据契约</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="3.html#_3_1_1_使用显式schema作为契约">3.1.1 使用显式schema作为契约</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="3.html#_3_1_2_schema定义的注释">3.1.2 schema定义的注释</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="3.html#_3_1_3_全能的schema演化">3.1.3 全能的schema演化</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="3.html#_3_1_4_有代码生成器支持">3.1.4 有代码生成器支持</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="3.html#_3_1_5_破坏性的schema变更">3.1.5 破坏性的schema变更</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="3.html#_3_2_选择事件格式">3.2 选择事件格式</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="3.html#_3_3_设计事件">3.3 设计事件</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="3.html#_3_3_1_只讲述事实">3.3.1 只讲述事实</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="3.html#_3_3_2_每个流都使用单一事件定义">3.3.2 每个流都使用单一事件定义</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="3.html#_3_3_3_使用最窄的数据类型">3.3.3 使用最窄的数据类型</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="3.html#_3_3_4_保持事件的单一用途">3.3.4 保持事件的单一用途</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="3.html#_3_3_5_最小化事件">3.3.5 最小化事件</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="3.html#_3_3_6_让潜在的消费者参与事件设计">3.3.6 让潜在的消费者参与事件设计</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="3.html#_3_3_7_避免将事件作为信号量或信号">3.3.7 避免将事件作为信号量或信号</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="3.html#_3_4_小结">3.4 小结</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="4.html">第 4 章 将事件驱动架构与现有系统集成</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="4.html#_4_1_什么是数据解放">4.1 什么是数据解放</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="4.html#_4_1_1_数据解放的折中方案">4.1.1 数据解放的折中方案</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="4.html#_4_1_2_将被解放的数据转化成事件">4.1.2 将被解放的数据转化成事件</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="4.html#_4_2_数据解放模式">4.2 数据解放模式</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="4.html#_4_3_数据解放框架">4.3 数据解放框架</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="4.html#_4_4_通过查询实施数据解放">4.4 通过查询实施数据解放</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="4.html#_4_4_1_批量加载">4.4.1 批量加载</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="4.html#_4_4_2_增量时间戳加载">4.4.2 增量时间戳加载</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="4.html#_4_4_3_自增id加载">4.4.3 自增ID加载</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="4.html#_4_4_4_自定义查询">4.4.4 自定义查询</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="4.html#_4_4_5_增量更新">4.4.5 增量更新</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="4.html#_4_4_6_基于查询更新的优点">4.4.6 基于查询更新的优点</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="4.html#_4_4_7_基于查询更新的缺点">4.4.7 基于查询更新的缺点</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="4.html#_4_5_使用变更数据捕获日志解放数据">4.5 使用变更数据捕获日志解放数据</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="4.html#_4_5_1_使用数据存储日志的优点">4.5.1 使用数据存储日志的优点</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="4.html#_4_5_2_使用数据库日志的缺点">4.5.2 使用数据库日志的缺点</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="4.html#_4_6_使用发件箱表解放数据">4.6 使用发件箱表解放数据</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="4.html#_4_6_1_性能考虑">4.6.1 性能考虑</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="4.html#_4_6_2_隔离内部数据模型">4.6.2 隔离内部数据模型</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="4.html#_4_6_3_确保schema兼容性">4.6.3 确保schema兼容性</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="4.html#_4_6_4_使用触发器捕获变更数据">4.6.4 使用触发器捕获变更数据</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="4.html#_4_7_对处于捕获的数据集做数据定义变更">4.7 对处于捕获的数据集做数据定义变更</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="4.html#_4_7_1_为查询和cdc日志模式处理事后数据定义变更">4.7.1 为查询和CDC日志模式处理事后数据定义变更</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="4.html#_4_7_2_为变更数据表捕获模式处理数据定义变更">4.7.2 为变更数据表捕获模式处理数据定义变更</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="4.html#_4_8_将事件数据落地到数据存储">4.8 将事件数据落地到数据存储</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="4.html#_4_9_数据落地和获取对业务的影响">4.9 数据落地和获取对业务的影响</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="4.html#_4_10_小结">4.10 小结</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="5.html">第 5 章 事件驱动处理基础</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="5.html#_5_1_构建无状态拓扑">5.1 构建无状态拓扑</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="5.html#_5_1_1_转换">5.1.1 转换</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="5.html#_5_1_2_分流与合流">5.1.2 分流与合流</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="5.html#_5_2_对事件流再分区">5.2 对事件流再分区</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="5.html#_示例对一个事件流再分区">示例：对一个事件流再分区</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="5.html#_5_3_对事件流协同分区">5.3 对事件流协同分区</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="5.html#_示例对一个事件流进行协同分区">示例：对一个事件流进行协同分区</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="5.html#_5_4_给消费者实例分配分区">5.4 给消费者实例分配分区</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="5.html#_5_4_1_使用分区分配器分配分区">5.4.1 使用分区分配器分配分区</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="5.html#_5_4_2_分配协同分区">5.4.2 分配协同分区</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="5.html#_5_4_3_分区分配策略">5.4.3 分区分配策略</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="5.html#_5_5_从无状态处理实例故障中恢复">5.5 从无状态处理实例故障中恢复</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="5.html#_5_6_小结">5.6 小结</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="6.html">第 6 章 具有确定性的流处理</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="6.html#_6_1_事件驱动工作流的确定性">6.1 事件驱动工作流的确定性</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="6.html#_6_2_时间戳">6.2 时间戳</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="6.html#_6_2_1_同步分布式时间戳">6.2.1 同步分布式时间戳</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="6.html#_6_2_2_处理带时间戳的事件">6.2.2 处理带时间戳的事件</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="6.html#_6_3_事件调度和确定性处理">6.3 事件调度和确定性处理</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="6.html#_6_3_1_自定义事件调度器">6.3.1 自定义事件调度器</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="6.html#_6_3_2_基于事件时间处理时间和摄取时间进行处理">6.3.2 基于事件时间、处理时间和摄取时间进行处理</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="6.html#_6_3_3_消费者提取时间戳">6.3.3 消费者提取时间戳</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="6.html#_6_3_4_对外部系统的请求响应调用">6.3.4 对外部系统的“请求–响应”调用</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="6.html#_6_4_水位">6.4 水位</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="6.html#_并行处理中的水位">并行处理中的水位</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="6.html#_6_5_流时间">6.5 流时间</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="6.html#_并行处理中的流时间">并行处理中的流时间</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="6.html#_6_6_乱序事件和迟到事件">6.6 乱序事件和迟到事件</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="6.html#_6_6_1_使用水位和流时间的迟到事件">6.6.1 使用水位和流时间的迟到事件</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="6.html#_6_6_2_乱序事件的原因和影响">6.6.2 乱序事件的原因和影响</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="6.html#_6_6_3_时间敏感的函数和窗口化">6.6.3 时间敏感的函数和窗口化</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="6.html#_6_7_处理迟到事件">6.7 处理迟到事件</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="6.html#_6_8_再处理与近实时处理">6.8 再处理与近实时处理</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="6.html#_6_9_间歇性故障和迟到事件">6.9 间歇性故障和迟到事件</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="6.html#_6_10_生产者事件代理的连接性问题">6.10 生产者/事件代理的连接性问题</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="6.html#_6_11_小结与延展阅读">6.11 小结与延展阅读</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="7.html">第 7 章 有状态的流</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="7.html#_7_1_状态存储与从事件流中物化状态">7.1 状态存储与从事件流中物化状态</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="7.html#_7_2_记录状态到变更日志事件流">7.2 记录状态到变更日志事件流</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="7.html#_7_3_将状态物化至内部状态存储">7.3 将状态物化至内部状态存储</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="7.html#_7_3_1_物化全局状态">7.3.1 物化全局状态</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="7.html#_7_3_2_使用内部状态的优点">7.3.2 使用内部状态的优点</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="7.html#_7_3_3_使用内部状态的缺点">7.3.3 使用内部状态的缺点</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="7.html#_7_3_4_内部状态的伸缩和恢复">7.3.4 内部状态的伸缩和恢复</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="7.html#_7_4_将状态物化至外部状态存储">7.4 将状态物化至外部状态存储</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="7.html#_7_4_1_外部状态的优点">7.4.1 外部状态的优点</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="7.html#_7_4_2_外部状态的缺点">7.4.2 外部状态的缺点</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="7.html#_7_4_3_外部状态存储的伸缩和恢复">7.4.3 外部状态存储的伸缩和恢复</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="7.html#_7_5_重建与迁移状态存储">7.5 重建与迁移状态存储</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="7.html#_7_5_1_重建">7.5.1 重建</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="7.html#_7_5_2_迁移">7.5.2 迁移</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="7.html#_7_6_事务与有效一次处理">7.6 事务与有效一次处理</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="7.html#_7_6_1_示例库存计算服务">7.6.1 示例：库存计算服务</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="7.html#_7_6_2_使用客户端代理事务的有效一次处理">7.6.2 使用“客户端–代理”事务的有效一次处理</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="7.html#_7_6_3_没有客户端代理事务的有效一次处理">7.6.3 没有“客户端–代理”事务的有效一次处理</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="7.html#_7_7_小结">7.7 小结</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="8.html">第 8 章 用微服务构建工作流</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="8.html#_8_1_编排模式">8.1 编排模式</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="8.html#_8_1_1_一个简单的事件驱动编排示例">8.1.1 一个简单的事件驱动编排示例</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="8.html#_8_1_2_创建和修改编排的工作流">8.1.2 创建和修改编排的工作流</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="8.html#_8_1_3_监控编排的工作流">8.1.3 监控编排的工作流</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="8.html#_8_2_编制模式">8.2 编制模式</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="8.html#_8_2_1_一个简单的事件驱动编制模式例子">8.2.1 一个简单的事件驱动编制模式例子</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="8.html#_8_2_2_一个简单的直接调用的编制模式例子">8.2.2 一个简单的直接调用的编制模式例子</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="8.html#_8_2_3_对比事件驱动编制模式和直接调用的编制模式">8.2.3 对比事件驱动编制模式和直接调用的编制模式</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="8.html#_8_2_4_创建和修改编制工作流">8.2.4 创建和修改编制工作流</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="8.html#_8_2_5_监控编制工作流">8.2.5 监控编制工作流</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="8.html#_8_3_分布式事务">8.3 分布式事务</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="8.html#_8_3_1_编排型事务saga模式">8.3.1 编排型事务：saga模式</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="8.html#_8_3_2_编制型事务">8.3.2 编制型事务</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="8.html#_8_4_补偿工作流">8.4 补偿工作流</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="8.html#_8_5_小结">8.5 小结</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="9.html">第 9 章 使用“函数即服务”的微服务</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="9.html#_9_1_设计基于函数的微服务解决方案">9.1 设计基于函数的微服务解决方案</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="9.html#_9_1_1_确保界限上下文的严格的成员关系">9.1.1 确保界限上下文的严格的成员关系</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="9.html#_9_1_2_只在完成处理之后提交偏移量">9.1.2 只在完成处理之后提交偏移量</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="9.html#_9_1_3_少即是多">9.1.3 少即是多</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="9.html#_9_2_选择faas供应商">9.2 选择FaaS供应商</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="9.html#_9_3_在函数之外构建微服务">9.3 在函数之外构建微服务</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="9.html#_9_4_冷启动和热启动">9.4 冷启动和热启动</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="9.html#_9_5_用触发器启动函数">9.5 用触发器启动函数</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="9.html#_9_5_1_基于新事件触发事件流监听器">9.5.1 基于新事件触发：事件流监听器</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="9.html#_9_5_2_基于消费者组的滞后度触发">9.5.2 基于消费者组的滞后度触发</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="9.html#_9_5_3_按调度表触发">9.5.3 按调度表触发</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="9.html#_9_5_4_使用网络钩子触发">9.5.4 使用网络钩子触发</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="9.html#_9_5_5_触发资源事件">9.5.5 触发资源事件</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="9.html#_9_6_用函数执行业务工作">9.6 用函数执行业务工作</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="9.html#_9_7_维持状态">9.7 维持状态</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="9.html#_9_8_调用其他函数的函数">9.8 调用其他函数的函数</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="9.html#_9_8_1_事件驱动通信模式">9.8.1 事件驱动通信模式</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="9.html#_9_8_2_直接调用模式">9.8.2 直接调用模式</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="9.html#_9_9_终止和关闭">9.9 终止和关闭</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="9.html#_9_10_调整函数">9.10 调整函数</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="9.html#_9_10_1_分配足够的资源">9.10.1 分配足够的资源</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="9.html#_9_10_2_批量事件处理的参数">9.10.2 批量事件处理的参数</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="9.html#_9_11_faas的伸缩方案">9.11 FaaS的伸缩方案</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="9.html#_9_12_小结">9.12 小结</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="10.html">第 10 章 基础的生产者和消费者微服务</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="10.html#_10_1_bpc的适用场合">10.1 BPC的适用场合</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="10.html#_10_1_1_集成现有遗留系统">10.1.1 集成现有遗留系统</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="10.html#_10_1_2_不依赖于事件顺序的有状态的业务逻辑">10.1.2 不依赖于事件顺序的有状态的业务逻辑</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="10.html#_10_1_3_当数据层完成大部分工作时">10.1.3 当数据层完成大部分工作时</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="10.html#_10_1_4_处理层和数据层独立伸缩">10.1.4 处理层和数据层独立伸缩</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="10.html#_10_2_具有外部流处理的混合bpc应用程序">10.2 具有外部流处理的混合BPC应用程序</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="10.html#_示例使用外部流处理框架来联结事件流">示例：使用外部流处理框架来联结事件流</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="10.html#_10_3_小结">10.3 小结</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="11.html">第 11 章 使用重量级框架的微服务</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="11.html#_11_1_重量级框架的简单历史">11.1 重量级框架的简单历史</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="11.html#_11_2_重量级框架的内部运作">11.2 重量级框架的内部运作</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="11.html#_11_3_优点和局限性">11.3 优点和局限性</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="11.html#_11_4_集群搭建方案和执行模式">11.4 集群搭建方案和执行模式</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="11.html#_11_4_1_使用托管服务">11.4.1 使用托管服务</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="11.html#_11_4_2_构建自己的完整集群">11.4.2 构建自己的完整集群</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="11.html#_11_4_3_使用cms集成来创建集群">11.4.3 使用CMS集成来创建集群</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="11.html#_11_5_应用程序提交模式">11.5 应用程序提交模式</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="11.html#_11_5_1_驱动器模式">11.5.1 驱动器模式</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="11.html#_11_5_2_集群模式">11.5.2 集群</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="11.html#_11_6_处理状态和使用检查点">11.6 处理状态和使用检查点</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="11.html#_11_7_伸缩应用程序和处理事件流分区">11.7 伸缩应用程序和处理事件流分区</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="11.html#_11_7_1_伸缩运行中的应用程序">11.7.1 伸缩运行中的应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="11.html#_11_7_2_通过重启伸缩应用程序">11.7.2 通过重启伸缩应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="11.html#_11_7_3_自动伸缩应用程序">11.7.3 自动伸缩应用程序</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="11.html#_11_8_从故障中恢复">11.8 从故障中恢复</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="11.html#_11_9_考虑多租户问题">11.9 考虑多租户问题</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="11.html#_11_10_语言和语法">11.10 语言和语法</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="11.html#_11_11_选择一个框架">11.11 选择一个框架</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="11.html#_11_12_示例点击和观看的会话窗口">11.12 示例：点击和观看的会话窗口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="11.html#_11_13_小结">11.13 小结</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="12.html">第 12 章 使用轻量级框架的微服务</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="12.html#_12_1_优点和局限性">12.1 优点和局限性</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="12.html#_12_2_轻量级处理">12.2 轻量级处理</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="12.html#_12_3_处理状态和使用变更日志">12.3 处理状态和使用变更日志</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="12.html#_12_4_伸缩和故障恢复">12.4 伸缩和故障恢复</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="12.html#_12_4_1_事件洗牌">12.4.1 事件洗牌</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="12.html#_12_4_2_状态分配">12.4.2 状态分配</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="12.html#_12_4_3_状态复制和热副本">12.4.3 状态复制和热副本</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="12.html#_12_5_选择一个轻量级框架">12.5 选择一个轻量级框架</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="12.html#_12_5_1_apache_kafka_streams">12.5.1 Apache Kafka Streams</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="12.html#_12_5_2_apache_samza嵌入模式">12.5.2 Apache Samza：嵌入模式</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="12.html#_12_6_语言和语法">12.6 语言和语法</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="12.html#_12_7_流表表联结增强模式">12.7 流–表–表联结：增强模式</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="12.html#_12_8_小结">12.8 小结</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="13.html">第 13 章 集成事件驱动型和“请求–响应”型微服务</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="13.html#_13_1_处理外部事件">13.1 处理外部事件</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="13.html#_13_1_1_自动生成的事件">13.1.1 自动生成的事件</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="13.html#_13_1_2_由响应生成的事件">13.1.2 由响应生成的事件</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="13.html#_13_2_处理自动生成的分析事件">13.2 处理自动生成的分析事件</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="13.html#_13_3_集成第三方请求响应api">13.3 集成第三方“请求–响应”API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="13.html#_13_4_处理并提供有状态的数据">13.4 处理并提供有状态的数据</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="13.html#_13_4_1_实时请求内部状态存储">13.4.1 实时请求内部状态存储</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="13.html#_13_4_2_实时请求外部状态存储">13.4.2 实时请求外部状态存储</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="13.html#_13_5_在事件驱动的工作流中处理请求">13.5 在事件驱动的工作流中处理请求</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="13.html#_处理用户界面事件">处理用户界面事件</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="13.html#_13_6_请求响应应用程序中的微前端">13.6 “请求–响应”应用程序中的微前端</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="13.html#_13_7_微前端的优点">13.7 微前端的优点</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="13.html#_13_7_1_基于组合的微服务">13.7.1 基于组合的微服务</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="13.html#_13_7_2_容易与业务需求对齐">13.7.2 容易与业务需求对齐</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="13.html#_13_8_微前端的缺点">13.8 微前端的缺点</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="13.html#_13_8_1_可能不一致的ui元素和样式">13.8.1 可能不一致的UI元素和样式</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="13.html#_13_8_2_不同的微前端性能">13.8.2 不同的微前端性能</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="13.html#_13_8_3_示例体验搜索与评论应用程序">13.8.3 示例：体验搜索与评论应用</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="13.html#_13_9_小结">13.9 小结</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="14.html">第 14 章 支持性工具</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="14.html#_14_1_微服务团队分配系统">14.1 微服务–团队分配系统</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="14.html#_14_2_事件流的创建和修改">14.2 事件流的创建和修改</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="14.html#_14_3_事件流元数据标记">14.3 事件流元数据标记</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="14.html#_14_4_限额">14.4 限额</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="14.html#_14_5_schema注册表">14.5 schema注册表</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="14.html#_14_6_schema创建和修改通知">14.6 schema创建和修改通知</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="14.html#_14_7_偏移量管理">14.7 偏移量管理</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="14.html#_14_8_事件流的权限和访问控制列表">14.8 事件流的权限和访问控制列表</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="14.html#_14_9_状态管理和应用程序重置">14.9 状态管理和应用程序重置</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="14.html#_14_10_消费者偏移量滞后度监控">14.10 消费者偏移量滞后度</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="14.html#_14_11_流水线型的微服务创建流程">14.11 流水线型的微服务创建流程</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="14.html#_14_12_容器管理控制">14.12 容器管理控制</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="14.html#_14_13_集群创建和管理">14.13 集群创建和管理</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="14.html#_14_13_1_事件代理的程序化创建">14.13.1 事件代理的程序化创建</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="14.html#_14_13_2_计算资源的程序化创建">14.13.2 计算资源的程序化创建</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="14.html#_14_13_3_跨集群事件数据复制">14.13.3 跨集群事件数据复制</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="14.html#_14_13_4_工具的程序化创建">14.13.4 工具的程序化创建</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="14.html#_14_14_依赖跟踪和拓扑可视化">14.14 依赖跟踪和拓扑可视化</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="14.html#_拓扑示例">拓扑示例</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="14.html#_14_15_小结">14.15 小结</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="15.html">第 15 章 测试事件驱动型微服务</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="15.html#_15_1_通用测试原则">15.1 通用测试原则</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="15.html#_15_2_单元测试拓扑函数">15.2 单元测试拓扑函数</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="15.html#_15_2_1_无状态的函数">15.2.1 无状态的函数</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="15.html#_15_2_2_有状态的函数">15.2.2 有状态的函数</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="15.html#_15_3_测试拓扑">15.3 测试拓扑</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="15.html#_15_4_测试schema演化和兼容性">15.4 测试schema演化和兼容性</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="15.html#_15_5_事件驱动型微服务的集成测试">15.5 事件驱动型微服务的集成测试</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="15.html#_15_6_本地集成测试">15.6 本地集成测试</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="15.html#_15_6_1_在测试代码的运行时内创建临时环境">15.6.1 在测试代码的运行时内创建临时环境</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="15.html#_15_6_2_在测试代码外部创建临时环境">15.6.2 在测试代码外部创建临时环境</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="15.html#_15_6_3_使用mocking和模拟器方法集成托管服务">15.6.3 使用mocking和模拟器方法集成托管</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="15.html#_15_6_4_集成没有本地支持的远程服务">15.6.4 集成没有本地支持的远程服务</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="15.html#_15_7_完全远程集成测试">15.7 完全远程集成测试</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="15.html#_15_7_1_程序化创建临时集成测试环境">15.7.1 程序化创建临时集成测试环境</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="15.html#_15_7_2_使用共享环境进行测试">15.7.2 使用共享环境进行测试</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="15.html#_15_7_3_使用生产环境进行测试">15.7.3 使用生产环境进行测试</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="15.html#_15_8_选择你的完全远程集成测试策略">15.8 选择你的完全远程集成测试策略</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="15.html#_15_9_小结">15.9 小结</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="16.html">第 16 章 部署事件驱动型微服务</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="16.html#_16_1_微服务部署的原则">16.1 微服务部署的原则</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="16.html#_16_2_微服务部署的架构组件">16.2 微服务部署的架构组件</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="16.html#_16_2_1_持续集成系统持续交付系统和持续部署系统">16.2.1 持续集成系统、持续交付系统和持续部署</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="16.html#_16_2_2_cms和商业硬件">16.2.2 CMS和商业硬件</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="16.html#_16_3_基本的全站式部署模式">16.3 基本的全站式部署模式</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="16.html#_16_4_滚动更新模式">16.4 滚动更新模式</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="16.html#_16_5_破坏性的schema变更模式">16.5 破坏性的schema变更模式</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="16.html#_16_5_1_通过两个事件流达到最终迁移">16.5.1 通过两个事件流达到最终迁移</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="16.html#_16_5_2_同步迁移到新事件流">16.5.2 同步迁移到新事件流</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="16.html#_16_6_蓝绿部署模式">16.6 蓝绿部署模式</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="16.html#_16_7_小结">16.7 小结</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="17.html">第 17 章 结论</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="17.html#_17_1_通信层">17.1 通信层</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="17.html#_17_2_业务领域和界限上下文">17.2 业务领域和界限上下文</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="17.html#_17_3_可共享的工具和基础设施">17.3 可共享的工具和基础设施</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="17.html#_17_4_结构化事件">17.4 结构化事件</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="17.html#_17_5_数据解放和单一事实来源">17.5 数据解放和单一事实来源</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="17.html#_17_6_微服务">17.6 微服务</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="17.html#_17_7_微服务实现方案">17.7 微服务实现方案</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="17.html#_17_8_测试">17.8 测试</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="17.html#_17_9_部署">17.9 部署</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="17.html#_17_10_结语">17.10 结语</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="about_author.html">关于作者</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="about_cover.html">关于封面</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">微服务与事件驱动架构</span>
+    <span class="version">0.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../docs-config/0.0.1/index.html">docs-config</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-config/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steam-electron/0.0.1/index.html">docs-steam-electron</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steam-electron/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-xiuxian/0.0.1/index.html">docs-xiuxian</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-xiuxian/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-es-java/7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-es-java/7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-greenworks-js/0.0.1/index.html">Greenworks-JS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-greenworks-js/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-rust-libp2p/0.0.1/index.html">libp2p入门</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-rust-libp2p/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-neutralino-api/0.0.1/index.html">NeutralinoJS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-neutralino-api/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-antora-oauth2.1/0.0.1/index.html">OAuth 2.1 授权框架</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-antora-oauth2.1/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-pd2/0.0.1/index.html">PD2记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-pd2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-peerjs/0.0.1/index.html">PEER JS</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-peerjs/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-actuator/3.3.3/index.html">Spring Boot Actuator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-actuator/3.3.3/index.html">3.3.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-oauth2/0.0.1/index.html">Spring Boot OAuth2</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-oauth2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steamworks-rs/0.11.0/index.html">Steamworks for Rust</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steamworks-rs/0.11.0/index.html">0.11.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-tauri/v1/index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-tauri/v1/index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-testing-angular/中文/start.html">Testing Angular</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-testing-angular/中文/start.html">中文</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-me/0.0.1/index.html">个人记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-me/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-taiwu/0.0.1/index.html">太吾绘卷</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-taiwu/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-palworld/0.0.1/index.html">幻兽帕鲁笔记</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-palworld/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">微服务与事件驱动架构</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-hunter/0.0.1/index.html">猎人-荒野的呼唤</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-hunter/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-logitech/v8.45/index.html">罗技鼠标宏文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-logitech/v8.45/index.html">v8.45</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-milk/0.0.1/index.html">银河奶牛</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-milk/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../docs-me/0.0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">微服务与事件驱动架构</a></li>
+    <li><a href="1.html">第 1 章 为什么用事件驱动型微服务</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-building-event-driven-microservices/edit/master/modules/ROOT/pages/1.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">第 1 章 为什么用事件驱动型微服务</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>媒介即信息。 ——Marshall McLuhan</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Marshall McLuhan 认为，影响人类并给社会带来根本性变革的不是媒介的内容，而是与媒介的互动过程。在我们的集体参与下，报纸、广播、电视、互联网、即时通信和社交媒体改变了人类的互动方式以及社会结构。</p>
+</div>
+<div class="paragraph">
+<p>对于计算机系统架构来说同样如此。只需回顾计算机技术的发明史就会发现，网络通信、关系型数据库、大数据开发和云计算等显著地改变了系统架构的构建方式和工作方式。其中的每一项发明不仅改变了技术在各软件项目中的使用方式，也改变了各类组织、团队和人们相互交流的方式。从中心化的大型机到分布式的移动应用，每种新的媒介都彻底改变了人们与计算的关系。</p>
+</div>
+<div class="paragraph">
+<p>异步生产和消费事件的媒介已被现代技术彻底改变。这些事件如今可以被大规模地永久存储，并且能被任何服务按需多次消费。可以根据需要轻松地获取和释放计算资源，这让微服务的创建和管理变得简单。微服务可以根据自身的需要存储和管理数据，并且能够达到之前仅限于基于批处理的大数据解决方案的数据规模。对事件驱动媒介的这些改进已经产生了深远的影响，不仅改变了计算机体系结构，也彻底重塑了团队、个人和组织创建系统和业务的方式。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_1_什么是事件驱动型微服务"><a class="anchor" href="#_1_1_什么是事件驱动型微服务"></a>1.1 什么是事件驱动型微服务</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>微服务和微服务类型的架构已经存在很多年了，它们有许多不同的形式和名字。面向服务的架构（service-oriented architecture，SOA）通常由多个相互直接同步通信的微服务构成。消息传递架构使用可被消费的事件在微服务之间进行异步通信。基于事件的通信当然不算新颖，但大规模并实时地处理大数据集是新的需求，而这要求对旧的架构类型进行改进。</p>
+</div>
+<div class="paragraph">
+<p>在现代的事件驱动型微服务架构中，系统通过发布和消费事件来通信。这些事件并不会像消息传递系统中那样在某次消费的时候就被销毁，而是可被其他多个消费者按需消费。这是一个重要的区别，因为正是这个特性使得本书所要介绍的真正强大的模式成为可能。</p>
+</div>
+<div class="paragraph">
+<p>微服务本身是微小且定制的，旨在帮助组织实现必要的业务目标。“微小”的一种典型定义是能够在两周内实现，另一种定义是服务应该（在概念上）像是出自一个人的头脑。这些服务从输入事件流中消费事件，运行它们特定的业务逻辑，并且可能发布自己的输出事件，提供用于“请求–响应”访问的数据，与某个第三方 API 通信或者执行其他必需的操作。正如本书将要详细介绍的，这些服务可以是有状态的，也可以是无状态的；可以复杂，也可以简单；可以被实现为长期运行的独立应用程序，也可以通过“函数即服务”作为函数执行。</p>
+</div>
+<div class="paragraph">
+<p>事件流和微服务的组合形成了贯穿整个组织的业务活动的相连图。传统的计算机体系结构由多个单体应用和单体应用间的通信组成，具有相似的图形结构。这两种图形结构如图 1-1 所示。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/image8.png" alt="image8">
+</div>
+<div class="title">Figure 1. 图 1-1：微服务和单体应用的图形结构</div>
+</div>
+<div class="paragraph">
+<p>为了确定如何使这种图形结构高效运行，要看两个主要部分：节点和连接。本章会依次对它们进行介绍。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_2_领域驱动设计和界限上下文"><a class="anchor" href="#_1_2_领域驱动设计和界限上下文"></a>1.2 领域驱动设计和界限上下文</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>领域驱动设计由 Eric Evans 在他的同名图书《领域驱动设计：软件核心复杂性应对之道》1 中提出，书中介绍了一些构建事件驱动型微服务所必需的概念。鉴于已有丰富的文章（“What is the Domain Model in Domain Driven Design?”）、图书（《实现领域驱动设计》）和博客资源讨论了这一主题，本节仅做简单介绍。</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>该书已由人民邮电出版社出版，详见图灵社区。——编者注</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>以下概念支撑了领域驱动设计。</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">领域</dt>
+<dd>
+<p>某个企业所涉足并提供解决方案的问题空间。它涵盖了这个企业必须关注的所有内容，包括规则、流程、想法、特定于业务的术语，以及所有跟这个问题空间相关的东西，无论该企业是否与之相关。领域的存在跟企业是否存在无关。</p>
+</dd>
+<dt class="hdlist1">子领域</dt>
+<dd>
+<p>子领域是主领域的一个部分。每个子领域都聚焦于一个特定的职责子集，并且通常反映了企业的部分组织结构（如仓储、销售和工程部门）。一个子领域本身可视为一个领域。跟领域一样，子领域也属于问题空间。</p>
+</dd>
+<dt class="hdlist1">领域（子领域）模型</dt>
+<dd>
+<p>这是一种用于商业目的的对实际领域的抽象。在领域中对企业最重要的部分和属性被用来生成模型。一个企业的主领域模型可通过其提供给客户的产品、客户与产品交互的接口以及企业实现既定目标的各种流程和功能来识别。模型往往需要随着领域的改变和业务优先级的变化而不断完善。领域模型是解决方案空间的一部分，因为它是企业用来解决问题的框架。</p>
+</dd>
+<dt class="hdlist1">界限上下文</dt>
+<dd>
+<p>界限上下文是与子领域相关的逻辑边界，包括输入、输出、事件、需求、流程和数据模型。虽然在理想情况下，界限上下文会和子领域保持完全一致，但是历史遗留的系统、技术债和第三方集成等因素通常会带来一些例外。界限上下文也是解决方案空间的一个属性，对微服务如何相互交互有着重要的影响。</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>界限上下文应该是高内聚的。上下文内部的运作应该是紧密相关的，绝大部分的通信发生在内部而不会跨越边界。拥有高内聚的职责可以缩小设计范围和简化实现。</p>
+</div>
+<div class="paragraph">
+<p>界限上下文之间的关联应该是低耦合的，因为一个界限上下文内部的更改应该最小化或消除对相邻上下文的影响。低耦合可以确保在某个上下文内的需求变更不会向相邻的上下文传播大量依赖变更。</p>
+</div>
+<div class="sect2">
+<h3 id="_1_2_1_运用领域模型和界限上下文"><a class="anchor" href="#_1_2_1_运用领域模型和界限上下文"></a>1.2.1 运用领域模型和界限上下文</h3>
+<div class="paragraph">
+<p>每个组织都会在其自身和外部世界之间形成一个单独的领域。每个人在这个组织内的工作都在支持这个领域的需求。</p>
+</div>
+<div class="paragraph">
+<p>领域可以被划分为多个子领域，例如，对于以技术为中心的公司来说，会有一个工程部门、一个销售部门和一个客户支持部门。每个子领域有其自身的需求和职责，并且其本身可以进一步划分。这个划分的过程会不断重复，直到子领域模型的颗粒度变得足够细和具有可操作性，并且开发团队可将其实现为小型的独立服务。界限上下文是围绕着这些子领域建立的，并且是创建微服务的基础。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_2_2_保持界限上下文与业务需求一致"><a class="anchor" href="#_1_2_2_保持界限上下文与业务需求一致"></a>1.2.2 保持界限上下文与业务需求一致</h3>
+<div class="paragraph">
+<p>产品的业务需求在其生命周期内发生变化是很平常的事情，这可能是由于组织变更或新特性的要求所致。很少有公司需要在没有业务需求变更的情况下去变更既有产品的底层实现。这就是为什么界限上下文应该围绕着业务需求而不是技术需求去构建。</p>
+</div>
+<div class="paragraph">
+<p>保持界限上下文和业务需求一致，可以让开发团队以高内聚、低耦合的方式对微服务的实现做出变更。这为团队提供了设计和实现特定业务需求解决方案的自主权，可以大大减少团队之间的依赖，并且让每个团队都高度聚焦于自身需求。</p>
+</div>
+<div class="paragraph">
+<p>相反，根据技术需求来调整微服务是有问题的。这种模式通常见于设计不当的同步点对点微服务和传统的单体式计算系统中，在这些系统中不同的团队负责应用程序中特定的技术分层。按照技术保持一致性的主要问题在于，它将实现业务功能的职责分散到不同的界限上下文中，这会涉及多个具有不同排期和职责的团队。因为没有一个团队单独对实现某个解决方案负责，所以每个服务都要跨越团队和 API 边界，这使得变更很困难，而且成本很高。一个看起来无害的变更、缺陷或者故障服务，却可能对使用这种技术系统的所有服务的业务服务能力产生严重的连锁反应。事件驱动型微服务很少采用保持技术一致性的做法，并且应该尽可能地完全避免这种做法。清除跨领域的技术方案和团队间的相互依赖可以降低系统对变更的敏感度。</p>
+</div>
+<div class="paragraph">
+<p>图 1-2 展示了两种场景：左边的单一权责结构和右边的跨领域权责结构。在单一权责结构中，团队是完全围绕着两个独立的业务需求（界限上下文）来组织的，并且可以完全控制其应用层和数据层。在右边的图中，团队是根据技术需求来组织的，应用层和数据层是分开管理的。这就在不同的团队之间建立了显式的依赖，进而在不同的业务需求之间产生了隐式的依赖。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/image9.png" alt="image9">
+</div>
+<div class="title">Figure 2. 图 1-2：对齐业务上下文与对齐技术上下文</div>
+</div>
+<div class="paragraph">
+<p>围绕着业务需求对事件驱动型微服务架构建模是更好的选择，尽管这种方法也有一些折中之处。代码可能会被复制多次，并且许多服务可能使用相似的数据访问模式。产品开发者可能会尝试与其他产品共享数据资源或耦合边界的方式来减少复制行为。在这些例子中，从长远来看，后续的紧耦合可能比重复代码和存储冗余数据带来更高的成本。这些权衡点将在本书中详细讨论。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/image3.png" alt="image" width="40" height="46"></span>
+保持界限上下文之间的低耦合，并聚焦于最小化上下文之间的依赖。这将使得界限上下文的实现可以按需变更，而不会进一步破坏很多（或任何）其他系统。</p>
+</div>
+<div class="paragraph">
+<p>此外，每个团队可能都需要拥有全栈的专业知识，这个要求会因需要特定的技能集和访问权限而变得复杂。组织应该实施最通用的需求，这样这些垂直团队就能进行自支持，同时可以根据需要在跨团队中提供更专业的技能集。这些最佳实践会在第 14 章中详细介绍。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_3_沟通结构"><a class="anchor" href="#_1_3_沟通结构"></a>1.3 沟通结构</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要达成目标，一个组织的团队、系统和人员必须相互沟通。这些沟通形成了一个相互连接的依赖拓扑结构，被称为沟通结构。沟通结构主要有 3 种，每一种都影响着企业的运作方式。</p>
+</div>
+<div class="sect2">
+<h3 id="_1_3_1_业务沟通结构"><a class="anchor" href="#_1_3_1_业务沟通结构"></a>1.3.1 业务沟通结构</h3>
+<div class="paragraph">
+<p>如图 1-3 所示，业务沟通结构决定了团队和部门之间的沟通方式，每个团队和部门都由分配给它的主要需求和职责驱动。例如，工程部开发软件产品，销售部将其卖给客户，支持部则负责确保顾客和客户满意。从主要业务部门到个人贡献者的工作，团队的组织及其目标的配置都遵循此结构。业务需求、需求在团队间的分配以及团队的组成都会随着时间而改变，这会极大地影响业务沟通结构和实现沟通结构之间的关系。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/image11.png" alt="image11">
+</div>
+<div class="title">Figure 3. 图 1-3：业务沟通结构的例子</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_3_2_实现沟通结构"><a class="anchor" href="#_1_3_2_实现沟通结构"></a>1.3.2 实现沟通结构</h3>
+<div class="paragraph">
+<p>实现沟通结构（参见图 1-4）是由组织确定的子领域模型相关的数据和逻辑。它确立了业务流程、数据结构和系统设计，以便快速高效地执行业务操作。因为实现重新定义的业务需求需要重写逻辑，所以这会导致业务沟通结构灵活性的折中。这些重写通常是对子领域模型和相关代码的迭代改进，随着时间的推移，它们反映了为满足新的业务需求而在实现上进行的演进。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/image12.png" alt="image12">
+</div>
+<div class="title">Figure 4. 图 1-4：实现沟通结构的例子</div>
+</div>
+<div class="paragraph">
+<p>软件工程中对应实现沟通结构的典型例子是单体数据库应用程序。应用程序中的业务逻辑通过函数调用或共享状态来进行内部通信。继而，这类单体应用被用来满足业务沟通结构所确定的业务需求。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_3_3_数据沟通结构"><a class="anchor" href="#_1_3_3_数据沟通结构"></a>1.3.3 数据沟通结构</h3>
+<div class="paragraph">
+<p>数据沟通结构（参见图 1-5）是在业务之间，特别是实现之间进行数据通信的过程。虽然在日常事务中经常使用包括电子邮件、即时通信和会议的数据沟通结构来传达业务的变更，但在大部分软件实现中，数据沟通结构是缺失的。它的作用通常临时体现在系统跟系统间发生联系的时候。实现沟通结构经常扮演双重角色，除了实现自身需求，还包含数据通信功能。这就给公司的成长和变化造成了很多问题，其影响会在下一节中进行评估。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/image13.png" alt="image13">
+</div>
+<div class="title">Figure 5. 图 1-5：临时性的数据沟通结构的例子</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_3_4_康威定律和沟通结构"><a class="anchor" href="#_1_3_4_康威定律和沟通结构"></a>1.3.4 康威定律和沟通结构</h3>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>设计系统的组织……受到约束，产生的设计是这些组织的沟通结构的副本。<br>
+—— Melvin Conway，“How Do Committees Invent?”（1968 年 4 月）</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>这句话被称为康威定律，它表明一个团队将根据其组织的沟通结构来构建产品。业务沟通结构将人员组织成团队，这些团队通常生产由他们的团队边界限定的产品。实现沟通结构提供了对给定产品的子领域数据模型的访问，但是较弱的数据通信能力限制了其对其他产品的访问。</p>
+</div>
+<div class="paragraph">
+<p>因为领域概念跨越了不同业务，所以同一个组织里的不同界限上下文之间通常需要对方的领域数据。实现沟通结构一般不擅长提供这种通信机制，虽然它们在满足自身界限上下文的需求时表现得很出色。它们会以两种方式来影响产品设计。首先，由于在整个组织内传递所需的领域数据很低效，它们不鼓励创建逻辑独立的新产品。其次，它们会提供能轻松访问现有领域数据的方式，但存在要不断扩展领域以满足新业务需求的风险。这种特殊的模式体现在单体设计中。</p>
+</div>
+<div class="paragraph">
+<p>数据沟通结构在组织设计和构建产品的过程中扮演着关键角色，但对于许多组织来说这种结构是长期缺失的。如前所述，实现沟通结构除了自身的角色外，还经常扮演数据沟通结构的角色。</p>
+</div>
+<div class="paragraph">
+<p>一些组织试图通过其他实现方式来提升访问领域数据的能力，但这些努力有其自身的缺点。例如，尽管共享数据库的做法会促进反模式并且通常无法进行充分扩展以满足所有的性能要求，但还是经常被使用。数据库方案也许仅仅提供了一个只读副本，但是这可能会不必要地暴露其内部数据模型。批处理程序能够将数据转存到文件中以被其他程序读取，但这种方法会造成数据一致性和多信息源的问题。最后，所有这些解决方案都会导致实现之间的紧耦合，并进一步将系统架构强化为点对点的关系。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/image5.png" alt="image" width="47" height="44"></span>
+如果你发现在组织中访问数据很困难，或者由于所有数据都存在于单独的实现中，你的产品不得不不断扩大其涵盖的范围，那你可能正受到糟糕的数据沟通结构的影响。这个问题会随着组织的发展、新产品的开发以及对访问通用领域数据需求的增加而进一步扩大。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_4_传统计算中的沟通结构"><a class="anchor" href="#_1_4_传统计算中的沟通结构"></a>1.4 传统计算中的沟通结构</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>一个组织的沟通结构极大地影响了工程实现的创建方式。在团队的层面也是如此：团队的沟通结构影响了其为所负责的特定业务需求所构建的解决方案。下面来看看具体实践。</p>
+</div>
+<div class="paragraph">
+<p>考虑这样的场景：有一个团队负责一个单独的服务及支持该服务的单独的数据库。团队成员很乐于提供他们的业务功能，一切都很美好。有一天团队领导带来了一个新的业务需求。这个需求跟该团队正在做的业务是相关的，可能将其加到现有的服务里就可以。但是，它与当前服务的差异程度也足以让团队考虑去开发一个新服务。</p>
+</div>
+<div class="paragraph">
+<p>团队目前处在一个十字路口：是用新服务来实现新的业务需求，还是简单地将其加到现有的服务中去？下面进一步看看他们的选择。</p>
+</div>
+<div class="sect2">
+<h3 id="_1_4_1_选项1创建一个新服务"><a class="anchor" href="#_1_4_1_选项1创建一个新服务"></a>1.4.1 选项1：创建一个新服务</h3>
+<div class="paragraph">
+<p>如果业务需求与原服务差异足够大，那么可以将其放入新的服务。但是数据呢？新的业务功能需要一些旧数据，但那些数据目前限定在现有的服务内。此外，团队并没有真正的启动新的、完全独立的服务的流程。另外，团队越来越大，公司也在快速成长。如果团队在将来不得不被拆分，那么拥有模块化和独立的系统可能会让划分职权更加容易。</p>
+</div>
+<div class="paragraph">
+<p>这种方法存在一些风险。团队必须找到一种从原有数据库中复制合适的数据到新数据库中的方法。他们需要确保不会暴露内部工作逻辑，并且对数据结构的变更不会影响任何其他复制了他们数据的团队。此外，被复制的数据通常是过时的，因为他们只能每 30 分钟实时同步一次生产数据，这样才不会给数据库带来大量查询，进而造成过载。复制数据的连接需要被监控和维护，以保证它的正确运行。</p>
+</div>
+<div class="paragraph">
+<p>让新服务启动并运转起来也有风险。他们需要管理两套数据库、两个服务，并且要为它们建立日志记录、监控、测试、部署和回滚流程。他们还必须注意同步任何数据结构的变更，以免影响相关的系统。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_4_2_选项2将它加入现有服务中"><a class="anchor" href="#_1_4_2_选项2将它加入现有服务中"></a>1.4.2 选项2：将它加入现有服务中</h3>
+<div class="paragraph">
+<p>另一个选项是在现有服务里创建新的数据结构和业务逻辑。所需的数据已经在当前的数据库中，日志记录、监控、测试、部署和回滚流程也早已经被定义和使用。团队很熟悉这个系统并且能正确地实现逻辑，他们的单体模式支持这种服务设计方法。</p>
+</div>
+<div class="paragraph">
+<p>这种方法也有一些风险，尽管它们更不易被察觉。随着变更的不断发生，实现的边界可能会变得模糊，特别是因为不同的模块通常被捆绑在同一个代码库里。通过跨边界和直接跨模块耦合来快速添加特性实在太容易了。能够快速迭代是一个很大的优势，但这是以高耦合、低内聚和缺少模块化为代价的。虽然团队可以防范这种情况，但这需要出色的规划和对边界的严格遵守，而在面对紧张的排期、缺乏经验和服务权责改变等情况时，这些要求往往会被搁置一边。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_4_3_两种选项的利弊"><a class="anchor" href="#_1_4_3_两种选项的利弊"></a>1.4.3 两种选项的利弊</h3>
+<div class="paragraph">
+<p>大部分团队会选择第二个选项，即添加功能到现有的服务中。这个选择并没有错，单体架构是很有用且强大的结构，能够为企业带来巨大的价值。第一个选项首先会遇到与传统计算相关的两个问题：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>难以可靠地访问另一个系统的数据，特别是在大规模访问和实时访问的情况下；</p>
+</li>
+<li>
+<p>创建和管理新的服务会带来很大的开销和风险，特别是在组织没有处理此类事情的既定方法的情况下。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>访问本地数据通常比访问另一个数据存储中的数据简单。要获取任何封装在属于其他团队的数据存储中的数据都是很难的，因为这需要跨越实现和业务沟通边界。随着数据、连接数和性能需求的增长，这会变得越来越难以维护和扩展。</p>
+</div>
+<div class="paragraph">
+<p>虽然复制必要的数据是值得的，但并非万无一失。这个模型鼓励许多直接的点对点的耦合，而随着组织的发展、业务单元和所有者的变化，以及产品的成熟和逐渐淘汰，这些耦合将变得难以维护。它创建了一种严格的技术依赖关系，即两个团队（存储数据的团队和复制数据的团队）的实现沟通结构要求它们在更改数据时进行同步工作。这需要很大的投入来确保不会过度暴露一个实现的内部数据模型，以免其他系统与之紧密耦合。扩展性、性能和系统可用性通常是这两个系统存在的问题，因为数据的复制查询可能给数据源系统带来不可持续的负载。在紧急事故发生之前，失败的同步过程可能并不会被察觉。部落文化可能导致一个正在复制数据的团队认为这就是原始数据。</p>
+</div>
+<div class="paragraph">
+<p>被复制的数据在查询完成和数据传输完成时总是有些过时的。数据集越大，来源越复杂，副本与数据源不同步的可能性就越大。当系统期望彼此拥有完美的、最实时的数据时，这会是个问题，尤其是在就这些数据进行相互通信时。例如，由于数据过时，一个报表服务可能会上报与计费服务不同的值。这会对服务质量、报表、分析和基于金钱的决策制定产生严重的传导影响。</p>
+</div>
+<div class="paragraph">
+<p>无法在整个公司内正确地传播数据并非由于概念上的根本性缺陷。恰恰相反，这是由于数据沟通结构的弱化或缺失。在前面的场景中，团队的实现沟通结构作为相当有限的数据沟通结构在执行着双重任务。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/image3.png" alt="image" width="40" height="46"></span>
+事件驱动型微服务的一个原则是核心业务数据应该易于获得，并且可以由任何需要它的服务使用。这将用一个正式的数据沟通结构替代此场景中的临时数据沟通结构。对于这个假设的团队，这种数据沟通结构能够消除从其他系统获取数据的大部分困难点。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_4_4_团队场景续"><a class="anchor" href="#_1_4_4_团队场景续"></a>1.4.4 团队场景（续）</h3>
+<div class="paragraph">
+<p>该团队最终决定采用第二个选项，在同一服务内加入新特性。这种做法简单便捷，并且从那之后他们已经实现了很多新特性。随着公司的成长，团队也在壮大，经过一年时间，是时候考虑将原团队拆分为两个更小、更聚焦的团队了。</p>
+</div>
+<div class="paragraph">
+<p>现在必须指定每个新团队负责之前服务中的某些业务功能。每个团队的业务需求都基于最需要关注的业务领域进行了极好的划分。但是，要拆分实现沟通结构并不那么容易。就如之前的情况，似乎两个团队都需要大量相同的数据来满足各自的需求。新的问题出现了。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>哪个团队应该拥有哪些数据？</p>
+</li>
+<li>
+<p>数据应该存储在哪里？</p>
+</li>
+<li>
+<p>两个团队都需要修改值的数据怎么办？</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>团队领导们觉得最好继续共享原有的服务，他们可以各自负责处理不同的部分。这需要更多的跨团队沟通和同步工作，而这些工作可能会导致生产效率降低。并且，如果将来他们的规模再扩大一倍，又该怎么办呢？或者，如果业务需求变化使得他们再也无法用相同的数据结构去满足需求，又该如何？</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_4_5_冲突的压力"><a class="anchor" href="#_1_4_5_冲突的压力"></a>1.4.5 冲突的压力</h3>
+<div class="paragraph">
+<p>原有的团队中有两个冲突的压力。要保持所有数据在一个服务里面，以使添加新功能更加快捷和简便，代价就是扩大实现沟通结构。最终，随着团队规模的扩大，需要拆分业务沟通结构——紧跟而来的是要给新的团队重新分配业务需求。但是，实现沟通结构在当前模式下无法支持重新分配，它需要被分解成适当的组件。这两种方法都没有可伸缩性，并且都需要做一些不同的事情。这些问题都来自同一个根源：一种在实现沟通结构之间弱化的、不明确的数据通信方式。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_5_事件驱动的沟通结构"><a class="anchor" href="#_1_5_事件驱动的沟通结构"></a>1.5 事件驱动的沟通结构</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>事件驱动方法提供了一种替代传统的实现行为和数据沟通结构的选项。基于事件的通信不是“请求–响应”通信的简单替代品，而是服务之间完全不同的通信方式。一个事件流的数据沟通结构从数据访问场景中解耦了数据的生产和所有。服务之间不再通过一个“请求–响应”API 发生联系，而是通过在事件流里定义的事件数据（这个过程在第 3 章中有更详细的描述）发生联系。生产者的职责仅限于生产定义良好的数据到它们各自的事件流中。</p>
+</div>
+<div class="sect2">
+<h3 id="_1_5_1_事件是通信的基础"><a class="anchor" href="#_1_5_1_事件是通信的基础"></a>1.5.1 事件是通信的基础</h3>
+<div class="paragraph">
+<p>所有可共享的数据都被发布到一系列事件流中，构成了一个连续、规范的叙述，详细描述了组织中发生的所有事情。这成了系统间相互通信的渠道。大部分事物能作为事件进行通信，从简单的某个事情的发生到复杂的、有状态的记录。事件就是数据。它们不仅仅是表明数据已经准备就绪的信号，也不仅仅是从一个实现向另一个实现直接进行数据传输的方法。相反，它们既是数据存储又是服务间异步通信的一种方式。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_5_2_事件流提供了单一事实来源"><a class="anchor" href="#_1_5_2_事件流提供了单一事实来源"></a>1.5.2 事件流提供了单一事实来源</h3>
+<div class="paragraph">
+<p>事件流里的每个事件都是事实的一个状态，所有这些状态合起来构成了单一事实来源——这是组织内所有系统相互通信的基础。沟通结构的好坏取决于其信息的真实性，因此组织采用事件流叙述作为单一事实来源是至关重要的。如果有些团队选择在其他位置放置一份有冲突的数据，那么事件流作为组织数据通信主干的功能将显著降低。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_5_3_消费者执行自己的建模和查询"><a class="anchor" href="#_1_5_3_消费者执行自己的建模和查询"></a>1.5.3 消费者执行自己的建模和查询</h3>
+<div class="paragraph">
+<p>基于事件的数据沟通结构不同于扩大化的实现沟通结构，因为它不能提供数据查询和查找功能。所有的业务和应用逻辑必须被封装在事件的生产者和消费者内部。</p>
+</div>
+<div class="paragraph">
+<p>数据访问和建模需求被完全转移到了消费者一方，每个消费者需要从源事件流中获取他们自己的事件副本。任何查询复杂度也会从数据所有者的实现沟通结构转移到消费者的实现沟通结构。消费者全权负责来自多个事件流的数据混合、特定的查询功能，或者其他特定业务的实现逻辑。生产者和消费者都不必为了数据通信方式而提供查询机制、数据传输机制、API（应用编程接口）和跨团队的服务。它们现在的责任仅限于解决当前的界限上下文的需求。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_5_4_整个组织的数据沟通得到改善"><a class="anchor" href="#_1_5_4_整个组织的数据沟通得到改善"></a>1.5.4 整个组织的数据沟通得到改善</h3>
+<div class="paragraph">
+<p>数据沟通结构的使用是一种逆转，所有可共享的数据都暴露在了实现沟通结构外部。不是所有的数据都必须共享，因此也不是所有的数据都需要发布到一系列事件流中。但是，任何其他团队或服务感兴趣的数据都必须发布到公共事件流集合中，这样数据的生产和所有就变得完全解耦了。这提供了系统架构中长期缺失的正式的数据沟通结构，并且更好地遵守了“高内聚，低耦合”的界限上下文原则。</p>
+</div>
+<div class="paragraph">
+<p>应用程序现在可以访问原本很难通过点到点连接获得的数据了。新的服务可以简单地从典型事件流中获得所需的数据，创建它们自己的模型和状态，并执行任何必要的业务功能，而无须依赖与其他服务的直接点到点连接或 API。这就释放了组织在任何产品中更高效地使用海量数据的潜力，甚至可以以独特而强大的方式整合来自不同产品的数据。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_5_5_高可访问的数据利于业务变更"><a class="anchor" href="#_1_5_5_高可访问的数据利于业务变更"></a>1.5.5 高可访问的数据利于业务变更</h3>
+<div class="paragraph">
+<p>事件流包含对业务操作至关重要的核心领域事件。虽然各团队可能重组，项目也会一个接一个地开展，但是重要的核心领域数据可以随时提供给任何有需要的新产品，这个能力独立于任何具体的实现沟通结构。这为业务提供了空前的灵活性，因为访问核心领域事件不再依赖于任何具体的实现。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_6_异步的事件驱动型微服务"><a class="anchor" href="#_1_6_异步的事件驱动型微服务"></a>1.6 异步的事件驱动型微服务</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>事件驱动型微服务支持业务逻辑转换和操作以满足界限上下文的需求。这些应用的任务是满足这些需求并向其他下游消费者发布任何必要的事件。下面是使用事件驱动型微服务的主要优点。</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">颗粒化</dt>
+<dd>
+<p>服务可以恰当地映射界限上下文，并且在业务需求发生变化时可被轻易重写。</p>
+</dd>
+<dt class="hdlist1">可伸缩性</dt>
+<dd>
+<p>单独的服务可以根据需要进行扩缩容。</p>
+</dd>
+<dt class="hdlist1">技术灵活性</dt>
+<dd>
+<p>服务可以使用最合适的语言和技术，也可以使用最前沿的技术进行简单的原型开发。</p>
+</dd>
+<dt class="hdlist1">业务需求灵活性</dt>
+<dd>
+<p>颗粒化微服务的所有权很容易进行重组。与大型服务相比，它们有更少的跨团队依赖，并且组织可以快速响应业务需求的变化，否则这些变化会受到数据访问障碍的阻碍。</p>
+</dd>
+<dt class="hdlist1">松耦合</dt>
+<dd>
+<p>事件驱动型微服务耦合于领域数据而不是特定的实现 API。数据 schema 能极大地改进管理数据变更的方式，这部分内容会在第 3 章中详细介绍。</p>
+</dd>
+<dt class="hdlist1">持续交付支持</dt>
+<dd>
+<p>发布一个小型的、模块化的微服务很容易，并且可在需要时将其回滚。</p>
+</dd>
+<dt class="hdlist1">高可测试性</dt>
+<dd>
+<p>微服务的依赖比大型单体服务少，因此可以更容易地模拟所需的测试端点并保证适当的代码覆盖率。</p>
+</dd>
+</dl>
+</div>
+<div class="sect2">
+<h3 id="_使用事件驱动型微服务的示例团队"><a class="anchor" href="#_使用事件驱动型微服务的示例团队"></a>使用事件驱动型微服务的示例团队</h3>
+<div class="paragraph">
+<p>现在回到前面那个团队早期做决策的时候，这次他们使用的是事件驱动的数据沟通结构。</p>
+</div>
+<div class="paragraph">
+<p>一个新的业务需求被提交给了这个团队。此需求与该团队当前负责的产品相关，但它们的差异程度也足以将其实现到单独的一个服务里。将其添加到当前的服务是否违反了单一权责原则且扩大了当前所定义的界限上下文？或者它就是对现有服务的一次简单扩展，可能添加了一些新的相关数据和功能？</p>
+</div>
+<div class="paragraph">
+<p>之前所说的技术问题，比如确定从哪里获取数据和如何接收数据、批处理的同步，以及需要实现同步 API等，在采用事件驱动型微服务后都基本被消除了。该团队可以启动一个新的微服务并从事件流中获取必要的数据。如果需要，可以一直回溯到事件流中最开始时的数据。团队完全可以整合用于其他服务的公共数据，只要这些数据只用于实现新的界限上下文需求。这些数据的存储和结构完全由该团队来决定，他们可以选择保留哪些字段和抛弃哪些字段。</p>
+</div>
+<div class="paragraph">
+<p>业务风险也得到了缓解，因为小型的、细粒度的服务允许由单一团队来负责，团队可以根据需要进行规模调整和重组。当团队变得太大而无法在单一业务所有者下进行管理时，可以根据需要拆分并重新分配微服务的权责。事件数据的所有权跟着生产事件的服务移动，并且所做出的组织决策会减少将来执行任务时所需的跨团队通信。</p>
+</div>
+<div class="paragraph">
+<p>如果创建新服务和获取所需数据的开销很小，那么微服务的特性就防止了意大利面式代码和扩大化的单体应用的出现。可伸缩性的关注点现在聚焦于单个事件处理服务，这些服务可以根据需要变更 CPU、内存、</p>
+</div>
+<div class="paragraph">
+<p>磁盘和实例计数的规模。剩余的伸缩需求被转移到了数据沟通结构上，数据沟通结构必须确保能够处理服务从事件流中消费和往事件流生产事件所产生的各种负载。</p>
+</div>
+<div class="paragraph">
+<p>然而，要实现这一切，团队需要确保数据确实存在于数据沟通结构中，并且他们必须有轻松启动和管理一系列微服务的方法。这就需要整个组织接受事件驱动型微服务架构。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_7_同步式微服务"><a class="anchor" href="#_1_7_同步式微服务"></a>1.7 同步式微服务</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>微服务可以通过事件（本书所建议的方法）实现成异步的形式，或者实现成同步的形式（同步服务通常出现在面向服务的架构中）。同步的微服务通常采用“请求–响应”的方法来实现，服务间通信直接通过API 来满足业务需求。</p>
+</div>
+<div class="sect2">
+<h3 id="_1_7_1_同步式微服务的缺点"><a class="anchor" href="#_1_7_1_同步式微服务的缺点"></a>1.7.1 同步式微服务的缺点</h3>
+<div class="paragraph">
+<p>同步式微服务有很多问题，这使得它们难以大规模地使用。这并不是说一个公司不能用同步式微服务来获得成功，Netflix、Lyft、Uber 和 Facebook 等公司的成功就证明了这一点。但是也有许多公司使用过时的、混乱的意大利面式代码和单体应用发了大财，所以不要把公司的最终成功与底层架构的质量混为一谈。市面上有许多介绍如何实现同步式微服务的图书，可以读读它们以更好地理解同步方法。2</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>2 例如由 Sam Newman 所著的《微服务设计》以及由 Kasun Indrasiri 和 Prabath Siriwardena 合著的 Microservices for the Enterprise。</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>此外，请注意，无论是点到点的“请求–响应”型微服务还是异步的事件驱动型微服务，严格来说都没有绝对的优劣之分。在一个组织里它们都有自己的一席之地，因为有些任务更适合采用其中的一种模式。然而，我以及我的许多同行和同事的经验表明，事件驱动型微服务架构提供了无与伦比的灵活性，这是同步的“请求–响应”型微服务所不具备的。当你继续阅读本书时可能会同意我的观点，至少你会了解它们的优缺点。</p>
+</div>
+<div class="paragraph">
+<p>以下是同步的“请求–响应”型微服务的几大缺点。</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">点到点的耦合</dt>
+<dd>
+<p>同步的微服务依赖其他服务来帮助它们执行业务任务。那些服务同样有自己的依赖服务，而这些依赖服务又有自己的依赖服务，以此类推。这会导致过度的扇出，且难以跟踪哪些服务要为实现业务逻辑的特定部分负责。服务之间的连接数量多得惊人，这会进一步增强现有的沟通结构并使得未来的变更更加困难。</p>
+</dd>
+<dt class="hdlist1">有依赖的可伸缩性</dt>
+<dd>
+<p>你自身服务的扩容能力依赖于所有依赖服务的扩容能力，并且直接与通信的扇出程度有关。实现技术可能是可伸缩性的瓶颈。高度变化的负载和激增的请求模式会使情况更加复杂，所有这些都需要在整个体系架构内同步处理。</p>
+</dd>
+<dt class="hdlist1">服务故障的处理</dt>
+<dd>
+<p>如果一个依赖服务关闭，则必须做出如何处理这个异常的决策。生态系统中的微服务越多，决定如何处理停机、何时重试、何时失败以及何时恢复以确保数据一致性就越困难。</p>
+</dd>
+<dt class="hdlist1">API 版本和依赖管理</dt>
+<dd>
+<p>多个 API 定义和服务版本通常需要同时存在。强制让客户端升级到最新的 API 并不总是可行或可取的。这会增加跨多个服务协调 API 更改请求的复杂性，特别是当它们伴随着对底层数据结构的更改时。</p>
+</dd>
+<dt class="hdlist1">数据访问耦合于实现</dt>
+<dd>
+<p>同步的微服务在访问外部数据时会遇到所有跟传统的服务相同的问题。虽然有减少访问外部数据需求的服务设计策略，但微服务通常还是需要访问来自其他服务的通用数据。这就把数据访问和可伸缩性的责任重新放在了实现沟通结构上。</p>
+</dd>
+<dt class="hdlist1">分布式的单体应用</dt>
+<dd>
+<p>服务可以被组合成一个分布式的单体应用，在它们之间进行许多相互交织的调用。这种情况通常出现在团队分解一个单体应用，并决定使用同步的点到点调用来模拟这个单体应用内部的边界时。点对点的服务可以很容易地模糊界限上下文的边界，因为对远程系统的函数调用可以一行一行地插入现有单体式代码。</p>
+</dd>
+<dt class="hdlist1">测试</dt>
+<dd>
+<p>集成测试可能很困难，因为每个服务都需要完全可操作的依赖项，而这些依赖项又需要自己的依赖项。在单元测试中将它们截取出来可能是可行的，但并不足以满足更广泛的测试需求。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_7_2_同步式微服务的优点"><a class="anchor" href="#_1_7_2_同步式微服务的优点"></a>1.7.2 同步式微服务的优点</h3>
+<div class="paragraph">
+<p>同步式微服务有许多不可否认的优点。一些数据访问模式很适合直接的“请求–响应”耦合，比如验证用户身份和 AB 测试中的上报。与外部第三方解决方案的集成大多数时候使用同步机制，并且通常使用HTTP 以提供一种灵活的、与语言无关的通信机制。</p>
+</div>
+<div class="paragraph">
+<p>跟踪跨多个系统的操作在同步环境下会比异步环境下更简单。详细的日志可以显示在哪些系统上调用了哪些函数，从而实现业务操作的高度可调试性和可见性。</p>
+</div>
+<div class="paragraph">
+<p>承载 Web 和移动体验的服务通常由“请求–响应”设计提供支持，无论它们是同步还是异步性质。客户会收到完全满足了其需求的及时响应。</p>
+</div>
+<div class="paragraph">
+<p>经验因素也是非常重要的，尤其是当今市场上的许多开发者往往对同步、单体类型的编码更有经验。总的来说，这使得获取熟悉同步系统的人才比获取熟悉异步事件驱动开发的人才更容易。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/image3.png" alt="image" width="40" height="46"></span>
+一个公司的架构很少完全基于事件驱动型微服务。混合式架构肯定会成为常态，同步和异步的解决方案会根据问题空间的需要进行并行部署。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_8_小结"><a class="anchor" href="#_1_8_小结"></a>1.8 小结</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>沟通结构指导着在组织的整个生命周期中如何创建和管理软件。数据沟通结构通常是开发不完全且临时的，但是，如事件驱动系统所体现的那样，引入一组持久的、易于访问的领域事件可以使得更小的、专门构建的实现得以应用。</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="more_information.html">更多信息</a></span>
+  <span class="next"><a href="2.html">第 2 章 事件驱动型微服务基础</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

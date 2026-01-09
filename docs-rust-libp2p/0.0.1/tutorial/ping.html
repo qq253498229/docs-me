@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ping教程 - rust-libp2p入门 :: docs-me</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">docs-me</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-rust-libp2p" data-version="0.0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">libp2p入门</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">教程</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hole-punching.html">打洞教程</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="ping.html">Ping教程</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">示例</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../example/chat.html">聊天</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../example/distributed-key-value-store.html">分布式键值存储</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../example/file-sharing.html">基本文件共享应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../example/ipfs-kad.html">IPFS Kademlia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../example/ipfs-private.html">IPFS 私有实现</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../example/ping.html">Ping</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../example/rendezvous.html">Rendezvous</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../example/autonat.html">AutoNAT</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../example/relay-server.html">中继服务器</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">libp2p入门</span>
+    <span class="version">0.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../docs-config/0.0.1/index.html">docs-config</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-config/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-steam-electron/0.0.1/index.html">docs-steam-electron</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-steam-electron/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-xiuxian/0.0.1/index.html">docs-xiuxian</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-xiuxian/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-es-java/7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-es-java/7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../docs-es-java/6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../docs-es-java/6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-greenworks-js/0.0.1/index.html">Greenworks-JS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-greenworks-js/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">libp2p入门</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-neutralino-api/0.0.1/index.html">NeutralinoJS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-neutralino-api/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-antora-oauth2.1/0.0.1/index.html">OAuth 2.1 授权框架</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-antora-oauth2.1/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-pd2/0.0.1/index.html">PD2记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-pd2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-peerjs/0.0.1/index.html">PEER JS</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-peerjs/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-actuator/3.3.3/index.html">Spring Boot Actuator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-actuator/3.3.3/index.html">3.3.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-oauth2/0.0.1/index.html">Spring Boot OAuth2</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-oauth2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-steamworks-rs/0.11.0/index.html">Steamworks for Rust</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-steamworks-rs/0.11.0/index.html">0.11.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-tauri/v1/index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-tauri/v1/index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-testing-angular/中文/start.html">Testing Angular</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-testing-angular/中文/start.html">中文</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-me/0.0.1/index.html">个人记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-me/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-taiwu/0.0.1/index.html">太吾绘卷</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-taiwu/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-palworld/0.0.1/index.html">幻兽帕鲁笔记</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-palworld/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-building-event-driven-microservices/0.0.1/index.html">微服务与事件驱动架构</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-building-event-driven-microservices/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-hunter/0.0.1/index.html">猎人-荒野的呼唤</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-hunter/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-logitech/v8.45/index.html">罗技鼠标宏文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-logitech/v8.45/index.html">v8.45</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-milk/0.0.1/index.html">银河奶牛</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-milk/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../docs-me/0.0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">libp2p入门</a></li>
+    <li>教程</li>
+    <li><a href="ping.html">Ping教程</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-rust-libp2p/edit/master/modules/ROOT/pages/tutorial/ping.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Ping教程 - rust-libp2p入门</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>本教程旨在为新手提供一个实践性的概览，介绍如何使用 Rust 的 libp2p 实现。 对于 Rust 的新手来说，可能希望先从 <a href="https://www.rust-lang.org/" target="_blank" rel="noopener">Rust</a> 本身开始，然后再深入到网络的乐趣中。 这个库大量使用了异步 Rust。如果你不熟悉这个概念，<a href="https://rust-lang.github.io/async-book/" target="_blank" rel="noopener">Rust 的异步书籍</a> 应该会很有帮助。 对于 libp2p 的新手来说，可能更愿意先在 <a href="https://libp2p.io/" target="_blank" rel="noopener">libp2p.io</a> 上获得一个总体概览，尽管本教程不需要 libp2p 的知识。</p>
+</div>
+<div class="paragraph">
+<p>我们将构建一个小型的 ping 克隆程序，向一个对等节点发送 ping，期待收到 pong 作为响应。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_脚手架"><a class="anchor" href="#_脚手架"></a>脚手架</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>让我们从以下步骤开始：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>更新到最新的 Rust 工具链，例如：<code>rustup update</code></p>
+</li>
+<li>
+<p>创建一个新的 crate：<code>cargo init rust-libp2p-tutorial</code></p>
+</li>
+<li>
+<p>在 <code>Cargo.toml</code> 文件中添加 <code>libp2p</code> 以及 <code>futures</code> 作为依赖项。当前的 crate 版本可以在 <a href="https://crates.io/" target="_blank" rel="noopener">crates.io</a> 上找到。我们还将包含带有“attributes”特性的 async-std，以允许 <code>async main</code>。在撰写本文时我们有：</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">[package]
+    name = "rust-libp2p-tutorial"
+    version = "0.1.0"
+    edition = "2021"
+
+[dependencies]
+    libp2p = { version = "0.52", features = ["tcp", "tls", "dns", "async-std", "noise", "yamux", "websocket", "ping", "macros"] }
+    futures = "0.3.21"
+    async-std = { version = "1.12.0", features = ["attributes"] }
+    tracing-subscriber = { version = "0.3", features = ["env-filter"] }</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_网络身份"><a class="anchor" href="#_网络身份"></a>网络身份</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>随着所有脚手架的到位，我们可以深入到 libp2p 的具体内容。 首先，我们需要在 <code>async fn main()</code> 中为我们的本地节点创建一个网络身份，并用一个属性注解，以允许 <code>main</code> 是 <code>async</code> 的。 在 libp2p 中，身份通过一对公钥/私钥来处理。节点通过它们的 <a href="https://docs.rs/libp2p/latest/libp2p/struct.PeerId.html" target="_blank" rel="noopener">PeerId</a> 来识别彼此，这是从它们的公钥派生出来的。现在，用以下内容替换 main.rs 中的内容：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">use std::error::Error;
+use tracing_subscriber::EnvFilter;
+
+#[async_std::main]
+async fn main() -&gt; Result&lt;(), Box&lt;dyn Error&gt;&gt; {
+    tracing_subscriber::fmt().with_env_filter(EnvFilter::from_default_env()).init();
+
+    let mut swarm = libp2p::SwarmBuilder::with_new_identity();
+
+    Ok(())
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>继续构建并运行上述代码：<code>cargo run</code>。到目前为止还没有发生什么。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_传输"><a class="anchor" href="#_传输"></a>传输</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>接下来我们需要构建一个传输。libp2p 中的每个传输都提供加密流。例如，结合 TCP 来建立连接，TLS 来加密这些连接，以及 Yamux 在一个连接上运行一个或多个流。另一个 libp2p 传输是 QUIC，它提供了开箱即用的加密流。我们现在将坚持使用 TCP。这些传输都实现了 <a href="https://docs.rs/libp2p/latest/libp2p/trait.Transport.html" target="_blank" rel="noopener">Transport</a> trait。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_网络行为"><a class="anchor" href="#_网络行为"></a>网络行为</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>现在我们来看 rust-libp2p 的另一个核心特性：<a href="https://docs.rs/libp2p/latest/libp2p/swarm/trait.NetworkBehaviour.html" target="_blank" rel="noopener">NetworkBehaviour</a>。虽然之前介绍的 <a href="https://docs.rs/libp2p/latest/libp2p/trait.Transport.html" target="_blank" rel="noopener">Transport</a> trait 定义了如何在网络中发送字节，<a href="https://docs.rs/libp2p/latest/libp2p/swarm/trait.NetworkBehaviour.html" target="_blank" rel="noopener">NetworkBehaviour</a> 定义了在网络中发送哪些字节以及发送给谁。</p>
+</div>
+<div class="paragraph">
+<p>为了更具体地说明这一点，让我们看看 <a href="https://docs.rs/libp2p/latest/libp2p/swarm/trait.NetworkBehaviour.html" target="_blank" rel="noopener">NetworkBehaviour</a> trait 的一个简单实现：<a href="https://docs.rs/libp2p/latest/libp2p/ping/struct.Behaviour.html" target="_blank" rel="noopener">ping::Behaviour</a>。 正如你可能已经猜到的，类似于旧的 ICMP ping 网络工具，libp2p <a href="https://docs.rs/libp2p/latest/libp2p/ping/struct.Behaviour.html" target="_blank" rel="noopener">ping::Behaviour</a> 向一个对等节点发送 ping，并期望收到 pong 作为回应。
+<a href="https://docs.rs/libp2p/latest/libp2p/ping/struct.Behaviour.html" target="_blank" rel="noopener">ping::Behaviour</a> 不关心 ping 和 pong 消息是如何在网络上发送的，无论是通过 TCP 发送，是否通过 <a href="https://docs.rs/libp2p/latest/libp2p/noise/index.html" target="_blank" rel="noopener">noise</a> 加密，还是仅仅是 <a href="https://docs.rs/libp2p/latest/libp2p/plaintext/index.html" target="_blank" rel="noopener">明文</a>。 它只关心在网络中发送哪些消息以及发送给谁。</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.rs/libp2p/latest/libp2p/trait.Transport.html" target="<em>blank">Transport</a> 和 <a href="https://docs.rs/libp2p/latest/libp2p/swarm/trait.NetworkBehaviour.html" target="_blank" rel="noopener">NetworkBehaviour</a> 这两个特性使我们能够清晰地分离如何发送字节与发送 _哪些</em> 字节以及发送给 <em>谁。</em></p>
+</div>
+<div class="paragraph">
+<p>考虑到上述内容，让我们扩展我们的例子，在最后创建一个 <a href="https://docs.rs/libp2p/latest/libp2p/ping/struct.Behaviour.html" target="_blank" rel="noopener">ping::Behaviour</a>：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">use libp2p::ping;
+use tracing_subscriber::EnvFilter;
+use std::error::Error;
+
+#[async_std::main]
+async fn main() -&gt; Result&lt;(), Box&lt;dyn Error&gt;&gt; {
+    tracing_subscriber::fmt().with_env_filter(EnvFilter::from_default_env()).init();
+
+    let mut swarm = libp2p::SwarmBuilder::with_new_identity()
+        .with_async_std()
+        .with_tcp(
+            libp2p::tcp::Config::default(),
+            libp2p::tls::Config::new,
+            libp2p::yamux::Config::default,
+        )?
+        .with_behaviour(|_| ping::Behaviour::default())?;
+
+    Ok(())
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_swarm"><a class="anchor" href="#_swarm"></a>Swarm</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>现在我们有了传输（<a href="https://docs.rs/libp2p/latest/libp2p/trait.Transport.html" target="_blank" rel="noopener">Transport</a>）和网络行为（<a href="https://docs.rs/libp2p/latest/libp2p/swarm/trait.NetworkBehaviour.html" target="_blank" rel="noopener">NetworkBehaviour</a>），我们可以构建一个连接两者的 <a href="https://docs.rs/libp2p/latest/libp2p/struct.Swarm.html" target="_blank" rel="noopener">Swarm</a>，允许两者都取得进展。 简单来说，<a href="https://docs.rs/libp2p/latest/libp2p/struct.Swarm.html" target="_blank" rel="noopener">Swarm</a> 推动 <a href="https://docs.rs/libp2p/latest/libp2p/trait.Transport.html" target="_blank" rel="noopener">Transport</a> 和 <a href="https://docs.rs/libp2p/latest/libp2p/swarm/trait.NetworkBehaviour.html" target="_blank" rel="noopener">NetworkBehaviour</a> 向前发展，将命令从 <a href="https://docs.rs/libp2p/latest/libp2p/swarm/trait.NetworkBehaviour.html" target="_blank" rel="noopener">NetworkBehaviour</a> 传递到 <a href="https://docs.rs/libp2p/latest/libp2p/trait.Transport.html" target="_blank" rel="noopener">Transport</a>，并将事件从 <a href="https://docs.rs/libp2p/latest/libp2p/trait.Transport.html" target="_blank" rel="noopener">Transport</a> 传递到 <a href="https://docs.rs/libp2p/latest/libp2p/swarm/trait.NetworkBehaviour.html" target="_blank" rel="noopener">NetworkBehaviour</a>。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">use libp2p::ping;
+use std::error::Error;
+use tracing_subscriber::EnvFilter;
+
+#[async_std::main]
+async fn main() -&gt; Result&lt;(), Box&lt;dyn Error&gt;&gt; {
+    tracing_subscriber::fmt().with_env_filter(EnvFilter::from_default_env()).init();
+
+    let mut swarm = libp2p::SwarmBuilder::with_new_identity()
+        .with_async_std()
+        .with_tcp(
+            libp2p::tcp::Config::default(),
+            libp2p::tls::Config::new,
+            libp2p::yamux::Config::default,
+        )?
+        .with_behaviour(|_| ping::Behaviour::default())?
+        .build();
+
+    Ok(())
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_空闲连接超时"><a class="anchor" href="#_空闲连接超时"></a>空闲连接超时</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>现在，对于这个特定的例子，我们需要设置空闲连接超时。否则，连接将立即关闭。</p>
+</div>
+<div class="paragraph">
+<p>你是否也需要在你的应用程序中设置这个，取决于你的用例。通常情况下，如果连接被某个协议“使用”，则会保持连接。然而，ping协议只是一个“辅助”类型的协议。因此，如果没有其他行为到位，我们将无法观察到ping。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">use libp2p::ping;
+use std::error::Error;
+use std::time::Duration;
+use tracing_subscriber::EnvFilter;
+
+#[async_std::main]
+async fn main() -&gt; Result&lt;(), Box&lt;dyn Error&gt;&gt; {
+    tracing_subscriber::fmt().with_env_filter(EnvFilter::from_default_env()).init();
+
+    let mut swarm = libp2p::SwarmBuilder::with_new_identity()
+        .with_async_std()
+        .with_tcp(
+            libp2p::tcp::Config::default(),
+            libp2p::tls::Config::new,
+            libp2p::yamux::Config::default,
+        )?
+        .with_behaviour(|_| ping::Behaviour::default())?
+        .with_swarm_config(|cfg| cfg.with_idle_connection_timeout(Duration::from_secs(u64::MAX))) // Allows us to observe pings indefinitely.
+        .build();
+
+    Ok(())
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_multiaddr"><a class="anchor" href="#_multiaddr"></a>Multiaddr</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>有了 <a href="https://docs.rs/libp2p/latest/libp2p/struct.Swarm.html" target="_blank" rel="noopener">Swarm</a>，我们准备监听传入的连接。我们只需要像 <a href="https://doc.rust-lang.org/nightly/std/net/tcp/struct.TcpListener.html#method.bind" target="_blank" rel="noopener">std::net::TcpListener::bind</a> 一样向<a href="https://docs.rs/libp2p/latest/libp2p/struct.Swarm.html" target="_blank" rel="noopener">Swarm</a> 传递一个地址。 但我们传递的不是IP地址，而是一个 <a href="https://docs.rs/libp2p/latest/libp2p/struct.Multiaddr.html" target="_blank" rel="noopener">Multiaddr</a>，这是libp2p中另一个值得一看的核心概念。</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.rs/libp2p/latest/libp2p/struct.Multiaddr.html" target="_blank" rel="noopener">Multiaddr</a> 是一个自描述的网络地址和协议栈，用于建立与对等方的连接。 可以在 <a href="https://docs.libp2p.io/concepts/addressing/" target="_blank" rel="noopener">docs.libp2p.io/concepts/addressing</a> 找到 <a href="https://docs.rs/libp2p/latest/libp2p/struct.Multiaddr.html" target="_blank" rel="noopener">Multiaddr</a> 的良好介绍，其规范仓库位于 <a href="https://github.com/multiformats/multiaddr/" target="_blank" rel="noopener">github.com/multiformats/multiaddr</a>。</p>
+</div>
+<div class="paragraph">
+<p>让我们使我们的本地节点在一个新的套接字上监听。这个套接字同时在多个网络接口上监听。对于每个网络接口，都会创建一个新的监听地址。这些地址可能随着接口的可用或不可用而变化。例如，对于我们的TCP传输，它可能（除其他外）在回环接口（localhost）<code>/ip4/127.0.0.1/tcp/24915</code> 以及本地网络 <code>/ip4/192.168.178.25/tcp/24915</code> 上监听。</p>
+</div>
+<div class="paragraph">
+<p>此外，如果CLI提供了，让我们指示我们的本地节点拨打远程对等方。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">use libp2p::{ping, Multiaddr};
+use std::error::Error;
+use std::time::Duration;
+use tracing_subscriber::EnvFilter;
+
+#[async_std::main]
+async fn main() -&gt; Result&lt;(), Box&lt;dyn Error&gt;&gt; {
+    tracing_subscriber::fmt().with_env_filter(EnvFilter::from_default_env()).init();
+
+    let mut swarm = libp2p::SwarmBuilder::with_new_identity()
+        .with_async_std()
+        .with_tcp(
+            libp2p::tcp::Config::default(),
+            libp2p::tls::Config::new,
+            libp2p::yamux::Config::default,
+        )?
+        .with_behaviour(|_| ping::Behaviour::default())?
+        .with_swarm_config(|cfg| cfg.with_idle_connection_timeout(Duration::from_secs(u64::MAX))) // Allows us to observe pings indefinitely..
+        .build();
+
+    // 告诉集群监听所有接口和一个随机的、操作系统分配的端口。
+    swarm.listen_on("/ip4/0.0.0.0/tcp/0".parse()?)?;
+
+    // 拨打由第二个命令行参数给出的多地址标识的对等体（如果有的话）。
+    if let Some(addr) = std::env::args().nth(1) {
+        let remote: Multiaddr = addr.parse()?;
+        swarm.dial(remote)?;
+        println!("Dialed {addr}")
+    }
+
+    Ok(())
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_持续轮询swarm"><a class="anchor" href="#_持续轮询swarm"></a>持续轮询Swarm</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>现在一切都已就绪。最后一步是在循环中驱动 <a href="https://docs.rs/libp2p/latest/libp2p/struct.Swarm.html" target="_blank" rel="noopener">Swarm</a>，允许它监听传入的连接，并在CLI上指定地址的情况下建立出站连接。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">use futures::prelude::*;
+use libp2p::swarm::SwarmEvent;
+use libp2p::{ping, Multiaddr};
+use std::error::Error;
+use std::time::Duration;
+use tracing_subscriber::EnvFilter;
+
+#[async_std::main]
+async fn main() -&gt; Result&lt;(), Box&lt;dyn Error&gt;&gt; {
+    tracing_subscriber::fmt().with_env_filter(EnvFilter::from_default_env()).init();
+
+    let mut swarm = libp2p::SwarmBuilder::with_new_identity()
+        .with_async_std()
+        .with_tcp(
+            libp2p::tcp::Config::default(),
+            libp2p::tls::Config::new,
+            libp2p::yamux::Config::default,
+        )?
+        .with_behaviour(|_| ping::Behaviour::default())?
+        .with_swarm_config(|cfg| cfg.with_idle_connection_timeout(Duration::from_secs(u64::MAX))) // Allows us to observe pings indefinitely.
+        .build();
+
+    // 告诉集群监听所有接口和一个随机的、操作系统分配的端口。
+    swarm.listen_on("/ip4/0.0.0.0/tcp/0".parse()?)?;
+
+    // 拨打由第二个命令行参数给出的多地址标识的对等体（如果有的话）。
+    if let Some(addr) = std::env::args().nth(1) {
+        let remote: Multiaddr = addr.parse()?;
+        swarm.dial(remote)?;
+        println!("Dialed {addr}")
+    }
+
+    loop {
+        match swarm.select_next_some().await {
+            SwarmEvent::NewListenAddr { address, .. } =&gt; println!("Listening on {address:?}"),
+            SwarmEvent::Behaviour(event) =&gt; println!("{event:?}"),
+            _ =&gt; {}
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_运行两个节点"><a class="anchor" href="#_运行两个节点"></a>运行两个节点</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>为了方便，上述例子也在 <code>examples/ping.rs</code> 中完整实现。因此，你可以从你自己的项目中运行下面的命令，也可以从rust-libp2p仓库的根目录运行。注意，在前者的情况下，你需要忽略 <code>--example ping</code> 参数。</p>
+</div>
+<div class="paragraph">
+<p>你需要两个终端。在第一个终端窗口运行：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">cargo run --example ping</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>它将打印新的监听地址，例如：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">Listening on "/ip4/127.0.0.1/tcp/24915"
+Listening on "/ip4/192.168.178.25/tcp/24915"
+Listening on "/ip4/172.17.0.1/tcp/24915"
+Listening on "/ip6/::1/tcp/24915"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>在第二个终端窗口，启动示例的新实例：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">cargo run --example ping -- /ip4/127.0.0.1/tcp/24915</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>注意：最后的 <a href="https://docs.rs/libp2p/latest/libp2p/struct.Multiaddr.html" target="_blank" rel="noopener">Multiaddr</a> 是之前在终端窗口一中打印的 <a href="https://docs.rs/libp2p/latest/libp2p/struct.Multiaddr.html" target="_blank" rel="noopener">Multiaddr</a> 之一。两个对等方必须在同一网络中，与地址相关联。在我们的情况下，可以使用任何打印的地址，因为两个对等方都在同一设备上运行。</p>
+</div>
+<div class="paragraph">
+<p>这两个节点将建立连接，并且每15秒互相发送ping和pong消息。</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

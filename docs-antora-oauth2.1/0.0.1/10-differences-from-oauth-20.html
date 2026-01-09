@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>10.与OAuth 2.0的不同之处 :: docs-me</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-me</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-antora-oauth2.1" data-version="0.0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">OAuth 2.1 授权框架</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="1-introduction.html">1.介绍</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="2-client-registration.html">2.客户端注册</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="3-protocol-endpoints.html">3.协议端点</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="4-grant-types.html">4.授权类型</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="5-resource-requests.html">5.资源请求</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="6-extensibility.html">6.可扩展性</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="7-security-considerations.html">7.安全考虑</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="8-native-applications.html">8.原生应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="9-section-9.html">9.基于浏览器的应用程序</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="10-differences-from-oauth-20.html">10.与OAuth 2.0的不同之处</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="11-iana-considerations.html">11.IANA考虑因素</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="12-references.html">12.参考文献</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-a.html">附录A</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-b.html">附录B</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-c.html">附录C</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-d.html">附录D</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-e.html">附录E</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-f.html">附录F</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="authors-addresses.html">作者邮箱</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OAuth 2.1 授权框架</span>
+    <span class="version">0.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../docs-config/0.0.1/index.html">docs-config</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-config/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steam-electron/0.0.1/index.html">docs-steam-electron</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steam-electron/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-xiuxian/0.0.1/index.html">docs-xiuxian</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-xiuxian/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-es-java/7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-es-java/7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-greenworks-js/0.0.1/index.html">Greenworks-JS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-greenworks-js/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-rust-libp2p/0.0.1/index.html">libp2p入门</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-rust-libp2p/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-neutralino-api/0.0.1/index.html">NeutralinoJS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-neutralino-api/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">OAuth 2.1 授权框架</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-pd2/0.0.1/index.html">PD2记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-pd2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-peerjs/0.0.1/index.html">PEER JS</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-peerjs/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-actuator/3.3.3/index.html">Spring Boot Actuator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-actuator/3.3.3/index.html">3.3.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-oauth2/0.0.1/index.html">Spring Boot OAuth2</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-oauth2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steamworks-rs/0.11.0/index.html">Steamworks for Rust</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steamworks-rs/0.11.0/index.html">0.11.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-tauri/v1/index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-tauri/v1/index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-testing-angular/中文/start.html">Testing Angular</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-testing-angular/中文/start.html">中文</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-me/0.0.1/index.html">个人记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-me/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-taiwu/0.0.1/index.html">太吾绘卷</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-taiwu/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-palworld/0.0.1/index.html">幻兽帕鲁笔记</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-palworld/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-building-event-driven-microservices/0.0.1/index.html">微服务与事件驱动架构</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-building-event-driven-microservices/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-hunter/0.0.1/index.html">猎人-荒野的呼唤</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-hunter/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-logitech/v8.45/index.html">罗技鼠标宏文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-logitech/v8.45/index.html">v8.45</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-milk/0.0.1/index.html">银河奶牛</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-milk/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../docs-me/0.0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">OAuth 2.1 授权框架</a></li>
+    <li><a href="10-differences-from-oauth-20.html">10.与OAuth 2.0的不同之处</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-antora-oauth2.1/edit/master/modules/ROOT/pages/10-differences-from-oauth-20.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">10.与OAuth 2.0的不同之处</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>本草案整合了OAuth 2.0[<a href="12-references.html#RFC6749" class="xref page">RFC6749</a>]、面向原生应用的OAuth 2.0[<a href="12-references.html#RFC8252" class="xref page">RFC8252</a>]、用于代码交换的证明密钥[<a href="12-references.html#RFC7636" class="xref page">RFC7636</a>]、面向浏览器应用的OAuth 2.0[<a href="12-references.html#I-D.ietf-oauth-browser-based-apps" class="xref page">I-D.ietf-oauth-browser-based-apps</a>]、OAuth安全最佳当前实践[<a href="12-references.html#I-D.ietf-oauth-security-topics" class="xref page">I-D.ietf-oauth-security-topics</a>]和承载令牌使用[RFC6750]中的功能。</p>
+</div>
+<div class="paragraph">
+<p>如果后续草案更新或废弃了原始[<a href="12-references.html#RFC6749" class="xref page">RFC6749</a>]中的功能，则本草案中的该功能将按照后续草案中描述的规范性更改进行更新，或完全删除。</p>
+</div>
+<div class="paragraph">
+<p>下面列出了与OAuth 2.0相比的非规范性更改列表：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>授权码授予扩展了PKCE [<a href="12-references.html#RFC7636" class="xref page">RFC7636</a>]的功能，因此根据本规范使用授权码授予的默认方法需要添加PKCE参数。</p>
+</li>
+<li>
+<p>重定向URI必须根据[<a href="12-references.html#I-D.ietf-oauth-security-topics" class="xref page">I-D.ietf-oauth-security-topics</a>]的第4.1.3节使用精确字符串匹配进行比较。</p>
+</li>
+<li>
+<p>根据[<a href="12-references.html#I-D.ietf-oauth-security-topics" class="xref page">I-D.ietf-oauth-security-topics</a>]的第2.1.2节，本规范中省略了隐式授予（response_type=token）。</p>
+</li>
+<li>
+<p>根据[<a href="12-references.html#I-D.ietf-oauth-security-topics" class="xref page">I-D.ietf-oauth-security-topics</a>]的第2.4节，本规范中省略了资源所有者密码凭据授予。</p>
+</li>
+<li>
+<p>根据[<a href="12-references.html#I-D.ietf-oauth-security-topics" class="xref page">I-D.ietf-oauth-security-topics</a>]的第4.3.2节，承载令牌的使用省略了在URI查询字符串中使用承载令牌。</p>
+</li>
+<li>
+<p>公共客户端的刷新令牌必须根据[<a href="12-references.html#I-D.ietf-oauth-security-topics" class="xref page">I-D.ietf-oauth-security-topics</a>]的第4.13.2节进行发送方约束或一次性使用。</p>
+</li>
+<li>
+<p>包含授权码的令牌端点请求不再包含redirect_uri参数。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="removal-of-the-oauth-20-imp"><a class="anchor" href="#removal-of-the-oauth-20-imp"></a>10.1.移除OAuth 2.0隐式授予</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>OAuth 2.0隐式授予已从OAuth 2.1中省略，因为它已在[<a href="12-references.html#I-D.ietf-oauth-security-topics" class="xref page">I-D.ietf-oauth-security-topics</a>]中被弃用。</p>
+</div>
+<div class="paragraph">
+<p>移除隐式授予的目的是不再在授权响应中颁发访问令牌，因为这些令牌容易泄露和注入，并且无法对客户端进行发送方约束。此行为是由使用response_type=token参数的客户端指示的。在OAuth 2.1中，已不再定义此response_type参数的值。</p>
+</div>
+<div class="paragraph">
+<p>移除response_type=token不会影响授权端点返回其他工件的其他扩展响应类型，例如，由[<a href="12-references.html#OpenID" class="xref page">OpenID</a>]定义的response_type=id_token。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="redirect-uri-parameter-in-t"><a class="anchor" href="#redirect-uri-parameter-in-t"></a>10.2.令牌请求中的重定向URI参数</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>在OAuth 2.0中，授权码流程（[<a href="12-references.html#RFC6749" class="xref page">RFC6749</a>]的第4.1.3节）中向令牌端点的请求包含一个可选的redirect_uri参数。该参数的目的是防止授权码注入攻击，如果原始授权请求中发送了redirect_uri参数，则必须包含它。如果为特定客户端注册了多个重定向URI，则授权请求才需要redirect_uri参数。然而，在实际操作中，即使只注册了一个重定向URI，许多授权服务器实现也要求授权请求中包含redirect_uri参数，从而导致在令牌端点也需要该参数。</p>
+</div>
+<div class="paragraph">
+<p>在OAuth 2.1中，通过code_challenge和code_verifier参数来防止授权码注入，这使得在令牌请求中包含redirect_uri参数没有任何意义，因此已将其删除。</p>
+</div>
+<div class="paragraph">
+<p>对于希望同时支持OAuth 2.0和OAuth 2.1客户端的授权服务器，为了向后兼容，授权服务器必须允许客户端在令牌请求（<a href="4-grant-types.html#token-endpoint-extension" class="xref page">第4.1.3节</a>）中发送redirect_uri参数，并且必须按照[<a href="12-references.html#RFC6749" class="xref page">RFC6749</a>]中所述强制执行该参数。授权服务器可以使用请求中的client_id来确定是否对特定客户端强制执行此行为，因为该服务器知道它将使用旧的OAuth 2.0行为。</p>
+</div>
+<div class="paragraph">
+<p>仅遵循OAuth 2.1建议的客户端不会在令牌请求中发送redirect_uri，因此将与期望在令牌请求中收到该参数的授权服务器不兼容。</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

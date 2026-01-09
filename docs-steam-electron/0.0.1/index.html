@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>如何将web项目打包上传到Steam :: docs-me</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-me</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-steam-electron" data-version="0.0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">docs-steam-electron</span>
+    <span class="version">0.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../docs-config/0.0.1/index.html">docs-config</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-config/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">docs-steam-electron</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-xiuxian/0.0.1/index.html">docs-xiuxian</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-xiuxian/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-es-java/7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-es-java/7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-greenworks-js/0.0.1/index.html">Greenworks-JS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-greenworks-js/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-rust-libp2p/0.0.1/index.html">libp2p入门</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-rust-libp2p/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-neutralino-api/0.0.1/index.html">NeutralinoJS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-neutralino-api/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-antora-oauth2.1/0.0.1/index.html">OAuth 2.1 授权框架</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-antora-oauth2.1/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-pd2/0.0.1/index.html">PD2记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-pd2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-peerjs/0.0.1/index.html">PEER JS</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-peerjs/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-actuator/3.3.3/index.html">Spring Boot Actuator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-actuator/3.3.3/index.html">3.3.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-oauth2/0.0.1/index.html">Spring Boot OAuth2</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-oauth2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steamworks-rs/0.11.0/index.html">Steamworks for Rust</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steamworks-rs/0.11.0/index.html">0.11.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-tauri/v1/index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-tauri/v1/index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-testing-angular/中文/start.html">Testing Angular</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-testing-angular/中文/start.html">中文</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-me/0.0.1/index.html">个人记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-me/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-taiwu/0.0.1/index.html">太吾绘卷</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-taiwu/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-palworld/0.0.1/index.html">幻兽帕鲁笔记</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-palworld/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-building-event-driven-microservices/0.0.1/index.html">微服务与事件驱动架构</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-building-event-driven-microservices/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-hunter/0.0.1/index.html">猎人-荒野的呼唤</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-hunter/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-logitech/v8.45/index.html">罗技鼠标宏文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-logitech/v8.45/index.html">v8.45</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-milk/0.0.1/index.html">银河奶牛</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-milk/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../docs-me/0.0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-steam-electron/edit/master/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">如何将web项目打包上传到Steam</h1>
+<div id="toc" class="toc">
+<div id="toctitle">目录</div>
+<ul class="sectlevel1">
+<li><a href="#_从静态站点开始">1. 从静态站点开始</a></li>
+<li><a href="#_关于electron的一点简单介绍">2. 关于Electron的一点简单介绍</a></li>
+<li><a href="#_在electron环境中集成基于浏览器项目的工作流程">3. 在Electron环境中集成基于浏览器项目的工作流程</a></li>
+<li><a href="#_最终导出本地桌面应用">4. 最终导出本地桌面应用</a></li>
+<li><a href="#_其它_关于steam的一些你需要提前了解的事">5. 其它: 关于Steam的一些你需要提前了解的事</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>原文地址: <a href="https://codepen.io/punkydrewster713/post/package-web-project-for-steam" class="bare">https://codepen.io/punkydrewster713/post/package-web-project-for-steam</a></p>
+</div>
+<div class="paragraph">
+<p>我开发的游戏 <strong>Danger Crew</strong> 今天已经完成并且上架到Steam啦!
+Danger Crew 是使用HTML、CSS以及JavaScriptis开发的RPG游戏.
+这是一个使用 <code>&lt;div&gt;</code> 开发的游戏！
+之前我分享过一些关于Danger Crew的帖子&#8230;&#8203;甚至在CodePen上面上传了一份demo！</p>
+</div>
+<div class="paragraph">
+<p>在Steam上面看看 <a href="https://store.steampowered.com/app/1064690/Danger_Crew">Danger Crew</a></p>
+</div>
+<div class="paragraph">
+<p>通过预告片来感受一下游戏吧!</p>
+</div>
+<div class="paragraph">
+<p>这个问题最开始出现在Reddit&#8217;s r/reactjs上面：</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/RedditScreenshot.png" alt="RedditScreenshot"></span></p>
+</div>
+<div class="paragraph">
+<p>(非常感谢 <a href="https://twitter.com/swyx">Shawn</a> 最开始发布的 <a href="https://www.reddit.com/r/reactjs/comments/bgd0gb/danger_crew_an_rpg_built_with_react_over_3_years/">帖子</a>！)</p>
+</div>
+<div class="paragraph">
+<p>是的 - 这是100%确定的。开发人员绝对可以将Web游戏发布到Steam上面。</p>
+</div>
+<div class="paragraph">
+<p>这篇帖子是一份快速入门指南，其中介绍了我是如何将HTML项目打包为同时支持Windows以及MacOS平台的独立游戏。
+我们可以将我们的应用使用Electron框架打包，最终在类似Steam之类的游戏平台上面上架。
+接下来我们会简单的介绍一下Electron，将静态站点转换成Electron环境的工作流程，以及在这个过程中我所遇到的一些问题。</p>
+</div>
+<div class="paragraph">
+<p>在开始之前，我们会先聊聊“Steam”。
+这部分内容你可以根据实际需要替换为你所使用的其它平台。
+其整体思路就是将以浏览器为核心的代码打包成原生应用，来满足你所需要的目的。</p>
+</div>
+<div class="paragraph">
+<p>我希望在看完这篇帖子之后，你能打开一些新的思路，知道你所学的前端技术还可以在浏览器之外使用。
+如果你已经知道了这些东西 - 我希望你能立刻使用它们来做点东西，然后告诉我们吧！</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_从静态站点开始"><a class="anchor" href="#_从静态站点开始"></a>1. 从静态站点开始</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>这是我现在的情况： 我已经使用HTML、CSS以及JavaScript实现了一些东西。
+现在没有后端服务器作为支持来将数据库与页面进行关联。
+用户使用的内容都是通过ajax进行调用的。
+由于其静态站点的特性所以保持了非常好的可移植性。</p>
+</div>
+<div class="paragraph">
+<p>再具体一点说，我的项目是使用开箱即用的 Create React App （CRA） 来生成的 - 没有什么特殊的修改。
+使用CRA中的 <code>npm start</code> 启动服务，并使用 <code>npm build</code> 进行生产环境的构建。
+在生产环境的构建结束后，CRA会生成一个 <code>build</code> 目录。
+我将这个目录移动到我的服务器以及 kaboom 💥 上 - 这样我的项目就可以通过web进行访问了。
+当然这篇文章的内容不是必须依赖Create React App的&#8230;&#8203;
+我只是想告诉你，这里的思路适用于任何类型的web项目，只要它最终输出的是浏览器支持的静态文件就可以。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_关于electron的一点简单介绍"><a class="anchor" href="#_关于electron的一点简单介绍"></a>2. 关于Electron的一点简单介绍</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://electronjs.org/" class="bare">https://electronjs.org/</a></p>
+</div>
+<div class="paragraph">
+<p>在他们的官方网站上面可以看到： “使用 JavaScript，HTML 和 CSS 构建跨平台的桌面应用程序”。
+它会替你解决其中的基础硬件部分，因此您可以更专注于自己应用的核心功能。
+有很多流行的软件都是基于Electron所开发的，比如Slack、VS Code、Skype以及Discord。</p>
+</div>
+<div class="paragraph">
+<p>从我的角度，我想说的是，使用Electron就像在你的电脑上面运行其它开发终端进程一样。
+首先 <code>cd</code> 到你的Electron项目中，执行 <code>npm start</code> 命令来启动本地实例，之后使用build命令来将应用打包成生产环境。
+（关于打包的更多信息在后面会说明）</p>
+</div>
+<div class="paragraph">
+<p>你的应用会运行在特定版本的Chromium中。
+可以想象一下Google Chrome浏览器，但是其中不包含用户自定义还有一些额外的功能。
+你甚至可以和web开发一样使用相同的开发工具！
+作为前端开发人员你会感觉非常熟悉。</p>
+</div>
+<div class="paragraph">
+<p>要想开始，首先先将这个仓库克隆到你的电脑上: <a href="https://github.com/electron/electron-quick-start" class="bare">https://github.com/electron/electron-quick-start</a></p>
+</div>
+<div class="paragraph">
+<p>在本地执行 <code>npm start</code> 启动，然后对 <code>index.html</code> 文件进行修改。
+重新加载后，你就可以在应用中看到变化。
+你可以随便进行开发以及对样式进行定义 - 就像你期待的那样运行！</p>
+</div>
+<div class="paragraph">
+<p>等等，还有一些要说的！Electron是可以直接执行Node.js代码的。
+所以除了客户端脚本，你还可以编写类似于后端的代码的。
+例如，我的应用就编写了几个函数来读写本地文件系统中的JSON文件。
+这些功能可以实现 “保存游戏” 以及 “加载存档” 之类的功能，玩家可以使用它们进行本地文件的读写，而无需数据库或者是持续发送互联网请求。</p>
+</div>
+<div class="paragraph">
+<p>最终你可以同时使用前端代码以及NodeJS代码的全部功能，并将它们打包到一起。
+一切皆有可能！这篇文章不是一个完整的Electron指南，而只是一个简单的思路，让你对Electron能为你的项目实现什么功能有一个更清晰的认知。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_在electron环境中集成基于浏览器项目的工作流程"><a class="anchor" href="#_在electron环境中集成基于浏览器项目的工作流程"></a>3. 在Electron环境中集成基于浏览器项目的工作流程</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>如果你打算使用Electron从头开始构建一个项目，那么可以暂时跳过这一部分。
+这部分所讲解的是“如何将 【已有】 的web项目打包成桌面应用”，所以，我们假设现在已经有了一个基于浏览器的应用。</p>
+</div>
+<div class="paragraph">
+<p>由于我们团队的原因，我比较习惯将web应用独立于Electron的构建之外。
+这样我们就可以在网页/浏览器上运行应用了。
+通过这种方式，我们可以快速的将应用发布到我们的临时站点，并对其进行开发以及QA测试。</p>
+</div>
+<div class="paragraph">
+<p>我们有两个仓库：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Web项目.</strong> 这是在集成Electron之前就有的。在我的示例中，它是使用Create React App创建的游戏，很重要的一点是，它可以在任何普通的浏览器中运行。</p>
+</li>
+<li>
+<p><strong>Electron 项目.</strong> 这是一个独立的项目，是根据上面的 <code>electron-quick-start</code> 初始化的。我的目的是将Web项目打包成生产环境并复制到这个项目中。
+我不介意手动的复制文件，因为每隔几天才需要复制/粘贴一次，如果您需要的话，完全可以将这个过程自动化。
+复制完这些文件后，我们最终会构建出一份桌面应用并将其发布到Steam上。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>下面是将已有的web项目关联Electron的关键.</strong> Electron是基于Node环境的。他会假设你的项目是使用CommonJS进行构建的。
+可能你已经在开发中这么做了，特别是一些现代的工具链比如Create React App，但是我们希望最终将打包后的浏览器支持的文件提供给Electron - 而不是我们开发的源代码。
+我们的生产环境站点引用了如下资源：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;!-- you know, the good 'ol way! --&gt;
+&lt;link rel="stylesheet" type="text/css" href="/css/my.production.stylesheet.css"&gt;
+&lt;script src="/js/my.production.bundle.min.js"&gt;&lt;/script&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>在最开始使用Electron开发环境时，你可能会看到一个包含好多404网络错误的没有样式的页面。
+Electron不会自动解析我们所使用资源的相对路径，比如静态资源的公有服务器。
+我们需要巧妙的使用Electron来对已有项目进行迁移，所以我们需要做出一些修改。
+下面是一种修复路径的解决方案。我们需要对electron-quick-start中自带的 <code>main.js</code> 文件进行编辑：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">/* Augmentations to the default main.js file that comes with electron-quick-start */
+
+//The top section of `requires` will already be there. Make sure the following requires are present!
+const {app, protocol} = require('electron')
+const url = require('url')
+
+//This is the "out of the box" loadFile line:
+//mainWindow.loadFile('index.html')
+
+//Use this instead - it's the first step in helping Electron find your assets
+mainWindow.loadURL(url.format({
+  pathname: 'index.html',
+  protocol: 'file',
+  slashes: true
+}));
+
+app.on('ready', () =&gt; { //This event should already exist in main.js
+  //Add this block! It's the second step in helping Electron find your assets
+  protocol.interceptFileProtocol('file', (request, callback) =&gt; {
+    const url = request.url.substr(7)
+    callback({ path: path.normalize(`${__dirname}/${url}`)})
+  }, (err) =&gt; {
+    if (err) console.error('Failed to register protocol')
+  })
+})</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>在这些修改后，你应该可以在Electron中发现可以正确加载你的资源文件了！
+无需修改已有的代码即可使用CommonJS！</p>
+</div>
+<div class="paragraph">
+<p><strong>重要免责声明</strong> - 这样修改会有一些问题。这样配置后，你可能会破坏Electron的某些功能。所以需要对齐进行调研以及测试，来确定是否符合你的需求。
+如果可行的话，你现在就已经将web项目和Electron正确的进行关联了。对我们的项目来说，上面的修改是完全可行的。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_最终导出本地桌面应用"><a class="anchor" href="#_最终导出本地桌面应用"></a>4. 最终导出本地桌面应用</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>好的，干得漂亮！您已经完成了开发，现在开始准备导出最终的桌面应用，这样用户就可以在它们的电脑上下载并运行了。
+Electron有几个导出的选项。我使用的是一个叫Electron Builder的工具: <a href="https://github.com/electron-userland/electron-builder" class="bare">https://github.com/electron-userland/electron-builder</a></p>
+</div>
+<div class="paragraph">
+<p>按照上面GitHub页面中的说明，在项目中安装Electron Builder。
+安装后，你就可以在你的应用中使用命令对应用进行打包了：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell"># Run this from the root of your Electron project after installing `electron-builder`
+electron-builder</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>根据我的理解，这条命令默认会针对你所使用的平台。
+我使用的是Mac系统，所以这条命令会在我的Electron项目中的 <code>/dist</code> 文件夹下生成Mac OSX系统适用的 {MyProjectName}.app 文件。
+如果想生成对应Windows平台需要执行 <code>electron-builder --win</code> 。
+我猜在Window系统下应该跟我的情况正好相反。</p>
+</div>
+<div class="paragraph">
+<p>此时， <code>dist</code> 文件夹中的内容就是你所需要的最终应用啦！
+打开生成的文件，你就可以在你的电脑上运行web项目的单机版本了！🎉
+这些文件最终会发布到Steam或者是其它你使用的平台上。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_其它_关于steam的一些你需要提前了解的事"><a class="anchor" href="#_其它_关于steam的一些你需要提前了解的事"></a>5. 其它: 关于Steam的一些你需要提前了解的事</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>这篇文章已经结束了，但是我还有一些其它在发布的过程中遇到的问题想要分享给你。
+我的游戏Danger Crew已经发布到了  <a href="https://store.steampowered.com/app/1064690/Danger_Crew/">Steam商店</a> 上。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Steam不仅能发布游戏。好多人也在Steam上面发布软件。我最喜欢的是 <a href="https://store.steampowered.com/app/431730/Aseprite/">Aesprite</a>（一款为2D像素游戏制作动画的工具软件）。所有你使用Web构建的【合适】的项目都可以发布到Steam上！</p>
+</li>
+<li>
+<p>要想将你的游戏上传到Steam上面需要提前在电脑上面安装Steam SDK。
+将你构建出来的文件（就是上面 <code>dist</code> 文件夹中的文件）复制到指定的位置，然后运行Valve提供的构建脚本。
+其中文档的大部分都是关于Windows操作系统的，但SDK也同样可以在Mac系统上面正常使用。
+<a href="https://partner.steamgames.com/doc/sdk">阅读SDK的文档</a>。
+这个 <a href="https://www.youtube.com/watch?v=SoNH-v6aU9Q">视频</a> 帮助我了解了这个发布流程。</p>
+</li>
+<li>
+<p>Steam实际上只是一个在你电脑上运行的软件更新以及启动器。
+在你上传了应用的新版本后，所有已经下载了你的应用的用户都会收到自动更新通知（当然前提是用户可以正常进行互联网链接并且没有关闭自动更新功能）。
+你不需要为这个过程编写额外的代码，Steam会帮你实现这个步骤。</p>
+</li>
+<li>
+<p><strong>然而,</strong> Steam还需要注入一些代码，来保证Steam Overlay等功能可以正常生效。
+（比如在游戏中使用 Shift + Tab 快捷键访问Steam聊天以及其它小组件）
+这个功能在Electron下是 <strong>不好使</strong> 的。目前为止我还在研究如何解决这个问题。</p>
+</li>
+<li>
+<p>手柄也是可以正常使用的！听起来是不是很兴奋呢 - 如果你插入了一个Steam手柄、Xbox手柄或者是PS4手柄，可以对他们进行配置（比如在Xbox手柄上按“A”键则代表“按下空格键”），
+你的游戏/应用中立刻就可以使用手柄啦。你也不需要为这个过程编写额外的代码，Steam都会帮你实现。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>感谢你能看到这里！如果你能关注我之前对Danger Crew的帖子我会更高兴。</p>
+</div>
+<div class="paragraph">
+<p>如果你想制作游戏，并且你已经了解了HTML、CSS、JavaScript&#8230;&#8203; 那么 <strong>没有什么可以阻止你</strong>。😀</p>
+</div>
+<div class="paragraph">
+<p>twitter地址：Drew (<a href="https://twitter.com/drewconley13/">@drewconley13</a>)</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

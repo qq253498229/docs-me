@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>5.资源请求 :: docs-me</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-me</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-antora-oauth2.1" data-version="0.0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">OAuth 2.1 授权框架</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="1-introduction.html">1.介绍</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="2-client-registration.html">2.客户端注册</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="3-protocol-endpoints.html">3.协议端点</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="4-grant-types.html">4.授权类型</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="5-resource-requests.html">5.资源请求</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="6-extensibility.html">6.可扩展性</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="7-security-considerations.html">7.安全考虑</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="8-native-applications.html">8.原生应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="9-section-9.html">9.基于浏览器的应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="10-differences-from-oauth-20.html">10.与OAuth 2.0的不同之处</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="11-iana-considerations.html">11.IANA考虑因素</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="12-references.html">12.参考文献</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-a.html">附录A</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-b.html">附录B</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-c.html">附录C</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-d.html">附录D</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-e.html">附录E</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-f.html">附录F</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="authors-addresses.html">作者邮箱</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OAuth 2.1 授权框架</span>
+    <span class="version">0.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../docs-config/0.0.1/index.html">docs-config</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-config/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steam-electron/0.0.1/index.html">docs-steam-electron</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steam-electron/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-xiuxian/0.0.1/index.html">docs-xiuxian</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-xiuxian/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-es-java/7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-es-java/7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-greenworks-js/0.0.1/index.html">Greenworks-JS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-greenworks-js/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-rust-libp2p/0.0.1/index.html">libp2p入门</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-rust-libp2p/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-neutralino-api/0.0.1/index.html">NeutralinoJS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-neutralino-api/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">OAuth 2.1 授权框架</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-pd2/0.0.1/index.html">PD2记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-pd2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-peerjs/0.0.1/index.html">PEER JS</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-peerjs/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-actuator/3.3.3/index.html">Spring Boot Actuator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-actuator/3.3.3/index.html">3.3.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-oauth2/0.0.1/index.html">Spring Boot OAuth2</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-oauth2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steamworks-rs/0.11.0/index.html">Steamworks for Rust</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steamworks-rs/0.11.0/index.html">0.11.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-tauri/v1/index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-tauri/v1/index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-testing-angular/中文/start.html">Testing Angular</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-testing-angular/中文/start.html">中文</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-me/0.0.1/index.html">个人记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-me/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-taiwu/0.0.1/index.html">太吾绘卷</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-taiwu/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-palworld/0.0.1/index.html">幻兽帕鲁笔记</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-palworld/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-building-event-driven-microservices/0.0.1/index.html">微服务与事件驱动架构</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-building-event-driven-microservices/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-hunter/0.0.1/index.html">猎人-荒野的呼唤</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-hunter/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-logitech/v8.45/index.html">罗技鼠标宏文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-logitech/v8.45/index.html">v8.45</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-milk/0.0.1/index.html">银河奶牛</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-milk/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../docs-me/0.0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">OAuth 2.1 授权框架</a></li>
+    <li><a href="5-resource-requests.html">5.资源请求</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-antora-oauth2.1/edit/master/modules/ROOT/pages/5-resource-requests.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">5.资源请求</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>客户端通过向资源服务器呈现访问令牌来访问受保护资源。资源服务器必须验证访问令牌，并确保其未过期且其范围涵盖所请求的资源。资源服务器用于验证访问令牌的方法超出了本规范的范围，但通常涉及资源服务器和授权服务器之间的交互或协调。例如，当资源服务器和授权服务器位于同一位置或属于同一系统时，它们可能共享数据库或其他存储；当这两个组件独立运行时，它们可以使用令牌内省[<a href="12-references.html#RFC7662" class="xref page">RFC7662</a>]或结构化的访问令牌格式（如JWT [<a href="12-references.html#RFC9068" class="xref page">RFC9068</a>]）。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="bearer-token-requests"><a class="anchor" href="#bearer-token-requests"></a>5.1.承载令牌请求</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>本节定义了向资源服务器发送资源请求中承载令牌的两种方法。客户端必须使用下面定义的两种方法之一，并且每次请求中传输令牌时不得使用超过一种方法。</p>
+</div>
+<div class="paragraph">
+<p>特别是，客户端不得在URI查询参数中发送访问令牌，并且资源服务器必须忽略URI查询参数中的访问令牌。</p>
+</div>
+<div class="sect2">
+<h3 id="authorization-request-heade"><a class="anchor" href="#authorization-request-heade"></a>5.1.1.授权请求头字段</h3>
+<div class="paragraph">
+<p>在通过HTTP/1.1[<a href="12-references.html#RFC7235" class="xref page">RFC7235</a>]定义的授权请求头字段中发送访问令牌时，客户端使用Bearer方案来传输访问令牌。</p>
+</div>
+<div class="paragraph">
+<p>例如：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre> GET /resource HTTP/1.1
+ Host: server.example.com
+ Authorization: Bearer mF_9.B5f-4.1JqM</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>该方案的Authorization头部字段的语法遵循[<a href="12-references.html#RFC2617" class="xref page">RFC2617</a>]第2节中定义的Basic方案的用法。请注意，与Basic方案一样，它不符合[<a href="12-references.html#RFC2617" class="xref page">RFC2617</a>]第1.2节中定义的通用语法，但与HTTP 1.1身份验证[<a href="12-references.html#RFC7235" class="xref page">RFC7235</a>]中的一般身份验证框架兼容，尽管它没有遵循其中概述的最佳实践，以反映现有的部署。Bearer凭据的语法如下：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>token68    = 1*( ALPHA / DIGIT /
+    "-" / "." / "_" / "~" / "+" / "/" ) *"="
+credentials = "bearer" 1*SP token68</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>客户端应该使用带有Bearer HTTP授权方案的Authorization请求头部字段和承载令牌发出经过身份验证的请求。资源服务器必须支持此方法。</p>
+</div>
+<div class="paragraph">
+<p>如[<a href="12-references.html#RFC9110" class="xref page">RFC9110</a>]第11.1节所述，字符串bearer不区分大小写。这意味着以下所有用法都是Authorization头部的有效用法：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Authorization: Bearer mF_9.B5f-4.1JqM</p>
+</li>
+<li>
+<p>Authorization: bearer mF_9.B5f-4.1JqM</p>
+</li>
+<li>
+<p>Authorization: BEARER mF_9.B5f-4.1JqM</p>
+</li>
+<li>
+<p>Authorization: bEaReR mF_9.B5f-4.1JqM</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="form-encoded-content-parame"><a class="anchor" href="#form-encoded-content-parame"></a>5.1.2.Form-Encoded 内容参数</h3>
+<div class="paragraph">
+<p>在HTTP请求内容中发送访问令牌时，客户端使用access_token参数将访问令牌添加到请求内容中。除非满足以下所有条件，否则客户端不得使用此方法：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>HTTP请求包含设置为application/x-www-form-urlencoded的Content-Type头部字段。</p>
+</li>
+<li>
+<p>内容符合URL Living Standard [<a href="12-references.html#WHATWG.URL" class="xref page">WHATWG.URL</a>]中定义的application/x-www-form-urlencoded内容类型的编码要求。</p>
+</li>
+<li>
+<p>HTTP请求内容是单部分的。</p>
+</li>
+<li>
+<p>要在请求中编码的内容必须完全由ASCII [<a href="12-references.html#USASCII" class="xref page">USASCII</a>]字符组成。</p>
+</li>
+<li>
+<p>HTTP请求方法是已为其内容定义语义的方法。特别是，这意味着不得使用GET方法。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>内容可能包括其他特定于请求的参数，在这种情况下，必须使用&amp;字符（ASCII码38）将access_token参数与特定于请求的参数正确分隔开。</p>
+</div>
+<div class="paragraph">
+<p>例如，客户端使用传输层安全性发出以下HTTP请求：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>POST /resource HTTP/1.1
+Host: server.example.com
+Content-Type: application/x-www-form-urlencoded</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>access_token=mF_9.B5f-4.1JqM</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>除参与客户端无法访问Authorization请求头部字段的应用程序上下文之外，不应使用application/x-www-form-urlencoded方法。资源服务器可以选择支持此方法。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="access-token-validation"><a class="anchor" href="#access-token-validation"></a>5.2.访问令牌验证</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>在收到访问令牌后，资源服务器必须检查访问令牌是否尚未过期、是否已授权访问所请求的资源、是否已使用适当的范围颁发，以及是否满足资源服务器访问受保护资源的其他策略要求。</p>
+</div>
+<div class="paragraph">
+<p>访问令牌通常分为两类：引用令牌或自编码令牌。引用令牌可以通过查询授权服务器或在令牌数据库中查找令牌来进行验证，而自编码令牌包含在一个加密和/或签名的字符串中的授权信息，该信息可以由资源服务器提取。</p>
+</div>
+<div class="paragraph">
+<p>在令牌内省[<a href="12-references.html#RFC7662" class="xref page">RFC7662</a>]中定义了向授权服务器查询以检查访问令牌有效性的标准化方法。</p>
+</div>
+<div class="paragraph">
+<p>在JWT访问令牌配置文件[<a href="12-references.html#RFC9068" class="xref page">RFC9068</a>]中定义了在令牌字符串中编码信息的标准化方法。</p>
+</div>
+<div class="paragraph">
+<p>有关创建和验证访问令牌的其他考虑，请参阅 <a href="7-security-considerations.html#access-token-security-consi" class="xref page">第7.1节</a>。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="error-response-3"><a class="anchor" href="#error-response-3"></a>5.3.错误响应</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>如果资源访问请求失败，资源服务器应该向客户端通知错误。错误响应的详细信息由特定的令牌类型确定，如 <a href="#error-codes">第5.3.2节</a>中对Bearer令牌的描述。</p>
+</div>
+<div class="sect2">
+<h3 id="the-www-authenticate-respon"><a class="anchor" href="#the-www-authenticate-respon"></a>5.3.1.WWW-Authenticate 响应头部字段</h3>
+<div class="paragraph">
+<p>如果受保护资源请求未包含身份验证凭据或未包含能够访问受保护资源的访问令牌，则资源服务器必须包含 HTTP WWW-Authenticate 响应头部字段；它也可以在其他条件下包含此字段。WWW-Authenticate 头部字段使用 HTTP/1.1 [<a href="12-references.html#RFC7235" class="xref page">RFC7235</a>] 中定义的框架。</p>
+</div>
+<div class="paragraph">
+<p>对于这种令牌类型的所有质询，必须使用 auth-scheme 值 Bearer。此方案后面必须跟一个或多个 auth-param 值。本规范为这种令牌类型使用或定义的 auth-param 属性如下。也可以使用其他 auth-param 属性。</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>"realm"</strong></dt>
+<dd>
+<p>可以包含realm属性，以HTTP/1.1 [RFC7235]中描述的方式指示保护范围。realm属性在一条信息中只能出现一次。</p>
+</dd>
+<dt class="hdlist1"><strong>"scope"</strong></dt>
+<dd>
+<p>scope属性定义在 <a href="1-introduction.html#access-token-scope" class="xref page">第1.4.1节</a>中。scope属性是一个由空格分隔的、对大小写敏感的scope值列表，表示访问所请求资源所需的访问令牌范围。scope值的实现是定义的；没有集中的注册表；允许的值由授权服务器定义。scope值的顺序并不重要。在某些情况下，当请求具有足够范围来访问受保护资源的新访问令牌时，将使用scope值。scope属性的使用是可选的。scope属性在一条信息中只能出现一次。scope值用于程序化使用，不打算显示给最终用户。</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>以下是两个scope值的示例；它们分别来自OpenID Connect [OpenID.Messages]和开放认证技术委员会（OATC）在线多媒体授权协议[OMAP]的OAuth 2.0用例：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>scope="openid profile email"
+scope="urn:example:channel=HBO&amp;urn:example:rating=G,PG-13"</pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>"error"</strong></dt>
+<dd>
+<p>如果受保护资源请求中包含了访问令牌但身份验证失败，资源服务器应该包含error属性，以向客户端提供访问请求被拒绝的原因。参数值描述见 <a href="#error-codes">第5.3.2节</a>。</p>
+</dd>
+<dt class="hdlist1"><strong>"error_description"</strong></dt>
+<dd>
+<p>资源服务器可以包含error_description属性，以提供开发人员可读的解释，但该解释不是用于向最终用户显示的。</p>
+</dd>
+<dt class="hdlist1"><strong>"error_uri"</strong></dt>
+<dd>
+<p>资源服务器可以包含error_uri属性，该属性具有一个绝对URI，用于标识解释错误的可读网页。</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>error、error_description和error_uri属性不得出现超过一次。</p>
+</div>
+<div class="paragraph">
+<p>scope属性的值（指定于 <a href="appendix-a.html#scope-syntax" class="xref page">附录A.4</a>）必须不包括用于表示scope值的字符集%x21 / %x23-5B / %x5D-7E之外的字符，以及用于scope值之间分隔符的%x20。error和error_description属性的值（分别指定于 <a href="appendix-a.html#error-syntax" class="xref page">附录A.7</a>和 <a href="appendix-a.html#error_description-syntax" class="xref page">附录A.8</a>）必须不包括字符集%x20-21 / %x23-5B / %x5D-7E之外的字符。error_uri属性的值（指定于 <a href="appendix-a.html#error_uri-syntax" class="xref page">附录A.9</a>）必须符合URI引用语法，因此必须不包括字符集%x21 / %x23-5B / %x5D-7E之外的字符。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="error-codes"><a class="anchor" href="#error-codes"></a>5.3.2.错误代码</h3>
+<div class="paragraph">
+<p>当请求失败时，资源服务器使用适当的HTTP状态码（通常是400、401、403或405）进行响应，并在响应中包含以下错误代码之一：</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>“invalid_request”</strong></dt>
+<dd>
+<p>请求缺少必需参数、包含不受支持的参数或参数值、重复相同的参数、使用多种方法包含访问令牌，或以其他方式格式错误。资源服务器应以HTTP 400（错误请求）状态码进行响应。</p>
+</dd>
+<dt class="hdlist1"><strong>“invalid_token”</strong></dt>
+<dd>
+<p>提供的访问令牌已过期、被撤销、格式错误或由于其他原因无效。资源服务器应以HTTP 401（未授权）状态码进行响应。客户端可以请求新的访问令牌并重试受保护资源请求。</p>
+</dd>
+<dt class="hdlist1"><strong>“insufficient_scope”</strong></dt>
+<dd>
+<p>请求所需的权限（范围）高于客户端被授予的范围（由访问令牌表示）。资源服务器应以HTTP 403（禁止访问）状态码进行响应，并可以包含scope属性，指明访问受保护资源所需的范围。</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>扩展可以定义其他错误代码或指定返回上述错误代码的其他情况。</p>
+</div>
+<div class="paragraph">
+<p>如果请求缺少任何身份验证信息（例如，客户端不知道需要进行身份验证或尝试使用不受支持的身份验证方法），资源服务器不应包含错误代码或其他错误信息。</p>
+</div>
+<div class="paragraph">
+<p>例如：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 401 Unauthorized
+WWW-Authenticate: Bearer realm="example"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>并且，对于使用已过期的访问令牌进行身份验证的受保护资源请求，资源服务器的响应应该是：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 401 Unauthorized
+WWW-Authenticate: Bearer realm="example",
+    error="invalid_token",
+    error_description="The access token expired"</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

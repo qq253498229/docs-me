@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>分布式键值存储示例 :: docs-me</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">docs-me</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-rust-libp2p" data-version="0.0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">libp2p入门</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">教程</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/hole-punching.html">打洞教程</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/ping.html">Ping教程</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">示例</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="chat.html">聊天</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="distributed-key-value-store.html">分布式键值存储</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="file-sharing.html">基本文件共享应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ipfs-kad.html">IPFS Kademlia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ipfs-private.html">IPFS 私有实现</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ping.html">Ping</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="rendezvous.html">Rendezvous</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="autonat.html">AutoNAT</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="relay-server.html">中继服务器</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">libp2p入门</span>
+    <span class="version">0.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../docs-config/0.0.1/index.html">docs-config</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-config/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-steam-electron/0.0.1/index.html">docs-steam-electron</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-steam-electron/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-xiuxian/0.0.1/index.html">docs-xiuxian</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-xiuxian/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-es-java/7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-es-java/7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../docs-es-java/6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../docs-es-java/6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-greenworks-js/0.0.1/index.html">Greenworks-JS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-greenworks-js/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">libp2p入门</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-neutralino-api/0.0.1/index.html">NeutralinoJS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-neutralino-api/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-antora-oauth2.1/0.0.1/index.html">OAuth 2.1 授权框架</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-antora-oauth2.1/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-pd2/0.0.1/index.html">PD2记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-pd2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-peerjs/0.0.1/index.html">PEER JS</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-peerjs/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-actuator/3.3.3/index.html">Spring Boot Actuator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-actuator/3.3.3/index.html">3.3.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-oauth2/0.0.1/index.html">Spring Boot OAuth2</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-oauth2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-steamworks-rs/0.11.0/index.html">Steamworks for Rust</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-steamworks-rs/0.11.0/index.html">0.11.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-tauri/v1/index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-tauri/v1/index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-testing-angular/中文/start.html">Testing Angular</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-testing-angular/中文/start.html">中文</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-me/0.0.1/index.html">个人记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-me/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-taiwu/0.0.1/index.html">太吾绘卷</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-taiwu/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-palworld/0.0.1/index.html">幻兽帕鲁笔记</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-palworld/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-building-event-driven-microservices/0.0.1/index.html">微服务与事件驱动架构</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-building-event-driven-microservices/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-hunter/0.0.1/index.html">猎人-荒野的呼唤</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-hunter/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-logitech/v8.45/index.html">罗技鼠标宏文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-logitech/v8.45/index.html">v8.45</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-milk/0.0.1/index.html">银河奶牛</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-milk/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../docs-me/0.0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">libp2p入门</a></li>
+    <li>示例</li>
+    <li><a href="distributed-key-value-store.html">分布式键值存储</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-rust-libp2p/edit/master/modules/ROOT/pages/example/distributed-key-value-store.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">分布式键值存储示例</h1>
+<div class="sect1">
+<h2 id="_描述"><a class="anchor" href="#_描述"></a>描述</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>这个示例展示了一个使用libp2p库以及mDNS和Kademlia协议实现的基本分布式键值存储系统。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_用法"><a class="anchor" href="#_用法"></a>用法</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_键值存储"><a class="anchor" href="#_键值存储"></a>键值存储</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>1.打开两个终端窗口，输入 <code>cargo run</code> 并按回车。</p>
+</li>
+<li>
+<p>2.在第一个终端中，输入 <code>PUT my-key my-value</code> 并按回车。这条命令会将值 <code>my-value</code> 与键 <code>my-key</code> 一起存储在分布式键值存储系统中。</p>
+</li>
+<li>
+<p>3.在第二个终端中，输入 <code>GET my-key</code> 并按回车。这条命令会从键值存储系统中检索与键 <code>my-key</code> 关联的值。</p>
+</li>
+<li>
+<p>4.要退出，按每个终端窗口的 <code>Ctrl-c</code> 优雅地关闭实例。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_提供者记录"><a class="anchor" href="#_提供者记录"></a>提供者记录</h3>
+<div class="paragraph">
+<p>你也可以在分布式存储中使用提供者记录，而不是键值记录。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1.打开两个终端窗口并启动两个键值存储实例。如果你的本地网络支持mDNS，这些实例将自动连接。</p>
+</li>
+<li>
+<p>2.在第一个终端中，输入 <code>PUT_PROVIDER my-key</code> 并按回车。这条命令会在分布式键值存储系统中注册该节点为键 <code>my-key</code> 的提供者。</p>
+</li>
+<li>
+<p>3.在第二个终端中，输入 <code>GET_PROVIDERS my-key</code> 并按回车。这条命令会从键值存储系统中检索键 <code>my-key</code> 的提供者列表。</p>
+</li>
+<li>
+<p>4.要退出，按每个终端窗口的 <code>Ctrl-c</code> 优雅地关闭实例。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>请随意探索和实验这个分布式键值存储示例，并观察数据是如何使用libp2p、mDNS和Kademlia协议在网络中分布和检索的。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_结论"><a class="anchor" href="#_结论"></a>结论</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>这个示例展示了使用libp2p、mDNS和Kademlia协议实现的基本分布式键值存储系统的实现。通过利用这些技术，节点可以以去中心化的方式连接、存储和检索键值对。这个示例为构建更高级的分布式系统和探索libp2p及其相关协议的能力提供了起点。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_代码"><a class="anchor" href="#_代码"></a>代码</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_cargo_toml"><a class="anchor" href="#_cargo_toml"></a>Cargo.toml</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">[package]
+name = "distributed-key-value-store-example"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license = "MIT"
+
+[package.metadata.release]
+release = false
+
+[dependencies]
+tokio = { workspace = true, features = ["full"] }
+async-trait = "0.1"
+futures = { workspace = true }
+libp2p = { path = "../../libp2p", features = [ "tokio", "dns", "kad", "mdns", "noise", "macros", "tcp", "yamux"] }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true, features = ["env-filter"] }
+
+[lints]
+workspace = true</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_main_rs"><a class="anchor" href="#_main_rs"></a>main.rs</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-rust hljs" data-lang="rust">#![doc = include_str!("../README.md")]
+
+use futures::stream::StreamExt;
+use libp2p::kad;
+use libp2p::kad::store::MemoryStore;
+use libp2p::kad::Mode;
+use libp2p::{
+    mdns, noise,
+    swarm::{NetworkBehaviour, SwarmEvent},
+    tcp, yamux,
+};
+use std::error::Error;
+use std::time::Duration;
+use tokio::{
+    io::{self, AsyncBufReadExt},
+    select,
+};
+use tracing_subscriber::EnvFilter;
+
+#[tokio::main]
+async fn main() -&gt; Result&lt;(), Box&lt;dyn Error&gt;&gt; {
+    let _ = tracing_subscriber::fmt()
+        .with_env_filter(EnvFilter::from_default_env())
+        .try_init();
+
+    // 我们创建了一个自定义的网络行为，它结合了Kademlia和mDNS。
+    #[derive(NetworkBehaviour)]
+    struct Behaviour {
+        kademlia: kad::Behaviour&lt;MemoryStore&gt;,
+        mdns: mdns::tokio::Behaviour,
+    }
+
+    let mut swarm = libp2p::SwarmBuilder::with_new_identity()
+        .with_tokio()
+        .with_tcp(
+            tcp::Config::default(),
+            noise::Config::new,
+            yamux::Config::default,
+        )?
+        .with_behaviour(|key| {
+            Ok(Behaviour {
+                kademlia: kad::Behaviour::new(
+                    key.public().to_peer_id(),
+                    MemoryStore::new(key.public().to_peer_id()),
+                ),
+                mdns: mdns::tokio::Behaviour::new(
+                    mdns::Config::default(),
+                    key.public().to_peer_id(),
+                )?,
+            })
+        })?
+        .with_swarm_config(|c| c.with_idle_connection_timeout(Duration::from_secs(60)))
+        .build();
+
+    swarm.behaviour_mut().kademlia.set_mode(Some(Mode::Server));
+
+    // 从stdin中读取完整的行
+    let mut stdin = io::BufReader::new(io::stdin()).lines();
+
+    // 监听所有接口和操作系统分配的任何端口
+    swarm.listen_on("/ip4/0.0.0.0/tcp/0".parse()?)?;
+
+    // Kick it off.
+    loop {
+        select! {
+        Ok(Some(line)) = stdin.next_line() =&gt; {
+            handle_input_line(&amp;mut swarm.behaviour_mut().kademlia, line);
+        }
+        event = swarm.select_next_some() =&gt; match event {
+            SwarmEvent::NewListenAddr { address, .. } =&gt; {
+                println!("监听中 {address:?}");
+            },
+            SwarmEvent::Behaviour(BehaviourEvent::Mdns(mdns::Event::Discovered(list))) =&gt; {
+                for (peer_id, multiaddr) in list {
+                    swarm.behaviour_mut().kademlia.add_address(&amp;peer_id, multiaddr);
+                }
+            }
+            SwarmEvent::Behaviour(BehaviourEvent::Kademlia(kad::Event::OutboundQueryProgressed { result, ..})) =&gt; {
+                match result {
+                    kad::QueryResult::GetProviders(Ok(kad::GetProvidersOk::FoundProviders { key, providers, .. })) =&gt; {
+                        for peer in providers {
+                            println!(
+                                "节点 {peer:?} 提供key {:?}",
+                                std::str::from_utf8(key.as_ref()).unwrap()
+                            );
+                        }
+                    }
+                    kad::QueryResult::GetProviders(Err(err)) =&gt; {
+                        eprintln!("获取提供者失败: {err:?}");
+                    }
+                    kad::QueryResult::GetRecord(Ok(
+                        kad::GetRecordOk::FoundRecord(kad::PeerRecord {
+                            record: kad::Record { key, value, .. },
+                            ..
+                        })
+                    )) =&gt; {
+                        println!(
+                            "获取记录 {:?} {:?}",
+                            std::str::from_utf8(key.as_ref()).unwrap(),
+                            std::str::from_utf8(&amp;value).unwrap(),
+                        );
+                    }
+                    kad::QueryResult::GetRecord(Ok(_)) =&gt; {}
+                    kad::QueryResult::GetRecord(Err(err)) =&gt; {
+                        eprintln!("获取记录失败: {err:?}");
+                    }
+                    kad::QueryResult::PutRecord(Ok(kad::PutRecordOk { key })) =&gt; {
+                        println!(
+                            "PUT记录成功 {:?}",
+                            std::str::from_utf8(key.as_ref()).unwrap()
+                        );
+                    }
+                    kad::QueryResult::PutRecord(Err(err)) =&gt; {
+                        eprintln!("PUT记录失败: {err:?}");
+                    }
+                    kad::QueryResult::StartProviding(Ok(kad::AddProviderOk { key })) =&gt; {
+                        println!(
+                            "Successfully put provider record {:?}",
+                            std::str::from_utf8(key.as_ref()).unwrap()
+                        );
+                    }
+                    kad::QueryResult::StartProviding(Err(err)) =&gt; {
+                        eprintln!("Failed to put provider record: {err:?}");
+                    }
+                    _ =&gt; {}
+                }
+            }
+            _ =&gt; {}
+        }
+        }
+    }
+}
+
+fn handle_input_line(kademlia: &amp;mut kad::Behaviour&lt;MemoryStore&gt;, line: String) {
+    let mut args = line.split(' ');
+
+    match args.next() {
+        Some("GET") =&gt; {
+            let key = {
+                match args.next() {
+                    Some(key) =&gt; kad::RecordKey::new(&amp;key),
+                    None =&gt; {
+                        eprintln!("Expected key");
+                        return;
+                    }
+                }
+            };
+            kademlia.get_record(key);
+        }
+        Some("GET_PROVIDERS") =&gt; {
+            let key = {
+                match args.next() {
+                    Some(key) =&gt; kad::RecordKey::new(&amp;key),
+                    None =&gt; {
+                        eprintln!("Expected key");
+                        return;
+                    }
+                }
+            };
+            kademlia.get_providers(key);
+        }
+        Some("PUT") =&gt; {
+            let key = {
+                match args.next() {
+                    Some(key) =&gt; kad::RecordKey::new(&amp;key),
+                    None =&gt; {
+                        eprintln!("Expected key");
+                        return;
+                    }
+                }
+            };
+            let value = {
+                match args.next() {
+                    Some(value) =&gt; value.as_bytes().to_vec(),
+                    None =&gt; {
+                        eprintln!("Expected value");
+                        return;
+                    }
+                }
+            };
+            let record = kad::Record {
+                key,
+                value,
+                publisher: None,
+                expires: None,
+            };
+            kademlia
+                .put_record(record, kad::Quorum::One)
+                .expect("Failed to store record locally.");
+        }
+        Some("PUT_PROVIDER") =&gt; {
+            let key = {
+                match args.next() {
+                    Some(key) =&gt; kad::RecordKey::new(&amp;key),
+                    None =&gt; {
+                        eprintln!("Expected key");
+                        return;
+                    }
+                }
+            };
+
+            kademlia
+                .start_providing(key)
+                .expect("Failed to start providing key");
+        }
+        _ =&gt; {
+            eprintln!("expected GET, GET_PROVIDERS, PUT or PUT_PROVIDER");
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

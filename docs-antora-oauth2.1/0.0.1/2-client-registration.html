@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>2.客户端注册 :: docs-me</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-me</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-antora-oauth2.1" data-version="0.0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">OAuth 2.1 授权框架</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="1-introduction.html">1.介绍</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="2-client-registration.html">2.客户端注册</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="3-protocol-endpoints.html">3.协议端点</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="4-grant-types.html">4.授权类型</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="5-resource-requests.html">5.资源请求</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="6-extensibility.html">6.可扩展性</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="7-security-considerations.html">7.安全考虑</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="8-native-applications.html">8.原生应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="9-section-9.html">9.基于浏览器的应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="10-differences-from-oauth-20.html">10.与OAuth 2.0的不同之处</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="11-iana-considerations.html">11.IANA考虑因素</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="12-references.html">12.参考文献</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-a.html">附录A</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-b.html">附录B</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-c.html">附录C</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-d.html">附录D</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-e.html">附录E</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-f.html">附录F</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="authors-addresses.html">作者邮箱</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OAuth 2.1 授权框架</span>
+    <span class="version">0.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../docs-config/0.0.1/index.html">docs-config</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-config/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steam-electron/0.0.1/index.html">docs-steam-electron</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steam-electron/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-xiuxian/0.0.1/index.html">docs-xiuxian</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-xiuxian/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-es-java/7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-es-java/7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-greenworks-js/0.0.1/index.html">Greenworks-JS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-greenworks-js/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-rust-libp2p/0.0.1/index.html">libp2p入门</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-rust-libp2p/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-neutralino-api/0.0.1/index.html">NeutralinoJS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-neutralino-api/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">OAuth 2.1 授权框架</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-pd2/0.0.1/index.html">PD2记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-pd2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-peerjs/0.0.1/index.html">PEER JS</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-peerjs/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-actuator/3.3.3/index.html">Spring Boot Actuator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-actuator/3.3.3/index.html">3.3.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-oauth2/0.0.1/index.html">Spring Boot OAuth2</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-oauth2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steamworks-rs/0.11.0/index.html">Steamworks for Rust</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steamworks-rs/0.11.0/index.html">0.11.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-tauri/v1/index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-tauri/v1/index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-testing-angular/中文/start.html">Testing Angular</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-testing-angular/中文/start.html">中文</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-me/0.0.1/index.html">个人记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-me/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-taiwu/0.0.1/index.html">太吾绘卷</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-taiwu/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-palworld/0.0.1/index.html">幻兽帕鲁笔记</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-palworld/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-building-event-driven-microservices/0.0.1/index.html">微服务与事件驱动架构</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-building-event-driven-microservices/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-hunter/0.0.1/index.html">猎人-荒野的呼唤</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-hunter/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-logitech/v8.45/index.html">罗技鼠标宏文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-logitech/v8.45/index.html">v8.45</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-milk/0.0.1/index.html">银河奶牛</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-milk/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../docs-me/0.0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">OAuth 2.1 授权框架</a></li>
+    <li><a href="2-client-registration.html">2.客户端注册</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-antora-oauth2.1/edit/master/modules/ROOT/pages/2-client-registration.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">2.客户端注册</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>在启动协议之前，客户端必须在授权服务器上建立标识符（<a href="#client-identifier">第2.2节</a>）。客户端标识符与授权服务器建立的方式超出了本规范的范围，但通常涉及客户端开发人员手动在授权服务器的网站上注册客户端（在创建帐户并同意服务条款后），或者通过使用动态客户端注册[<a href="12-references.html#RFC7591" class="xref page">RFC7591</a>]。扩展还可以定义其他用于建立客户端注册的程序化方法。</p>
+</div>
+<div class="paragraph">
+<p>客户端注册不需要客户端和授权服务器之间的直接交互。当授权服务器支持时，注册可以依靠其他手段来建立信任和获取所需的客户端属性（例如，重定向URI、客户端类型）。例如，注册可以使用自颁发或第三方颁发的断言来完成，或者由授权服务器使用受信任通道执行客户端发现。</p>
+</div>
+<div class="paragraph">
+<p>客户端注册必须包括：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#client-identifier">第2.1节</a> 中描述的客户端类型，</p>
+</li>
+<li>
+<p>正在使用的授权类型所需的客户端详细信息，如 <a href="#redirection-endpoint">第2.3节</a> 中描述的重定向URI，以及</p>
+</li>
+<li>
+<p>授权服务器所需的其他任何信息（例如，应用程序名称、网站、描述、徽标图像、法律条款的接受）。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>动态客户端注册[<a href="12-references.html#RFC7591" class="xref page">RFC7591</a>]为客户端定义了一个通用的数据模型，该模型甚至可用于手动客户端注册。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="client-types"><a class="anchor" href="#client-types"></a>2.1.客户端类型</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>OAuth 2.1根据客户端与安全认证授权服务器的能力，定义了两种客户端类型。</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>“confidential”（机密）</strong></dt>
+<dd>
+<p>拥有授权服务器（AS）凭证的客户端被指定为“机密客户端”。</p>
+</dd>
+<dt class="hdlist1"><strong>“public”（公开）</strong></dt>
+<dd>
+<p>没有凭证的客户端被称为“公开客户端”。</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>任何拥有凭证的客户端都必须采取预防措施，防止凭证泄露和滥用。</p>
+</div>
+<div class="paragraph">
+<p>客户端认证允许授权服务器确保在OAuth流程中与特定客户端（通过其client_id标识）进行交互。授权服务器可能会根据对授权服务器是否确实在与合法客户端通信的信心程度，就诸如是否每次授权都提示用户同意，还是仅在第一次提示用户同意等事项作出策略决策。</p>
+</div>
+<div class="paragraph">
+<p>授权服务器是否以及如何验证客户端或提供/操作此客户端的方的身份，不在本规范的范围内。授权服务器在决定是否允许客户端访问更敏感的资源和操作（如客户端凭据授权类型）以及多久提示用户一次同意时，应考虑对客户端身份的信任程度。</p>
+</div>
+<div class="paragraph">
+<p>不应将单个client_id视为多种类型的客户端。</p>
+</div>
+<div class="paragraph">
+<p>本规范围绕以下客户端配置文件进行设计：</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>“web application”（Web应用程序）</strong></dt>
+<dd>
+<p>Web应用程序是在Web服务器上运行的客户端。资源所有者通过资源所有者所用设备上用户代理呈现的HTML用户界面访问客户端。客户端凭证以及向客户端颁发的任何访问令牌都存储在Web服务器上，并且资源所有者无法访问或暴露它们。</p>
+</dd>
+<dt class="hdlist1"><strong>“browser-based application”（基于浏览器的应用程序）</strong></dt>
+<dd>
+<p>基于浏览器的应用程序是一种客户端，其客户端代码从Web服务器下载并在资源所有者所用设备的用户代理（例如，Web浏览器）内执行。协议数据和凭证对资源所有者而言易于访问（并且通常可见）。如果此类应用程序希望使用客户端凭证，建议使用后端为前端模式。由于此类应用程序驻留在用户代理内，因此它们可以在请求授权时无缝利用用户代理功能。</p>
+</dd>
+<dt class="hdlist1"><strong>“native application”（原生应用程序）</strong></dt>
+<dd>
+<p>原生应用程序是安装在资源所有者所用设备上的客户端，并在该设备上执行。协议数据和凭证对资源所有者而言是可访问的。假设应用程序中包含的任何客户端认证凭证都可以被提取。动态颁发的访问令牌和刷新令牌可以获得可接受级别的保护。在一些平台上，这些凭证受到同一设备上驻留的其他应用程序的保护。如果此类应用程序希望使用客户端凭证，建议使用后端为前端模式，或在运行时使用动态客户端注册[<a href="12-references.html#RFC7591" class="xref page">RFC7591</a>]颁发凭证。</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="client-identifier"><a class="anchor" href="#client-identifier"></a>2.2.客户端标识符</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>在授权服务器的上下文中，每个客户端都通过客户端标识符进行标识——这是一个唯一字符串，代表客户端提供的注册信息。虽然授权服务器通常会自行颁发客户端标识符，但它也可以为那些由授权服务器以外的实体创建的客户端标识符提供服务。客户端标识符不是秘密；它会对资源所有者公开，并且不能单独用于客户端身份验证。在授权服务器的上下文中，客户端标识符是唯一的。</p>
+</div>
+<div class="paragraph">
+<p>客户端标识符是一个不透明的字符串，本规范未对其大小进行定义。客户端应避免对标识符大小做出假设。授权服务器应该对其颁发的任何标识符的大小进行说明。</p>
+</div>
+<div class="paragraph">
+<p>如果授权服务器支持具有由授权服务器以外的实体颁发的客户端标识符的客户端，那么授权服务器应采取预防措施，以避免客户端如 <a href="7-security-considerations.html#client-impersonating-resour" class="xref page">第7.4节</a> 所述假冒资源所有者。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="redirection-endpoint"><a class="anchor" href="#redirection-endpoint"></a>2.3.客户端重定向端点</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>客户端重定向端点（也称为“重定向端点”）是指客户端的URI，授权服务器在与资源所有者完成交互后，将用户代理重定向回该URI。</p>
+</div>
+<div class="paragraph">
+<p>授权服务器将用户代理重定向到客户端在客户端注册过程中先前与授权服务器建立的重定向端点之一。</p>
+</div>
+<div class="paragraph">
+<p>重定向URI必须是按照[<a href="12-references.html#RFC3986" class="xref page">RFC3986</a>]第4.3节定义的绝对URI。重定向URI可以包含一个查询字符串组件（<a href="appendix-c.html#query-string-serialization" class="xref page">附录C.1</a>），在添加其他查询参数时，必须保留该组件。重定向URI不得包含片段组件。</p>
+</div>
+<div class="sect2">
+<h3 id="registration-requirements"><a class="anchor" href="#registration-requirements"></a>2.3.1.注册要求</h3>
+<div class="paragraph">
+<p>授权服务器必须要求客户端注册其完整的重定向URI（包括路径组件）。授权服务器必须拒绝那些指定的重定向URI与已注册的不完全匹配的授权请求，回环重定向（loopback redirects）除外，对于回环重定向，除端口URI组件外，其他部分必须完全匹配，详情参见 <a href="4-grant-types.html#authorization-request" class="xref page">第4.1.1节</a>。</p>
+</div>
+<div class="paragraph">
+<p>授权服务器可以允许客户端注册多个重定向URI。</p>
+</div>
+<div class="paragraph">
+<p>注册可能发生在带外（out of band），例如在授权服务器上手动配置客户端信息的步骤，或者可能发生在运行时，例如在推送授权请求（Pushed Authorization Requests）[<a href="12-references.html#RFC9126" class="xref page">RFC9126</a>]中的初始POST请求中。</p>
+</div>
+<div class="paragraph">
+<p>对于基于私有URI方案的重定向URI，授权服务器应该强制执行 <a href="8-native-applications.html#private-use-uri-scheme-redi" class="xref page">第8.4.3节</a> 中的要求，即客户端应使用基于反向域名的方案。至少，任何不包含句点（.）字符的私有URI方案都应该被拒绝。</p>
+</div>
+<div class="paragraph">
+<p>除了防碰撞属性外，这还可以在两个应用程序声称拥有相同的私有URI方案（其中一个应用程序存在恶意行为）而发生争议时，帮助证明所有权。例如，如果两个应用程序都声称拥有com.example.app，那么example.com的所有者可以请求应用商店运营商删除假冒的应用程序。如果使用通用URI方案，则此类请求更难得到证明。</p>
+</div>
+<div class="paragraph">
+<p>客户端不得暴露那些将用户浏览器转发到从查询参数中获得的任意URI的URL（“开放重定向器”），如 <a href="7-security-considerations.html#open-redirection" class="xref page">第7.12节</a> 所述。开放重定向器可能会导致授权码和访问令牌的泄露。</p>
+</div>
+<div class="paragraph">
+<p>客户端如果需要实现每个请求的自定义，可以使用state请求参数，而不是为每个请求更改重定向URI。</p>
+</div>
+<div class="paragraph">
+<p>如果不要求注册重定向URI，攻击者就可以像 <a href="7-security-considerations.html#open-redirection" class="xref page">第7.12节</a> 所述那样，将授权端点用作开放重定向器。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="multiple-redirect-uris"><a class="anchor" href="#multiple-redirect-uris"></a>2.3.2.多个重定向URI</h3>
+<div class="paragraph">
+<p>如果已为客户端注册了多个重定向URI，则客户端必须在授权请求中使用redirect_uri请求参数（<a href="4-grant-types.html#authorization-request" class="xref page">第4.1.1节</a>）包含一个重定向URI。如果客户端仅注册了一个重定向URI，则redirect_uri请求参数是可选的。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="preventing-csrf-attacks"><a class="anchor" href="#preventing-csrf-attacks"></a>2.3.3.防止CSRF攻击</h3>
+<div class="paragraph">
+<p>客户端必须防止跨站请求伪造（CSRF）攻击。在此上下文中，CSRF是指不是源自授权服务器而是由恶意第三方发出的对重定向端点的请求（有关详细信息，请参阅[<a href="12-references.html#RFC6819" class="xref page">RFC6819</a>]的第4.4.1.8节）。已确保授权服务器支持code_challenge参数的客户端可以依赖该机制提供的CSRF保护。在OpenID Connect流程中，验证nonce参数可提供CSRF保护。否则，必须使用安全绑定到用户代理的一次性使用CSRF令牌（在state参数中携带）来进行CSRF保护（请参阅 <a href="7-security-considerations.html#cross-site-request-forgery" class="xref page">第7.9节</a>）。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="preventing-mix-up-attacks"><a class="anchor" href="#preventing-mix-up-attacks"></a>2.3.4.防止混淆攻击</h3>
+<div class="paragraph">
+<p>当OAuth客户端只能与一个授权服务器交互时，不需要进行混淆防御。然而，在OAuth客户端与两个或更多授权服务器交互的场景中，客户端必须防止混淆攻击。为了防止混淆攻击，客户端必须仅处理它们发送了相应请求的发行者的重定向响应，并且这些响应必须来自发起该授权请求的同一用户代理。</p>
+</div>
+<div class="paragraph">
+<p>有关防止混淆攻击的两种不同防御措施的详细描述，请参阅 <a href="7-security-considerations.html#authorization-server-mix-up" class="xref page">第7.13节</a>。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="invalid-endpoint"><a class="anchor" href="#invalid-endpoint"></a>2.3.5.无效端点</h3>
+<div class="paragraph">
+<p>如果授权请求由于缺少、无效或不匹配的重定向URI而无法通过验证，授权服务器应该通知资源所有者出现错误，并且绝对不可以自动将用户代理重定向到无效的重定向URI。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="endpoint-content"><a class="anchor" href="#endpoint-content"></a>2.3.6.端点内容</h3>
+<div class="paragraph">
+<p>对客户端端点的重定向请求通常会导致一个HTML文档响应，该响应由用户代理处理。如果HTML响应是直接作为重定向请求的结果提供的，那么HTML文档中包含的任何脚本都将以完全访问重定向URI及其包含的工件（例如授权码）的权限执行。此外，包含授权码的请求URL可能会作为HTTP Referer头部发送给页面中加载的任何嵌入式图像、样式表和其他元素。</p>
+</div>
+<div class="paragraph">
+<p>客户端不应在重定向URI端点响应中包含任何第三方脚本（例如第三方分析、社交插件、广告网络）。相反，它应该从URI中提取工件，并将用户代理再次重定向到另一个端点，而不暴露工件（在URI中或其他地方）。如果包含了第三方脚本，客户端必须确保其自己的脚本（用于从URI中提取和删除凭据）将首先执行。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="client-authentication"><a class="anchor" href="#client-authentication"></a>2.4.客户端认证</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>授权服务器只有在基础凭证的颁发/注册和分发过程能够确保其保密性的情况下，才必须依赖客户端认证。</p>
+</div>
+<div class="paragraph">
+<p>如果客户端是保密的，授权服务器可以接受任何符合其安全要求的客户端认证形式（例如，密码、公钥/私钥对）。</p>
+</div>
+<div class="paragraph">
+<p>建议使用基于非对称（公钥）的方法对客户端进行认证，如mTLS [<a href="12-references.html#RFC8705" class="xref page">RFC8705</a>]，或根据[<a href="12-references.html#RFC7521" class="xref page">RFC7521</a>]和[<a href="12-references.html#RFC7523" class="xref page">RFC7523</a>]使用签名的JWT（“私钥JWT”）（在[<a href="12-references.html#OpenID" class="xref page">OpenID</a>]中定义为客户端认证方法private_key_jwt）。当使用此类客户端认证方法时，授权服务器无需存储敏感的对称密钥，从而使这些方法更能抵御多种攻击。</p>
+</div>
+<div class="paragraph">
+<p>当无法进行客户端认证时，授权服务器应采用其他手段来验证客户端的身份——例如，要求注册客户端重定向URI，或要求资源所有者确认身份。在请求资源所有者授权时，有效的重定向URI不足以验证客户端的身份，但可用于防止在获得资源所有者授权后将凭证交付给假冒客户端。</p>
+</div>
+<div class="paragraph">
+<p>客户端在每个请求中不得使用超过一种认证方法，以防止关于哪个认证机制对请求具有权威性的冲突。</p>
+</div>
+<div class="paragraph">
+<p>授权服务器必须考虑与未经认证的客户端交互的安全影响，并采取措施限制向此类客户端颁发的令牌可能带来的风险（例如，限制刷新令牌的生存期）。</p>
+</div>
+<div class="paragraph">
+<p>授权服务器与特定客户端身份相关联的权限必须基于对客户端识别和客户端凭证生命周期管理整体过程的评估。有关详细信息，请参阅 <a href="7-security-considerations.html#client-authentication-3" class="xref page">第7.2节</a>。</p>
+</div>
+<div class="sect2">
+<h3 id="client-secret"><a class="anchor" href="#client-secret"></a>2.4.1.客户端密钥</h3>
+<div class="paragraph">
+<p>为了支持拥有客户端密钥的客户端，授权服务器必须支持客户端在请求体内容中包含以下参数的客户端凭据：</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>“client_id”</strong></dt>
+<dd>
+<p>必填项。在 <a href="#client-identifier">2.2节</a> 所述的注册过程中向客户端颁发的客户端标识符。</p>
+</dd>
+<dt class="hdlist1"><strong>“client_secret”</strong></dt>
+<dd>
+<p>必填项。客户端密钥。</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>参数只能在请求内容中传输，并且绝对不能包含在请求URI中。</p>
+</div>
+<div class="paragraph">
+<p>例如，使用内容参数刷新访问令牌（<a href="4-grant-types.html#refresh-token-grant" class="xref page">第4.3节</a>）的请求（仅为了显示目的而添加了额外的换行符）：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>POST /token HTTP/1.1 +
+Host: server.example.com +
+Content-Type: application/x-www-form-urlencoded</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>grant_type=refresh_token&amp;refresh_token=tGzv3JOkF0XG5Qx2TlKWIA
+&amp;client_id=s6BhdRkqt3&amp;client_secret=7Fjfp0ZBr1KtDRbnfVdmIw</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>授权服务器可以支持HTTP基本认证方案，用于对已颁发客户端密钥的客户端进行认证。</p>
+</div>
+<div class="paragraph">
+<p>当使用[<a href="12-references.html#RFC9110" class="xref page">RFC9110</a>]第11节中定义的HTTP基本认证方案向授权服务器进行认证时，客户端标识符将使用 <a href="appendix-b.html" class="xref page">附录B</a> 中的application/x-www-form-urlencoded编码算法进行编码，编码后的值用作用户名；客户端密钥使用相同的算法进行编码，并用作密码。</p>
+</div>
+<div class="paragraph">
+<p>例如（仅为了显示目的而添加了额外的换行符）：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Authorization: Basic czZCaGRSa3F0Mzo3RmpmcDBaQnIxS3REUmJuZlZkbUl3</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>注意：这种先将客户端标识符和密钥进行表单编码，然后将编码后的值作为HTTP Basic身份验证的用户名和密码的方法，在过去已经导致了许多互操作性问题。一些实现遗漏了编码步骤，或者决定只编码某些字符，或者在验证凭据时忽略了编码要求，导致客户端不得不针对它们如何向各个授权服务器呈现凭据做出特殊处理。将凭据包含在请求体内容中可以避免编码问题，并导致更具互操作性的实现。</p>
+</div>
+<div class="paragraph">
+<p>由于客户端密钥身份验证方法涉及密码，因此授权服务器必须保护利用该密码的任何端点免受暴力攻击。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="other-authentication-method"><a class="anchor" href="#other-authentication-method"></a>2.4.2.其他身份验证方法</h3>
+<div class="paragraph">
+<p>授权服务器可以支持任何符合其安全要求的身份验证方案。当使用其他身份验证方法时，授权服务器必须定义客户端标识符（注册记录）和身份验证方案之间的映射关系。</p>
+</div>
+<div class="paragraph">
+<p>在“<a href="https://www.iana.org/assignments/oauth-parameters/oauth-parameters.xhtml#token-endpoint-auth-method">OAuth Token Endpoint Authentication Methods</a>”注册表中定义了其他一些身份验证方法，如mTLS [<a href="12-references.html#RFC8705" class="xref page">RFC8705</a>]和私钥JWT [<a href="12-references.html#RFC7523" class="xref page">RFC7523</a>]，这些方法除了可用于特定保护令牌端点的用途外，还可以作为通用的客户端身份验证方法。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="unregistered-clients"><a class="anchor" href="#unregistered-clients"></a>2.5.未注册客户端</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>本规范不要求客户端必须在授权服务器进行注册。但是，未注册客户端的使用超出了本规范的范围，并且需要对其互操作性影响进行额外的安全分析和审查。</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

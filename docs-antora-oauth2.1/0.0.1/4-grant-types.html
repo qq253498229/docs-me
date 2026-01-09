@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>4.授权类型 :: docs-me</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-me</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-antora-oauth2.1" data-version="0.0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">OAuth 2.1 授权框架</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="1-introduction.html">1.介绍</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="2-client-registration.html">2.客户端注册</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="3-protocol-endpoints.html">3.协议端点</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="4-grant-types.html">4.授权类型</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="5-resource-requests.html">5.资源请求</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="6-extensibility.html">6.可扩展性</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="7-security-considerations.html">7.安全考虑</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="8-native-applications.html">8.原生应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="9-section-9.html">9.基于浏览器的应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="10-differences-from-oauth-20.html">10.与OAuth 2.0的不同之处</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="11-iana-considerations.html">11.IANA考虑因素</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="12-references.html">12.参考文献</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-a.html">附录A</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-b.html">附录B</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-c.html">附录C</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-d.html">附录D</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-e.html">附录E</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-f.html">附录F</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="authors-addresses.html">作者邮箱</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OAuth 2.1 授权框架</span>
+    <span class="version">0.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../docs-config/0.0.1/index.html">docs-config</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-config/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steam-electron/0.0.1/index.html">docs-steam-electron</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steam-electron/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-xiuxian/0.0.1/index.html">docs-xiuxian</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-xiuxian/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-es-java/7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-es-java/7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-greenworks-js/0.0.1/index.html">Greenworks-JS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-greenworks-js/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-rust-libp2p/0.0.1/index.html">libp2p入门</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-rust-libp2p/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-neutralino-api/0.0.1/index.html">NeutralinoJS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-neutralino-api/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">OAuth 2.1 授权框架</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-pd2/0.0.1/index.html">PD2记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-pd2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-peerjs/0.0.1/index.html">PEER JS</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-peerjs/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-actuator/3.3.3/index.html">Spring Boot Actuator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-actuator/3.3.3/index.html">3.3.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-oauth2/0.0.1/index.html">Spring Boot OAuth2</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-oauth2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steamworks-rs/0.11.0/index.html">Steamworks for Rust</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steamworks-rs/0.11.0/index.html">0.11.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-tauri/v1/index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-tauri/v1/index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-testing-angular/中文/start.html">Testing Angular</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-testing-angular/中文/start.html">中文</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-me/0.0.1/index.html">个人记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-me/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-taiwu/0.0.1/index.html">太吾绘卷</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-taiwu/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-palworld/0.0.1/index.html">幻兽帕鲁笔记</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-palworld/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-building-event-driven-microservices/0.0.1/index.html">微服务与事件驱动架构</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-building-event-driven-microservices/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-hunter/0.0.1/index.html">猎人-荒野的呼唤</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-hunter/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-logitech/v8.45/index.html">罗技鼠标宏文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-logitech/v8.45/index.html">v8.45</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-milk/0.0.1/index.html">银河奶牛</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-milk/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../docs-me/0.0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">OAuth 2.1 授权框架</a></li>
+    <li><a href="4-grant-types.html">4.授权类型</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-antora-oauth2.1/edit/master/modules/ROOT/pages/4-grant-types.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">4.授权类型</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>为了请求访问令牌，客户端从资源所有者处获得授权。本规范定义了以下授权类型：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>授权码（authorization code）</p>
+</li>
+<li>
+<p>客户端凭证（client credentials），以及</p>
+</li>
+<li>
+<p>刷新令牌（refresh token）</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>本规范还提供了一种用于定义其他授权类型的扩展机制。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="authorization-code-grant"><a class="anchor" href="#authorization-code-grant"></a>4.1.授权码授权类型</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>授权码授权类型用于获取访问令牌和刷新令牌。</p>
+</div>
+<div class="paragraph">
+<p>该授权类型使用额外的授权端点，让授权服务器与资源所有者进行交互，以获得对资源的访问同意。</p>
+</div>
+<div class="paragraph">
+<p>由于这是一个基于重定向的流程，客户端必须能够与资源所有者的用户代理（通常是Web浏览器）一起启动流程，并且能够从授权服务器重定向回来。</p>
+</div>
+<div id="figure-3" class="listingblock">
+<div class="title">图3：授权码流程</div>
+<div class="content">
+<pre> +----------+
+ |          |
+ | 资源拥有者 |
+ +----------+
+       ^
+       |
+       |
+ +-----|----+             客户端标识符          +---------------+
+ | .---+---------(1)-- &amp;   重定向URI   -------&gt;|               |
+ | |   |    |                                 |               |
+ | |   '---------(2)--      用户认证       ---&gt;|               |
+ | | 用户代理|                                 |   授权服务器    |
+ | |        |                                 |               |
+ | |        |                                 |               |
+ | |    .--------(3)--       授权码        ---&lt;|               |
+ +-|----|---+                                 +---------------+
+   |    |                                         ^      v
+   |    |                                         |      |
+   ^    v                                         |      |
+ +---------+                                      |      |
+ |         |&gt;---(4)--        授权码       ---------'      |
+ |  客户端  |              &amp; 重定向URI                     |
+ |         |                                             |
+ |         |&lt;---(5)-----    访问令牌   -------------------'
+ +---------+          (w/ 可选的刷新令牌)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="#figure-3">图3</a>所示流程包括以下步骤：</p>
+</div>
+<div class="paragraph">
+<p>（1）客户端通过引导资源所有者的用户代理到授权端点来启动流程。客户端包括其客户端标识符、代码挑战（从生成的代码验证器派生而来）、可选的请求范围、可选的本地状态以及授权服务器在授予（或拒绝）访问后将用户代理发送回的重定向URI。</p>
+</div>
+<div class="paragraph">
+<p>（2）授权服务器通过用户代理对资源所有者进行身份验证，并确定资源所有者是授予还是拒绝客户端的访问请求。</p>
+</div>
+<div class="paragraph">
+<p>（3）假设资源所有者授予访问权限，授权服务器使用之前提供的重定向URI（在请求中或在客户端注册期间）将用户代理重定向回客户端。重定向URI包括授权代码和客户端之前提供的任何本地状态。</p>
+</div>
+<div class="paragraph">
+<p>（4）客户端通过包含上一步中收到的授权代码和代码验证器，向授权服务器的令牌端点请求访问令牌。在发出请求时，如果可能，客户端会对授权服务器进行身份验证。客户端包括用于获取授权代码进行验证的重定向URI。</p>
+</div>
+<div class="paragraph">
+<p>（5）授权服务器在可能的情况下对客户端进行身份验证，验证授权代码，验证代码验证器，并确保收到的重定向URI与步骤（3）中用于重定向客户端的URI相匹配。如果有效，授权服务器将返回访问令牌，以及可选的刷新令牌。</p>
+</div>
+<div class="sect2">
+<h3 id="authorization-request"><a class="anchor" href="#authorization-request"></a>4.1.1.授权请求</h3>
+<div class="paragraph">
+<p>要开始授权请求，客户端通过向授权服务器的授权端点URI添加参数来构建授权请求URI。客户端最终会将用户代理重定向到这个URI以发起请求。</p>
+</div>
+<div class="paragraph">
+<p>客户端针对每个授权请求使用唯一的密钥，以防止授权代码注入和CSRF攻击。客户端首先生成此密钥，在兑换授权代码时可以使用它来证明使用授权代码的客户端与请求它的客户端是同一个。</p>
+</div>
+<div class="paragraph">
+<p>客户端通过按照 <a href="appendix-c.html#query-string-serialization" class="xref page">附录C.1</a>中的描述，向授权端点URI的查询组件添加以下参数来构建请求URI：</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>"response_type"</strong></dt>
+<dd>
+<p>必需。 授权终点支持不同的请求和响应参数集。 客户端通过使用特定的response_type值来确定流的类型。本规范定义了值code，该值必须用于指示客户端希望使用授权码流。</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>扩展响应类型可能包含一个由空格分隔（%x20）的值列表，其中值的顺序不重要（例如，响应类型a b与b a相同）。这种组合响应类型的含义由其各自规范定义。</p>
+</div>
+<div class="paragraph">
+<p>一些扩展响应类型由[<a href="12-references.html#OpenID" class="xref page">OpenID</a>]定义。</p>
+</div>
+<div class="paragraph">
+<p>如果授权请求缺少response_type参数，或者响应类型无法理解，授权服务器必须按照 <a href="#error-response-2">4.1.2.1节</a>的描述返回错误响应。</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>"client_id"</strong></dt>
+<dd>
+<p>必需。如 <a href="2-client-registration.html#client-identifier" class="xref page">第2.2节</a>所述的客户端标识符。</p>
+</dd>
+<dt class="hdlist1"><strong>"code_challenge"</strong></dt>
+<dd>
+<p>必需或建议（见 <a href="7-security-considerations.html#authorization-code-injectio" class="xref page">第7.5.1节</a>）。代码挑战。</p>
+</dd>
+<dt class="hdlist1"><strong>"code_challenge_method"</strong></dt>
+<dd>
+<p>可选，如果请求中不存在则默认为plain。代码验证器转换方法为S256或plain。</p>
+</dd>
+<dt class="hdlist1"><strong>"redirect_uri"</strong></dt>
+<dd>
+<p>如果此客户端仅注册了一个重定向URI，则为可选。如果此客户端注册了多个重定向URI，则为必需。见 <a href="2-client-registration.html#multiple-redirect-uris" class="xref page">第2.3.2节</a>。</p>
+</dd>
+<dt class="hdlist1"><strong>"scope"</strong></dt>
+<dd>
+<p>可选。如 <a href="1-introduction.html#access-token-scope" class="xref page">第1.4.1节</a>所述的访问请求范围。</p>
+</dd>
+<dt class="hdlist1"><strong>"state"</strong></dt>
+<dd>
+<p>可选。客户端用于在请求和回调之间维持状态的不透明值。授权服务器在将用户代理重定向回客户端时包含此值。</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>code_verifier是为每个授权请求生成的唯一高熵密码学随机字符串，使用未保留字符[A-Z]/[a-z]/[0-9]/"-"/"."/"_"/"~"，最小长度为43个字符，最大长度为128个字符。</p>
+</div>
+<div class="paragraph">
+<p>客户端临时存储code_verifier，并计算用于授权请求的code_challenge。</p>
+</div>
+<div class="paragraph">
+<p>code_verifier的ABNF如下。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>code-verifier = 43*128unreserved +
+unreserved = ALPHA / DIGIT / "-" / "." / "_" / "~" +
+ALPHA = %x41-5A / %x61-7A +
+DIGIT = %x30-39</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>客户端应该使用不会在授权请求中暴露code_verifier的代码挑战方法。否则，能够读取授权请求的攻击者（参见[<a href="12-references.html#I-D.ietf-oauth-security-topics" class="xref page">I-D.ietf-oauth-security-topics</a>]中的攻击者A4）可能会破坏此机制提供的安全性。当前，S256是唯一的一种方法。</p>
+</div>
+<div class="paragraph">
+<p>注意：code_verifier应该具有足够的熵，以使猜测其值变得不切实际。建议使用合适的随机数生成器的输出来创建一个32八位字节序列。然后，对该八位字节序列进行base64url编码，以生成一个43八位字节的URL安全字符串，用作code_verifier。</p>
+</div>
+<div class="paragraph">
+<p>然后，客户端通过对code_verifier执行以下转换之一，从中派生出code_challenge：</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>S256</strong></dt>
+<dd>
+<p>code_challenge = BASE64URL-ENCODE(SHA256(ASCII(code_verifier)))</p>
+</dd>
+<dt class="hdlist1"><strong>plain</strong></dt>
+<dd>
+<p>code_challenge = code_verifier</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>如果客户端能够使用S256，则必须使用S256，因为服务器上必须实现（MTI）S256。如果客户端由于某些技术原因（例如，没有哈希函数的受限环境）无法支持S256，并且通过带外配置或通过授权服务器元数据[<a href="12-references.html#RFC8414" class="xref page">RFC8414</a>]得知服务器支持plain，则允许客户端使用plain。</p>
+</div>
+<div class="paragraph">
+<p>code_challenge的ABNF如下。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>code-challenge = 43*128unreserved +
+unreserved = ALPHA / DIGIT / "-" / "." / "_" / "~" +
+ALPHA = %x41-5A / %x61-7A +
+DIGIT = %x30-39</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>code_challenge和code_verifier属性是从OAuth 2.0扩展“用于代码交换的证明密钥”（Proof-Key for Code Exchange，简称PKCE）[<a href="12-references.html#RFC7636" class="xref page">RFC7636</a>]中采用的，该技术最初就是在此扩展中开发的。</p>
+</div>
+<div class="paragraph">
+<p>授权服务器必须支持code_challenge和code_verifier参数。</p>
+</div>
+<div class="paragraph">
+<p>客户端必须使用code_challenge和code_verifier，授权服务器必须强制执行其使用，但 <a href="7-security-considerations.html#authorization-code-injectio" class="xref page">第7.5.1节</a>中描述的情况除外。在这种情况下，仍建议使用和强制执行以下描述的code_challenge和code_verifier。</p>
+</div>
+<div class="paragraph">
+<p>state和scope参数不应以明文形式包含敏感的客户端或资源所有者信息，因为它们可能通过不安全的通道传输或以不安全的方式存储。</p>
+</div>
+<div class="paragraph">
+<p>客户端通过使用HTTP重定向或通过用户代理可用的其他手段，将资源所有者定向到构造的URI。</p>
+</div>
+<div class="paragraph">
+<p>例如，客户端指示用户代理发出以下HTTP请求（仅为了显示目的而添加了额外的换行符）：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>GET /authorize?response_type=code&amp;client_id=s6BhdRkqt3&amp;state=xyz
+  &amp;redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb
+  &amp;code_challenge=6fdkQaPm51l13DSukcAH3Mdx7_ntecHYd1vi3n0hMZY
+  &amp;code_challenge_method=S256 HTTP/1.1 +
+Host: server.example.com</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>授权服务器验证请求，以确保所有必需参数都存在且有效。</p>
+</div>
+<div class="paragraph">
+<p>特别是，如果请求中存在redirect_uri，授权服务器必须验证它，确保它与客户端注册期间先前建立的已注册重定向URI之一匹配（<a href="2-client-registration.html" class="xref page">第2节</a>）。在比较两个URI时，授权服务器必须确保两个URI相等，有关详细信息，请参阅[<a href="12-references.html#RFC3986" class="xref page">RFC3986</a>]的第6.2.1节“简单字符串比较”。</p>
+</div>
+<div class="paragraph">
+<p>如果请求有效，授权服务器对资源所有者进行身份验证，并获得授权决定（通过询问资源所有者或通过其他方式建立批准）。</p>
+</div>
+<div class="paragraph">
+<p>做出决定后，授权服务器通过使用HTTP重定向响应或通过用户代理可用的其他手段，将用户代理定向到提供的客户端重定向URI。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="authorization-response"><a class="anchor" href="#authorization-response"></a>4.1.2.授权响应</h3>
+<div class="paragraph">
+<p>如果资源所有者授予访问请求，授权服务器将生成一个授权码，并通过向重定向URI的查询组件添加以下参数（使用 <a href="appendix-c.html#query-string-serialization" class="xref page">附录C.1</a>中描述的查询字符串序列化方式）， 将其传递给客户端，除非扩展中另有规定：</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>“code”</strong></dt>
+<dd>
+<p>必填项。授权码由授权服务器生成，对客户端不透明。为了降低泄露风险，授权码必须在颁发后不久过期。建议授权码的最大生命周期为10分钟。授权码与客户端标识符、代码挑战和重定向URI绑定。</p>
+</dd>
+<dt class="hdlist1"><strong>“state”</strong></dt>
+<dd>
+<p>如果客户端授权请求中存在state参数，则为必填项。其值为从客户端接收到的确切值。</p>
+</dd>
+<dt class="hdlist1"><strong>“iss”</strong></dt>
+<dd>
+<p>可选。授权服务器的标识符，如果客户端与多个授权服务器交互，客户端可以使用该标识符来防止混淆攻击。有关此参数何时必要以及客户端如何使用它来防止混淆攻击的更多详细信息，请参见 <a href="7-security-considerations.html#authorization-server-mix-up" class="xref page">第7.13节</a>和[<a href="12-references.html#RFC9207" class="xref page">RFC9207</a>]。</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>例如，授权服务器通过发送以下HTTP响应来重定向用户代理：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 302 Found
+  Location: https://client.example.com/cb?code=SplxlOBeZQQYbYS6WxSbIA
+  &amp;state=xyz&amp;iss=https%3A%2F%2Fauthorization-server.example.com</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>客户端必须忽略无法识别的响应参数。本规范未定义授权码字符串的大小。客户端应避免对代码值大小做出假设。授权服务器应对其发出的任何值的大小进行说明。</p>
+</div>
+<div class="paragraph">
+<p>授权服务器必须将code_challenge和code_challenge_method值与发出的授权码相关联，以便稍后验证代码挑战。</p>
+</div>
+<div class="paragraph">
+<p>服务器将code_challenge与发出的代码相关联的具体方法不在本规范的范围内。代码挑战可以存储在服务器上并与该处的代码相关联。code_challenge和code_challenge_method值可以以加密形式存储在代码中，但服务器不得将code_challenge值以授权服务器之外的其他实体可以提取的形式包含在响应参数中。</p>
+</div>
+<div class="paragraph">
+<p>客户端必须防止攻击者将授权码注入（重放）到授权响应中。使用code_challenge和code_verifier可以防止授权码注入，因为授权服务器将拒绝具有不匹配code_verifier的令牌请求。有关更多详细信息，请参阅 <a href="7-security-considerations.html#authorization-code-injectio" class="xref page">第7.5.1节</a>。</p>
+</div>
+<div class="sect3">
+<h4 id="error-response-2"><a class="anchor" href="#error-response-2"></a>4.1.2.1.错误响应</h4>
+<div class="paragraph">
+<p>如果请求由于缺少、无效或不匹配的重定向URI而失败，或者如果客户端标识符缺失或无效，授权服务器应通知资源所有者出现错误，并且不得自动将用户代理重定向到无效的重定向URI。</p>
+</div>
+<div class="paragraph">
+<p>授权服务器必须拒绝来自公共客户端且没有code_challenge的请求，并且必须拒绝来自其他客户端的此类请求，除非有合理保证表明客户端以其他方式缓解了授权码注入。有关详细信息，请参阅 <a href="7-security-considerations.html#authorization-code-injectio" class="xref page">第7.5.1节</a>。</p>
+</div>
+<div class="paragraph">
+<p>如果服务器不支持请求的代码挑战方法转换，授权端点必须返回授权错误响应，并将错误值设置为invalid_request。error_description或error_uri的响应应解释错误的性质，例如，不支持转换算法。</p>
+</div>
+<div class="paragraph">
+<p>如果资源所有者拒绝访问请求，或者请求由于除缺少或无效的重定向URI之外的其他原因而失败，授权服务器将通过向重定向URI的查询组件添加以下参数（如 <a href="appendix-c.html#query-string-serialization" class="xref page">附录C.1</a>所述）来通知客户端：</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>"error"</strong></dt>
+<dd>
+<p>必需。以下单个ASCII [<a href="12-references.html#OpenID" class="xref page">USASCII</a>]错误代码：</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>“invalid_request”</strong></dt>
+<dd>
+<p>请求缺少必需参数、包含无效参数值、多次包含同一参数，或以其他方式格式错误。</p>
+</dd>
+<dt class="hdlist1"><strong>“unauthorized_client”</strong></dt>
+<dd>
+<p>客户端未获授权使用此方法请求授权码。</p>
+</dd>
+<dt class="hdlist1"><strong>“access_denied”</strong></dt>
+<dd>
+<p>资源所有者或授权服务器拒绝了请求。</p>
+</dd>
+<dt class="hdlist1"><strong>“unsupported_response_type”</strong></dt>
+<dd>
+<p>授权服务器不支持使用此方法获取授权码。</p>
+</dd>
+<dt class="hdlist1"><strong>“invalid_scope”</strong></dt>
+<dd>
+<p>请求的范围无效、未知或格式错误。</p>
+</dd>
+<dt class="hdlist1"><strong>“server_error”</strong></dt>
+<dd>
+<p>授权服务器遇到意外情况，无法完成请求。（需要此错误代码，因为无法通过HTTP重定向向客户端返回500 Internal Server Error HTTP状态码。）</p>
+</dd>
+<dt class="hdlist1"><strong>“temporarily_unavailable”</strong></dt>
+<dd>
+<p>授权服务器当前由于临时过载或维护而无法处理请求。（需要此错误代码，因为无法通过HTTP重定向向客户端返回503 Service Unavailable HTTP状态码。）</p>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>error参数的值不得包含%x20-21 / %x23-5B / %x5D-7E集合之外的字符。</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>"error_description"</strong></dt>
+<dd>
+<p>可选。提供额外信息的人类可读ASCII [<a href="12-references.html#OpenID" class="xref page">USASCII</a>]文本，用于帮助客户端开发人员理解发生的错误。error_description参数的值不得包含%x20-21 / %x23-5B / %x5D-7E集合之外的字符。</p>
+</dd>
+<dt class="hdlist1"><strong>"error_uri"</strong></dt>
+<dd>
+<p>可选。标识包含有关错误信息的人类可读网页的URI，用于向客户端开发人员提供有关错误的额外信息。error_uri参数的值必须符合URI引用语法，因此不得包含%x21 / %x23-5B / %x5D-7E集合之外的字符。</p>
+</dd>
+<dt class="hdlist1"><strong>"state"</strong></dt>
+<dd>
+<p>如果客户端授权请求中存在state参数，则为必填项。其值为从客户端接收到的确切值。</p>
+</dd>
+<dt class="hdlist1"><strong>"iss"</strong></dt>
+<dd>
+<p>可选。授权服务器的标识符。有关详细信息，请参阅上面的 <a href="#authorization-response">第4.1.2节</a>。</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>例如，授权服务器通过发送以下HTTP响应来重定向用户代理：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 302 Found +
+Location: https://client.example.com/cb?error=access_denied
+    &amp;state=xyz&amp;iss=https%3A%2F%2Fauthorization-server.example.com</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="token-endpoint-extension"><a class="anchor" href="#token-endpoint-extension"></a>4.1.3.Token端点扩展</h3>
+<div class="paragraph">
+<p>在token端点，授权授予类型通过grant_type值的authorization_code进行标识。</p>
+</div>
+<div class="paragraph">
+<p>如果设置了此值，则除了 <a href="3-protocol-endpoints.html#token-request" class="xref page">第3.2.2节</a>之外，还支持以下额外的token请求参数：</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>“code”</strong></dt>
+<dd>
+<p>必需。从授权服务器接收到的授权码。</p>
+</dd>
+<dt class="hdlist1"><strong>“code_verifier”</strong></dt>
+<dd>
+<p>如果授权请求中包含了code_challenge参数，则为必需。否则不得使用。原始的code verifier字符串。</p>
+</dd>
+<dt class="hdlist1"><strong>“client_id”</strong></dt>
+<dd>
+<p>如果客户端未按照 <a href="3-protocol-endpoints.html#client-authentication-2" class="xref page">第3.2.1节</a>的描述对授权服务器进行身份验证，则为必需。</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>授权服务器对于给定的授权码，必须仅返回一次访问令牌。</p>
+</div>
+<div class="paragraph">
+<p>如果使用与之前成功的token请求中相同的授权码发出第二个有效的token请求，授权服务器必须拒绝该请求，并且（在可能的情况下）应撤销之前基于该授权码发出的所有访问令牌和刷新令牌。有关更多详细信息，请参阅 <a href="7-security-considerations.html#reuse-of-authorization-code" class="xref page">第7.5.3节</a>。</p>
+</div>
+<div class="paragraph">
+<p>例如，客户端发出以下HTTP请求（仅为了显示目的而添加了额外的换行符）：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>POST /token HTTP/1.1
+Host: server.example.com
+Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW
+Content-Type: application/x-www-form-urlencoded</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>grant_type=authorization_code
+&amp;code=SplxlOBeZQQYbYS6WxSbIA
+&amp;code_verifier=3641a2d12d66101249cdf7a79c000c1f8c05d2aafcf14bf146497bed</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>除了 <a href="3-protocol-endpoints.html#token-request" class="xref page">第3.2.2节</a>中的处理规则外，授权服务器必须：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>确保授权码已颁发给经过身份验证的机密客户端，或者如果客户端是公开的，则确保该代码已颁发给请求中的client_id，</p>
+</li>
+<li>
+<p>验证授权码是否有效，</p>
+</li>
+<li>
+<p>验证当且仅当授权请求中存在code_challenge参数时，才存在code_verifier参数，</p>
+</li>
+<li>
+<p>如果存在code_verifier，则通过根据接收到的code_verifier计算代码挑战，并将其与先前关联的代码挑战进行比较（在首先根据客户端指定的code_challenge_method方法进行转换之后）来验证code_verifier，以及</p>
+</li>
+<li>
+<p>如果与令牌请求中的授权码相关联的授权请求中没有code_challenge，则授权服务器必须拒绝令牌请求。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>有关令牌请求中redirect_uri参数与OAuth 2.0客户端向后兼容的详细信息，请参阅 <a href="10-differences-from-oauth-20.html#redirect-uri-parameter-in-t" class="xref page">第10.2节</a>。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="client-credentials-grant"><a class="anchor" href="#client-credentials-grant"></a>4.2.客户端凭据授权</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>当客户端请求访问其控制下的受保护资源，或之前已与授权服务器安排好的另一个资源所有者的受保护资源时（其方法超出本规范的范围），客户端可以仅使用其客户端凭据（或其他支持的身份验证手段）请求访问令牌。</p>
+</div>
+<div class="paragraph">
+<p>客户端凭据授权类型只能由机密客户端使用。</p>
+</div>
+<div id="figure-4" class="listingblock">
+<div class="title">图4：客户端凭据授权</div>
+<div class="content">
+<pre>     +---------+                                  +---------------+
+     |         |                                  |               |
+     |         |&gt;--(1)-     客户端身份验证      ---&gt;|               |
+     | 客户端   |                                  |   授权服务器    |
+     |         |&lt;--(2)----     访问令牌  ---------&lt;|               |
+     |         |                                  |               |
+     +---------+                                  +---------------+</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="#figure-4">图4</a> 中所示的客户端凭据授权的使用包括以下步骤：</p>
+</div>
+<div class="paragraph">
+<p>（1）客户端在授权服务器上进行身份验证，并从令牌端点请求访问令牌。</p>
+</div>
+<div class="paragraph">
+<p>（2）授权服务器对客户端进行身份验证，如果有效，则颁发访问令牌。</p>
+</div>
+<div class="sect2">
+<h3 id="token-endpoint-extension-2"><a class="anchor" href="#token-endpoint-extension-2"></a>4.2.1.令牌端点扩展</h3>
+<div class="paragraph">
+<p>在令牌端点，客户端凭据授权类型通过grant_type值的client_credentials进行标识。</p>
+</div>
+<div class="paragraph">
+<p>如果设置了此值，则除了 <a href="3-protocol-endpoints.html#token-request" class="xref page">第3.2.2节</a>之外，还支持以下额外的令牌请求参数：</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>“scope”</strong></dt>
+<dd>
+<p>可选。如 <a href="1-introduction.html#access-token-scope" class="xref page">第1.4.1节</a>所述，访问请求的范围。</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>例如，客户端使用传输层安全性发出以下HTTP请求（仅为了显示目的而添加了额外的换行符）：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>POST /token HTTP/1.1 +
+Host: server.example.com +
+Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW +
+Content-Type: application/x-www-form-urlencoded</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>grant_type=client_credentials</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>授权服务器必须对客户端进行身份验证。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="refresh-token-grant"><a class="anchor" href="#refresh-token-grant"></a>4.3.刷新令牌授予</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>刷新令牌是授权服务器颁发给客户端的凭据，客户端可以使用它基于现有的授权来获取新的（有效的）访问令牌。客户端使用此选项的原因可能是先前的访问令牌已过期，或者客户端先前获得的访问令牌的范围比相应授权所批准的范围更窄，而后来在同一授权下需要具有不同范围的访问令牌。</p>
+</div>
+<div class="paragraph">
+<p>刷新令牌在传输和存储过程中必须保密，并且只能在授权服务器和颁发刷新令牌的客户端之间共享。授权服务器必须维护刷新令牌与其颁发客户端之间的绑定关系。</p>
+</div>
+<div class="paragraph">
+<p>每当可以验证客户端身份时，授权服务器必须验证刷新令牌与客户端身份之间的绑定关系。当无法进行客户端身份验证时，授权服务器应该颁发受发送方约束的刷新令牌，或按照 <a href="#token-endpoint-extension-3">第4.3.1节</a>所述使用刷新令牌轮换。</p>
+</div>
+<div class="paragraph">
+<p>授权服务器必须确保未经授权的方无法生成、修改或猜测以产生有效的刷新令牌。</p>
+</div>
+<div class="sect2">
+<h3 id="token-endpoint-extension-3"><a class="anchor" href="#token-endpoint-extension-3"></a>4.3.1.令牌端点扩展</h3>
+<div class="paragraph">
+<p>在令牌端点，刷新令牌授予类型通过值为 refresh_token 的 grant_type 参数进行标识。</p>
+</div>
+<div class="paragraph">
+<p>如果设置了此值，则除了 <a href="3-protocol-endpoints.html#token-request" class="xref page">第3.2.2节</a>之外，还支持以下附加参数：</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>“refresh_token”</strong></dt>
+<dd>
+<p>必需。颁发给客户端的刷新令牌。</p>
+</dd>
+<dt class="hdlist1"><strong>“scope”</strong></dt>
+<dd>
+<p>可选。如 <a href="1-introduction.html#access-token-scope" class="xref page">第1.4.1节</a>所述，访问请求的范围。请求的范围不得包含资源所有者最初未授予的任何范围，如果省略，则视为等于资源所有者最初授予的范围。</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>由于刷新令牌通常是用于请求其他访问令牌的长期凭据，因此刷新令牌与其颁发的客户端绑定。机密客户端必须按照 <a href="3-protocol-endpoints.html#client-authentication-2" class="xref page">第3.2.1节</a>的描述对授权服务器进行身份验证。</p>
+</div>
+<div class="paragraph">
+<p>例如，客户端使用传输层安全性（仅为了显示目的而添加了额外的换行符）发出以下HTTP请求：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>POST /token HTTP/1.1
+Host: server.example.com
+Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW
+Content-Type: application/x-www-form-urlencoded</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>grant_type=refresh_token&amp;refresh_token=tGzv3JOkF0XG5Qx2TlKWIA</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>除了 <a href="3-protocol-endpoints.html#token-request" class="xref page">第3.2.2节</a>中的处理规则外，授权服务器必须：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>如果请求中包含了客户端身份验证，则确保刷新令牌是颁发给经过身份验证的客户端的，或者如果请求中包含了client_id，则确保刷新令牌是颁发给匹配客户端的</p>
+</li>
+<li>
+<p>验证与此刷新令牌对应的授权是否仍然有效</p>
+</li>
+<li>
+<p>验证刷新令牌</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>授权服务器必须使用以下方法之一来检测恶意行为者对公共客户端的刷新令牌重放：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>受发送方约束的刷新令牌：授权服务器通过加密方式将刷新令牌与特定的客户端实例绑定，例如，通过使用DPoP [<a href="12-references.html#RFC9449" class="xref page">RFC9449</a>]或mTLS [<a href="12-references.html#RFC8705" class="xref page">RFC8705</a>]。</p>
+</li>
+<li>
+<p>刷新令牌轮换：授权服务器在每次访问令牌刷新响应中颁发一个新的刷新令牌。先前的刷新令牌将失效，但授权服务器会保留有关它们之间关系的信息。如果刷新令牌被泄露，并且随后被攻击者和合法客户端同时使用，其中一方将呈现一个已失效的刷新令牌，这将通知授权服务器发生了泄露。授权服务器无法确定哪一方提交了无效的刷新令牌，但它将撤销有效的刷新令牌以及与其关联的访问授权授予。这将以迫使合法客户端获得新的授权授予为代价来阻止攻击。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>实现注意事项：刷新令牌所属的授权授予可能被编码到刷新令牌本身中。这可以使授权服务器能够高效地确定刷新令牌所属的授权授予，进而确定所有需要撤销的刷新令牌。在这种情况下，授权服务器必须确保刷新令牌值的完整性，例如，通过使用签名。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="refresh-token-response"><a class="anchor" href="#refresh-token-response"></a>4.3.2.刷新令牌响应</h3>
+<div class="paragraph">
+<p>如果有效且已授权，授权服务器将按照 <a href="3-protocol-endpoints.html#token-response" class="xref page">第3.2.3节</a>的描述颁发访问令牌。</p>
+</div>
+<div class="paragraph">
+<p>授权服务器可以颁发一个新的刷新令牌，在这种情况下，客户端必须丢弃旧的刷新令牌，并用新的刷新令牌替换它。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="refresh-token-recommendatio"><a class="anchor" href="#refresh-token-recommendatio"></a>4.3.3.刷新令牌建议</h3>
+<div class="paragraph">
+<p>在向客户端颁发新的刷新令牌后，授权服务器可以撤销旧的刷新令牌。如果颁发了新的刷新令牌，那么刷新令牌的范围必须与客户端在请求中包含的刷新令牌的范围相同。</p>
+</div>
+<div class="paragraph">
+<p>在发生安全事件时，授权服务器可以自动撤销刷新令牌，例如：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>密码更改</p>
+</li>
+<li>
+<p>在授权服务器注销</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>如果客户端已有一段时间未活动，即刷新令牌已有一段时间未用于获取新的访问令牌，那么刷新令牌应过期。过期时间由授权服务器自行决定。它可能是全局值，也可能是根据客户端策略或与刷新令牌关联的授权授予（及其敏感性）来确定的。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="extension-grants"><a class="anchor" href="#extension-grants"></a>4.4.扩展授予</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>客户端通过使用绝对URI（由授权服务器定义）作为令牌端点的grant_type参数的值来指定授予类型，并通过添加任何必要的附加参数，来使用扩展授予类型。</p>
+</div>
+<div class="paragraph">
+<p>例如，在用户在另一台设备上授权客户端后，按照[<a href="12-references.html#RFC8628" class="xref page">RFC8628</a>]的定义使用设备授权授予来请求访问令牌，客户端会发出以下HTTP请求（仅为了显示目的而添加了额外的换行符）：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>POST /token HTTP/1.1 +
+Host: server.example.com +
+Content-Type: application/x-www-form-urlencoded</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Adevice_code
+&amp;device_code=GmRhmhcxhwEzkoEqiMEg_DnyEysNkuNhszIySk9eS
+&amp;client_id=C409020731</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>如果访问令牌请求有效且已授权，授权服务器将按照 <a href="3-protocol-endpoints.html#token-response" class="xref page">第3.2.3节</a>的描述颁发访问令牌和可选的刷新令牌。 如果请求未能通过客户端身份验证或无效，授权服务器将按照 <a href="3-protocol-endpoints.html#error-response" class="xref page">第3.2.4节</a>的描述返回错误响应。</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

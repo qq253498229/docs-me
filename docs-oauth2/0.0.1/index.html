@@ -1,0 +1,2000 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>OAuth2 Boot :: docs-me</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-me</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-oauth2" data-version="0.0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Boot OAuth2</span>
+    <span class="version">0.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../docs-config/0.0.1/index.html">docs-config</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-config/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steam-electron/0.0.1/index.html">docs-steam-electron</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steam-electron/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-xiuxian/0.0.1/index.html">docs-xiuxian</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-xiuxian/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-es-java/7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-es-java/7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-greenworks-js/0.0.1/index.html">Greenworks-JS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-greenworks-js/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-rust-libp2p/0.0.1/index.html">libp2p入门</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-rust-libp2p/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-neutralino-api/0.0.1/index.html">NeutralinoJS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-neutralino-api/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-antora-oauth2.1/0.0.1/index.html">OAuth 2.1 授权框架</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-antora-oauth2.1/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-pd2/0.0.1/index.html">PD2记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-pd2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-peerjs/0.0.1/index.html">PEER JS</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-peerjs/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-actuator/3.3.3/index.html">Spring Boot Actuator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-actuator/3.3.3/index.html">3.3.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Spring Boot OAuth2</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steamworks-rs/0.11.0/index.html">Steamworks for Rust</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steamworks-rs/0.11.0/index.html">0.11.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-tauri/v1/index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-tauri/v1/index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-testing-angular/中文/start.html">Testing Angular</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-testing-angular/中文/start.html">中文</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-me/0.0.1/index.html">个人记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-me/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-taiwu/0.0.1/index.html">太吾绘卷</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-taiwu/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-palworld/0.0.1/index.html">幻兽帕鲁笔记</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-palworld/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-building-event-driven-microservices/0.0.1/index.html">微服务与事件驱动架构</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-building-event-driven-microservices/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-hunter/0.0.1/index.html">猎人-荒野的呼唤</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-hunter/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-logitech/v8.45/index.html">罗技鼠标宏文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-logitech/v8.45/index.html">v8.45</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-milk/0.0.1/index.html">银河奶牛</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-milk/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../docs-me/0.0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-oauth2/edit/master/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">OAuth2 Boot</h1>
+<div id="toc" class="toc">
+<div id="toctitle">目录</div>
+<ul class="sectlevel1">
+<li><a href="#boot-features-security-oauth2-authorization-server">1. 1. 认证服务器（认证中心）</a>
+<ul class="sectlevel2">
+<li><a href="#_1_1_是否需要自己搭建一个认证服务器">1.1. 1.1 是否需要自己搭建一个认证服务器？</a></li>
+<li><a href="#_1_2_依赖项">1.2. 1.2 依赖项</a></li>
+<li><a href="#oauth2-boot-authorization-server-minimal">1.3. 1.3 最小化配置</a>
+<ul class="sectlevel3">
+<li><a href="#_1_3_1_开启认证服务器">1.3.1. 1.3.1 开启认证服务器</a></li>
+<li><a href="#_1_3_2_指定_client_和_secret">1.3.2. 1.3.2 指定 Client 和 Secret</a></li>
+<li><a href="#_1_3_3_获取_token">1.3.3. 1.3.3 获取 Token</a></li>
+</ul>
+</li>
+<li><a href="#oauth2-boot-authorization-server-disable">1.4. 1.4 如何关闭 Spring Boot Oauth2 的自动配置</a></li>
+<li><a href="#oauth2-boot-authorization-server-authorization-code-grant">1.5. 1.5 如何使授权码认证方式生效</a>
+<ul class="sectlevel3">
+<li><a href="#_1_5_1_添加用户">1.5.1. 1.5.1 添加用户</a></li>
+<li><a href="#_1_5_2_添加用户登录流">1.5.2. 1.5.2 添加用户登录流</a></li>
+<li><a href="#_1_5_3_客户端注册重定向uri">1.5.3. 1.5.3 客户端注册重定向URI</a></li>
+<li><a href="#oauth2-boot-testing-authorization-code-flow">1.5.4. 1.5.4 测试授权码流程</a></li>
+</ul>
+</li>
+<li><a href="#oauth2-boot-authorization-server-password-grant">1.6. 1.6 如何使密码认证方式生效</a></li>
+<li><a href="#oauth2-boot-authorization-server-authentication-manager">1.7. 1.7 如何、何时提供 AuthenticationManager</a>
+<ul class="sectlevel3">
+<li><a href="#oauth2-boot-authorization-server-password-grant-user-details-service">1.7.1. 1.7.1 Exposing a <code>UserDetailsService</code></a></li>
+<li><a href="#oauth2-boot-authorization-server-password-grant-authentication-manager">1.7.2. 1.7.2 Exposing an <code>AuthenticationManager</code></a></li>
+<li><a href="#oauth2-boot-authorization-server-password-grant-authentication-configuration">1.7.3. 1.7.3 Depending on <code>AuthenticationConfiguration</code></a></li>
+<li><a href="#oauth2-boot-authorization-server-password-grant-autowired-authentication-manager">1.7.4. 1.7.4 Manually Wiring An <code>AuthenticationManager</code></a></li>
+</ul>
+</li>
+<li><a href="#oauth2-boot-authorization-server-spring-security-oauth2-resource-server">1.8. 1.8 认证服务器是否与资源服务器或客户端互相兼容？</a>
+<ul class="sectlevel3">
+<li><a href="#oauth2-boot-authorization-server-spring-security-oauth2-resource-server-jwk">1.8.1. 1.8.1 Configuring Authorization Server to Use JWKs</a></li>
+<li><a href="#oauth2-boot-authorization-server-spring-security-oauth2-resource-server-jwk-set-uri">1.8.2. 1.8.2 Add a JWK Set URI Endpoint</a></li>
+<li><a href="#_1_8_3_testing_against_spring_security_5_1_resource_server">1.8.3. 1.8.3 Testing Against Spring Security 5.1 Resource Server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#boot-features-security-oauth2-resource-server">2. 2. 资源服务器（应用服务器）</a>
+<ul class="sectlevel2">
+<li><a href="#_2_1_依赖项">2.1. 2.1. 依赖项</a></li>
+<li><a href="#oauth2-boot-resource-server-minimal">2.2. 2.2. 最小化配置</a>
+<ul class="sectlevel3">
+<li><a href="#_2_2_1_开启资源服务器">2.2.1. 2.2.1. 开启资源服务器</a></li>
+<li><a href="#_2_2_2_指定token验证策略">2.2.2. 2.2.2. 指定token验证策略</a>
+<ul class="sectlevel4">
+<li><a href="#_jwt">JWT</a></li>
+<li><a href="#_opaque">Opaque</a></li>
+</ul>
+</li>
+<li><a href="#_2_2_3_accessing_a_resource">2.2.3. 2.2.3. Accessing a Resource</a></li>
+</ul>
+</li>
+<li><a href="#oauth2-boot-resource-server-jwt-single-key">2.3. 2.3. How to Use JWT with a Single Key</a></li>
+<li><a href="#oauth2-boot-resource-server-token-info">2.4. 2.4. 如何配置Token信息接口</a></li>
+<li><a href="#oauth2-boot-resource-server-user-info">2.5. 2.5. 如何配置用户信息接口</a>
+<ul class="sectlevel3">
+<li><a href="#oauth2-boot-resource-server-custom-user-info">2.5.1. 2.5.1. 自定义用户信息请求</a></li>
+</ul>
+</li>
+<li><a href="#oauth2-boot-resource-server-authorization">2.6. 2.6. 自定义认证规则</a></li>
+<li><a href="#oauth2-boot-resource-server-less-common">2.7. 2.7. 不常用功能</a>
+<ul class="sectlevel3">
+<li><a href="#oauth2-boot-resource-server-token-type">2.7.1. 2.7.1. Changing the Token Type</a></li>
+<li><a href="#oauth2-boot-resource-server-filter-order">2.7.2. 2.7.2. Changing the Filter Order</a></li>
+<li><a href="#oauth2-boot-resource-server-permit-error">2.7.3. 2.7.3. Permitting the /error Endpoint</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#boot-features-security-custom-user-info-client">3. 3. 客户端</a></li>
+<li><a href="#boot-features-security-oauth2-single-sign-on">4. 4. 单点登录</a></li>
+<li><a href="#common-application-properties">Appendix A: 通用配置文件</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>版本 2.3.0.RELEASE</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>如果您已经在 classpath 中加入了 <code>spring-security-oauth2</code> ，就可以利用一些类库中自带的自动配置，很方便的配置认证和资源服务器。要想查看完整信息，请点击 <a href="https://projects.spring.io/spring-security-oauth/docs/oauth2.html">Spring Security OAuth 2 开发者指南</a></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>下列项目仍处于维护阶段:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>spring-security-oauth2</code></p>
+</li>
+<li>
+<p><code>spring-security-oauth2-autoconfigure</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>当然，欢迎您使用它们，我们将为您提供帮助！</p>
+</div>
+<div class="paragraph">
+<p><strong>但是，在选择 <code>spring-security-oauth2</code> 和 <code>spring-security-oauth2-autoconfigure</code> 之前，您应该查看 <a href="https://github.com/spring-projects/spring-security/wiki/OAuth-2.0-Features-Matrix">Spring Security的功能列表</a>，来看看是否能 <a href="https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#oauth2client">满足</a> 您的需求。</strong></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>该项目是 Spring Boot 1.x 中 Spring Security OAuth 的一部分。
+<strong>在 Spring Boot 2.x 会被删除，以提供对 <a href="https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#oauth2client">Spring Security 5 OAuth 的支持。</a></strong></p>
+</div>
+<div class="paragraph">
+<p>为了方便迁移，该项目作为旧版 Spring Security OAuth 与 Spring Boot 2.x 之间的桥梁而存在。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="boot-features-security-oauth2-authorization-server"><a class="anchor" href="#boot-features-security-oauth2-authorization-server"></a>1. 1. 认证服务器（认证中心）</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>使用 Spring Security OAuth2 Boot 可以快速搭建 OAuth 2.0 认证服务器。</p>
+</div>
+<div class="sect2">
+<h3 id="_1_1_是否需要自己搭建一个认证服务器"><a class="anchor" href="#_1_1_是否需要自己搭建一个认证服务器"></a>1.1. 1.1 是否需要自己搭建一个认证服务器？</h3>
+<div class="paragraph">
+<p>如果您想实现以下需求，可能就应该搭建自己的认证服务器了:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>您希望使用一个单独的服务(也叫 <em>统一身份</em> )来自行维护登录、注销以及找回密码等功能</p>
+</li>
+<li>
+<p>您希望使用 OAuth 2.0 协议作为一个单独的服务来配合其它服务</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_2_依赖项"><a class="anchor" href="#_1_2_依赖项"></a>1.2. 1.2 依赖项</h3>
+<div class="paragraph">
+<p>要想使用自动配置，需要依赖 <code>spring-security-oauth2</code> 和 <code>spring-security-oauth2-autoconfigure</code>。
+注意您需要手动为 <code>spring-security-oauth2-autoconfigure</code> 指定版本，因为它在很久之前就已经不再由 Spring Boot 维护了，虽然它仍然和 Spring Boot 的版本相匹配。</p>
+</div>
+<div class="paragraph">
+<p>如果您需要 JWT 支持，则需要依赖 <code>spring-security-jwt</code> 。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="oauth2-boot-authorization-server-minimal"><a class="anchor" href="#oauth2-boot-authorization-server-minimal"></a>1.3. 1.3 最小化配置</h3>
+<div class="paragraph">
+<p>通常来讲，创建一个最小化的 Spring Boot 认证服务器需要以下三个步骤:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>导入依赖项</p>
+</li>
+<li>
+<p>使用 <code>@EnableAuthorizationServer</code> 注解</p>
+</li>
+<li>
+<p>至少配置一对 client_id/client_secret</p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="_1_3_1_开启认证服务器"><a class="anchor" href="#_1_3_1_开启认证服务器"></a>1.3.1. 1.3.1 开启认证服务器</h4>
+<div class="paragraph">
+<p>与 Spring Boot 的 <code>@Enable</code> 注解类似，您需要在 包含 <code>main</code> 方法的类中添加 <code>@EnableAuthorizationServer</code> 注解，下面是一个例子:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableAuthorizationServer
+@SpringBootApplication
+public class SimpleAuthorizationServerApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(SimpleAuthorizationServerApplication, args);
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>添加这个注解会引入其它的 Spring 配置文件，这些文件会添加一些默认的约定，例如应该如何对 token 进行签名、token的持续时间以及允许授权的范围。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_3_2_指定_client_和_secret"><a class="anchor" href="#_1_3_2_指定_client_和_secret"></a>1.3.2. 1.3.2 指定 Client 和 Secret</h4>
+<div class="paragraph">
+<p>根据 OAuth 2.0 规范，许多默认接口都需要 client 进行身份认证，因此您至少需要配置一个 client ，来让其他人能够和认证服务器进行交互。</p>
+</div>
+<div class="paragraph">
+<p>下面这段代码向您展示了如何配置:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">security:
+  oauth2:
+    client:
+      client-id: first-client
+      client-secret: noonewilleverguess</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+在生产环境中不能这样使用，您需要做更多的配置。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>这样就完成啦！但是，我们如何使用它呢？请继续往下看。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_3_3_获取_token"><a class="anchor" href="#_1_3_3_获取_token"></a>1.3.3. 1.3.3 获取 Token</h4>
+<div class="paragraph">
+<p>OAuth 2.0 本质上就是一个将长期生效的 token 交换为短期生效的 token 的框架。</p>
+</div>
+<div class="paragraph">
+<p>默认情况下，只要添加了 <code>@EnableAuthorizationServer</code> 注解，就可以使用客户端授权 (client credentials) 策略了，这意味着您可以直接运行下面的命令来获取token:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">curl first-client:noonewilleverguess@localhost:8080/oauth/token -dgrant_type=client_credentials -dscope=any</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>得到的响应大概长这样:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+    "access_token" : "f05a1ea7-4c80-4583-a123-dc7a99415588",
+    "token_type" : "bearer",
+    "expires_in" : 43199,
+    "scope" : "any"
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>任何支持 OAuth 2.0 标准协议的资源服务器，都可以使用上面的 token 并配置认证服务器。</p>
+</div>
+<div class="paragraph">
+<p>接下来，你可以查看下列章节:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#oauth2-boot-authorization-server-disable">1.4 如何关闭 Spring Boot Oauth2 的自动配置</a></p>
+</li>
+<li>
+<p><a href="#oauth2-boot-authorization-server-authorization-code-grant">1.5 如何使授权码认证方式生效</a></p>
+</li>
+<li>
+<p><a href="#oauth2-boot-authorization-server-password-grant">1.6 如何使密码认证方式生效</a></p>
+</li>
+<li>
+<p><a href="#oauth2-boot-authorization-server-authentication-manager">1.7 如何、何时提供 AuthenticationManager</a></p>
+</li>
+<li>
+<p><a href="#oauth2-boot-authorization-server-spring-security-oauth2-resource-server">1.8 认证服务器是否与资源服务器或客户端互相兼容？</a></p>
+</li>
+<li>
+<p><a href="https://projects.spring.io/spring-security-oauth/docs/oauth2.html#jwt-tokens">How to Configure for Jwt Tokens</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="oauth2-boot-authorization-server-disable"><a class="anchor" href="#oauth2-boot-authorization-server-disable"></a>1.4. 1.4 如何关闭 Spring Boot Oauth2 的自动配置</h3>
+<div class="paragraph">
+<p>总的来说，OAuth2 Boot 会创建一个 <a href="https://projects.spring.io/spring-security-oauth/docs/oauth2.html#authorization-server-configuration"><code>AuthorizationServerConfigurer</code></a>  实例并完成一些默认操作：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>注册一个 <code>NoOpPasswordEncoder</code> (覆盖 <a href="https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#core-services-password-encoding">Spring Security 默认的编码器</a>)</p>
+</li>
+<li>
+<p>允许客户端使用任何一种服务器支持的授权方式: <code>authorization_code</code>, <code>password</code>, <code>client_credentials</code>, <code>implicit</code>, 或 <code>refresh_token</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Otherwise, it also tries to pick up a handful of beans, if they are defined&#8201;&#8212;&#8201;namely:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>AuthenticationManager</code>: For looking up end users (not clients)</p>
+</li>
+<li>
+<p><code>TokenStore</code>: 用于生成和获取 tokens</p>
+</li>
+<li>
+<p><code>AccessTokenConverter</code>: 将 token 转换成不同的格式，例如 JWT。</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+虽然这篇文档已经涵盖了这些 bean 的功能，但还是更推荐阅读 <a href="https://projects.spring.io/spring-security-oauth/docs/oauth2.html">Spring Security OAuth</a> 来查看更详细的术语
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you expose a bean of type <code>AuthorizationServerConfigurer</code>, none of this is done automatically.</p>
+</div>
+<div class="paragraph">
+<p>So, for example, if you need to configure more than one client, change their allowed grant types, or use something better than the no-op password encoder (highly recommended!), then you want to expose your own <code>AuthorizationServerConfigurer</code>, as the following example shows:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
+
+    @Autowired DataSource dataSource;
+
+    protected void configure(ClientDetailsServiceConfigurer clients) {
+        clients
+            .jdbc(this.dataSource)
+            .passwordEncoder(PasswordEncoderFactories.createDelegatingPasswordEncoder());
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The preceding configuration causes OAuth2 Boot to no longer retrieve the client from environment properties and now falls back to the Spring Security password encoder default.</p>
+</div>
+<div class="paragraph">
+<p>From here, you may want to learn more about:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#oauth2-boot-authorization-server-authorization-code-grant">1.5 如何使授权码认证方式生效</a></p>
+</li>
+<li>
+<p><a href="#oauth2-boot-authorization-server-password-grant">1.6 如何使密码认证方式生效</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="oauth2-boot-authorization-server-authorization-code-grant"><a class="anchor" href="#oauth2-boot-authorization-server-authorization-code-grant"></a>1.5. 1.5 如何使授权码认证方式生效</h3>
+<div class="paragraph">
+<p>默认配置情况下是支持授权码认证方式的，但缺没配置完全。</p>
+</div>
+<div class="paragraph">
+<p>这是因为，除了与配置之外，授权码认证方式还需要:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>配置用户</p>
+</li>
+<li>
+<p>用户登录流，以及</p>
+</li>
+<li>
+<p>客户端注册重定向URI</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_1_5_1_添加用户"><a class="anchor" href="#_1_5_1_添加用户"></a>1.5.1. 1.5.1 添加用户</h4>
+<div class="paragraph">
+<p>在由 Spring Security 保护的典型 Spring Boot 应用程序中， <a href="https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#tech-userdetailsservice">用户由 <code>UserDetailsService</code> 定义</a>。
+在这方面，授权服务器没有什么不同，如下例所示：</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+    @Bean
+    @Override
+    public UserDetailsService userDetailsService() {
+        return new InMemoryUserDetailsManager(
+            User.withDefaultPasswordEncoder()
+                .username("enduser")
+                .password("password")
+                .roles("USER")
+                .build());
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>注意，与典型的 Spring Security web 应用一样，用户在 <code>WebSecurityConfigurerAdapter</code> 实例中定义。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_5_2_添加用户登录流"><a class="anchor" href="#_1_5_2_添加用户登录流"></a>1.5.2. 1.5.2 添加用户登录流</h4>
+<div class="paragraph">
+<p>顺便说一下，添加 <code>WebSecurityConfigurerAdapter</code> 实例后，用户登录所需的全部准备就都完成了。
+但请注意，这是 web 应用程序本身的配置，而不是 OAuth 2.0 API 的。</p>
+</div>
+<div class="paragraph">
+<p>如果您想自定义登录页面、提供除了登录之外的其它功能，或是添加额外的支持，例如找回密码等， <code>WebSecurityConfigurerAdapter</code> 中可以配置。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_5_3_客户端注册重定向uri"><a class="anchor" href="#_1_5_3_客户端注册重定向uri"></a>1.5.3. 1.5.3 客户端注册重定向URI</h4>
+<div class="paragraph">
+<p>OAuth2 Boot does not support configuring a redirect URI as a property&#8201;&#8212;&#8201;say, alongside <code>client-id</code> and <code>client-secret</code>.</p>
+</div>
+<div class="paragraph">
+<p>To add a redirect URI, you need to specify the client by using either <code>InMemoryClientDetailsService</code> or <code>JdbcClientDetailsService</code>.</p>
+</div>
+<div class="paragraph">
+<p>Doing either means <a href="#oauth2-boot-authorization-server-disable">replacing the OAuth2 Boot-provided <code>AuthorizationServerConfigurer</code></a> with your own, as the following example shows:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
+
+    @Bean
+    PasswordEncoder passwordEncoder() {
+        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
+    }
+
+    protected void configure(ClientDetailsServiceConfigurer clients) {
+        clients
+            .inMemory()
+                .withClient("first-client")
+                .secret(passwordEncoder().encode("noonewilleverguess"))
+                .scopes("resource:read")
+                .authorizedGrantTypes("authorization_code")
+                .redirectUris("http://localhost:8081/oauth/login/client-app");
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="oauth2-boot-testing-authorization-code-flow"><a class="anchor" href="#oauth2-boot-testing-authorization-code-flow"></a>1.5.4. 1.5.4 测试授权码流程</h4>
+<div class="paragraph">
+<p>Testing OAuth can be tricky since it requires more than one server to see the full flow in action.
+However, the first steps are straight-forward:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Browse to <a href="http://localhost:8080/oauth/authorize?grant_type=authorization_code&amp;response_type=code&amp;client_id=first-client&amp;state=1234" class="bare">http://localhost:8080/oauth/authorize?grant_type=authorization_code&amp;response_type=code&amp;client_id=first-client&amp;state=1234</a></p>
+</li>
+<li>
+<p>The application, if the user is not logged in, redirects to the login page, at <a href="http://localhost:8080/login" class="bare">http://localhost:8080/login</a></p>
+</li>
+<li>
+<p>Once the user logs in, the application generates a code and redirects to the registered redirect URI&#8201;&#8212;&#8201;in this case, <a href="http://localhost:8081/oauth/login/client-app" class="bare">http://localhost:8081/oauth/login/client-app</a></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The flow could continue at this point by standing up any resource server that is configured for opaque tokens and is pointed at this authorization server instance.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="oauth2-boot-authorization-server-password-grant"><a class="anchor" href="#oauth2-boot-authorization-server-password-grant"></a>1.6. 1.6 如何使密码认证方式生效</h3>
+<div class="paragraph">
+<p>With the default configuration, while the Password Flow is technically possible, it, like Authorization Code, is missing users.</p>
+</div>
+<div class="paragraph">
+<p>That said, because the default configuration creates a user with a username of <code>user</code> and a randomly-generated password, you can hypothetically check the logs for the password and do the following:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">curl first-client:noonewilleverguess@localhost:8080/oauth/token -dgrant_type=password -dscope=any -dusername=user -dpassword=the-password-from-the-logs</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>When you run that command, you should get a token back.</p>
+</div>
+<div class="paragraph">
+<p>More likely, though, you want to specify a set of users.</p>
+</div>
+<div class="paragraph">
+<p>As was stated in <a href="#oauth2-boot-authorization-server-authorization-code-grant">1.5 如何使授权码认证方式生效</a>, in Spring Security, users are typically specified in a <code>UserDetailsService</code> and this application is no different, as the following example shows:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+    @Bean
+    @Override
+    public UserDetailsService userDetailsService() {
+        return new InMemoryUserDetailsManager(
+            User.withDefaultPasswordEncoder()
+                .username("enduser")
+                .password("password")
+                .roles("USER")
+                .build());
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>This is all we need to do. We do not need to override <code>AuthorizationServerConfigurer</code>, because the client ID and secret are specified as environment properties.</p>
+</div>
+<div class="paragraph">
+<p>So, the following should now work:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">curl first-client:noonewilleverguess@localhost:8080/oauth/token -dgrant_type=password -dscope=any -dusername=enduser -dpassword=password</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="oauth2-boot-authorization-server-authentication-manager"><a class="anchor" href="#oauth2-boot-authorization-server-authentication-manager"></a>1.7. 1.7 如何、何时提供 AuthenticationManager</h3>
+<div class="paragraph">
+<p>This is a very common question and is not terribly intuitive when <code>AuthorizationServerEndpointsConfigurer</code> needs an <code>AuthenticationManager</code> instance to be specified.
+简单一句话回答：仅当资源服务器使用 <a href="#_how_to_make_password_grant_flow_work">密码认证</a> 的方式时，才需要提供 <code>AuthenticationManager</code> 。</p>
+</div>
+<div class="paragraph">
+<p>It helps to remember a few fundamentals:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>An <code>AuthenticationManager</code> is an abstraction for authenticating users. It typically needs some kind of <code>UserDetailsService</code> to be specified in order to be complete.</p>
+</li>
+<li>
+<p>End users are specified in a <code>WebSecurityConfigurerAdapter</code>.</p>
+</li>
+<li>
+<p>OAuth2 Boot, by default, automatically picks up any exposed <code>AuthenticationManager</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>However, not all flows require an <code>AuthenticationManager</code> because not all flows have end users involved.
+For example, the Client Credentials flow asks for a token based only on the client&#8217;s authority, not the end user&#8217;s.
+And the Refresh Token flow asks for a token based only on the authority of a refresh token.</p>
+</div>
+<div class="paragraph">
+<p>Also, not all flows specifically require the OAuth 2.0 API itself to have an <code>AuthenticationManager</code>, either.
+For example, the Authorization Code and Implicit flows verify the user when they login (application flow), not when the token (OAuth 2.0 API) is requested.</p>
+</div>
+<div class="paragraph">
+<p>Only the Resource Owner Password flow returns a code based off of the end user&#8217;s credentials.
+This means that the Authorization Server only needs an <code>AuthenticationManager</code> when clients are using the Resource Owner Password flow.</p>
+</div>
+<div class="paragraph">
+<p>The following example shows the Resource Owner Password flow:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">.authorizedGrantTypes("password", ...)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the preceding flow, your Authorization Server needs an instance of <code>AuthenticationManager</code>.</p>
+</div>
+<div class="paragraph">
+<p>这里提供了几种方式来做到这一点 (<a href="#boot-features-security-oauth2-authorization-server">记住前面的原理</a>):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>保持 OAuth2 Boot 处在默认状态 (无需覆盖 <code>AuthorizationServerConfigurer</code>) 之后 <a href="#oauth2-boot-authorization-server-password-grant-user-details-service">定义一个 <code>UserDetailsService</code> Bean</a>。</p>
+</li>
+<li>
+<p>保持 OAuth2 Boot 处在默认状态，之后 <a href="#oauth2-boot-authorization-server-password-grant-authentication-manager">定义一个 <code>AuthenticationManager</code> Bean</a>。</p>
+</li>
+<li>
+<p>覆盖 <code>AuthorizationServerConfigurerAdapter</code> (这会破坏 OAuth2 Boot 的默认状态)，之后 <a href="#oauth2-boot-authorization-server-password-grant-authentication-configuration">通过 <code>AuthenticationConfiguration</code></a> 获取 <code>AuthenticationManager</code>。</p>
+</li>
+<li>
+<p>覆盖 <code>AuthorizationServerConfigurerAdapter</code> ，之后 <a href="#oauth2-boot-authorization-server-password-grant-autowired-authentication-manager">手动连接 <code>AuthenticationManager</code></a></p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="oauth2-boot-authorization-server-password-grant-user-details-service"><a class="anchor" href="#oauth2-boot-authorization-server-password-grant-user-details-service"></a>1.7.1. 1.7.1 Exposing a <code>UserDetailsService</code></h4>
+<div class="paragraph">
+<p>End users are specified in a <code>WebSecurityConfigurerAdapter</code> through a <code>UserDetailsService</code>.
+So, if you use the OAuth2 Boot defaults (meaning you haven&#8217;t implemented a <code>AuthorizationServerConfigurer</code>), you can expose a <code>UserDetailsService</code> and be done, as the following example shows:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+    @Autowired DataSource dataSource;
+
+    @Bean
+    @Override
+    public UserDetailsService userDetailsService() {
+        return new JdbcUserDetailsManager(this.dataSource);
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="oauth2-boot-authorization-server-password-grant-authentication-manager"><a class="anchor" href="#oauth2-boot-authorization-server-password-grant-authentication-manager"></a>1.7.2. 1.7.2 Exposing an <code>AuthenticationManager</code></h4>
+<div class="paragraph">
+<p>In case you need to do more specialized configuration of the <code>AuthenticationManager</code>, you can do so in the <code>WebSecurityConfigurerAdapter</code> and then expose it, as the following example shows:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+    @Bean(BeansId.AUTHENTICATION_MANAGER)
+    @Override
+    public AuthenticationManager authenticationManagerBean() {
+        return super.authenticationManagerBean();
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) {
+        auth.authenticationProvider(customAuthenticationProvider());
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If you use the OAuth2 Boot defaults, then it picks up the bean automatically.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="oauth2-boot-authorization-server-password-grant-authentication-configuration"><a class="anchor" href="#oauth2-boot-authorization-server-password-grant-authentication-configuration"></a>1.7.3. 1.7.3 Depending on <code>AuthenticationConfiguration</code></h4>
+<div class="paragraph">
+<p>Any configured <code>AuthenticationManager</code> is available in <code>AuthenticationConfiguration</code>.
+This means that, if you need to have an <code>AuthorizationServerConfigurer</code> (in which case you need to do your own autowiring), you can have it depend on <code>AuthenticationConfiguration</code> to get the <code>AuthenticationManager</code> bean, as the following class shows:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Component
+public class CustomAuthorizationServerConfigurer extends
+    AuthorizationServerConfigurerAdapter {
+
+    AuthenticationManager authenticationManager;
+
+    public CustomAuthorizationServerConfigurer(AuthenticationConfiguration authenticationConfiguration) {
+        this.authenticationManager = authenticationConfiguration.getAuthenticationManager();
+    }
+
+    @Override
+    public void configure(ClientDetailsServiceConfigurer clients) {
+        // .. your client configuration that allows the password grant
+    }
+
+    @Override
+    public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
+        endpoints.authenticationManager(authenticationManager);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+    @Bean
+    @Override
+    public UserDetailsService userDetailsService() {
+        return new MyCustomUserDetailsService();
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="oauth2-boot-authorization-server-password-grant-autowired-authentication-manager"><a class="anchor" href="#oauth2-boot-authorization-server-password-grant-autowired-authentication-manager"></a>1.7.4. 1.7.4 Manually Wiring An <code>AuthenticationManager</code></h4>
+<div class="paragraph">
+<p>In the most sophisticated case, where the <code>AuthenticationManager</code> needs special configuration and you have your own <code>AuthenticationServerConfigurer</code>, then you need to both create your own <code>AuthorizationServerConfigurerAdapter</code> and your own <code>WebSecurityConfigurerAdapter</code>:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Component
+public class CustomAuthorizationServerConfigurer extends
+    AuthorizationServerConfigurerAdapter {
+
+    AuthenticationManager authenticationManager;
+
+    public CustomAuthorizationServerConfigurer(AuthenticationManager authenticationManager) {
+        this.authenticationManager = authenticationManager;
+    }
+
+    @Override
+    public void configure(ClientDetailsServiceConfigurer clients) {
+        // .. your client configuration that allows the password grant
+    }
+
+    @Override
+    public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
+        endpoints.authenticationManager(authenticationManager);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+    @Bean(BeansId.AUTHENTICATION_MANAGER)
+    @Override
+    public AuthenticationManager authenticationManagerBean() {
+        return super.authenticationManagerBean();
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) {
+        auth.authenticationProvider(customAuthenticationProvider());
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="oauth2-boot-authorization-server-spring-security-oauth2-resource-server"><a class="anchor" href="#oauth2-boot-authorization-server-spring-security-oauth2-resource-server"></a>1.8. 1.8 认证服务器是否与资源服务器或客户端互相兼容？</h3>
+<div class="paragraph">
+<p>No, not out of the box.
+Spring Security 5.1 supports only JWT-encoded JWK-signed authorization, and Authorization Server does not ship with a JWK Set URI.</p>
+</div>
+<div class="paragraph">
+<p>Basic support is possible, though.</p>
+</div>
+<div class="paragraph">
+<p>In order to configure Authorization Server to be compatible with Spring Security 5.1 Resource Server, for example, you need to do the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Configure it to use JWKs</p>
+</li>
+<li>
+<p>Add a JWK Set URI endpoint</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="oauth2-boot-authorization-server-spring-security-oauth2-resource-server-jwk"><a class="anchor" href="#oauth2-boot-authorization-server-spring-security-oauth2-resource-server-jwk"></a>1.8.1. 1.8.1 Configuring Authorization Server to Use JWKs</h4>
+<div class="paragraph">
+<p>To change the format used for access and refresh tokens, you can change out the <code>AccessTokenConverter</code> and the <code>TokenStore</code>, as the following example shows:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableAuthorizationServer
+@Configuration
+public class JwkSetConfiguration extends AuthorizationServerConfigurerAdapter {
+
+	AuthenticationManager authenticationManager;
+	KeyPair keyPair;
+
+	public JwkSetConfiguration(AuthenticationConfiguration authenticationConfiguration,
+			KeyPair keyPair) throws Exception {
+
+		this.authenticationManager = authenticationConfiguration.getAuthenticationManager();
+		this.keyPair = keyPair;
+	}
+
+    // ... client configuration, etc.
+
+	@Override
+	public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
+		// @formatter:off
+		endpoints
+			.authenticationManager(this.authenticationManager)
+			.accessTokenConverter(accessTokenConverter())
+			.tokenStore(tokenStore());
+		// @formatter:on
+	}
+
+	@Bean
+	public TokenStore tokenStore() {
+		return new JwtTokenStore(accessTokenConverter());
+	}
+
+	@Bean
+	public JwtAccessTokenConverter accessTokenConverter() {
+		JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
+		converter.setKeyPair(this.keyPair);
+		return converter;
+	}
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="oauth2-boot-authorization-server-spring-security-oauth2-resource-server-jwk-set-uri"><a class="anchor" href="#oauth2-boot-authorization-server-spring-security-oauth2-resource-server-jwk-set-uri"></a>1.8.2. 1.8.2 Add a JWK Set URI Endpoint</h4>
+<div class="paragraph">
+<p>Spring Security OAuth does not support JWKs, nor does <code>@EnableAuthorizationServer</code> support adding more OAuth 2.0 API endpoints to its initial set.
+However, we can add this with only a few lines.</p>
+</div>
+<div class="paragraph">
+<p>First, you need to add another dependency: <code>com.nimbusds:nimbus-jose-jwt</code>. This gives you the appropriate JWK primitives.</p>
+</div>
+<div class="paragraph">
+<p>Second, instead of using <code>@EnableAuthorizationServer</code>, you need to directly include its two <code>@Configuration</code> classes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>AuthorizationServerEndpointsConfiguration</code>: The <code>@Configuration</code> class for configuring the OAuth 2.0 API endpoints, such as what format to use for the tokens.</p>
+</li>
+<li>
+<p><code>AuthorizationServerSecurityConfiguration</code>: The <code>@Configuration</code> class for the access rules around those endpoints.
+This is the one that you need to extend, as shown in the following example:</p>
+</li>
+</ul>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@FrameworkEndpoint
+class JwkSetEndpoint {
+	KeyPair keyPair;
+
+	public JwkSetEndpoint(KeyPair keyPair) {
+		this.keyPair = keyPair;
+	}
+
+	@GetMapping("/.well-known/jwks.json")
+	@ResponseBody
+	public Map&lt;String, Object&gt; getKey(Principal principal) {
+		RSAPublicKey publicKey = (RSAPublicKey) this.keyPair.getPublic();
+		RSAKey key = new RSAKey.Builder(publicKey).build();
+		return new JWKSet(key).toJSONObject();
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+class JwkSetEndpointConfiguration extends AuthorizationServerSecurityConfiguration {
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		super.configure(http);
+		http
+			.requestMatchers()
+				.mvcMatchers("/.well-known/jwks.json")
+				.and()
+			.authorizeRequests()
+				.mvcMatchers("/.well-known/jwks.json").permitAll();
+	}
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, since you do not need to change <code>AuthorizationServerEndpointsConfiguration</code>, you can <code>@Import</code> it instead of using <code>@EnableAuthorizationServer</code>, as the following example shows:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Import(AuthorizationServerEndpointsConfiguration.class)
+@Configuration
+public class JwkSetConfiguration extends AuthorizationServerConfigurerAdapter {
+
+    // ... the rest of the configuration from the previous section
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_8_3_testing_against_spring_security_5_1_resource_server"><a class="anchor" href="#_1_8_3_testing_against_spring_security_5_1_resource_server"></a>1.8.3. 1.8.3 Testing Against Spring Security 5.1 Resource Server</h4>
+<div class="paragraph">
+<p>Now you can POST to the <code>/oauth/token</code> endpoint (<a href="#oauth2-boot-testing-authorization-code-flow">as before</a>) to obtain a token and then present that to a <a href="https://github.com/spring-projects/spring-security/tree/master/samples/boot/oauth2resourceserver">Spring Security 5.1 Resource Server</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="boot-features-security-oauth2-resource-server"><a class="anchor" href="#boot-features-security-oauth2-resource-server"></a>2. 2. 资源服务器（应用服务器）</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Security OAuth2 Boot 简化了对资源服务器（应用服务器）的配置，其中有两种不同的 Token 模式：JWT（Json Web Token）模式 和 暗箱(Opaque)模式。</p>
+</div>
+<div class="sect2">
+<h3 id="_2_1_依赖项"><a class="anchor" href="#_2_1_依赖项"></a>2.1. 2.1. 依赖项</h3>
+<div class="paragraph">
+<p>要想使用自动配置，需要依赖 <code>spring-security-oauth2</code> 和 <code>spring-security-oauth2-autoconfigure</code>。
+注意您需要手动为 <code>spring-security-oauth2-autoconfigure</code> 指定版本，因为它在很久之前就已经不再由 Spring Boot 维护了，虽然它仍然和 Spring Boot 的版本相匹配。</p>
+</div>
+<div class="paragraph">
+<p>如果您需要 JWT 支持，则需要依赖 <code>spring-security-jwt</code> 。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="oauth2-boot-resource-server-minimal"><a class="anchor" href="#oauth2-boot-resource-server-minimal"></a>2.2. 2.2. 最小化配置</h3>
+<div class="paragraph">
+<p>创建一个最小化的 Spring Boot 资源服务器需要以下三个步骤:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>导入依赖项</p>
+</li>
+<li>
+<p>使用 <code>@EnableResourceServer</code> 注解</p>
+</li>
+<li>
+<p>Specifying a strategy for verifying the bearer token.</p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="_2_2_1_开启资源服务器"><a class="anchor" href="#_2_2_1_开启资源服务器"></a>2.2.1. 2.2.1. 开启资源服务器</h4>
+<div class="paragraph">
+<p>与 Spring Boot 的 <code>@Enable</code> 注解类似，您需要在 包含 <code>main</code> 方法的类中添加 <code>@EnableResourceServer</code> 注解，下面是一个例子:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableResourceServer
+@SpringBootApplication
+public class SimpleAuthorizationServerApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(SimpleAuthorizationServerApplication, args);
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>添加这个注解会同时添加 <code>OAuth2AuthenticationProcessingFilter</code>，不过您还需要一些额外的配置来指定如何合适地审批校验 token。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_2_2_指定token验证策略"><a class="anchor" href="#_2_2_2_指定token验证策略"></a>2.2.2. 2.2.2. 指定token验证策略</h4>
+<div class="paragraph">
+<p>Bearer Tokens typically come in one of two forms: JWT-encoded or opaque. You will need to configure the resource server with one or the other strategy.</p>
+</div>
+<div class="sect4">
+<h5 id="_jwt"><a class="anchor" href="#_jwt"></a>JWT</h5>
+<div class="paragraph">
+<p>To indicate JWT, simply specify the JWK Set Uri hosted on your Authorization Server:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">security:
+  oauth2:
+    resource:
+      jwk:
+        key-set-uri: https://idp.example.com/.well-known/jwks.json</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Instead of a JWK Set Uri, you can also specify a key.</p>
+</div>
+<div class="paragraph">
+<p>Note that with this configuration, your authorization server needs to be up in order for Resource Server to start up.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_opaque"><a class="anchor" href="#_opaque"></a>Opaque</h5>
+<div class="paragraph">
+<p>To indicate opaque, simply specify the Authorization Server endpoint that knows how to decode the token:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">security:
+  oauth2:
+    resource:
+      token-info-uri: https://idp.example.com/oauth2/introspect</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It&#8217;s likely this endpoint requires some kind of authorization separate from the token itself, for example, client authentication.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it! But, what do you do with it? We cover that next.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_2_3_accessing_a_resource"><a class="anchor" href="#_2_2_3_accessing_a_resource"></a>2.2.3. 2.2.3. Accessing a Resource</h4>
+<div class="paragraph">
+<p>To confirm that Resource Server is correctly processing tokens, you can add a simple controller endpoint like so:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RestController
+public class SimpleController {
+	@GetMapping("/whoami")
+	public String whoami(@AuthenticationPrincipal(expression="name") String name) {
+		return name;
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, obtain an active access token from your Authorization Server and present it to the Resource Server:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">curl -H "Authorization: $TOKEN" http://localhost:8080/whoami</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>And you should see the value of the <code>user_name</code> attribute in the token.</p>
+</div>
+<div class="paragraph">
+<p>From this point, you may want to learn more about three alternative ways to authenticate using bearer tokens:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#oauth2-boot-resource-server-jwt-single-key">2.3. How to Use JWT with a Single Key</a></p>
+</li>
+<li>
+<p><a href="#oauth2-boot-resource-server-token-info">2.4. 如何配置Token信息接口</a></p>
+</li>
+<li>
+<p><a href="#oauth2-boot-resource-server-user-info">2.5. 如何配置用户信息接口</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="oauth2-boot-resource-server-jwt-single-key"><a class="anchor" href="#oauth2-boot-resource-server-jwt-single-key"></a>2.3. 2.3. How to Use JWT with a Single Key</h3>
+<div class="paragraph">
+<p>Instead of a JWK Set endpoint, you may have a local key you want to configure for verification.
+While this is weaker due to the key being static, it may be necessary in your situation.</p>
+</div>
+<div class="paragraph">
+<p>Configuring the resource server with the appropriate symmetric key or PKCS#8 PEM-encoded public key is simple, as can be seen below:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">security:
+  oauth2:
+    resource:
+      jwt:
+        key-value: |
+          -----BEGIN PUBLIC KEY-----
+          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC...
+          -----END PUBLIC KEY-----</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The pipe in yaml indicates a multi-line property value.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You can also instead supply a <code>key-store</code>, <code>key-store-password</code>, <code>key-alias</code>, and <code>key-password</code> properties.</p>
+</div>
+<div class="paragraph">
+<p>Or you can use the <code>key-uri</code> endpoint to get the key remotely from your authorization server, which is something of a happy medium between static, local configuration and a JWK Set endpoint.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="oauth2-boot-resource-server-token-info"><a class="anchor" href="#oauth2-boot-resource-server-token-info"></a>2.4. 2.4. 如何配置Token信息接口</h3>
+<div class="paragraph">
+<p>The token info endpoint, also sometimes called the introspection endpoint, likely requires some kind of client authentication, either Basic or Bearer.
+Generally speaking, the bearer token in the <code>SecurityContext</code> won&#8217;t suffice since that is tied to the user.
+Instead, you&#8217;ll need to specify credentials that represent this client, like so:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">security:
+  oauth2:
+    client:
+      clientId: client-id
+      clientSecret: client-secret
+    resource:
+      tokenInfoUri: https://idp.example.com/oauth2/check_token</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>By default, this will use Basic authentication, using the configured credentials, to authenticate against the token info endpoint.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="oauth2-boot-resource-server-user-info"><a class="anchor" href="#oauth2-boot-resource-server-user-info"></a>2.5. 2.5. 如何配置用户信息接口</h3>
+<div class="paragraph">
+<p>It&#8217;s atypical for a resource server to need to call a user info endpoint.
+This is because, fundamentally, a resource server is about authorizing a request, not authenticating it.
+That said, it is at times necessary.</p>
+</div>
+<div class="paragraph">
+<p>If you specify a user info endpoint like so:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">security:
+  oauth2:
+    resource:
+      userInfoUri: https://idp.example.com/oauth2/userinfo</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Then Resource Server will send it the bearer token that is part of the request and enhance the <code>Authentication</code> object with the result.</p>
+</div>
+<div class="sect3">
+<h4 id="oauth2-boot-resource-server-custom-user-info"><a class="anchor" href="#oauth2-boot-resource-server-custom-user-info"></a>2.5.1. 2.5.1. 自定义用户信息请求</h4>
+<div class="paragraph">
+<p>Internally, Resource Server uses an <code>OAuth2RestTemplate</code> to invoke the <code>/userinfo</code> endpoint.
+At times, it may be necessary to add filters or perform other customization for this invocation.
+To customize the creation of this bean, you can expose a <code>UserInfoRestTemplateCustomizer</code>, like so:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public UserInfoRestTemplateCustomizer customHeader() {
+	return restTemplate -&gt;
+			restTemplate.getInterceptors().add(new MyCustomInterceptor());
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>This bean will be handed to a <code>UserInfoTemplateFactory</code> which will add other configurations helpful to coordinating with the <code>/userinfo</code> endpoint.</p>
+</div>
+<div class="paragraph">
+<p>And, of course, you can replace the <code>UserInfoTemplateFactory</code> completely, if you need complete control over `OAuth2RestTemplate&#8217;s configuration.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="oauth2-boot-resource-server-authorization"><a class="anchor" href="#oauth2-boot-resource-server-authorization"></a>2.6. 2.6. 自定义认证规则</h3>
+<div class="paragraph">
+<p>和 Spring Security 的工作方式类似地，您可以通过 Spring Security OAuth 自带的接口自定义认证规则，例如:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class HasAuthorityConfig
+		extends ResourceServerConfigurerAdapter {
+
+	@Override
+	public void configure(HttpSecurity http) throws Exception {
+		// @formatter:off
+		http
+			.authorizeRequests()
+				.antMatchers("/flights/**").hasAuthority("#oauth2.hasScope('message:read')")
+				.anyRequest().authenticated();
+		// @formatter:on
+	}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>不过这里需要注意的是，如果您的服务既是认证服务器，又是资源服务器，那么某些接口可能需要特殊处理。
+为了避免覆盖默认接口(例如 <code>/token</code>)，最好将资源服务器的接口重构到不同的路径下，例如:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class ResourceServerEndpointConfig
+		extends ResourceServerConfigurerAdapter {
+
+	@Override
+	public void configure(HttpSecurity http) throws Exception {
+		// @formatter:off
+		http
+			.antMatchers("/resourceA/**", "/resourceB/**")
+			.authorizeRequests()
+				.antMatchers("/resourceA/**").hasAuthority("#oauth2.hasScope('resourceA:read')")
+				.antMatchers("/resourceB/**").hasAuthority("#oauth2.hasScope('resourceB:read')")
+				.anyRequest().authenticated();
+		// @formatter:on
+	}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>上面的配置会作用到您的资源接口上，同时也不会影响到认证服务器默认的接口。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="oauth2-boot-resource-server-less-common"><a class="anchor" href="#oauth2-boot-resource-server-less-common"></a>2.7. 2.7. 不常用功能</h3>
+<div class="sect3">
+<h4 id="oauth2-boot-resource-server-token-type"><a class="anchor" href="#oauth2-boot-resource-server-token-type"></a>2.7.1. 2.7.1. Changing the Token Type</h4>
+<div class="paragraph">
+<p>Google and certain other third-party identity providers are more strict about the token type name that is sent in the headers to the user info endpoint.
+The default is <code>Bearer</code>, which suits most providers and matches the spec.
+However, if you need to change it, you can set <code>security.oauth2.resource.token-type</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="oauth2-boot-resource-server-filter-order"><a class="anchor" href="#oauth2-boot-resource-server-filter-order"></a>2.7.2. 2.7.2. Changing the Filter Order</h4>
+<div class="paragraph">
+<p>OAuth2 resources are protected by a filter chain with the order specified by <code>security.oauth2.resource.filter-order</code>.</p>
+</div>
+<div class="paragraph">
+<p>By default the filters in <code>AuthorizationServerConfigurerAdapter</code> come first, followed by those in <code>ResourceServerConfigurerAdapter</code>, followed by those in <code>WebSecurityConfigurerAdapter</code>.</p>
+</div>
+<div class="paragraph">
+<p>This means that <strong>all application endpoints will require bearer token authentication</strong> unless one of two things happens:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The filter chain order is changed or</p>
+</li>
+<li>
+<p>The <code>ResourceServerConfigurerAdapter</code> set of authorized requests is narrowed</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The first, changing the filter chain order, can be done by moving <code>WebSecurityConfigurerAdapter</code> in front of <code>ResourceServerConfigurerAdapter</code> like so:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Order(2)
+@EnableWebSecurity
+public WebSecurityConfig extends WebSecurityConfigurerAdapter {
+	// ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Resource Server&#8217;s default <code>@Order</code> value is 3 which is why the example sets Web&#8217;s <code>@Order</code> to 2, so that it&#8217;s evaluated earlier.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>While this may work, it&#8217;s a little odd since we may simply trade one problem:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><code>ResourceServerConfigurerAdapter</code> is handling requests it shouldn&#8217;t</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>For another:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><code>WebSecurityConfigurerAdapter</code> is handling requests it shouldn&#8217;t</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>The more robust solution, then, is to indicate to <code>ResourceServerConfigurerAdapter</code> which endpoints should be secured by bearer token authentication.</p>
+</div>
+<div class="paragraph">
+<p>For example, the following configures Resource Server to secure the web application endpoints that begin with <code>/rest</code>:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableResourceServer
+public ResourceServerConfig extends ResourceServerConfigurerAdapter {
+	@Override
+    protected void configure(HttpSecurity http) {
+        http
+            .requestMatchers()
+                .antMatchers("/rest/**")
+            .authorizeRequests()
+                .anyRequest().authenticated();
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="oauth2-boot-resource-server-permit-error"><a class="anchor" href="#oauth2-boot-resource-server-permit-error"></a>2.7.3. 2.7.3. Permitting the /error Endpoint</h4>
+<div class="paragraph">
+<p>Resource Server, when also configured as a client, may rely on a request-scoped <code>OAuth2ClientContext</code> bean during the authentication process.
+And, in some error situations, Resource Server forwards to the ERROR servlet dispatcher.</p>
+</div>
+<div class="paragraph">
+<p>By default, request-scoped beans aren&#8217;t available in the ERROR dispatch.
+And, because of this, you may see a complaint about the <code>OAuth2ClientContext</code> bean not being available.</p>
+</div>
+<div class="paragraph">
+<p>The simplest approach may be to permit the <code>/error</code> endpoint, so that Resource Server doesn&#8217;t try and authenticate the request:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class PermitErrorConfig extends ResourceServerConfigurerAdapter {
+    @Override
+	public void configure(HttpSecurity http) throws Exception {
+		// @formatter:off
+		http
+			.authorizeRequests()
+				.antMatchers("/error").permitAll()
+				.anyRequest().authenticated();
+		// @formatter:on
+	}
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Other solutions are to configure Spring so that the <code>RequestContextFilter</code> is registered with the error dispatch or to register a <code>RequestContextListener</code> bean.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="boot-features-security-custom-user-info-client"><a class="anchor" href="#boot-features-security-custom-user-info-client"></a>3. 3. 客户端</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To make your web application into an OAuth2 client, you can add <code>@EnableOAuth2Client</code> and
+Spring Boot creates an <code>OAuth2ClientContext</code> and <code>OAuth2ProtectedResourceDetails</code> that
+are necessary to create an <code>OAuth2RestOperations</code>. Spring Boot does not automatically
+create such a bean, but you can easily create your own, as the following example shows:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public OAuth2RestTemplate oauth2RestTemplate(OAuth2ClientContext oauth2ClientContext,
+        OAuth2ProtectedResourceDetails details) {
+    return new OAuth2RestTemplate(details, oauth2ClientContext);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You may want to add a qualifier and review your configuration, as more than one
+<code>RestTemplate</code> may be defined in your application.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This configuration uses <code>security.oauth2.client.*</code> as credentials (the same as you might
+be using in the Authorization Server). However, in addition, it needs to know the
+authorization and token URIs in the Authorization Server, as the following example shows:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">application.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">security:
+  oauth2:
+    client:
+      clientId: bd1c0a783ccdd1c9b9e4
+      clientSecret: 1a9030fbca47a5b2c28e92f19050bb77824b5ad1
+      accessTokenUri: https://github.com/login/oauth/access_token
+      userAuthorizationUri: https://github.com/login/oauth/authorize
+      clientAuthenticationScheme: form</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>An application with this configuration redirects to Github for authorization when you
+attempt to use the <code>OAuth2RestTemplate</code>. If you are already signed into Github. you should not
+even notice that it has authenticated.  These specific credentials work only if your
+application is running on port 8080 (you can register your own client application in Github or other
+provider for more flexibility).</p>
+</div>
+<div class="paragraph">
+<p>To limit the scope that the client asks for when it obtains an access token, you can set
+<code>security.oauth2.client.scope</code> (comma separated or an array in YAML). By default, the scope
+is empty, and it is up to Authorization Server to decide what the defaults should be
+(usually depending on the settings in the client registration that it holds).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+There is also a setting for <code>security.oauth2.client.client-authentication-scheme</code>,
+which defaults to <code>header</code> (but you might need to set it to <code>form</code> if, like Github for
+instance, your OAuth2 provider does not like header authentication). In fact, the
+<code>security.oauth2.client.*</code> properties are bound to an instance of
+<code>AuthorizationCodeResourceDetails</code>, so all of its properties can be specified.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+In a non-web application, you can still create an <code>OAuth2RestOperations</code>, and it
+is still wired into the <code>security.oauth2.client.*</code> configuration. In this case, you are asking for is a
+&#8220;client credentials token grant&#8221; if you use it (and there is no
+need to use <code>@EnableOAuth2Client</code> or <code>@EnableOAuth2Sso</code>). To prevent that infrastructure
+being defined, remove the <code>security.oauth2.client.client-id</code> from your configuration
+(or make it be an empty string).
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="boot-features-security-oauth2-single-sign-on"><a class="anchor" href="#boot-features-security-oauth2-single-sign-on"></a>4. 4. 单点登录</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can use an OAuth2 Client to fetch user details from the provider (if such features are
+available) and then convert them into an <code>Authentication</code> token for Spring Security.
+The Resource Server (<a href="#boot-features-security-oauth2-resource-server">described earlier</a>) supports this through the <code>user-info-uri</code> property. This is the basis
+for a Single Sign On (SSO) protocol based on OAuth2, and Spring Boot makes it easy to
+participate by providing an annotation <code>@EnableOAuth2Sso</code>. The Github client shown in the preceding section can
+protect all its resources and authenticate by using the Github <code>/user/</code> endpoint, by adding
+that annotation and declaring where to find the endpoint (in addition to the
+<code>security.oauth2.client.*</code> configuration already listed earlier):</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 1. application.yml</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">security:
+  oauth2:
+# ...
+  resource:
+    userInfoUri: https://api.github.com/user
+    preferTokenInfo: false</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Since all paths are secure by default, there is no &#8220;home&#8221; page that you can show to
+unauthenticated users and invite them to login (by visiting the <code>/login</code> path, or the
+path specified by <code>security.oauth2.sso.login-path</code>).</p>
+</div>
+<div class="paragraph">
+<p>To customize the access rules or paths to protect s(o you can add a &#8220;home&#8221; page for
+instance,) you can add <code>@EnableOAuth2Sso</code> to a <code>WebSecurityConfigurerAdapter</code>. The
+annotation causes it to be decorated and enhanced with the necessary pieces to get
+the <code>/login</code> path working. In the following example, we simply allow unauthenticated access
+to the home page at <code>/</code> and keep the default for everything else:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+            .authorizeRequests()
+                .mvcMatchers("/").permitAll()
+                .anyRequest().authenticated();
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Also, note that, since all endpoints are secure by default, this includes any default
+error handling endpoints&#8201;&#8212;&#8201;for example, the <code>/error</code> endpoint. This means that, if
+there is some problem during Single Sign On that requires the application to redirect
+to the <code>/error</code> page, this can cause an infinite redirect between the identity
+provider and the receiving application.</p>
+</div>
+<div class="paragraph">
+<p>First, think carefully about making an endpoint insecure, as you may find that the
+behavior is simply evidence of a different problem. However, this behavior can be
+addressed by configuring the application to permit <code>/error</code>, as the following example shows:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+            .authorizeRequests()
+                .antMatchers("/error").permitAll()
+                .anyRequest().authenticated();
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="common-application-properties"><a class="anchor" href="#common-application-properties"></a>Appendix A: 通用配置文件</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can specify various properties inside your <code>application.properties</code> or <code>application.yml</code>
+files or as command line switches. This section provides a list of common Spring Boot
+properties and references to the underlying classes that consume them.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Property contributions can come from additional jar files on your classpath, so
+you should not consider this an exhaustive list. It is also perfectly legitimate to define
+your own properties.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+This sample file is meant as a guide only. Do <strong>not</strong> copy and paste the entire
+content into your application. Rather, pick only the properties that you need.
+</td>
+</tr>
+</table>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties"># SECURITY OAUTH2 CLIENT (<a href="../../api/org/springframework/boot/autoconfigure/security/oauth2/OAuth2ClientProperties.html">OAuth2ClientProperties</a>)
+security.oauth2.client.client-id= # OAuth2 client id.
+security.oauth2.client.client-secret= # OAuth2 client secret. A random secret is generated by default
+
+# SECURITY OAUTH2 RESOURCES (<a href="../../api/org/springframework/boot/autoconfigure/security/oauth2/resource/ResourceServerProperties.html">ResourceServerProperties</a>)
+security.oauth2.resource.id= # Identifier of the resource.
+security.oauth2.resource.jwt.key-uri= # The URI of the JWT token. Can be set if the value is not available and the key is public.
+security.oauth2.resource.jwt.key-value= # The verification key of the JWT token. Can either be a symmetric secret or PEM-encoded RSA public key.
+security.oauth2.resource.jwk.key-set-uri= # The URI for getting the set of keys that can be used to validate the token.
+security.oauth2.resource.prefer-token-info=true # Use the token info, can be set to false to use the user info.
+security.oauth2.resource.service-id=resource #
+security.oauth2.resource.token-info-uri= # URI of the token decoding endpoint.
+security.oauth2.resource.token-type= # The token type to send when using the userInfoUri.
+security.oauth2.resource.user-info-uri= # URI of the user endpoint.
+
+# SECURITY OAUTH2 SSO (<a href="../../api/org/springframework/boot/autoconfigure/security/oauth2/client/OAuth2SsoProperties.html">OAuth2SsoProperties</a>)
+security.oauth2.sso.login-path=/login # Path to the login page, i.e. the one that triggers the redirect to the OAuth2 Authorization Server</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

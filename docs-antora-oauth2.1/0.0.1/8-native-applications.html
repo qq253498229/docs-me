@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>8.原生应用程序 :: docs-me</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-me</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-antora-oauth2.1" data-version="0.0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">OAuth 2.1 授权框架</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="1-introduction.html">1.介绍</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="2-client-registration.html">2.客户端注册</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="3-protocol-endpoints.html">3.协议端点</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="4-grant-types.html">4.授权类型</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="5-resource-requests.html">5.资源请求</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="6-extensibility.html">6.可扩展性</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="7-security-considerations.html">7.安全考虑</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="8-native-applications.html">8.原生应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="9-section-9.html">9.基于浏览器的应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="10-differences-from-oauth-20.html">10.与OAuth 2.0的不同之处</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="11-iana-considerations.html">11.IANA考虑因素</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="12-references.html">12.参考文献</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-a.html">附录A</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-b.html">附录B</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-c.html">附录C</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-d.html">附录D</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-e.html">附录E</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="appendix-f.html">附录F</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="authors-addresses.html">作者邮箱</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">OAuth 2.1 授权框架</span>
+    <span class="version">0.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../docs-config/0.0.1/index.html">docs-config</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-config/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steam-electron/0.0.1/index.html">docs-steam-electron</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steam-electron/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-xiuxian/0.0.1/index.html">docs-xiuxian</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-xiuxian/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-es-java/7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-es-java/7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../docs-es-java/6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-greenworks-js/0.0.1/index.html">Greenworks-JS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-greenworks-js/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-rust-libp2p/0.0.1/index.html">libp2p入门</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-rust-libp2p/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-neutralino-api/0.0.1/index.html">NeutralinoJS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-neutralino-api/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">OAuth 2.1 授权框架</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-pd2/0.0.1/index.html">PD2记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-pd2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-peerjs/0.0.1/index.html">PEER JS</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-peerjs/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-actuator/3.3.3/index.html">Spring Boot Actuator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-actuator/3.3.3/index.html">3.3.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-oauth2/0.0.1/index.html">Spring Boot OAuth2</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-oauth2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-steamworks-rs/0.11.0/index.html">Steamworks for Rust</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-steamworks-rs/0.11.0/index.html">0.11.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-tauri/v1/index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-tauri/v1/index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-testing-angular/中文/start.html">Testing Angular</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-testing-angular/中文/start.html">中文</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-me/0.0.1/index.html">个人记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-me/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-taiwu/0.0.1/index.html">太吾绘卷</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-taiwu/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-palworld/0.0.1/index.html">幻兽帕鲁笔记</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-palworld/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-building-event-driven-microservices/0.0.1/index.html">微服务与事件驱动架构</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-building-event-driven-microservices/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-hunter/0.0.1/index.html">猎人-荒野的呼唤</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-hunter/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-logitech/v8.45/index.html">罗技鼠标宏文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-logitech/v8.45/index.html">v8.45</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../docs-milk/0.0.1/index.html">银河奶牛</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../docs-milk/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../docs-me/0.0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">OAuth 2.1 授权框架</a></li>
+    <li><a href="8-native-applications.html">8.原生应用程序</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-antora-oauth2.1/edit/master/modules/ROOT/pages/8-native-applications.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">8.原生应用程序</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>原生应用程序是指安装在资源所有者使用的设备上并执行的应用程序（即桌面应用程序、原生移动应用程序）。原生应用程序在安全、平台功能和整体最终用户体验方面需要特别考虑。</p>
+</div>
+<div class="paragraph">
+<p>授权端点需要客户端和资源所有者的用户代理之间进行交互。当前的最佳实践是在外部用户代理（通常是浏览器）而不是嵌入式用户代理（例如，使用web视图实现的用户代理）中执行OAuth授权请求。</p>
+</div>
+<div class="paragraph">
+<p>原生应用程序可以使用与操作系统注册的方案的重定向URI来捕获来自授权服务器的响应，以调用客户端作为处理程序，手动复制和粘贴凭据，运行本地Web服务器，安装用户代理扩展，或通过提供标识客户端控制的服务器托管资源的重定向URI，进而使响应可供原生应用程序使用。</p>
+</div>
+<div class="paragraph">
+<p>以前，原生应用程序通常使用嵌入式用户代理（通常通过web视图实现）进行OAuth授权请求。这种方法有很多缺点，包括宿主应用程序能够复制用户凭证和cookie，以及用户需要在每个应用程序中从头开始进行身份验证。有关使用嵌入式用户代理进行OAuth的缺点的深入分析，请参阅 <a href="#embedded-user-agents-in-nat">第8.5.1节</a>。</p>
+</div>
+<div class="paragraph">
+<p>使用系统浏览器的原生应用程序授权请求更加安全，并且可以利用用户在设备上的身份验证状态。能够在浏览器中使用现有的身份验证会话可以实现单点登录，因为用户在使用新应用程序时无需每次都对授权服务器进行身份验证（除非授权服务器策略要求）。</p>
+</div>
+<div class="paragraph">
+<p>支持原生应用程序和浏览器之间的授权流程无需更改OAuth协议本身，因为OAuth授权请求和响应已经根据URI进行了定义。这包括可用于应用程序间通信的URI。一些假设所有客户端都是机密Web客户端的OAuth服务器实现将需要增加对公共原生应用程序客户端和它们使用的重定向URI类型的理解，以支持这一最佳实践。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="registration-of-native-app-"><a class="anchor" href="#registration-of-native-app-"></a>8.1.原生应用程序客户端的注册</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>除非使用像动态客户端注册[<a href="12-references.html#RFC7591" class="xref page">RFC7591</a>]这样的机制来为每个实例提供密钥，否则原生应用程序都被归类为如 <a href="2-client-registration.html#client-types" class="xref page">第2.1节</a>所定义的公共客户端；它们必须作为此类客户端在授权服务器上进行注册。授权服务器必须在客户端注册详细信息中记录客户端类型，以便据此识别和处理请求。</p>
+</div>
+<div class="sect2">
+<h3 id="client-authentication-of-na"><a class="anchor" href="#client-authentication-of-na"></a>8.1.1.原生应用程序的客户端身份验证</h3>
+<div class="paragraph">
+<p>静态包含并作为分发给多个用户的应用程序一部分的密钥不应被视为机密密钥，因为一个用户可能会检查其副本并了解共享密钥。因此，不建议授权服务器要求使用共享密钥对公共原生应用程序客户端进行客户端身份验证，因为这除了客户端标识（已由client_id请求参数提供）之外几乎没有其他价值。</p>
+</div>
+<div class="paragraph">
+<p>仍然要求原生应用程序客户端静态包含共享密钥的授权服务器必须将客户端视为公共客户端（如 <a href="2-client-registration.html#client-types" class="xref page">第2.1节</a>所定义），并且不接受该密钥作为客户端身份的证明。如果没有额外的措施，此类客户端可能会受到客户端冒充攻击（见 <a href="7-security-considerations.html#impersonation-of-native-app" class="xref page">第7.3.1节</a>）。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="using-inter-app-uri-communi"><a class="anchor" href="#using-inter-app-uri-communi"></a>8.2.在原生应用中使用应用间URI通信进行OAuth</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>就像在Web上使用URI来发起授权请求并将授权响应返回给请求网站一样，原生应用也可以使用URI在设备的浏览器中发起授权请求，并将响应返回给请求的原生应用。</p>
+</div>
+<div class="paragraph">
+<p>通过采用Web上用于OAuth的相同方法，在原生应用环境中同样可以获得在Web环境中看到的益处，如单点登录会话的可用性和单独身份验证上下文的安全性。重用相同的方法还可以通过依赖非特定于特定平台的标准Web流程来降低实现复杂性并提高互操作性。</p>
+</div>
+<div class="paragraph">
+<p>原生应用必须使用外部用户代理来执行OAuth授权请求。这是通过在浏览器中打开授权请求（详见 <a href="#initiating-the-authorizatio">第8.3节</a>）并使用重定向URI将授权响应返回给原生应用（定义在 <a href="#receiving-the-authorization">第8.4节</a>）来实现的。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="initiating-the-authorizatio"><a class="anchor" href="#initiating-the-authorizatio"></a>8.3.从原生应用程序发起授权请求</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>需要用户授权的原生应用程序会根据 <a href="4-grant-types.html#authorization-code-grant" class="xref page">第4.1节</a>使用能够由原生应用程序接收的重定向URI和授权码授权类型来创建一个授权请求URI。</p>
+</div>
+<div class="paragraph">
+<p>原生应用程序授权请求中的重定向URI的功能与基于Web的授权请求中的重定向URI类似。与将授权响应返回给OAuth客户端的服务器不同，原生应用程序使用的重定向URI将响应返回给应用程序。<a href="#receiving-the-authorization">第8.4节</a>记录了在不同平台上将授权响应返回给原生应用程序的重定向URI的几个选项。任何允许应用程序接收URI并检查其参数的重定向URI都是可行的。</p>
+</div>
+<div class="paragraph">
+<p>在构造了授权请求URI后，应用程序使用特定于平台的API在外部用户代理中打开URI。通常，使用的外部用户代理是默认浏览器，即系统上配置为处理http和https方案URI的应用程序；然而，也可以使用不同的浏览器选择标准和其他类别的外部用户代理。</p>
+</div>
+<div class="paragraph">
+<p>此最佳实践侧重于将浏览器作为原生应用程序的推荐外部用户代理。也可以使用专门为用户授权而设计且能够像浏览器一样处理授权请求和响应的外部用户代理。其他外部用户代理，如授权服务器提供的原生应用程序，可能符合本最佳实践中规定的标准（包括使用相同的重定向URI属性），但它们的使用超出了本规范的范围。</p>
+</div>
+<div class="paragraph">
+<p>一些平台支持称为“应用内浏览器标签页”的浏览器功能，应用程序可以在应用上下文中呈现浏览器的标签页，而无需切换应用程序，但仍保留浏览器的主要优势，如共享身份验证状态和安全上下文。在支持该功能的平台上，出于可用性的原因，建议应用程序使用应用内浏览器标签页进行授权请求。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="receiving-the-authorization"><a class="anchor" href="#receiving-the-authorization"></a>8.4.在原生应用中接收授权响应</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>原生应用有多种重定向URI选项可用于从浏览器接收授权响应，其可用性和用户体验因平台而异。</p>
+</div>
+<div class="sect2">
+<h3 id="claimed-https-scheme-uri-re"><a class="anchor" href="#claimed-https-scheme-uri-re"></a>8.4.1.声明“https”方案URI重定向</h3>
+<div class="paragraph">
+<p>一些操作系统允许应用在它们控制的域中声明https URI（参见[<a href="12-references.html#RFC9110" class="xref page">RFC9110</a>]的第4.2.2节）。当浏览器遇到声明的URI时，页面不会在浏览器中加载，而是会启动原生应用，并将提供的URI作为启动参数。</p>
+</div>
+<div class="paragraph">
+<p>此类URI可以用作原生应用的重定向URI。对于授权服务器来说，它们与常规的基于Web的客户端重定向URI无法区分。例如：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>https://app.example.com/oauth2redirect/example-provider</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>由于仅凭重定向URI不足以区分公共原生应用客户端和机密Web客户端，因此在 <a href="#registration-of-native-app-">第8.1节</a>中要求，在客户端注册期间记录客户端类型，以便服务器能够确定客户端类型并采取相应的操作。</p>
+</div>
+<div class="paragraph">
+<p>与原生应用的其他重定向选项相比，应用声明的https方案重定向URI具有一些优势，因为操作系统的保证使得授权服务器能够确定目标应用的身份。因此，原生应用应尽可能使用它们而不是其他选项。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="loopback-interface-redirect"><a class="anchor" href="#loopback-interface-redirect"></a>8.4.2.回环接口重定向</h3>
+<div class="paragraph">
+<p>能够在回环网络接口上打开端口而无需特殊权限的原生应用程序（通常是桌面操作系统上的应用程序）可以使用回环接口来接收OAuth重定向。</p>
+</div>
+<div class="paragraph">
+<p>回环重定向URI使用http方案，并使用回环IP字面量和客户端正在监听的任何端口来构建。</p>
+</div>
+<div class="paragraph">
+<p>也就是说，对于IPv4，使用 <a href="http://127.0.0.1:{port}/{path}；对于IPv6，使用" class="bare">http://127.0.0.1:{port}/{path}；对于IPv6，使用</a> http://[::1]:{port}/{path}。一个使用IPv4回环接口和随机分配端口的重定向示例：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>http://127.0.0.1:51004/oauth2redirect/example-provider</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>使用IPv6回环接口和随机分配端口的重定向示例：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>http://[::1]:61023/oauth2redirect/example-provider</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>虽然使用名称localhost的重定向URI（即 <a href="http://localhost:{port}/{path}）在功能上与回环IP重定向类似，但不建议使用localhost。使用回环IP字面量而不是localhost来指定重定向URI，可以避免意外地在除回环接口以外的网络接口上监听。此外，这样做也不太容易受到用户设备上客户端防火墙和主机名解析配置错误的影响。" class="bare">http://localhost:{port}/{path}）在功能上与回环IP重定向类似，但不建议使用localhost。使用回环IP字面量而不是localhost来指定重定向URI，可以避免意外地在除回环接口以外的网络接口上监听。此外，这样做也不太容易受到用户设备上客户端防火墙和主机名解析配置错误的影响。</a></p>
+</div>
+<div class="paragraph">
+<p>授权服务器必须在回环IP重定向URI的请求中允许指定任何端口，以适应在请求时从操作系统获取可用临时端口的客户端。</p>
+</div>
+<div class="paragraph">
+<p>客户端不应假设设备支持特定版本的互联网协议。建议客户端尝试使用IPv4和IPv6绑定到回环接口，并使用其中可用的一个。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="private-use-uri-scheme-redi"><a class="anchor" href="#private-use-uri-scheme-redi"></a>8.4.3.私有使用URI方案重定向</h3>
+<div class="paragraph">
+<p>许多移动和桌面计算平台通过允许应用程序注册私有使用URI方案（有时俗称“自定义URL方案”），如com.example.app，来支持应用程序间的URI通信。当浏览器或其他应用程序尝试加载具有私有使用URI方案的URI时，注册该方案的应用程序将被启动以处理请求。</p>
+</div>
+<div class="paragraph">
+<p>许多支持私有使用URI方案的环境不提供声明方案并防止其他方使用另一个应用程序的方案的机制。因此，使用私有使用URI方案的客户端容易受到其重定向URI的潜在攻击，因此，如果之前提到的更安全的选项不可用，才应使用此选项。</p>
+</div>
+<div class="paragraph">
+<p>要使用私有使用URI方案重定向执行授权请求，原生应用程序将使用标准授权请求启动浏览器，但其中的重定向URI利用其向操作系统注册的私有使用URI方案。</p>
+</div>
+<div class="paragraph">
+<p>在选择与应用程序关联的URI方案时，应用程序必须使用基于其所控制域名的URI方案（以反向顺序表示），如[<a href="12-references.html#RFC7595" class="xref page">RFC7595</a>]第3.8节针对私有使用URI方案所建议的那样。</p>
+</div>
+<div class="paragraph">
+<p>例如，控制域名app.example.com的应用程序可以使用com.example.app作为其方案。一些授权服务器根据域名分配客户端标识符，例如client1234.usercontent.example.net，当以相同方式反向时，它也可以用作该方案的域名。然而，像myapp这样的方案则不符合此要求，因为它不是基于域名的。</p>
+</div>
+<div class="paragraph">
+<p>当同一发布者有多个应用程序时，必须注意确保每个方案在该组内都是唯一的。在使用基于反向域名顺序的应用程序标识符的平台上，这些标识符可以重用为OAuth重定向的私有使用URI方案，以帮助避免此问题。</p>
+</div>
+<div class="paragraph">
+<p>根据[<a href="12-references.html#RFC3986" class="xref page">RFC3986</a>]第3.2节的要求，由于私有使用URI方案重定向没有命名权威，因此在方案组件之后只出现一个斜杠（/）。使用私有使用URI方案的重定向URI的完整示例为：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>com.example.app:/oauth2redirect/example-provider</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>当授权服务器完成请求时，它会像往常一样重定向到客户端的重定向URI。由于重定向URI使用私有使用URI方案，因此操作系统会启动原生应用程序，并将URI作为启动参数传递。然后，原生应用程序对授权响应使用正常处理。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="security-considerations-in-"><a class="anchor" href="#security-considerations-in-"></a>8.5.原生应用中的安全考虑</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="embedded-user-agents-in-nat"><a class="anchor" href="#embedded-user-agents-in-nat"></a>8.5.1.原生应用中的嵌入式用户代理</h3>
+<div class="paragraph">
+<p>嵌入式用户代理是技术上可行的一种原生应用授权方法。根据定义，这些嵌入式用户代理对于授权服务器的第三方使用是不安全的，因为托管嵌入式用户代理的应用可以访问用户的完整身份验证凭据，而不仅仅是本应为该应用提供的OAuth授权许可。</p>
+</div>
+<div class="paragraph">
+<p>在基于web视图的嵌入式用户代理典型实现中，宿主应用可以记录登录表单中输入的每个键击以捕获用户名和密码，自动提交表单以绕过用户同意，并复制会话cookie并使用它们以用户身份执行经过身份验证的操作。</p>
+</div>
+<div class="paragraph">
+<p>即使嵌入式用户代理由与授权服务器属于同一方的受信任应用使用，由于它们可以访问比所需更强大的凭据，这也违反了最小权限原则，可能会增加攻击面。</p>
+</div>
+<div class="paragraph">
+<p>鼓励用户在没有浏览器通常具有的地址栏和可见证书验证功能的情况下，在嵌入式用户代理中输入凭据，这使得用户无法知道他们是否正在登录到合法网站；即使他们确实在登录合法网站，这也训练了他们无需先验证网站即可输入凭据的习惯。</p>
+</div>
+<div class="paragraph">
+<p>除了安全顾虑之外，嵌入式用户代理不会与其他应用或浏览器共享身份验证状态，这要求用户每次授权请求都要登录，这通常被认为是一种较差的用户体验。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="fake-external-user-agents-i"><a class="anchor" href="#fake-external-user-agents-i"></a>8.5.2.原生应用中的虚假外部用户代理</h3>
+<div class="paragraph">
+<p>发起授权请求的原生应用在很大程度上控制着用户界面，并可能潜在地呈现一个虚假的外部用户代理，即一个被伪装成外部用户代理的嵌入式用户代理。</p>
+</div>
+<div class="paragraph">
+<p>当所有正当用户都在使用外部用户代理时，其优势在于安全专家可以检测到恶意用户，因为任何伪装成外部用户代理的行为都可被证实为恶意。另一方面，如果正当用户和恶意用户都在使用嵌入式用户代理，那么恶意用户就无需伪装任何东西，这使得他们更难被发现。一旦检测到恶意应用，就可以利用这一信息将该应用的签名列入恶意软件扫描软件的黑名单，采取移除行动（针对应用商店分发的应用），以及其他步骤来减少恶意应用的影响和传播。</p>
+</div>
+<div class="paragraph">
+<p>授权服务器还可以通过要求只有真正的外部用户代理才能提供的认证因素来直接防范虚假的外部用户代理。</p>
+</div>
+<div class="paragraph">
+<p>当用户在应用内浏览器标签页中使用时特别关注其安全性，他们还可以采取额外的步骤，即从应用内浏览器标签页在完整浏览器中打开请求，并在那里完成授权，因为大多数应用内浏览器标签页模式的实现都提供这样的功能。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="malicious-external-user-age"><a class="anchor" href="#malicious-external-user-age"></a>8.5.3.原生应用中的恶意外部用户代理</h3>
+<div class="paragraph">
+<p>如果恶意应用能够将自己配置为操作系统中https方案URI的默认处理程序，那么它将能够拦截使用默认浏览器的授权请求，并滥用这种受信任的位置来达到恶意目的，例如对用户进行网络钓鱼。</p>
+</div>
+<div class="paragraph">
+<p>这种攻击不仅限于OAuth；以这种方式配置的恶意应用将对用户构成超出原生应用使用OAuth的一般且持续的风险。许多操作系统通过要求用户明确执行操作来更改http和https方案URI的默认处理程序，从而缓解了这个问题。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="loopback-redirect-considera"><a class="anchor" href="#loopback-redirect-considera"></a>8.5.4.原生应用中的回环重定向考虑</h3>
+<div class="paragraph">
+<p>回环接口重定向URI可以使用http方案（即，不使用TLS）。这对于回环接口重定向URI是可接受的，因为HTTP请求永远不会离开设备。</p>
+</div>
+<div class="paragraph">
+<p>客户端应在开始授权请求时打开网络端口，并在收到响应后关闭它。</p>
+</div>
+<div class="paragraph">
+<p>客户端应仅监听回环网络接口，以避免其他网络参与者造成干扰。</p>
+</div>
+<div class="paragraph">
+<p>客户端应使用回环IP文字而不是 <a href="#loopback-interface-redirect">第8.4.2节</a>中描述的localhost字符串。</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

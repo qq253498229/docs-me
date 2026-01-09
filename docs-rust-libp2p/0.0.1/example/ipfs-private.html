@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>IPFS 私有实现 :: docs-me</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">docs-me</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-rust-libp2p" data-version="0.0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">libp2p入门</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">教程</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/hole-punching.html">打洞教程</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/ping.html">Ping教程</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">示例</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="chat.html">聊天</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="distributed-key-value-store.html">分布式键值存储</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="file-sharing.html">基本文件共享应用程序</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ipfs-kad.html">IPFS Kademlia</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="ipfs-private.html">IPFS 私有实现</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ping.html">Ping</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="rendezvous.html">Rendezvous</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="autonat.html">AutoNAT</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="relay-server.html">中继服务器</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">libp2p入门</span>
+    <span class="version">0.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../docs-config/0.0.1/index.html">docs-config</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-config/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-steam-electron/0.0.1/index.html">docs-steam-electron</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-steam-electron/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-xiuxian/0.0.1/index.html">docs-xiuxian</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-xiuxian/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-es-java/7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-es-java/7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../docs-es-java/6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../docs-es-java/6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-greenworks-js/0.0.1/index.html">Greenworks-JS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-greenworks-js/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">libp2p入门</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-neutralino-api/0.0.1/index.html">NeutralinoJS 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-neutralino-api/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-antora-oauth2.1/0.0.1/index.html">OAuth 2.1 授权框架</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-antora-oauth2.1/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-pd2/0.0.1/index.html">PD2记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-pd2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-peerjs/0.0.1/index.html">PEER JS</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-peerjs/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-actuator/3.3.3/index.html">Spring Boot Actuator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-actuator/3.3.3/index.html">3.3.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-oauth2/0.0.1/index.html">Spring Boot OAuth2</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-oauth2/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-steamworks-rs/0.11.0/index.html">Steamworks for Rust</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-steamworks-rs/0.11.0/index.html">0.11.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-tauri/v1/index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-tauri/v1/index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-testing-angular/中文/start.html">Testing Angular</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-testing-angular/中文/start.html">中文</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-me/0.0.1/index.html">个人记录</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-me/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-taiwu/0.0.1/index.html">太吾绘卷</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-taiwu/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-palworld/0.0.1/index.html">幻兽帕鲁笔记</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-palworld/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-building-event-driven-microservices/0.0.1/index.html">微服务与事件驱动架构</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-building-event-driven-microservices/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-hunter/0.0.1/index.html">猎人-荒野的呼唤</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-hunter/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-logitech/v8.45/index.html">罗技鼠标宏文档</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-logitech/v8.45/index.html">v8.45</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../docs-milk/0.0.1/index.html">银河奶牛</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../docs-milk/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../docs-me/0.0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">libp2p入门</a></li>
+    <li>示例</li>
+    <li><a href="ipfs-private.html">IPFS 私有实现</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-rust-libp2p/edit/master/modules/ROOT/pages/example/ipfs-private.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">IPFS 私有实现</h1>
+<div class="sect1">
+<h2 id="_描述"><a class="anchor" href="#_描述"></a>描述</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>这个示例展示了一个可以与IPFS交互的libp2p节点的最小实现。它使用gossipsub协议进行pubsub消息传递，使用ping协议进行网络连通性测试，以及使用identify协议进行节点识别。该节点可以用来与已启用gossipsub的其他IPFS节点通信。</p>
+</div>
+<div class="paragraph">
+<p>要与其他节点建立连接，你可以提供它们的multiaddresses作为命令行参数。启动时，示例会显示一个你可以从 <code>go-ipfs</code> 或 <code>js-ipfs</code> 节点拨打的地址列表。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_用法"><a class="anchor" href="#_用法"></a>用法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要运行这个示例，请按照以下步骤操作：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1.使用Cargo构建并运行示例：</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">cargo run [ADDRESS_1] [ADDRESS_2] ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>将 <code>[ADDRESS_1]</code>、<code>[ADDRESS_2]</code> 等替换为你想要连接的节点的multiaddresses。你可以提供多个地址作为命令行参数。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+multiaddress应该采用以下格式：<code>/ip4/127.0.0.1/tcp/4001/p2p/peer_id</code>。
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>2.一旦示例运行，你可以使用以下命令与IPFS节点交互：</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Pubsub (Gossipsub)</strong>：你可以使用gossipsub协议在“chat”主题上发送和接收消息。要发送消息，只需在控制台中输入并按Enter键。消息将使用gossipsub广播给其他已连接的节点。</p>
+</li>
+<li>
+<p><strong>Ping</strong>：你可以ping其他已连接的节点以测试网络连通性。示例会显示成功ping的往返时间（RTT）或指示是否发生超时。</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_结论"><a class="anchor" href="#_结论"></a>结论</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>这个示例提供了一个使用libp2p的基本IPFS节点实现。它演示了如何使用gossipsub、ping和identify协议来实现与其他IPFS节点的通信。通过运行这个示例并探索其功能，你可以了解如何使用Rust构建更高级的P2P应用程序。</p>
+</div>
+<div class="paragraph">
+<p>请随意尝试不同的multiaddresses，并探索libp2p在IPFS背景下的能力。编程愉快！</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_代码"><a class="anchor" href="#_代码"></a>代码</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_cargo_toml"><a class="anchor" href="#_cargo_toml"></a>Cargo.toml</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">[package]
+name = "ipfs-private-example"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license = "MIT"
+
+[package.metadata.release]
+release = false
+
+[dependencies]
+tokio = { workspace = true, features = ["rt-multi-thread", "macros", "io-std"] }
+async-trait = "0.1"
+either = "1.12"
+futures = { workspace = true }
+libp2p = { path = "../../libp2p", features = [ "tokio", "gossipsub", "dns", "identify", "kad", "macros", "noise", "ping", "pnet", "tcp", "websocket", "yamux"] }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true, features = ["env-filter"] }
+
+[lints]
+workspace = true</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_main_rs"><a class="anchor" href="#_main_rs"></a>main.rs</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-rust hljs" data-lang="rust">#![doc = include_str!("../README.md")]
+
+use either::Either;
+use futures::prelude::*;
+use libp2p::{
+    core::transport::upgrade::Version,
+    gossipsub, identify,
+    multiaddr::Protocol,
+    noise, ping,
+    pnet::{PnetConfig, PreSharedKey},
+    swarm::{NetworkBehaviour, SwarmEvent},
+    tcp, yamux, Multiaddr, Transport,
+};
+use std::{env, error::Error, fs, path::Path, str::FromStr, time::Duration};
+use tokio::{io, io::AsyncBufReadExt, select};
+use tracing_subscriber::EnvFilter;
+
+/// Get the current ipfs repo path, either from the IPFS_PATH environment variable or
+/// from the default $HOME/.ipfs
+fn get_ipfs_path() -&gt; Box&lt;Path&gt; {
+    env::var("IPFS_PATH")
+        .map(|ipfs_path| Path::new(&amp;ipfs_path).into())
+        .unwrap_or_else(|_| {
+            env::var("HOME")
+                .map(|home| Path::new(&amp;home).join(".ipfs"))
+                .expect("could not determine home directory")
+                .into()
+        })
+}
+
+/// Read the pre shared key file from the given ipfs directory
+fn get_psk(path: &amp;Path) -&gt; std::io::Result&lt;Option&lt;String&gt;&gt; {
+    let swarm_key_file = path.join("swarm.key");
+    match fs::read_to_string(swarm_key_file) {
+        Ok(text) =&gt; Ok(Some(text)),
+        Err(e) if e.kind() == std::io::ErrorKind::NotFound =&gt; Ok(None),
+        Err(e) =&gt; Err(e),
+    }
+}
+
+/// for a multiaddr that ends with a peer id, this strips this suffix. Rust-libp2p
+/// only supports dialing to an address without providing the peer id.
+fn strip_peer_id(addr: &amp;mut Multiaddr) {
+    let last = addr.pop();
+    match last {
+        Some(Protocol::P2p(peer_id)) =&gt; {
+            let mut addr = Multiaddr::empty();
+            addr.push(Protocol::P2p(peer_id));
+            println!("removing peer id {addr} so this address can be dialed by rust-libp2p");
+        }
+        Some(other) =&gt; addr.push(other),
+        _ =&gt; {}
+    }
+}
+
+/// parse a legacy multiaddr (replace ipfs with p2p), and strip the peer id
+/// so it can be dialed by rust-libp2p
+fn parse_legacy_multiaddr(text: &amp;str) -&gt; Result&lt;Multiaddr, Box&lt;dyn Error&gt;&gt; {
+    let sanitized = text
+        .split('/')
+        .map(|part| if part == "ipfs" { "p2p" } else { part })
+        .collect::&lt;Vec&lt;_&gt;&gt;()
+        .join("/");
+    let mut res = Multiaddr::from_str(&amp;sanitized)?;
+    strip_peer_id(&amp;mut res);
+    Ok(res)
+}
+
+#[tokio::main]
+async fn main() -&gt; Result&lt;(), Box&lt;dyn Error&gt;&gt; {
+    let _ = tracing_subscriber::fmt()
+        .with_env_filter(EnvFilter::from_default_env())
+        .try_init();
+
+    let ipfs_path = get_ipfs_path();
+    println!("using IPFS_PATH {ipfs_path:?}");
+    let psk: Option&lt;PreSharedKey&gt; = get_psk(&amp;ipfs_path)?
+        .map(|text| PreSharedKey::from_str(&amp;text))
+        .transpose()?;
+
+    if let Some(psk) = psk {
+        println!("using swarm key with fingerprint: {}", psk.fingerprint());
+    }
+
+    // Create a Gosspipsub topic
+    let gossipsub_topic = gossipsub::IdentTopic::new("chat");
+
+    // We create a custom network behaviour that combines gossipsub, ping and identify.
+    #[derive(NetworkBehaviour)]
+    struct MyBehaviour {
+        gossipsub: gossipsub::Behaviour,
+        identify: identify::Behaviour,
+        ping: ping::Behaviour,
+    }
+
+    let mut swarm = libp2p::SwarmBuilder::with_new_identity()
+        .with_tokio()
+        .with_other_transport(|key| {
+            let noise_config = noise::Config::new(key).unwrap();
+            let yamux_config = yamux::Config::default();
+
+            let base_transport = tcp::tokio::Transport::new(tcp::Config::default().nodelay(true));
+            let maybe_encrypted = match psk {
+                Some(psk) =&gt; Either::Left(
+                    base_transport
+                        .and_then(move |socket, _| PnetConfig::new(psk).handshake(socket)),
+                ),
+                None =&gt; Either::Right(base_transport),
+            };
+            maybe_encrypted
+                .upgrade(Version::V1Lazy)
+                .authenticate(noise_config)
+                .multiplex(yamux_config)
+        })?
+        .with_dns()?
+        .with_behaviour(|key| {
+            let gossipsub_config = gossipsub::ConfigBuilder::default()
+                .max_transmit_size(262144)
+                .build()
+                .map_err(|msg| io::Error::new(io::ErrorKind::Other, msg))?; // Temporary hack because `build` does not return a proper `std::error::Error`.
+            Ok(MyBehaviour {
+                gossipsub: gossipsub::Behaviour::new(
+                    gossipsub::MessageAuthenticity::Signed(key.clone()),
+                    gossipsub_config,
+                )
+                .expect("Valid configuration"),
+                identify: identify::Behaviour::new(identify::Config::new(
+                    "/ipfs/0.1.0".into(),
+                    key.public(),
+                )),
+                ping: ping::Behaviour::new(ping::Config::new()),
+            })
+        })?
+        .with_swarm_config(|c| c.with_idle_connection_timeout(Duration::from_secs(60)))
+        .build();
+
+    println!("Subscribing to {gossipsub_topic:?}");
+    swarm
+        .behaviour_mut()
+        .gossipsub
+        .subscribe(&amp;gossipsub_topic)
+        .unwrap();
+
+    // Reach out to other nodes if specified
+    for to_dial in std::env::args().skip(1) {
+        let addr: Multiaddr = parse_legacy_multiaddr(&amp;to_dial)?;
+        swarm.dial(addr)?;
+        println!("Dialed {to_dial:?}")
+    }
+
+    // Read full lines from stdin
+    let mut stdin = io::BufReader::new(io::stdin()).lines();
+
+    // Listen on all interfaces and whatever port the OS assigns
+    swarm.listen_on("/ip4/0.0.0.0/tcp/0".parse()?)?;
+
+    // Kick it off
+    loop {
+        select! {
+            Ok(Some(line)) = stdin.next_line() =&gt; {
+                if let Err(e) = swarm
+                    .behaviour_mut()
+                    .gossipsub
+                    .publish(gossipsub_topic.clone(), line.as_bytes())
+                {
+                    println!("Publish error: {e:?}");
+                }
+            },
+            event = swarm.select_next_some() =&gt; {
+                match event {
+                    SwarmEvent::NewListenAddr { address, .. } =&gt; {
+                        println!("Listening on {address:?}");
+                    }
+                    SwarmEvent::Behaviour(MyBehaviourEvent::Identify(event)) =&gt; {
+                        println!("identify: {event:?}");
+                    }
+                    SwarmEvent::Behaviour(MyBehaviourEvent::Gossipsub(gossipsub::Event::Message {
+                        propagation_source: peer_id,
+                        message_id: id,
+                        message,
+                    })) =&gt; {
+                        println!(
+                            "Got message: {} with id: {} from peer: {:?}",
+                            String::from_utf8_lossy(&amp;message.data),
+                            id,
+                            peer_id
+                        )
+                    }
+                    SwarmEvent::Behaviour(MyBehaviourEvent::Ping(event)) =&gt; {
+                        match event {
+                            ping::Event {
+                                peer,
+                                result: Result::Ok(rtt),
+                                ..
+                            } =&gt; {
+                                println!(
+                                    "ping: rtt to {} is {} ms",
+                                    peer.to_base58(),
+                                    rtt.as_millis()
+                                );
+                            }
+                            ping::Event {
+                                peer,
+                                result: Result::Err(ping::Failure::Timeout),
+                                ..
+                            } =&gt; {
+                                println!("ping: timeout to {}", peer.to_base58());
+                            }
+                            ping::Event {
+                                peer,
+                                result: Result::Err(ping::Failure::Unsupported),
+                                ..
+                            } =&gt; {
+                                println!("ping: {} does not support ping protocol", peer.to_base58());
+                            }
+                            ping::Event {
+                                peer,
+                                result: Result::Err(ping::Failure::Other { error }),
+                                ..
+                            } =&gt; {
+                                println!("ping: ping::Failure with {}: {error}", peer.to_base58());
+                            }
+                        }
+                    }
+                    _ =&gt; {}
+                }
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
