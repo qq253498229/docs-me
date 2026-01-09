@@ -1,20 +1,22 @@
-= 个人记录
+= 我的文档
 
-个人工具
+== 游戏类
 
-* Angular脚手架(wng --min test-output-folder-name):
-** Windows: https://gitee.com/consolelog/wang-ng-init/releases/download/v1.4.0/wng.exe
-** Linux: https://gitee.com/consolelog/wang-ng-init/releases/download/v1.4.0/wng-linux-x86_64
-** macOS: https://gitee.com/consolelog/wang-ng-init/releases/download/v1.4.0/wng
-* TypeScript脚手架(wts my-typescript-folder-name)
-** https://gitee.com/consolelog/wang-typescript-starter/releases/download/v1.0.0/wts.zip
-* Tauri脚手架(wtauri demo-tauri002)
-** macOS: https://gitee.com/consolelog/wtauri/releases/download/v1.3.0/wtauri_macos_x86-64
-** Windows: https://gitee.com/consolelog/wtauri/releases/download/v1.3.0/wtauri.exe
-** Linux: https://gitee.com/consolelog/wtauri/releases/download/v1.3.0/wtauri_linux_gnu_x86-64
-* Antora脚手架(wantora docs-my-antora)
-** macOS: https://gitee.com/consolelog/wantora/releases/download/v1.1.0/wantora
-** Windows: https://gitee.com/consolelog/wantora/releases/download/v1.1.0/wantora.exe
-* CHANGELOG变更日志生成工具(wlog)
-** macOS: https://gitee.com/consolelog/wang-changelog/releases/download/v1.2.0/wlog
-** Linux: https://gitee.com/consolelog/wang-changelog/releases/download/v1.2.0/wlog.exe
+* Project Diablo2: https://qq253498229.github.io/docs-pd2/[window=_blank]
+* 幻兽帕鲁: https://qq253498229.github.io/docs-palworld[window=_blank]
+* 了不起的修仙模拟器: https://qq253498229.github.io/docs-xiuxian[window=_blank]
+* 银河奶牛: https://qq253498229.github.io/docs-milk[window=_blank]
+
+
+== 技术类
+
+* NeutralinoJS: https://qq253498229.github.io/docs-neutralino-api[window=_blank]
+* Spring Actuator: https://qq253498229.github.io/docs-actuator[window=_blank]
+* rust-libp2p(ing): https://qq253498229.github.io/docs-rust-libp2p[window=_blank]
+* Tauri: https://qq253498229.github.io/docs-tauri[window=_blank]
+* Steamworks for Rust: https://qq253498229.github.io/docs-steamworks-rs[window=_blank]
+* Spring Boot Admin: https://qq253498229.github.io/docs-spring-boot-admin[window=_blank]
+* Greenworks-JS: https://qq253498229.github.io/docs-greenworks-js[window=_blank]
+* ElasticSearch Java API: https://qq253498229.github.io/docs-es-java[window=_blank]
+
+

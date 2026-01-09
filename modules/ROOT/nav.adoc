@@ -1,2 +1,2 @@
-* xref:doc.adoc[]
+* xref:tools.adoc[]
 * xref:regexp.adoc[]
